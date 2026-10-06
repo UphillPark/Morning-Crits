@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Turn a Morning Crit issue into a ready-to-paste Naver blog post page.
 
-Usage:  python3 scripts/blog_post.py [YYYY-MM-DD]
-        (run after build_site.py; reads issues/YYYY-MM-DD.html, default = the
-        date in source/morning-crit.html)
+Usage:  python3 scripts/blog_post.py [SLUG]
+        (run after build_site.py; reads issues/SLUG.html, default = the issue
+        in source/morning-crit.html. SLUG is YYYY-MM-DD, or YYYY-MM-DD-NNN when
+        two issues share a date)
 
 Writes:
   blog/YYYY-MM-DD.html          the post, laid out for copy & paste
@@ -430,35 +431,50 @@ def page_html(draft, img_base):
     }
 
 
-def issue_date_from_source():
+def source_issue_number():
     src = open(os.path.join(ROOT, "source", "morning-crit.html"), encoding="utf-8").read()
     tb = text(BeautifulSoup(src, "html.parser").find(id="page-crit").select_one(".tblock"))
-    m = re.search(r"(\d{4})\.(\d{2})\.(\d{2})", tb)
-    return "-".join(m.groups())
+    return int(re.search(r"No\.\s*(\d+)", tb).group(1))
 
 
 def main():
+    """blog_post.py [SLUG]  — SLUG is the issue page name (YYYY-MM-DD or YYYY-MM-DD-NNN);
+    default: the issue currently in source/morning-crit.html."""
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
-    date = args[0] if args else issue_date_from_source()
-    issue_path = os.path.join(ROOT, "issues", date + ".html")
+    items = json.load(open(os.path.join(ROOT, "issues", "index.json"), encoding="utf-8"))
+    if args:
+        slug = args[0]
+    else:
+        num = source_issue_number()
+        hit = [it for it in items if it["issue"] == num]
+        if not hit:
+            sys.exit("issues/index.json 에 No. %03d 이 없습니다. build_site.py 를 먼저 실행하세요." % num)
+        slug = hit[0].get("slug", hit[0]["date"])
+    issue_path = os.path.join(ROOT, "issues", slug + ".html")
     if not os.path.exists(issue_path):
-        sys.exit("issues/%s.html 이 없습니다. build_site.py 를 먼저 실행하세요." % date)
+        sys.exit("issues/%s.html 이 없습니다. build_site.py 를 먼저 실행하세요." % slug)
     draft = build(open(issue_path, encoding="utf-8").read())
-    img_dir = os.path.join(ROOT, "blog", "img", date)
+    draft["source_url"] = SITE_URL + "issues/" + slug + ".html"
+    for b in draft["blocks"]:
+        if b["type"] == "text" and "issues/" + draft["date"] + ".html" in b["html"]:
+            b["html"] = b["html"].replace("issues/" + draft["date"] + ".html", "issues/" + slug + ".html")
+            b["text"] = b["text"].replace("issues/" + draft["date"] + ".html", "issues/" + slug + ".html")
+    img_dir = os.path.join(ROOT, "blog", "img", slug)
     done, missing = render_cards(draft, issue_path, img_dir)
     for b in draft["blocks"]:
         if b["type"] == "image":
             b["rendered"] = b["file"] in done
     local = "--local" in sys.argv
-    img_base = ("img/%s/" % date) if local else (SITE_URL + "blog/img/%s/" % date)
+    img_base = ("img/%s/" % slug) if local else (SITE_URL + "blog/img/%s/" % slug)
     page = page_html(draft, img_base)
+    newest = items and items[0].get("slug", items[0]["date"]) == slug  # index.json is newest first
     blog_dir = os.path.join(ROOT, "blog")
-    for name in (date + ".html", "index.html"):
+    for name in [slug + ".html"] + (["index.html"] if newest else []):
         with open(os.path.join(blog_dir, name), "w", encoding="utf-8") as f:
             f.write(page)
-    print(json.dumps({"date": date, "title": draft["title"], "chars": draft["stats"]["chars"],
-                      "images": len(done), "missing_images": missing,
-                      "page": SITE_URL + "blog/" + date + ".html"}, ensure_ascii=False))
+    print(json.dumps({"date": draft["date"], "issue": draft["issue"], "title": draft["title"],
+                      "chars": draft["stats"]["chars"], "images": len(done), "missing_images": missing,
+                      "page": SITE_URL + "blog/" + slug + ".html"}, ensure_ascii=False))
 
 
 if __name__ == "__main__":

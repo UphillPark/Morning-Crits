@@ -240,6 +240,16 @@ def sheet(main, title, icon, issue_date):
     return out
 
 
+def issue_slug(num, date):
+    """Page name build_site.py gave this issue (date, or date-NNN on a shared date)."""
+    idx = os.path.join(ROOT, "issues", "index.json")
+    if os.path.exists(idx):
+        for it in json.load(open(idx, encoding="utf-8")):
+            if it.get("issue") == num:
+                return it.get("slug", it["date"])
+    return date
+
+
 def main():
     src_path = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "source", "morning-crit.html")
     soup = BeautifulSoup(open(src_path, encoding="utf-8").read(), "html.parser")
@@ -253,7 +263,7 @@ def main():
     headline = text(crit.find("h2"))
     crit_q = text(crit.select_one("aside.crit.big p"))
     thesis_titles = [text(h) for h in thesis.select("article.issue h3")] if thesis else []
-    web = SITE_URL + "issues/" + issue_date.isoformat() + ".html"
+    web = SITE_URL + "issues/" + issue_slug(num, issue_date.isoformat()) + ".html"
 
     lines = [
         '<callout icon="🌐" color="blue_bg">',

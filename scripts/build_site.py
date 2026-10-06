@@ -5,7 +5,8 @@ Usage:  python3 scripts/build_site.py [source/morning-crit.html]
 
 Writes:
   index.html              today's issue (both sheets) + archive tab
-  issues/YYYY-MM-DD.html  permanent copy of the issue
+  issues/YYYY-MM-DD.html  permanent copy of the issue (YYYY-MM-DD-NNN.html when
+                          a second issue shares that date)
   issues/index.json       issue metadata, newest first
   archive.html            list of every issue
 """
@@ -87,7 +88,7 @@ def build_archive(head, items):
         rows.append(
             "<tr><td class=\"m\">" + it["date"].replace("-", ".") + "</td>"
             "<td class=\"m\">No. " + str(it["issue"]).zfill(3) + "</td>"
-            "<td><a href=\"issues/" + it["date"] + ".html\">" + escape(it["headline"]) + "</a></td>"
+            "<td><a href=\"issues/" + it.get("slug", it["date"]) + ".html\">" + escape(it["headline"]) + "</a></td>"
             "<td>" + thesis + "</td></tr>"
         )
     body = (
@@ -108,6 +109,16 @@ def build_archive(head, items):
     return page(head, body, "Morning Crit 지난 호 목록")
 
 
+def slug_for(meta, items):
+    """File name for an issue: its date, or date-NNN when another issue already has that date."""
+    for it in items:
+        if it["issue"] == meta["issue"]:
+            return it.get("slug", it["date"])
+    if any(it["date"] == meta["date"] for it in items):
+        return meta["date"] + "-" + str(meta["issue"]).zfill(3)
+    return meta["date"]
+
+
 def main():
     src_path = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "source", "morning-crit.html")
     src = open(src_path, encoding="utf-8").read()
@@ -115,18 +126,23 @@ def main():
     head, body = split_head(src)
     desc = "Morning Crit No. " + str(meta["issue"]).zfill(3) + " · " + meta["headline"]
 
-    os.makedirs(os.path.join(ROOT, "issues"), exist_ok=True)
-    with open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8") as f:
-        f.write(page(head, with_archive_tab(body, ""), desc))
-    with open(os.path.join(ROOT, "issues", meta["date"] + ".html"), "w", encoding="utf-8") as f:
-        f.write(page(head, with_archive_tab(body, "../"), desc))
-
     idx_path = os.path.join(ROOT, "issues", "index.json")
     items = []
     if os.path.exists(idx_path):
         items = json.load(open(idx_path, encoding="utf-8"))
-    items = [it for it in items if it["date"] != meta["date"]] + [meta]
-    items.sort(key=lambda it: it["date"], reverse=True)
+    # One entry per issue number; two issues may share a date.
+    meta["slug"] = slug_for(meta, items)
+    meta["url"] = SITE_URL + "issues/" + meta["slug"] + ".html"
+    items = [it for it in items if it["issue"] != meta["issue"]] + [meta]
+    items.sort(key=lambda it: (it["date"], it["issue"]), reverse=True)
+    newest = items[0]["issue"] == meta["issue"]
+
+    os.makedirs(os.path.join(ROOT, "issues"), exist_ok=True)
+    if newest:
+        with open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8") as f:
+            f.write(page(head, with_archive_tab(body, ""), desc))
+    with open(os.path.join(ROOT, "issues", meta["slug"] + ".html"), "w", encoding="utf-8") as f:
+        f.write(page(head, with_archive_tab(body, "../"), desc))
     with open(idx_path, "w", encoding="utf-8") as f:
         json.dump(items, f, ensure_ascii=False, indent=2)
     with open(os.path.join(ROOT, "archive.html"), "w", encoding="utf-8") as f:
