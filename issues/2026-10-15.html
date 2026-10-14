@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Morning Crit No. 008 · 보존은 “마멀레이드에나 하는 일” — 100세로 세상을 떠난 Donald Insall이 남긴 ‘살아 있는 건물’의 원칙">
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Morning Crit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,500;1,6..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap">
+<style>
+/* Layout: a drawing sheet. Title block masthead, lead + crit column, two-column story grid, calendar strip, reading map table. Redline = tutor's pen. */
+:root {
+  --paper: #F2F3EF;
+  --sheet: #F8F9F6;
+  --ink: #1B1F23;
+  --muted: #5A6168;
+  --rule: #C6CBC3;
+  --grid: rgba(31, 78, 121, 0.06);
+  --red: #C2331D;
+  --blue: #1F4E79;
+  --tint: #E6E9E2;
+  --f-mast: "Bodoni Moda", "Didot", "Times New Roman", serif;
+  --f-head: "Noto Serif KR", "Apple SD Gothic Neo", serif;
+  --f-body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #111417; --sheet: #161A1E; --ink: #E3E6E0; --muted: #9AA2A9; --rule: #2D3439;
+    --grid: rgba(138, 184, 230, 0.05); --red: #FF7C66; --blue: #8DB9E6; --tint: #1C2126;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #111417; --sheet: #161A1E; --ink: #E3E6E0; --muted: #9AA2A9; --rule: #2D3439;
+  --grid: rgba(138, 184, 230, 0.05); --red: #FF7C66; --blue: #8DB9E6; --tint: #1C2126;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  background: var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 15.5px;
+  line-height: 1.75;
+  padding-inline: 16px;
+  padding-block: 28px 64px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.sheet {
+  max-width: 1120px;
+  margin-inline: auto;
+  background: var(--sheet);
+  border: 1.5px solid var(--ink);
+  padding: clamp(16px, 3vw, 36px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 40px;
+}
+.sheet > * { min-width: 0; }
+a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+
+/* ── Masthead as title block ── */
+.mast {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  border-bottom: 3px double var(--ink);
+  padding-bottom: 18px;
+  gap: 20px;
+  align-items: end;
+}
+.mast h1 {
+  font-family: var(--f-mast);
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(48px, 9vw, 104px);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+.mast .sub {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.tblock {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, auto));
+  border: 1px solid var(--ink);
+  font-family: var(--f-mono);
+  font-size: 11.5px;
+  line-height: 1.35;
+}
+.tblock div { padding: 6px 10px; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.tblock div:nth-child(2n) { border-right: 0; }
+.tblock div:nth-last-child(-n+2) { border-bottom: 0; }
+.tblock b { display: block; font-weight: 400; color: var(--muted); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; }
+.mast > * { min-width: 0; }
+@media (max-width: 720px) { .mast { grid-template-columns: minmax(0, 1fr); } .tblock { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ── Section labels ── */
+.label {
+  display: flex; align-items: center; gap: 12px;
+  font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+.label::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+.label .tag { color: var(--ink); }
+
+/* ── Lead ── */
+.lead { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 36px; }
+.lead h2 { font-family: var(--f-head); font-weight: 900; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.3; }
+.lead .deck { font-size: 17px; margin-top: 14px; max-width: 62ch; }
+.lead .body { margin-top: 14px; max-width: 65ch; display: grid; gap: 12px; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: 22px; border-block: 1px solid var(--ink); }
+.stats div { padding: 12px 12px 12px 0; }
+.stats div + div { padding-left: 12px; border-left: 1px solid var(--rule); }
+.stats strong { display: block; font-family: var(--f-mono); font-size: 26px; font-weight: 500; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.stats span { font-size: 12.5px; color: var(--muted); line-height: 1.5; display: block; }
+.side { display: grid; gap: 22px; align-content: start; min-width: 0; }
+@media (max-width: 820px) { .lead { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .stats { grid-template-columns: 1fr; } .stats div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--rule); } }
+
+/* ── Crit (redline) ── */
+.crit {
+  border: 1.5px dashed var(--red);
+  padding: 12px 14px;
+  font-size: 14.5px;
+  line-height: 1.7;
+  margin-top: 14px;
+}
+.crit .k { font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.14em; color: var(--red); display: block; margin-bottom: 4px; }
+.crit.big { margin-top: 0; padding: 18px; }
+.crit.big p { font-family: var(--f-head); font-weight: 600; font-size: 19px; line-height: 1.55; }
+.crit.big ol { margin: 12px 0 0; padding-left: 20px; font-size: 14px; display: grid; gap: 6px; }
+
+/* ── Stories grid ── */
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 40px; }
+@media (max-width: 820px) { .grid2 { grid-template-columns: 1fr; } }
+.story { min-width: 0; border-top: 1.5px solid var(--ink); padding-top: 14px; }
+.kicker { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 6px; }
+.story h3 { font-family: var(--f-head); font-weight: 600; font-size: 21px; line-height: 1.42; margin-bottom: 10px; }
+.story p + p { margin-top: 10px; }
+.src { font-family: var(--f-mono); font-size: 12px; color: var(--muted); margin-top: 12px; line-height: 1.6; }
+.src a { color: var(--blue); }
+
+/* ── Briefs ── */
+.briefs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; }
+.briefs li { padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 14.5px; line-height: 1.6; min-width: 0; }
+.briefs li b { font-weight: 600; }
+.briefs .src { margin-top: 2px; }
+@media (max-width: 720px) { .briefs { grid-template-columns: 1fr; } }
+
+/* ── Calendar ── */
+.cal { list-style: none; margin: 0; padding: 0; display: grid; }
+.cal li { display: grid; grid-template-columns: 92px 64px minmax(0, 1fr); gap: 14px; padding: 11px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+.cal .d { font-family: var(--f-mono); font-size: 13px; font-variant-numeric: tabular-nums; }
+.cal .dd { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.cal .dd.soon { color: var(--red); font-weight: 500; }
+.cal .t { font-size: 14.5px; line-height: 1.6; }
+.cal .t small { display: block; color: var(--muted); font-size: 12.5px; }
+@media (max-width: 480px) { .cal li { grid-template-columns: 78px minmax(0, 1fr); } .cal .dd { grid-column: 1; grid-row: 2; } .cal .t { grid-column: 2; grid-row: 1 / span 2; } }
+
+/* ── Reading map ── */
+.mapintro { max-width: 70ch; margin-bottom: 18px; color: var(--muted); font-size: 14.5px; }
+.tablewrap { overflow-x: auto; border-top: 1.5px solid var(--ink); }
+table { width: 100%; border-collapse: collapse; min-width: 760px; font-size: 14px; line-height: 1.55; }
+th { text-align: left; font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 400; padding: 10px 12px 8px 0; border-bottom: 1px solid var(--ink); }
+td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+td:first-child { font-weight: 600; white-space: nowrap; }
+td.m { font-family: var(--f-mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
+tr.group td { padding-top: 22px; font-family: var(--f-mono); font-weight: 400; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red); border-bottom: 1px solid var(--ink); }
+.pill { display: inline-block; font-family: var(--f-mono); font-size: 10.5px; padding: 1px 6px; border: 1px solid currentColor; border-radius: 2px; letter-spacing: 0.04em; }
+.pill.free { color: var(--blue); }
+.pill.pay { color: var(--red); }
+.pill.part { color: var(--muted); }
+
+/* ── Routine ── */
+.routine { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--ink); }
+.routine div { padding: 16px; min-width: 0; }
+.routine div + div { border-left: 1px solid var(--ink); }
+.routine .mono { font-size: 12px; color: var(--red); display: block; margin-bottom: 6px; letter-spacing: 0.06em; }
+.routine p { font-size: 14px; line-height: 1.65; }
+@media (max-width: 720px) { .routine { grid-template-columns: 1fr; } .routine div + div { border-left: 0; border-top: 1px solid var(--ink); } }
+
+footer { border-top: 3px double var(--ink); padding-top: 14px; font-size: 12.5px; color: var(--muted); display: grid; gap: 6px; }
+
+/* ── Sheet tabs (page switch) ── */
+.tabs { max-width: 1120px; margin-inline: auto; display: flex; gap: 0; flex-wrap: wrap; }
+.tabs a {
+  font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.06em; text-decoration: none;
+  color: var(--muted); background: var(--tint);
+  border: 1.5px solid var(--ink); border-bottom: 0; padding: 8px 14px 7px;
+  margin-right: -1.5px; display: flex; gap: 10px; align-items: baseline;
+}
+.tabs a b { font-family: var(--f-head); font-weight: 600; font-size: 14px; letter-spacing: 0; color: inherit; }
+.tabs a[aria-current="page"] { background: var(--sheet); color: var(--ink); position: relative; top: 1.5px; }
+.tabs a:hover { color: var(--ink); }
+
+/* ── Thesis Desk ── */
+.method { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid var(--ink); }
+.method div { padding: 14px 16px; min-width: 0; }
+.method div + div { border-left: 1px solid var(--ink); }
+.method .mono { display: block; font-size: 11.5px; color: var(--red); letter-spacing: 0.08em; margin-bottom: 4px; }
+.method strong { font-family: var(--f-head); font-weight: 600; font-size: 17px; display: block; }
+.method p { font-size: 13.5px; line-height: 1.6; color: var(--muted); margin-top: 4px; }
+@media (max-width: 760px) { .method { grid-template-columns: repeat(2, minmax(0, 1fr)); } .method div:nth-child(3) { border-left: 0; } .method div:nth-child(n+3) { border-top: 1px solid var(--ink); } }
+@media (max-width: 420px) { .method { grid-template-columns: 1fr; } .method div + div { border-left: 0; border-top: 1px solid var(--ink); } }
+
+.issues { display: grid; gap: 44px; }
+.issue { border-top: 1.5px solid var(--ink); padding-top: 16px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 20px 40px; }
+.issue > header { grid-column: 1 / -1; display: grid; gap: 8px; }
+.issue .meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; font-family: var(--f-mono); font-size: 11.5px; letter-spacing: 0.08em; color: var(--muted); text-transform: uppercase; }
+.issue .region { color: var(--red); border: 1px solid currentColor; padding: 0 6px; border-radius: 2px; }
+.issue h3 { font-family: var(--f-head); font-weight: 900; font-size: clamp(22px, 2.6vw, 28px); line-height: 1.35; }
+.facts { min-width: 0; display: grid; gap: 10px; align-content: start; }
+.facts .figs { display: flex; flex-wrap: wrap; gap: 0; border-block: 1px solid var(--ink); }
+.facts .figs div { padding: 8px 14px 8px 0; margin-right: 14px; border-right: 1px solid var(--rule); min-width: 0; }
+.facts .figs div:last-child { border-right: 0; margin-right: 0; }
+.facts .figs strong { display: block; font-family: var(--f-mono); font-weight: 500; font-size: 20px; line-height: 1.25; font-variant-numeric: tabular-nums; }
+.facts .figs span { font-size: 12px; color: var(--muted); line-height: 1.4; display: block; }
+.translate { min-width: 0; margin: 0; display: grid; grid-template-columns: 76px minmax(0, 1fr); border-top: 1px solid var(--rule); align-content: start; }
+.translate dt, .translate dd { padding: 9px 0; border-bottom: 1px solid var(--rule); margin: 0; }
+.translate dt { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: 0.06em; color: var(--muted); padding-top: 12px; }
+.translate dd { font-size: 14.5px; line-height: 1.65; }
+.issue .crit { grid-column: 1 / -1; margin-top: 0; display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; }
+.issue .crit .q { font-family: var(--f-head); font-weight: 600; font-size: 18px; line-height: 1.5; }
+.issue .crit .en { font-family: var(--f-mast); font-style: italic; font-size: 16px; color: var(--muted); }
+@media (max-width: 820px) { .issue { grid-template-columns: 1fr; } }
+
+/* scale bar: which scales an issue spans */
+.scale { display: inline-grid; grid-template-columns: repeat(5, auto); border: 1px solid var(--ink); font-family: var(--f-mono); font-size: 10.5px; letter-spacing: 0.02em; text-transform: none; }
+.scale span { padding: 1px 7px; color: var(--muted); }
+.scale span + span { border-left: 1px solid var(--ink); }
+.scale span.on { background: var(--ink); color: var(--sheet); }
+
+.pairs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--ink); }
+.pairs article { padding: 18px; min-width: 0; display: grid; gap: 8px; align-content: start; }
+.pairs article + article { border-left: 1px solid var(--ink); }
+.pairs .x { font-family: var(--f-mono); font-size: 11.5px; color: var(--red); letter-spacing: 0.04em; }
+.pairs h3 { font-family: var(--f-head); font-weight: 600; font-size: 19px; line-height: 1.45; }
+.pairs p { font-size: 14px; line-height: 1.65; }
+@media (max-width: 820px) { .pairs { grid-template-columns: 1fr; } .pairs article + article { border-left: 0; border-top: 1px solid var(--ink); } }
+
+.board td:first-child { font-family: var(--f-mono); font-weight: 400; font-size: 12px; color: var(--muted); }
+.board td.seed { font-weight: 600; white-space: normal; }
+.board table { min-width: 680px; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+<nav class="tabs" aria-label="지면">
+  <a href="#crit" data-page="crit" aria-current="page">SHEET 1/2 <b>Morning Crit</b></a>
+  <a href="#thesis" data-page="thesis">SHEET 2/2 <b>Thesis Desk</b></a>
+  <a href="../archive.html">ARCHIVE <b>지난 호</b></a>
+</nav>
+
+<main class="sheet" id="page-crit">
+
+  <header class="mast">
+    <div>
+      <h1>Morning Crit</h1>
+      <p class="sub">방구석에서 읽는 런던 건축 조간 — AA Diploma를 준비하는 사람을 위한 오늘의 이슈, 담론, 그리고 크릿 질문</p>
+    </div>
+    <div class="tblock" aria-label="발행 정보">
+      <div><b>Issue</b>No. 008</div>
+      <div><b>Date</b>2026.10.15 THU</div>
+      <div><b>Desk</b>London 마감 10/14</div>
+      <div><b>Read</b>Seoul 아침</div>
+      <div><b>Scale</b>1 : 1</div>
+      <div><b>Rev</b>A</div>
+    </div>
+  </header>
+
+  <!-- LEAD -->
+  <section aria-labelledby="lead-h">
+    <div class="label"><span class="tag">1면</span> 보존 · 재사용 · 시간</div>
+    <div class="lead">
+      <div>
+        <h2 id="lead-h">보존은 “마멀레이드에나 하는 일” — 100세로 세상을 떠난 Donald Insall이 남긴 ‘살아 있는 건물’의 원칙</h2>
+        <p class="deck">영국 보존 건축의 대표적 인물 Sir Donald Insall이 100세로 세상을 떠났다. 그는 건물을 그대로 얼려 두는 preservation과, 건물이 사회와 함께 변하며 계속 쓰이게 하는 conservation을 구별했다. 재사용이 건축의 화두가 된 지금 그 구별이 다시 읽힌다.</p>
+        <div class="body">
+          <p>Architects’ Journal(10월 13일, Josh Butler)과 ArchDaily에 따르면 Insall은 1926년 2월 Bristol에서 태어나 1942년 Royal West of England Academy 건축학교에서 공부를 시작했다. 전쟁 중 Bristol의 역사 건물이 파괴되는 것을 본 것이 보존으로 이끌었고, 1950년 SPAB(Society for the Protection of Ancient Buildings)의 Lethaby 장학생으로 전통 장인들과 일했다. 1958년 런던 Belgrave Square 근처 아파트의 부엌 식탁에서 Donald Insall Associates를 시작했다(AJ). 1968년 Chester 연구는 지금도 쓰이는 보존 관리 원칙을 세웠고, 지방 계획의 conservation officer라는 직책이 생기는 데 기여했다고 AJ는 전한다. 이후 Kelmscott Manor 수리, House of Lords 천장 보존, 1992년 화재 뒤 Windsor Castle 복원을 맡았다. 부고는 10월 11일 그의 사무소가 알렸다(ArchDaily).</p>
+          <p>두 매체가 함께 전하는 것은 그의 용어다. 그는 preservation을 “marmalade에나 하는 일”이라고 농담했고(AJ), 건물이 사회와 함께 변하는 것을 ‘lively continuity’라 불렀으며, 일하는 방식을 “건물 자체와 친구가 되려 한다”로 요약했다(ArchDaily). 2008년 책 <i>Living Buildings</i>가 이 철학을 정리한다. 편집자의 해석을 덧붙이면, 그의 구별은 ‘무엇을 남길까’보다 ‘어떻게 계속 쓰이게 할까’를 먼저 묻는다. 철거와 신축이 기본값이던 시대에 ‘고쳐 쓰기’를 직업으로 만든 사람이 100년을 채우고 떠났다.</p>
+        </div>
+        <div class="stats">
+          <div><strong>100세</strong><span>1926년 2월 Bristol 출생</span></div>
+          <div><strong>1958</strong><span>Donald Insall Associates 설립</span></div>
+          <div><strong>1992</strong><span>화재 뒤 Windsor Castle 복원</span></div>
+        </div>
+        <p class="src">
+          <a href="https://www.architectsjournal.co.uk/news/donald-insall-pioneering-conservationist-architect-dies-aged-100" target="_blank" rel="noopener">Architects’ Journal · Josh Butler · 10.13</a> ·
+          <a href="https://www.archdaily.com/1186771/sir-donald-insall-architect-and-figure-in-modern-architectural-conservation-passes-away-at-100" target="_blank" rel="noopener">ArchDaily · 10.14</a>
+        </p>
+      </div>
+      <div class="side">
+        <aside class="crit big">
+          <span class="k">CRIT · 오늘의 질문</span>
+          <p>건물과 ‘친구가 된다’는 말은 도면으로 어떻게 증명되는가? 지키는 것과 계속 쓰이게 하는 것이 부딪칠 때, 나는 어느 쪽에 선을 긋는가?</p>
+          <ol>
+            <li>서울에서 오래 쓰인 건물 하나를 골라, 지금 평면 위에 ‘바뀐 것 세 가지’와 ‘남은 것 세 가지’를 색을 달리해 표시하기.</li>
+            <li>같은 건물에 내가 하나만 더한다면, 그리고 아무것도 더하지 않고 쓰임만 바꾼다면 어떻게 다른지 스케치 두 장으로 비교하기.</li>
+          </ol>
+        </aside>
+        <aside class="crit" style="margin-top:0">
+          <span class="k">DIPLOMA DESK · 이번 주</span>
+          AA <b>대면 오픈데이는 10월 23일</b>(36 Bedford Square)이고, 대학원 과정 온라인 오픈데이는 11월 3~5일이다(지난 호 기준이며 이번에는 AA 페이지를 다시 확인하지 못했다). 질문 하나를 미리 써 두자. “이 유닛은 지원자의 드로잉을 무엇으로 평가하는가?”
+          <p class="src"><a href="https://www.aaschool.ac.uk/public" target="_blank" rel="noopener">aaschool.ac.uk/public</a></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCOURSE / EUROPE -->
+  <section aria-labelledby="disc-h">
+    <div class="label"><span class="tag" id="disc-h">담론 · 비엔날레 · 유럽 현장</span></div>
+    <div class="grid2">
+      <article class="story">
+        <p class="kicker">Germany · School · Reused material</p>
+        <h3>Wilnsdorf 초등학교 — 철거된 고가교의 콘크리트를 다시 쓴 4,600㎡의 숲속 학교</h3>
+        <p>ArchDaily가 10월 14일 소개한 이 학교는 BUERO BB가 독일 서부 Wilnsdorf의 숲 비탈에 앉힌 초등학교와 체육관이다. 연면적 4,600㎡로 2026년 준공됐다. 구조는 목재, 지역 프리캐스트 콘크리트, 그리고 이 지역에서 철거된 고가교(viaduct)의 콘크리트를 재활용한 재료로 구성된다.</p>
+        <p>소개 글은 이 건물을 지역 재료와 재사용 재료를 쓰는 콤팩트한 건물로 설명한다. 재활용 콘크리트의 비율이나 탄소 수치는 소개 페이지에 나오지 않아 확인하지 못했다. 재사용을 ‘건물을 고치는 일’이 아니라 ‘이웃 인프라를 재료 창고로 보는 일’로 넓혔다는 점이 읽을 만하다.</p>
+        <aside class="crit"><span class="k">CRIT</span>철거된 다리의 콘크리트는 학교의 어느 벽, 어느 바닥이 되었는가? 재료의 출처를 도면 위에 표시한다면 어떤 선으로 그릴 것인가?</aside>
+        <p class="src"><a href="https://www.archdaily.com/1186599/wilnsdorf-primary-school-and-sports-hall-buero-bb" target="_blank" rel="noopener">ArchDaily · 10.14</a></p>
+      </article>
+      <article class="story">
+        <p class="kicker">Brazil · Memorial · Co-design</p>
+        <h3>Brumadinho Memorial — 272명을 기억하는 곳을 유가족과 함께 지었다</h3>
+        <p>ArchDaily(10월 14일)가 소개한 Brumadinho Memorial은 Gustavo Penna Arquitetos Associados(GPAA)가 브라질 Minas Gerais의 Córrego do Feijão 광산 댐 붕괴 현장에 세운 1,220㎡ 규모의 기념 공간이다. 희생자는 272명이고 2024년 준공됐다. 설계는 희생자 가족과 함께 개발됐고, 건축가들은 이곳을 “망각에 맞서는 저항의 장소”라 부른다.</p>
+        <p>프로젝트 정보에는 전망대(mirante), 입구 파빌리온, 인공 호수, 습지, 납골 벽감(loculi)이 올라 있다. 애도와 개인의 이야기 보존, 성찰과 교육이 목표로 소개된다. 소개 페이지는 붕괴 연도나 재료의 세부를 설명하지 않아 그 부분은 확인하지 못했다. 오늘 Thesis Desk의 이태원참사 추모시설 논의와 겹쳐 읽을 수 있다.</p>
+        <aside class="crit"><span class="k">CRIT</span>유가족이 공동 설계자일 때 건축가의 권한은 어디까지인가? 기억하는 건물의 ‘완성’은 누가 선언하는가?</aside>
+        <p class="src"><a href="https://www.archdaily.com/1186835/brumadinho-memorial-gustavo-penna-arquiteto-e-associados" target="_blank" rel="noopener">ArchDaily · 10.14</a></p>
+      </article>
+      <article class="story">
+        <p class="kicker">Brussels · Heritage · Stirling shortlist</p>
+        <h3>Sergison Bates, Ancienne Belgique를 ‘24시간 음악의 집’으로 바꾸는 전략 계획을 맡았다</h3>
+        <p>Architects’ Journal(10월 14일, Josh Butler)에 따르면 Sergison Bates가 Charcoalblue(극장·음향 컨설턴트)와 함께 Brussels의 콘서트홀 Ancienne Belgique의 전략 계획을 수주했다. 발주처는 Flemish 정부이고, 목표는 공연장을 ‘House of Music’, 곧 하루 종일 공연과 창작 행사, 지역 참여를 담는 문화 공간으로 바꾸는 것이다. 동선, 음향, 물류, 기술 인프라를 손본다.</p>
+        <p>이 건물은 중세 상인 회관에서 20세기 초 버라이어티 극장이 되었다가 10년의 개조 끝에 1996년 다시 문을 열었고, Flemish Arts Institution 일곱 곳 중 하나다. Sergison Bates는 올해 Stirling Prize 최종 후보인 Epping Forest의 Fairmead 주택도 설계했으며, 수상작은 오늘(10월 15일) 발표된다.</p>
+        <aside class="crit"><span class="k">CRIT</span>오래된 공연장을 24시간 열면 무엇이 닳는가? 건물의 ‘성격’을 지키는 일은 밤의 시간표에도 적용되는가?</aside>
+        <p class="src"><a href="https://www.architectsjournal.co.uk/news/stirling-prize-finalist-wins-job-to-transform-historic-belgian-music-venue" target="_blank" rel="noopener">Architects’ Journal · 10.14</a></p>
+      </article>
+      <article class="story">
+        <p class="kicker">Latin America · Flood · Public space</p>
+        <h3>물을 위해 땅을 비워 두는 공원 — 라틴아메리카의 ‘침수되는 공원’ 다섯 곳</h3>
+        <p>ArchDaily는 미주개발은행(IDB)을 인용해 홍수가 라틴아메리카·카리브에서 가장 흔한 자연재해라고 전한다. 글이 모은 사례는 Santiago의 Parque Inundable Víctor Jara(Zanjón de la Aguada 약 4.7km를 2013년부터 단계적으로 공원화), Copiapó의 Kaukari 공원(Teodoro Fernández), Temuco의 28헥타르 Isla Cautín 공원, Nogales의 Colosio 제방(Taller Capital), Fortaleza의 Rachel de Queiroz 공원(연못 아홉 개)이다.</p>
+        <p>이 공원들은 폭우 때 물을 받고 평소에는 공공 공간으로 쓰인다. 글은 물 높이에 따라 변하도록 설계해야 하므로 유지관리와 적응적 사용이 장기 운영의 일부라고 짚고, 물을 위해 얼마나 많은 땅을 남겨야 하며 홍수 사이에 어떻게 쓸지가 열린 질문이라고 적는다.</p>
+        <aside class="crit"><span class="k">CRIT</span>1년 중 물이 오는 날은 며칠인가? 나머지 날의 이 땅을 도면에 그리지 않는다면, 그 건축은 무엇을 설계한 것인가?</aside>
+        <p class="src"><a href="https://www.archdaily.com/1186646/making-room-for-water-floodable-parks-in-latin-america" target="_blank" rel="noopener">ArchDaily · 10.14</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="brief-h">
+    <div class="label"><span class="tag" id="brief-h">단신 · 런던 업계</span></div>
+    <ul class="briefs">
+      <li><b>Stirling Prize 2026, 오늘 발표.</b> Architects’ Journal은 10월 14일 「RIBA Stirling Prize 2026: who do the AJ readers want to win?」를 올렸다(제목만 확인). AJ의 다른 기사에 따르면 발표는 10월 15일이다.
+        <p class="src"><a href="https://www.architectsjournal.co.uk/news/riba-stirling-prize-2026-who-do-the-aj-readers-want-to-win" target="_blank" rel="noopener">Architects’ Journal · 10.14 (제목만 확인)</a></p></li>
+      <li><b>배당 선두가 둘로 갈렸다.</b> AJ는 10월 12일 「new joint favourite emerges」라는 제목으로 공동 선두의 등장을 전했다(제목만 확인; 지난 호의 William Hill 배당 기사와 함께 읽는다).
+        <p class="src"><a href="https://www.architectsjournal.co.uk/news/riba-stirling-prize-2026-new-joint-favourite-emerges" target="_blank" rel="noopener">Architects’ Journal · 10.12 (제목만 확인)</a></p></li>
+      <li><b>AJ Small Projects 2027 론칭 파티, Feilden Fowles의 새 Waterloo 공간에서.</b> 소규모 프로젝트 어워드의 새 회차가 시작된다(10.14, 제목만 확인).
+        <p class="src"><a href="https://www.architectsjournal.co.uk/news/aj-small-projects/aj-small-projects-2027-launch-party-to-take-place-at-feilden-fowles-new-waterloo-space" target="_blank" rel="noopener">Architects’ Journal · 10.14 (제목만 확인)</a></p></li>
+      <li><b>학생은 왜 공모전에 나가는가.</b> ArchDaily가 10월 14일 「Learning Through Practice: Why Architecture Students Enter Competitions」를 실었다(제목만 확인). 지원 포트폴리오에 공모전을 넣을지 고민하는 사람에게 참고가 된다.
+        <p class="src"><a href="https://www.archdaily.com/1186680/learning-through-practice-why-architecture-students-enter-competitions" target="_blank" rel="noopener">ArchDaily · 10.14 (제목만 확인)</a></p></li>
+    </ul>
+  </section>
+
+  <!-- CALENDAR -->
+  <section aria-labelledby="cal-h">
+    <div class="label"><span class="tag" id="cal-h">일정 · 런던 시간 기준</span></div>
+    <ul class="cal">
+      <li><span class="d">10.15 THU</span><span class="dd" data-date="2026-10-15"></span><span class="t">RIBA Stirling Prize 2026 발표 · AR Emerging 2026 시상<small>Old Billingsgate. 한국 시각으로는 밤늦게부터 새벽</small></span></li>
+      <li><span class="d">10.16 FRI</span><span class="dd" data-date="2026-10-16"></span><span class="t">Dezeen Awards 2026 투표 마감</span></li>
+      <li><span class="d">10.23 FRI</span><span class="dd" data-date="2026-10-23"></span><span class="t">AA 대면 오픈데이 · 36 Bedford Square</span></li>
+      <li><span class="d">10.26 MON</span><span class="dd" data-date="2026-10-26"></span><span class="t">Oxford Street 일부 구간 차량 통행 중단 · 런던<small>임시 1단계. East 설계, 피드백 수집</small></span></li>
+      <li><span class="d">10.29 THU</span><span class="dd" data-date="2026-10-29"></span><span class="t">이태원참사 4주기 · 정부 주관 추모행사 · 서울<small>검색 결과 기준. 정부 주관으로는 두 번째 행사</small></span></li>
+      <li><span class="d">10.30 FRI</span><span class="dd" data-date="2026-10-30"></span><span class="t">전시 <i>dRMM: Building from Forests</i> 종료 · 런던<small>목구조·숲 기반 건축</small></span></li>
+      <li><span class="d">11.03 TUE</span><span class="dd" data-date="2026-11-03"></span><span class="t">AA 대학원(Taught Postgraduate) 온라인 오픈데이 · 11.03–05<small>같은 날 Zaha Hadid Foundation 재개관 예정(단일 출처)</small></span></li>
+      <li><span class="d">11.29 SUN</span><span class="dd" data-date="2026-11-29"></span><span class="t">스페인 조기 총선 예정<small>주거 법령 부결의 정치적 결과</small></span></li>
+      <li><span class="d">12.04 FRI</span><span class="dd" data-date="2026-12-04"></span><span class="t">London Small Site Design Code 협의 마감<small>GLA 협의 페이지에서 의견 제출</small></span></li>
+      <li><span class="d">2027.05.08</span><span class="dd" data-date="2027-05-08"></span><span class="t">베니스 건축 비엔날레 개막 · <i>Do Architecture</i></span></li>
+    </ul>
+  </section>
+
+<!-- READING MAP --><!-- READING MAP -->
+  <section aria-labelledby="map-h">
+    <div class="label"><span class="tag" id="map-h">읽기 지도 · 매일 / 매주 / 매달</span></div>
+    <p class="mapintro">유명 프로젝트 사진보다 ‘런던 사람들이 무엇을 두고 다투는지’를 알려주는 매체 위주로 골랐다. 위쪽이 매일 훑을 뉴스, 아래로 갈수록 천천히 읽을 비평과 이론이다. 매일 아침 이 신문도 이 지도를 기준으로 기사를 고른다.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>매체</th><th>도시</th><th>주기</th><th>열람</th><th>무엇을 얻나</th></tr></thead>
+        <tbody>
+          <tr class="group"><td colspan="5">매일 · 런던 업계 뉴스</td></tr>
+          <tr><td><a href="https://www.architectsjournal.co.uk/" target="_blank" rel="noopener">Architects’ Journal</a></td><td class="m">London</td><td class="m">daily</td><td><span class="pill pay">유료</span></td><td>영국 업계의 1차 소스. 단독, 교육·고용 조사, 캠페인(탄소, 재사용). 학생 50% 할인</td></tr>
+          <tr><td><a href="https://www.bdonline.co.uk/" target="_blank" rel="noopener">Building Design</a></td><td class="m">London</td><td class="m">daily</td><td><span class="pill pay">유료</span></td><td>AJ의 경쟁지. 정책·공모·사무소 동향, 날 선 칼럼</td></tr>
+          <tr><td><a href="https://www.dezeen.com/" target="_blank" rel="noopener">Dezeen</a></td><td class="m">London</td><td class="m">daily</td><td><span class="pill free">무료</span></td><td>프로젝트 + AI·기술 이슈. 뉴스레터 <i>Dezeen Debate</i>, <i>Dezeen Agenda</i> 구독 추천</td></tr>
+          <tr><td><a href="https://www.theguardian.com/artanddesign/architecture" target="_blank" rel="noopener">The Guardian · Architecture</a></td><td class="m">London</td><td class="m">weekly+</td><td><span class="pill free">무료</span></td><td>Oliver Wainwright의 비평. 영국 대중 담론에서 건축이 어떻게 읽히는지</td></tr>
+          <tr><td><a href="https://www.ribaj.com/" target="_blank" rel="noopener">RIBA Journal</a></td><td class="m">London</td><td class="m">weekly+</td><td><span class="pill free">무료</span></td><td>직능단체 시각, 수상작 해설, 실무 기술</td></tr>
+
+          <tr class="group"><td colspan="5">매주 · 비평과 담론</td></tr>
+          <tr><td><a href="https://www.architectural-review.com/" target="_blank" rel="noopener">The Architectural Review</a></td><td class="m">London</td><td class="m">monthly</td><td><span class="pill part">일부 유료</span></td><td>매호 하나의 주제(도로, 국경, 산업, 미국…)로 건물을 논증의 프리즘으로 쓴다. AA식 브리프와 가장 닮은 편집</td></tr>
+          <tr><td><a href="https://www.e-flux.com/architecture/" target="_blank" rel="noopener">e-flux Architecture</a></td><td class="m">New York / Berlin</td><td class="m">series</td><td><span class="pill free">무료</span></td><td>기후, 기술, 정치를 엮는 연재 에세이. 학교 공개 강연 공지도 여기로 모인다</td></tr>
+          <tr><td><a href="https://thefunambulist.net/" target="_blank" rel="noopener">The Funambulist</a></td><td class="m">Paris</td><td class="m">bimonthly</td><td><span class="pill part">일부 유료</span></td><td>공간과 몸의 정치. 식민, 국경, 감시. 유럽 비판 담론의 핵심</td></tr>
+          <tr><td><a href="https://failedarchitecture.com/" target="_blank" rel="noopener">Failed Architecture</a></td><td class="m">Amsterdam</td><td class="m">irregular</td><td><span class="pill free">무료</span></td><td>도시의 실패와 그 원인을 사회적으로 읽는 글</td></tr>
+          <tr><td><a href="https://placesjournal.org/" target="_blank" rel="noopener">Places Journal</a></td><td class="m">online</td><td class="m">weekly</td><td><span class="pill free">무료</span></td><td>길고 깊은 공공 인문학 에세이. 리서치형 프로젝트의 참고서</td></tr>
+          <tr><td><a href="https://www.drawingmatter.org/" target="_blank" rel="noopener">Drawing Matter</a></td><td class="m">Somerset / London</td><td class="m">weekly</td><td><span class="pill free">무료</span></td><td>건축 드로잉 아카이브와 글. AA 포트폴리오의 ‘드로잉으로 생각하기’ 감각을 키운다</td></tr>
+
+          <tr class="group"><td colspan="5">매달 · 이론과 기관</td></tr>
+          <tr><td><a href="https://www.aaschool.ac.uk/" target="_blank" rel="noopener">AA Public Programme · AA Files</a></td><td class="m">London</td><td class="m">term</td><td><span class="pill free">강연 무료</span></td><td>강연 녹화와 학기별 프로그램. 지원할 학교가 지금 무엇을 말하는지 가장 직접적으로 보여준다</td></tr>
+          <tr><td><a href="https://www.architecturefoundation.org.uk/" target="_blank" rel="noopener">The Architecture Foundation</a></td><td class="m">London</td><td class="m">events</td><td><span class="pill free">무료</span></td><td>런던 독립 건축 기관의 토크, 신진 건축가 프로그램</td></tr>
+          <tr><td><a href="https://forensic-architecture.org/" target="_blank" rel="noopener">Forensic Architecture</a></td><td class="m">London</td><td class="m">projects</td><td><span class="pill free">무료</span></td><td>건축 기법을 증거·조사에 쓰는 Goldsmiths 기반 리서치 에이전시</td></tr>
+          <tr><td><a href="https://www.archplus.net/" target="_blank" rel="noopener">ARCH+</a></td><td class="m">Berlin</td><td class="m">quarterly</td><td><span class="pill pay">유료</span></td><td>독일어권 이론지. 주거, 공유재, 도시 정치</td></tr>
+          <tr><td><a href="https://www.oasejournal.nl/" target="_blank" rel="noopener">OASE</a></td><td class="m">Rotterdam</td><td class="m">2× / yr</td><td><span class="pill part">아카이브 공개</span></td><td>네덜란드·벨기에 학계의 설계 이론</td></tr>
+          <tr><td><a href="https://www.cca.qc.ca/" target="_blank" rel="noopener">CCA</a></td><td class="m">Montréal</td><td class="m">essays</td><td><span class="pill free">무료</span></td><td>리서치 전시와 온라인 에세이. 아카이브 기반 사고의 모범</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ROUTINE -->
+  <section aria-labelledby="rt-h">
+    <div class="label"><span class="tag" id="rt-h">읽는 법 · 아침 15분</span></div>
+    <div class="routine">
+      <div><span class="mono">05 MIN · 훑기</span><p>1면과 단신만 읽는다. 사람 이름, 사무소, 기관 이름을 하나씩 기억해 두면 한 달 뒤 런던 건축계의 지도가 그려진다.</p></div>
+      <div><span class="mono">07 MIN · 하나 깊게</span><p>기사 하나를 골라 원문 링크로 들어간다. 매일 바꾸기보다 한 주에 한 주제(AI, 재사용, 주거, 교육)를 정해 따라가면 담론의 흐름이 보인다.</p></div>
+      <div><span class="mono">03 MIN · 크릿 노트</span><p>빨간 박스의 질문에 세 줄로 답한다. 쌓인 답이 Diploma 지원서의 statement와 포트폴리오 서문의 재료가 된다.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Morning Crit No. 008 · 2026년 10월 15일 목요일. 기사 요약은 각 매체 원문에 근거하며, 유료 기사는 공개된 범위만 인용했다. 이번 호는 ArchDaily, Architects’ Journal, Al Jazeera, 정책브리핑을 직접 열어 확인했고, Dezeen(403)과 The Guardian(도구 차단)은 원문을 열지 못했다. AA 일정은 지난 호 기준이다. 제목만 확인한 단신은 본문에 표시했다. 판단과 크릿 질문은 편집자 몫이다.</p>
+    <p>매일 아침 새 호가 이 페이지에 발행된다.</p>
+  </footer>
+</main>
+
+<!-- ═════════════ SHEET 2 · THESIS DESK ═════════════ -->
+<main class="sheet" id="page-thesis" hidden>
+
+  <header class="mast">
+    <div>
+      <h1>Thesis Desk</h1>
+      <p class="sub">졸업전시 주제를 찾는 지면 — 건축 밖의 국내·해외 이슈를 골라, 그것이 어디서 일어나고 어떤 도면으로 그려질 수 있는지까지 번역한다</p>
+    </div>
+    <div class="tblock" aria-label="발행 정보">
+      <div><b>Sheet</b>2 / 2</div>
+      <div><b>Date</b>2026.10.15 THU</div>
+      <div><b>Desk</b>국내 2 · 해외 2</div>
+      <div><b>Mode</b>Issue → Drawing</div>
+      <div><b>Scale</b>1:1 — 1:500,000</div>
+      <div><b>Rev</b>A</div>
+    </div>
+  </header>
+
+  <section aria-labelledby="method-h">
+    <div class="label"><span class="tag" id="method-h">번역의 순서</span> 이슈가 건축이 되기까지</div>
+    <div class="method">
+      <div><span class="mono">1 · FACT</span><strong>사실</strong><p>숫자와 출처로 확인된 사건. 감상이 아니라 기록에서 출발한다.</p></div>
+      <div><span class="mono">2 · SITE</span><strong>장소</strong><p>그 일이 실제로 일어나는 곳. 방, 복도, 논밭, 변전소, 해저.</p></div>
+      <div><span class="mono">3 · MOVE</span><strong>개입</strong><p>건축이 바꿀 수 있는 하나의 조건. 프로그램, 경계, 재료, 시간.</p></div>
+      <div><span class="mono">4 · DRAWING</span><strong>재현</strong><p>그 생각을 증명하는 도면의 형식. 단면, 지도, 시간축, 인벤토리.</p></div>
+    </div>
+  </section>
+
+    <section aria-labelledby="dom-h">
+    <div class="label"><span class="tag" id="dom-h">국내</span> 한국 사회에서 지금 공간이 된 문제</div>
+    <div class="issues">
+
+      <article class="issue">
+        <header>
+          <div class="meta"><span class="region">국내 · 기억 / 추모</span><span class="scale" aria-label="스케일"> <span>몸</span><span class="on">방</span><span class="on">건물</span><span class="on">도시</span><span>영토</span></span></div>
+          <h3>이태원참사 4주기를 앞두고 추모시설과 아카이브 정책연구가 공유됐다: 지금 기억의 방은 사무 빌딩 안에 있다</h3>
+        </header>
+        <div class="facts">
+          <p>한성숙 국무총리는 10월 14일 정부서울청사에서 이태원참사 희생자 추모위원회 회의를 주재했고(노컷뉴스는 제3차 회의로 전한다), 4주기 추모행사 준비 상황과 함께 추모시설 조성·아카이브 구축을 위한 정책연구 추진 현황이 공유됐다. 회의 뒤 총리와 위원들은 서울 종로구 적선현대빌딩에 있는 기억·소통공간 ‘별들의 집’을 찾아 유가족 간담회를 열었다. 총리는 “국가의 이름으로 희생자를 추모하고 유가족을 위로하겠다”고 했고, 유가족은 “관심 갖고 이야기 들어주는 것이 큰 위로”라며 목소리에 귀 기울여 달라고 했다. 추모시설의 위치·규모와 아카이브의 구체적 계획은 두 기사 모두 밝히지 않아 확인하지 못했다. 4주기 행사는 정부가 주관하는 두 번째 행사다.</p>
+          <div class="figs"><div><strong>160명</strong><span>희생자 수 (뉴스1 제목 기준)</span></div><div><strong>4주기</strong><span>10·29 참사</span></div><div><strong>2번째</strong><span>정부 주관 4주기 추모행사 (노컷뉴스)</span></div></div>
+          <p class="src"><a href="https://www.news1.kr/politics/president/6320196" target="_blank" rel="noopener">뉴스1 · 10.14</a> · <a href="https://nocutnews.co.kr/news/6591588" target="_blank" rel="noopener">노컷뉴스 · 10.14</a> · <a href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785197" target="_blank" rel="noopener">정책브리핑 · 국무조정실 · 10.14 (제목만 확인)</a></p>
+        </div>
+        <dl class="translate">
+          <dt>장소</dt><dd>서울 종로구 적선현대빌딩 안의 ‘별들의 집’. 일반 사무 빌딩 한 곳에 놓인 기억 공간이고, 영구 추모시설의 자리는 아직 정해지지 않았다.</dd><dt>개입</dt><dd>‘임시’에서 ‘영구’로 가는 중간 단계를 설계한다. 사무 빌딩 안의 방이 가진 것(방문 습관, 유가족의 손길)을 영구 시설이 어떻게 이어받는지를 단계별 조건으로 정한다.</dd><dt>재현</dt><dd>별들의 집 평면과 후보지 평면을 같은 축척으로 겹친 비교도, 160명 한 사람씩의 기록이 쌓이는 아카이브를 방 단위로 나눈 인벤토리 단면, 방문 시간대별 이용 시간축.</dd><dt>참고</dt><dd>Brumadinho Memorial(Gustavo Penna Arquitetos Associados, 오늘 1면), Maya Lin의 Vietnam Veterans Memorial, Peter Eisenman의 Memorial to the Murdered Jews of Europe.</dd>
+        </dl>
+        <aside class="crit"><span class="k">THESIS Q</span><span class="q">임시로 시작한 기억의 방은 언제, 무엇을 가지고 영구한 건물이 되는가?</span><span class="en">When does a room of remembrance that began as temporary become a permanent building, and what does it carry over?</span></aside>
+      </article>
+
+      <article class="issue">
+        <header>
+          <div class="meta"><span class="region">국내 · 노동 / 특구</span><span class="scale" aria-label="스케일"> <span>몸</span><span>방</span><span class="on">건물</span><span class="on">도시</span><span class="on">영토</span></span></div>
+          <h3>‘다른 규칙의 구역’을 만드는 메가특구 노동특례: 노사정 실무협의가 3주째, 구역 안의 시계는 누가 정하는가</h3>
+        </header>
+        <div class="facts">
+          <p>고용노동부는 9월 22일 가칭 메가특구특별법의 노동 특례를 다루는 노사정 사회적 대화를 시작했고, 10월 8일 3차 실무협의가 열렸다. 경영계(경총)는 고소득·연구직에 주 52시간 예외, 기간제 사용 기간 연장, 파견 가능 업무 확대를 제안했다. 노동계(민주노총)는 예외가 노동 규제를 무너뜨릴 것이라며 반대하고 주 4.5일제 적용, 비정규직 사용 사유 제한, 기업 이익의 사회 환원을 요구했다. 정부의 구체적 입장은 기사에 나오지 않았고, 4차 회의는 14일 오후 4시로 예정되어 있어 결과를 확인하지 못했다. 특구가 어느 지역인지도 두 기사 모두 설명하지 않았다.</p>
+          <div class="figs"><div><strong>9.22</strong><span>1차 실무협의체</span></div><div><strong>10.8</strong><span>3차 실무협의</span></div><div><strong>주 52시간 · 4.5일제</strong><span>쟁점이 된 두 기준</span></div><div><strong>10.14</strong><span>4차 회의 예정 (결과 미확인)</span></div></div>
+          <p class="src"><a href="https://supple.kr/news/cmuzkuwrj003ztmkyvttakkz9" target="_blank" rel="noopener">서플 · 3차 실무협의 · 10월 (검색 결과 기준, 2등급)</a> · <a href="https://www.dailian.co.kr/news/view/1697615" target="_blank" rel="noopener">데일리안 · 2차 실무회의 (검색 결과 기준, 2등급)</a> · <a href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785222" target="_blank" rel="noopener">정책브리핑 · 고용노동부 · 10.14 (제목만 확인)</a></p>
+        </div>
+        <dl class="translate">
+          <dt>장소</dt><dd>특구로 지정될 구역 안의 공장·연구소·사무실. 지역은 확인되지 않았으므로 지도 대신 한 건물 안의 층과 방에서 출발한다.</dd><dt>개입</dt><dd>한 건물 안에서 서로 다른 시간 규칙이 겹칠 때 필요한 것을 설계한다. 예외가 적용되는 층과 아닌 층의 출입, 휴게 공간, 식당과 계단의 문턱.</dd><dt>재현</dt><dd>24시간 축 위에 건물 단면을 올려 층별 점유 시간을 표시한 시간 단면, 특구 경계와 통근 동선을 겹친 지도.</dd><dt>참고</dt><dd>Keller Easterling의 <i>Extrastatecraft</i>(자유 구역의 공간 규칙), Archizoom의 <i>No-Stop City</i>(멈추지 않는 실내).</dd>
+        </dl>
+        <aside class="crit"><span class="k">THESIS Q</span><span class="q">법이 다른 구역의 경계는 건물 안 어디에 그어지는가?</span><span class="en">Where inside a building is the border of a zone with different laws drawn?</span></aside>
+      </article>
+
+    </div>
+  </section>
+
+  <section aria-labelledby="int-h">
+    <div class="label"><span class="tag" id="int-h">해외</span> 세계가 지금 다투는 땅</div>
+    <div class="issues">
+
+      <article class="issue">
+        <header>
+          <div class="meta"><span class="region">해외 · 중동 · 식량 / 해협</span><span class="scale" aria-label="스케일"> <span>몸</span><span>방</span><span class="on">건물</span><span class="on">도시</span><span class="on">영토</span></span></div>
+          <h3>비료가 지나가는 하루 다섯 척의 문: UN이 호르무즈 비료 통로 개설을 촉구했다</h3>
+        </header>
+        <div class="facts">
+          <p>Al Jazeera와 Reuters(10월 14일)에 따르면 UN 사무차장 Jorge Moreira da Silva는 방콕의 IMF·세계은행 회의에서 Iran과 미국이 몇 주 안에 합의하는 것이 “절대적으로 중요하다”고 말했다. 3월에 마련된 UN 지원 체계는 양측이 동의하면 7~10일 안에 가동되고, Oman에 UN 직원이 상주하는 조정센터를 두어 선박을 등록하고 안전 통과를 감독한다. 그는 하루 다섯 척만 지나도 꼭 필요한 나라에 비료가 이어질 수 있다고 했다. 전쟁 이전 요소 수송의 약 3분의 1, 해상 수송 황(sulphur)의 거의 절반이 이 해협을 지났다. 반면 IFPRI는 해협을 지나는 화물에서 비료가 차지하는 비중이 “아주 작다”고 밝혔다. 6월의 잠정 휴전이 깨진 뒤 양측은 중개자를 통해 제안을 주고받았으나, Tehran의 조건과 핵 문제를 처음부터 다루자는 Washington의 주장으로 교착 상태다. 두 당사국의 직접 발언은 이 기사에서 확인하지 못했다.</p>
+          <div class="figs"><div><strong>5척/일</strong><span>비료 흐름 유지에 필요하다는 통과량</span></div><div><strong>7~10일</strong><span>합의 후 체계 가동 기간</span></div><div><strong>약 1/3</strong><span>전쟁 전 해협을 지난 요소 비중</span></div><div><strong>약 1/2</strong><span>전쟁 전 해협을 지난 해상 황 비중</span></div></div>
+          <p class="src"><a href="https://www.aljazeera.com/news/2026/10/14/un-official-warns-of-looming-food-crisis-as-hormuz-fertiliser-plan-stalls" target="_blank" rel="noopener">Al Jazeera · Reuters · 10.14</a></p>
+        </div>
+        <dl class="translate">
+          <dt>장소</dt><dd>Oman의 조정센터, 걸프 항만의 적재 부두, 그리고 비료를 받는 나라의 항구 창고와 농협·조합 창고. 해협에서 논밭까지의 한 줄.</dd><dt>개입</dt><dd>배가 드물게, 그러나 제때 오는 것을 전제로 한 창고를 설계한다. 파종 달력에 맞춰 비료를 쌓고 내보내는 완충 저장과 출고 순서.</dd><dt>재현</dt><dd>파종 달력 위에 해협 통과 척수를 겹친 시간축, 걸프 항-수입항-창고-논을 잇는 경로 지도, 재고 높이가 계절에 따라 변하는 창고 단면.</dd><dt>참고</dt><dd>Allan Sekula의 <i>Fish Story</i>, Deborah Cowen의 <i>The Deadly Life of Logistics</i>, Keller Easterling의 <i>Extrastatecraft</i>.</dd>
+        </dl>
+        <aside class="crit"><span class="k">THESIS Q</span><span class="q">좁은 바닷길이 닫혔을 때, 농사의 달력은 어떤 창고에 저장되는가?</span><span class="en">When a narrow sea lane closes, in which warehouse is the farming calendar stored?</span></aside>
+      </article>
+
+      <article class="issue">
+        <header>
+          <div class="meta"><span class="region">해외 · 지중해 · 이주 / 구조</span><span class="scale" aria-label="스케일"> <span>몸</span><span class="on">방</span><span class="on">건물</span><span class="on">도시</span><span class="on">영토</span></span></div>
+          <h3>연료비가 두 배가 된 구조선: 스페인 NGO가 중부 지중해 임무를 내년으로 미뤘다</h3>
+        </header>
+        <div class="facts">
+          <p>Al Jazeera와 Reuters(10월 14일)에 따르면 스페인 NGO Salvamento Marítimo Humanitario는 어선을 개조한 구조선의 다음 중부 지중해 임무를 연료비 상승 때문에 내년으로 미룬다고 밝혔다. 연료 값이 두 배가 되어 활동을 Valencia 인근 해역으로 옮겼고 모금 캠페인을 시작했다. 다른 스페인 NGO Open Arms도 연료비와, 구조선에 이탈리아 북부 항구를 배정하는 정책 때문에 임무를 줄여 왔다. 스페인에서 출발하면 활동 해역까지 2~3일이 걸린다. 이탈리아의 우파 정부는 인도적 구조가 이주민의 건너기 시도를 부추긴다고 주장한다. 스페인 정부의 입장은 기사에 나오지 않았다. IOM 보고를 인용하면 올해 배로 유럽에 닿은 이주민·난민은 약 6만 명으로 지난해 같은 기간 약 9만 8천 명보다 39% 적고, 최소 2,292명이 숨지거나 실종됐다.</p>
+          <div class="figs"><div><strong>2배</strong><span>구조선 연료 값</span></div><div><strong>2~3일</strong><span>스페인에서 활동 해역까지</span></div><div><strong>약 6만</strong><span>올해 배로 유럽에 닿은 사람 (IOM)</span></div><div><strong>2,292명</strong><span>올해 사망·실종 (최소, IOM)</span></div></div>
+          <p class="src"><a href="https://www.aljazeera.com/news/2026/10/14/spanish-ngo-halts-mediterranean-rescue-operations-citing-fuel-prices" target="_blank" rel="noopener">Al Jazeera · Reuters · 10.14</a></p>
+        </div>
+        <dl class="translate">
+          <dt>장소</dt><dd>구조선의 갑판과 선실, Valencia와 이탈리아 북부 항구 사이의 해역, 그리고 배정된 하선 항구의 부두.</dd><dt>개입</dt><dd>구조선을 ‘건물’로 보고 항구 배정과 연료 보급을 같은 시스템의 조건으로 설계한다. 구조 지점에서 배정 항구까지의 거리가 갑판의 수용·의료 공간을 정한다.</dd><dt>재현</dt><dd>구조 지점→배정 항구 거리·연료·일수를 겹친 해도, 구조선 갑판의 1:50 평면(수용 인원별), 연료비가 갑판 면적으로 환산되는 비교표.</dd><dt>참고</dt><dd>Forensic Oceanography(Charles Heller, Lorenzo Pezzani)의 <i>Mare Clausum</i>, Forensic Architecture의 해상 조사.</dd>
+        </dl>
+        <aside class="crit"><span class="k">THESIS Q</span><span class="q">항구가 멀어질 때, 구조선의 갑판은 어떤 도면이 되는가?</span><span class="en">When the port moves farther away, what drawing does a rescue ship’s deck become?</span></aside>
+      </article>
+
+    </div>
+  </section>
+
+  <section aria-labelledby="pair-h">
+    <div class="label"><span class="tag" id="pair-h">겹쳐 읽기</span> 두 이슈를 하나의 졸업 주제로</div>
+    <div class="pairs">
+      <article>
+        <span class="x">이태원 추모시설 × 지중해 구조선</span>
+        <h3>이름이 있는 기억, 숫자로 남는 죽음</h3>
+        <p>한쪽은 160명을 한 사람씩 기억하려는 방이고, 다른 쪽은 2,292명이 숫자로 집계되는 바다다. 같은 ‘기억의 단위’를 두 장소의 평면에 올려, 누구의 이름이 어떤 벽에 적히는지를 비교하는 프로젝트.</p>
+      </article>
+      <article>
+        <span class="x">메가특구 노동특례 × 호르무즈 비료</span>
+        <h3>달력이 다른 구역, 좁은 문</h3>
+        <p>한쪽은 건물 안에서 근무시간 규칙이 갈리는 구역이고, 다른 쪽은 하루 다섯 척만 지나는 해협이다. 두 장소를 ‘누가, 언제, 어디를 지나갈 수 있는가’라는 하나의 시간 도면으로 그려 문턱의 설계를 묻는다.</p>
+      </article>
+      <article>
+        <span class="x">이태원 추모시설 × 메가특구 노동특례</span>
+        <h3>임시와 예외의 방</h3>
+        <p>사무 빌딩 안에 임시로 놓인 기억의 방과, 법의 예외로 정해진 구역은 둘 다 ‘잠정’이 ‘영구’가 되는 순간을 묻는다. 층 하나가 그 순간을 어떻게 견디는지, 시간별 평면 세 장으로 그리는 프로젝트.</p>
+      </article>
+    </div>
+  </section>
+
+<section aria-labelledby="board-h" class="board">
+    <div class="label"><span class="tag" id="board-h">주제 후보 보드</span> 매일 쌓이는 졸업전시 씨앗</div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>날짜</th><th>씨앗</th><th>스케일</th><th>도면 형식</th><th>연결 이슈</th></tr></thead>
+        <tbody>
+          <tr><td>10.15</td><td class="seed">임시로 시작한 기억 — 사무 빌딩 한 층의 기억공간이 영구 시설로 자라는 이행</td><td>방 → 도시</td><td>층 평면 이행 단계 시간축, 160명 기록 인벤토리</td><td>이태원 추모시설·아카이브</td></tr>
+          <tr><td>10.15</td><td class="seed">구역 안의 시계 — 노동 특례 구역 건물의 층별 시간표와 문턱</td><td>건물 → 영토</td><td>24시간 층별 점유 단면, 특구 경계 × 통근 지도</td><td>메가특구 노동특례</td></tr>
+          <tr><td>10.15</td><td class="seed">하루 다섯 척의 창고 — 좁은 해협 통과량에 맞춘 비료 완충 저장</td><td>건물 → 영토</td><td>파종 달력 × 통과량 시간축, 창고 단면</td><td>호르무즈 비료 통로</td></tr>
+          <tr><td>10.15</td><td class="seed">배정된 항구까지 — 구조선의 거리와 연료를 설계 조건으로</td><td>방 → 영토</td><td>구조 지점-배정 항구 거리 해도, 갑판 1:50 평면</td><td>지중해 구조선 연료비</td></tr>
+          <tr><td>10.14</td><td class="seed">빈 방의 치수 바꾸기 — 아이의 키로 지은 어린이집을 어르신 회복실로 다시 맞추는 개조</td><td>몸 → 건물</td><td>1:20 치수 겹침 평면, 퇴원→귀가 동선</td><td>빈 어린이집 주거-돌봄</td></tr>
+          <tr><td>10.14</td><td class="seed">연기의 방 — 연무 철에만 켜지는 양압 공용실과 학교 체육관</td><td>방 → 도시</td><td>도시 단면 × AQI 시간축, 1:50 환기 평면</td><td>동남아 연무</td></tr>
+          <tr><td>10.14</td><td class="seed">열린 만큼만 여는 부두 — 계절 항로를 따라 열고 접히는 항만</td><td>도시 → 영토</td><td>항로 비교 지도, 연간 가동 시간축</td><td>북극항로 시범운항</td></tr>
+          <tr><td>10.14</td><td class="seed">빈 청사의 순서 — 이전 후 서울 청사의 층을 시기를 나눠 돌려주는 시간표</td><td>건물 → 도시</td><td>층별 점유 단면, 이전 타임라인</td><td>중앙행정기관 세종 이전</td></tr>
+          <tr><td>10.13</td><td class="seed">마지막 종이 울린 뒤 — 폐교 한 곳을 열 번에 나눠 마을에 돌려주는 순서</td><td>건물 → 도시</td><td>10년 단위 겹침 평면, 용도 이양 타임라인</td><td>폐교 58곳</td></tr>
+          <tr><td>10.13</td><td class="seed">가장 큰 방의 두 번째 삶 — 강당·급식실 같은 큰 방의 전용 사례집</td><td>방 → 건물</td><td>같은 축척 큰 방 단면 비교</td><td>폐교, 대형마트 폐점</td></tr>
+          <tr><td>10.12</td><td class="seed">두 번째 학기의 상가 — 문 닫은 대학가 점포를 유학생의 언어 교실·공동 부엌으로</td><td>방 → 건물</td><td>캠퍼스-원룸-상가 지도, 점포 설비 인벤토리</td><td>유학생 이탈, 자영업 폐업</td></tr>
+          <tr><td>10.12</td><td class="seed">일터 옆의 잠 — 농가 외국인 노동자 숙소와 수수료 흐름을 한 건물에</td><td>방 → 건물</td><td>숙소-일터 동선 지도, 수수료 흐름도, 1:50 평면</td><td>농가 외국인 의존 70%</td></tr>
+          <tr><td>10.12</td><td class="seed">대피의 높이 — 홍수 도착 시간을 건물 단면에 넣는 마을 단위 높은 바닥</td><td>건물 → 도시</td><td>홍수선 단면, 대피 시간 등고선 지도</td><td>네팔 Budhi Gandaki 홍수</td></tr>
+          <tr><td>10.12</td><td class="seed">물을 따라가는 시간표 — 계절에만 열리고 접히는 국경의 급수 거점</td><td>도시 → 영토</td><td>물 지점 계절 지도, 이동 시간축</td><td>앙골라-나미비아 가뭄 이동</td></tr>
+          <tr><td>10.10</td><td class="seed">문 닫은 뒤의 마당 — 폐교의 운동장과 강당을 마을의 공공 바닥으로 남기는 전환</td><td>건물 → 영토</td><td>매각/보유 폐교 지도, 교실-주거 전환 평면</td><td>폐교 4,037곳</td></tr>
+          <tr><td>10.10</td><td class="seed">빈 것들의 장부 — 빈집과 빈 건축물을 한 장의 읍 단위 인벤토리로</td><td>건물 → 영토</td><td>빈집·빈 건축물 figure-ground, 재료 인벤토리</td><td>빈집 13.4만, 빈 건축물 6.1만</td></tr>
+          <tr><td>10.10</td><td class="seed">문턱의 건물 — 철거와 수용 사이에서 짧게 머무는 해체 가능한 구조</td><td>방 → 도시</td><td>천막 배치 × 버스 동선 지도, 1:20 상세</td><td>세우타 캠프 철거</td></tr>
+          <tr><td>10.07</td><td class="seed">빈 집의 장부 — 불 꺼진 공공임대를 돌봄·공유 공간으로 바꾸는 단지 전환</td><td>방 → 도시</td><td>공가 입면도, 호당 임대료 환산 인벤토리</td><td>공공임대 빈집 2.2만 호</td></tr>
+          <tr><td>10.07</td><td class="seed">연계의 거리 — 속초와 경산 사이, 돌봄이 닿는 길의 건축</td><td>방 → 영토</td><td>신청→연계 동선 지도, 센서 가시 영역 평면</td><td>통합돌봄 4배 격차</td></tr>
+          <tr><td>10.07</td><td class="seed">존재 증명 도면 — 수몰 예정 마을이 직접 그리는 가옥대장</td><td>방 → 영토</td><td>8·9·18곳 수몰선 겹침 지도, 1:500 가옥 도면</td><td>Polavaram 댐</td></tr>
+          <tr><td>10.07</td><td class="seed">머무를 권리의 두께 — 거주 연수가 쌓이는 건물, 계약 단면도</td><td>방 → 건물</td><td>층별 소유·계약·거주 연수 단면, 월세 타임라인</td><td>스페인 주거 법령, 퇴거</td></tr>
+          <tr><td>10.06</td><td class="seed">큰 지붕 아래 동네 — 폐점 마트를 철거하지 않는 공공 실내</td><td>건물 → 도시</td><td>카트 동선 평면 × 새 프로그램, 49층 안과 나란한 단면</td><td>홈플러스 폐점</td></tr>
+          <tr><td>10.06</td><td class="seed">365일의 학교 — 남는 교실과 비는 시간을 맞물린 돌봄 건축</td><td>방 → 도시</td><td>365일 시간-장소 지도, 시간대별 개폐 평면</td><td>돌봄 60일, 학교 반토막</td></tr>
+          <tr><td>10.06</td><td class="seed">강의 장부 — 광산에서 수도꼭지까지 한 유역의 관측 네트워크</td><td>도시 → 영토</td><td>광물 경로 지도, 비소 농도 종단면</td><td>미얀마 광산, 태국 강</td></tr>
+          <tr><td>10.06</td><td class="seed">항적의 건축 — 어선과 위치추적이 만드는 바다의 경계</td><td>몸 → 영토</td><td>항적 해도, 어선 1:20 단면</td><td>베트남 어민, 분쟁 해역</td></tr>
+          <tr><td>10.06</td><td class="seed">열의 시민권 — 노동하는 몸을 위한 그늘 인프라</td><td>몸 → 도시</td><td>24시간 열 노출 단면</td><td>폭염 역설, 유럽 폭염</td></tr>
+          <tr><td>10.06</td><td class="seed">더하지 않는 건축 — 빈집 n채로 만드는 분산 시설</td><td>건물 → 영토</td><td>빈집 figure-ground, 재료 인벤토리</td><td>빈집, 지방소멸</td></tr>
+          <tr><td>10.06</td><td class="seed">기척의 주거 — 고립을 줄이는 사이 공간</td><td>몸 → 건물</td><td>마주침 평면, 누출 단면</td><td>고독사, 은둔 청년</td></tr>
+          <tr><td>10.06</td><td class="seed">클라우드의 지층 — 데이터에서 광물까지 하나의 단면</td><td>건물 → 영토</td><td>물질 경로 단면</td><td>데이터센터, 심해 채굴</td></tr>
+          <tr><td>10.06</td><td class="seed">첫 번째 선 — 주민이 그리는 재건 프로토콜</td><td>건물 → 영토</td><td>마스터플랜 × 기억 지도</td><td>가자 재건</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p>Thesis Desk · Morning Crit No. 008 · 2026년 10월 15일. 사실은 각 출처에 근거했고, 일부 출처는 검색 결과로 노출된 범위(2등급)만 확인했으며 본문에 표시했다. 장소·개입·재현과 질문은 졸업전시 탐색을 위한 편집자의 제안이다. 민감한 분쟁·정치 이슈는 확인 가능한 입장을 함께 붙였고, 확인하지 못한 입장은 그렇다고 적었다.</p>
+    <p>매일 아침 1면과 함께 갱신되며, 주제 후보 보드에는 새 씨앗이 추가된다.</p>
+  </footer>
+</main>
+
+<script>
+(function () {
+  var DAY = 86400000;
+  function kstMidnight(d) {
+    var k = new Date(d.getTime() + 9 * 3600000);
+    return Date.UTC(k.getUTCFullYear(), k.getUTCMonth(), k.getUTCDate());
+  }
+  var today = kstMidnight(new Date());
+  document.querySelectorAll('.dd[data-date]').forEach(function (el) {
+    var p = el.getAttribute('data-date').split('-');
+    var target = Date.UTC(+p[0], +p[1] - 1, +p[2]);
+    var n = Math.round((target - today) / DAY);
+    el.textContent = n > 0 ? 'D-' + n : (n === 0 ? '오늘' : '지남');
+    if (n >= 0 && n <= 3) el.classList.add('soon');
+  });
+
+  var pages = { crit: document.getElementById('page-crit'), thesis: document.getElementById('page-thesis') };
+  var tabs = document.querySelectorAll('.tabs a[data-page]');
+  function show(name, scroll) {
+    if (!pages[name]) name = 'crit';
+    Object.keys(pages).forEach(function (k) { pages[k].hidden = (k !== name); });
+    tabs.forEach(function (t) {
+      if (t.getAttribute('data-page') === name) t.setAttribute('aria-current', 'page');
+      else t.removeAttribute('aria-current');
+    });
+    if (scroll) window.scrollTo(0, 0);
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function (e) {
+      e.preventDefault();
+      var name = t.getAttribute('data-page');
+      try { history.replaceState(null, '', '#' + name); } catch (err) {}
+      show(name, true);
+    });
+  });
+  window.addEventListener('hashchange', function () { show(location.hash.slice(1), true); });
+  show(location.hash.slice(1), false);
+})();
+</script>
+
+</body></html>
+</body>
+</html>
