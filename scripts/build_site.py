@@ -4,7 +4,7 @@
 Usage:  python3 scripts/build_site.py [source/morning-crit.html]
 
 Writes:
-  index.html              today's issue (both sheets) + archive tab
+  index.html              today's issue (every sheet) + archive tab
   issues/YYYY-MM-DD.html  permanent copy of the issue (YYYY-MM-DD-NNN.html when
                           a second issue shares that date)
   issues/index.json       issue metadata, newest first
@@ -22,38 +22,82 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE_URL = "https://uphillpark.github.io/Morning-Crits/"
 
 
+def tblock(main):
+    out = {}
+    tb = main.find(class_="tblock") if main else None
+    if tb:
+        for cell in tb.find_all("div", recursive=False):
+            b = cell.find("b")
+            if b:
+                key = b.get_text(strip=True).lower()
+                b.extract()
+                out[key] = cell.get_text(" ", strip=True)
+    return out
+
+
+def thesis_chip(thesis):
+    """Short topic tags for sheet 2, from each issue card's region label."""
+    tags = []
+    for r in thesis.select("article.issue .region") if thesis else []:
+        parts = [x.strip() for x in r.get_text(" ", strip=True).split("·")]
+        tag = parts[1].split("/")[0].strip() if len(parts) > 1 else parts[0]
+        if tag and tag not in tags:
+            tags.append(tag)
+    return " · ".join(tags[:4])
+
+
 def read_meta(src):
     soup = BeautifulSoup(src, "html.parser")
-    crit = soup.find(id="page-crit")
-    thesis = soup.find(id="page-thesis")
-
-    def tblock(main):
-        out = {}
-        tb = main.find(class_="tblock") if main else None
-        if tb:
-            for cell in tb.find_all("div", recursive=False):
-                b = cell.find("b")
-                if b:
-                    key = b.get_text(strip=True).lower()
-                    b.extract()
-                    out[key] = cell.get_text(" ", strip=True)
-        return out
-
-    t1 = tblock(crit)
+    sheets = soup.select("main.sheet[id^=page-]")
+    if not sheets:
+        sys.exit("Source has no sheets.")
+    first = sheets[0]
+    by_id = {m["id"][len("page-"):]: m for m in sheets}
+    t1 = tblock(first)
     m = re.search(r"(\d{4})\.(\d{2})\.(\d{2})", t1.get("date", ""))
     if not m:
-        sys.exit("Could not read the issue date from the SHEET 1 title block.")
+        sys.exit("Could not read the issue date from the first sheet's title block.")
     date = "-".join(m.groups())
     num = re.search(r"\d+", t1.get("issue", "") or "0")
-    lead = crit.find("h2")
-    crit_q = crit.select_one("aside.crit.big p")
+    lead = first.find("h2")
+    crit_q = first.select_one("aside.crit.big p")
+    thesis = by_id.get("thesis")
     issues = [h.get_text(" ", strip=True) for h in thesis.select("article.issue h3")] if thesis else []
+
+    chips = {}
+    if thesis:
+        chips["thesis"] = thesis_chip(thesis)
+    sym = by_id.get("symposium")
+    if sym is not None and sym.get("data-day"):
+        chips["symposium"] = "DAY " + sym["data-day"].zfill(2) + " · " + sym.get("data-title", "")
+    unit = by_id.get("unit")
+    if unit is not None and unit.get("data-unit"):
+        chips["unit"] = unit.get("data-school", "") + " " + unit["data-unit"] + " · " + unit.get("data-concept", "")
+    screen = by_id.get("screen")
+    if screen is not None and screen.get("data-work"):
+        chips["screen"] = screen.get("data-medium", "") + " · " + screen["data-work"]
+    vocab = []
+    for main in sheets:
+        if main["id"] == "page-words":
+            continue
+        for li in main.select("aside.vocab li"):
+            term = li.find(class_="term")
+            if term:
+                vocab.append(term.get_text(" ", strip=True))
     return {
         "date": date,
         "issue": int(num.group()) if num else 0,
+        "edition": "sunday" if "review" in by_id else "weekday",
         "headline": lead.get_text(" ", strip=True) if lead else "",
         "crit": crit_q.get_text(" ", strip=True) if crit_q else "",
         "thesis": issues,
+        "symposium_day": int(sym["data-day"]) if sym is not None and sym.get("data-day", "").isdigit() else None,
+        "unit": unit.get("data-unit") if unit is not None else None,
+        "unit_concept": unit.get("data-concept") if unit is not None else None,
+        "screen_work": screen.get("data-work") if screen is not None else None,
+        "screen_medium": screen.get("data-medium") if screen is not None else None,
+        "chips": chips,
+        "vocab": vocab,
         "url": SITE_URL + "issues/" + date + ".html",
     }
 
@@ -81,32 +125,60 @@ def with_archive_tab(body, prefix, current=False):
     return body.replace("</nav>", tab, 1)
 
 
+CHIP_LABELS = [("thesis", "2"), ("symposium", "3"), ("unit", "4"), ("screen", "5")]
+ARCHIVE_CSS = """
+<style>
+.arch { list-style: none; margin: 0; padding: 0; display: grid; }
+.arch li { display: grid; grid-template-columns: 96px 64px minmax(0, 1fr); gap: 6px 14px; padding: 12px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+.arch .d, .arch .n { font-family: var(--f-mono); font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.arch .h { font-family: var(--f-head); font-weight: 600; font-size: 16px; line-height: 1.45; min-width: 0; }
+.arch .chips { grid-column: 3; display: flex; flex-wrap: wrap; gap: 6px; }
+.arch .chips span { font-family: var(--f-mono); font-size: 11.5px; border: 1px solid var(--rule); padding: 0 6px; line-height: 1.7; min-width: 0; overflow-wrap: anywhere; }
+.arch .chips b { color: var(--red); font-weight: 500; margin-right: 4px; }
+@media (max-width: 560px) { .arch li { grid-template-columns: 78px minmax(0, 1fr); } .arch .n { grid-column: 1; grid-row: 2; } .arch .h, .arch .chips { grid-column: 2; } }
+</style>
+"""
+
+
+def chips_for(it):
+    chips = dict(it.get("chips") or {})
+    if "thesis" not in chips and it.get("thesis"):
+        chips["thesis"] = "이슈 " + str(len(it["thesis"])) + "건"
+    out = []
+    for key, n in CHIP_LABELS:
+        if chips.get(key):
+            out.append("<span><b>" + n + "</b>" + escape(chips[key]) + "</span>")
+    return "".join(out)
+
+
 def build_archive(head, items):
     rows = []
     for it in items:
-        thesis = " · ".join(escape(t) for t in it.get("thesis", [])[:4])
+        tag = "Sunday · " if it.get("edition") == "sunday" else ""
         rows.append(
-            "<tr><td class=\"m\">" + it["date"].replace("-", ".") + "</td>"
-            "<td class=\"m\">No. " + str(it["issue"]).zfill(3) + "</td>"
-            "<td><a href=\"issues/" + it.get("slug", it["date"]) + ".html\">" + escape(it["headline"]) + "</a></td>"
-            "<td>" + thesis + "</td></tr>"
+            "<li><span class=\"d\">" + it["date"].replace("-", ".") + "</span>"
+            "<span class=\"n\">No. " + str(it["issue"]).zfill(3) + "</span>"
+            "<a class=\"h\" href=\"issues/" + it.get("slug", it["date"]) + ".html\">" + tag + escape(it["headline"]) + "</a>"
+            "<span class=\"chips\">" + chips_for(it) + "</span></li>"
         )
     body = (
-        '<nav class="tabs" aria-label="지면">\n'
-        '  <a href="index.html#crit">SHEET 1/2 <b>Morning Crit</b></a>\n'
-        '  <a href="index.html#thesis">SHEET 2/2 <b>Thesis Desk</b></a>\n'
+        '<nav class="tabs" aria-label="Sheets">\n'
+        '  <a href="index.html#crit"><span class="n">SHEET 1/5</span> <b>Morning Crit</b></a>\n'
+        '  <a href="index.html#thesis"><span class="n">SHEET 2/5</span> <b>Thesis Desk</b></a>\n'
+        '  <a href="index.html#symposium"><span class="n">SHEET 3/5</span> <b>Daily Symposium</b></a>\n'
+        '  <a href="index.html#unit"><span class="n">SHEET 4/5</span> <b>Unit Brief</b></a>\n'
+        '  <a href="index.html#screen"><span class="n">SHEET 5/5</span> <b>Mood Screen</b></a>\n'
         '  <a href="archive.html" aria-current="page">ARCHIVE <b>지난 호</b></a>\n'
         "</nav>\n"
         '<main class="sheet">\n'
         '  <header class="mast"><div><h1>Archive</h1>'
-        '<p class="sub">지난 Morning Crit 전체. 날짜를 누르면 그날의 1면과 2면이 열린다.</p></div></header>\n'
+        '<p class="sub">지난 Morning Crit 전체. 제목은 1면 헤드라인, 칩은 2~5면의 주제다. 제목을 누르면 그날 신문이 열린다.</p></div></header>\n'
         '  <section><div class="label"><span class="tag">지난 호</span> ' + str(len(items)) + "호</div>\n"
-        '  <div class="tablewrap"><table><thead><tr><th>날짜</th><th>호</th><th>1면</th><th>2면 이슈</th></tr></thead>\n'
-        "  <tbody>" + "\n".join(rows) + "</tbody></table></div></section>\n"
+        '  <ul class="arch">' + "\n".join(rows) + "</ul></section>\n"
         "</main>\n"
     )
     head = re.sub(r"<title>.*?</title>", "<title>Morning Crit · Archive</title>", head, flags=re.S)
-    return page(head, body, "Morning Crit 지난 호 목록")
+    return page(head + ARCHIVE_CSS, body, "Morning Crit 지난 호 목록")
 
 
 def slug_for(meta, items):

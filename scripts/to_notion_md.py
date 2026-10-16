@@ -3,8 +3,8 @@
 
 Usage:  python3 scripts/to_notion_md.py [source/morning-crit.html]
 
-Writes build/notion.md (page body) and build/notion-meta.json (database
-properties). The Markdown follows notion://docs/enhanced-markdown-spec:
+Writes build/notion.md (page body), build/notion-meta.json (database
+properties) and build/word-bank.json (one row per word-box term). The Markdown follows notion://docs/enhanced-markdown-spec:
 headings, callouts, tables, bullet and numbered lists, links.
 """
 import datetime as dt
@@ -18,6 +18,16 @@ from bs4 import BeautifulSoup, NavigableString, Tag
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE_URL = "https://uphillpark.github.io/Morning-Crits/"
 SPECIAL = set("\\*~`$[]<>{}|^")
+KIND = {"ielts": "IELTS 7.0", "crit": "AA Crit"}
+TITLES = {
+    "crit": ("1면 · Morning Crit", "📰"),
+    "thesis": ("2면 · Thesis Desk", "🧭"),
+    "symposium": ("3면 · Daily Symposium", "🏛️"),
+    "unit": ("4면 · Unit Brief", "📐"),
+    "screen": ("5면 · Mood Screen", "🎞️"),
+    "review": ("Weekly Review", "🗓️"),
+    "quiz": ("Word Quiz", "📝"),
+}
 
 
 def esc(text):
@@ -134,6 +144,33 @@ def block(el, issue_date):
         return []  # handled by sheet()
     if name == "aside" and "crit" in cls:
         return crit_aside(el, issue_date)
+    if name == "aside" and "vocab" in cls:
+        rows = [["Term", "뜻", "종류", "예문"]]
+        for li in el.find_all("li"):
+            def part(c):
+                x = li.find(class_=c)
+                return esc(text(x)) if x else ""
+            term = "**" + part("term") + "**" + (" *" + part("pos") + "*" if part("pos") else "")
+            rows.append([term, part("ko"), KIND.get(li.get("data-kind", ""), ""), part("ex")])
+        return ['<span color="blue">**' + esc(text(el.find(class_="k"))) + "**</span>"] + table(rows)
+    if name == "figure":
+        img = el.find("img")
+        cap = inline(el.find("figcaption")).strip() if el.find("figcaption") else ""
+        out = ["![" + esc(text(el.find("figcaption"))) + "](" + img["src"] + ")"] if img and img.get("src", "").startswith("http") else []
+        return out + (['<span color="gray">' + cap + "</span>"] if cap else [])
+    if name == "blockquote":
+        return ["> " + inline(el).strip()]
+    if name == "pre":
+        return ["```plain text", text(el), "```"]
+    if name == "h4":
+        return ['<span color="red">**' + esc(text(el)) + "**</span>"]
+    if name == "dl" and "terms" in cls:
+        return ["- **" + esc(text(dt_)) + "** " + inline(dd).strip() for dt_, dd in zip(el.find_all("dt"), el.find_all("dd"))]
+    if name in ("ul", "ol") and not ({"briefs", "cal"} & set(cls)):
+        mark = "1. " if name == "ol" else "- "
+        return [mark + inline(li).strip() for li in el.find_all("li", recursive=False)]
+    if "closed" in cls:
+        return ['<span color="gray">' + esc(text(el)) + "</span>"]
     if "kicker" in cls:
         return ['<span color="red">**' + esc(text(el)) + "**</span>"]
     if "src" in cls:
@@ -253,15 +290,17 @@ def issue_slug(num, date):
 def main():
     src_path = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "source", "morning-crit.html")
     soup = BeautifulSoup(open(src_path, encoding="utf-8").read(), "html.parser")
-    crit = soup.find(id="page-crit")
-    thesis = soup.find(id="page-thesis")
+    sheets = soup.select("main.sheet[id^=page-]")
+    by_id = {m["id"][len("page-"):]: m for m in sheets}
+    first = sheets[0]
 
-    date_txt = text(crit.select_one(".tblock"))
+    date_txt = text(first.select_one(".tblock"))
     m = re.search(r"(\d{4})\.(\d{2})\.(\d{2})", date_txt)
     issue_date = dt.date(*map(int, m.groups()))
     num = int(re.search(r"No\.\s*(\d+)", date_txt).group(1))
-    headline = text(crit.find("h2"))
-    crit_q = text(crit.select_one("aside.crit.big p"))
+    headline = text(first.find("h2"))
+    crit_q = text(first.select_one("aside.crit.big p"))
+    thesis = by_id.get("thesis")
     thesis_titles = [text(h) for h in thesis.select("article.issue h3")] if thesis else []
     web = SITE_URL + "issues/" + issue_slug(num, issue_date.isoformat()) + ".html"
 
@@ -271,16 +310,38 @@ def main():
         "</callout>",
         "<table_of_contents/>",
     ]
-    lines += sheet(crit, "1면 · Morning Crit", "📰", issue_date)
-    lines += ["---"]
-    if thesis:
-        lines += sheet(thesis, "2면 · Thesis Desk", "🧭", issue_date)
+    words = []
+    for i, main_el in enumerate(sheets):
+        name = main_el["id"][len("page-"):]
+        if name == "words":
+            continue
+        title, icon = TITLES.get(name, (name, "📄"))
+        if i:
+            lines += ["---"]
+        lines += sheet(main_el, title, icon, issue_date)
+        for li in main_el.select("aside.vocab li"):
+            def part(c):
+                x = li.find(class_=c)
+                return text(x) if x else ""
+            if part("term"):
+                words.append({
+                    "Term": part("term"),
+                    "뜻": part("ko"),
+                    "품사": part("pos"),
+                    "종류": KIND.get(li.get("data-kind", ""), ""),
+                    "예문": part("ex"),
+                    "면": title,
+                    "date:발행일:start": issue_date.isoformat(),
+                    "date:발행일:is_datetime": 0,
+                    "호 링크": web,
+                })
 
     os.makedirs(os.path.join(ROOT, "build"), exist_ok=True)
     md = "\n".join(lines) + "\n"
     open(os.path.join(ROOT, "build", "notion.md"), "w", encoding="utf-8").write(md)
+    edition = "Sunday Review" if "review" in by_id else "Morning Crit"
     meta = {
-        "Name": "Morning Crit No. " + str(num).zfill(3) + " · " + issue_date.strftime("%Y.%m.%d"),
+        "Name": edition + " No. " + str(num).zfill(3) + " · " + issue_date.strftime("%Y.%m.%d"),
         "date:발행일:start": issue_date.isoformat(),
         "date:발행일:is_datetime": 0,
         "호수": num,
@@ -289,8 +350,17 @@ def main():
         "2면 이슈": " / ".join(thesis_titles),
         "웹 신문": web,
     }
+    sym, unit, screen = by_id.get("symposium"), by_id.get("unit"), by_id.get("screen")
+    if sym is not None and sym.get("data-day"):
+        meta["3면 주제"] = "DAY " + sym["data-day"].zfill(2) + " · " + sym.get("data-title", "")
+    if unit is not None and unit.get("data-unit"):
+        meta["4면 유닛·개념"] = unit.get("data-school", "") + " " + unit["data-unit"] + " · " + unit.get("data-concept", "")
+    if screen is not None and screen.get("data-work"):
+        meta["5면 작품"] = screen["data-work"]
+        meta["5면 매체"] = screen.get("data-medium", "")
     json.dump(meta, open(os.path.join(ROOT, "build", "notion-meta.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
-    print(json.dumps({"lines": len(lines), "chars": len(md), **meta}, ensure_ascii=False))
+    json.dump(words, open(os.path.join(ROOT, "build", "word-bank.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    print(json.dumps({"lines": len(lines), "chars": len(md), "words": len(words), **meta}, ensure_ascii=False))
 
 
 if __name__ == "__main__":
