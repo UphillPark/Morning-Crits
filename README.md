@@ -33,7 +33,7 @@ AA Diploma와 졸업전시를 준비하며 매일 아침 읽는 런던·유럽 �
 
 ## 매일 발행 순서
 
-두 루틴이 나눠 만든다. 05:30 KST 세미나 루틴(`prompts/routine-b.md`)이 3~5면 조각을 `source/seminar/`에 푸시하고, 07:07 KST Morning Crit 루틴(`prompts/routine-a.md`)이 1·2면을 만든 뒤 합쳐서 발행한다.
+두 루틴이 나눠 만든다. 05:24 KST 세미나 루틴(`prompts/routine-b.md`)이 3~5면 조각을 `source/seminar/`에 푸시하고, 07:07 KST Morning Crit 루틴(`prompts/routine-a.md`)이 1·2면을 만든 뒤 합쳐서 발행한다.
 
 ```bash
 python3 scripts/assemble.py        # 1·2면 + 3~5면 조각 + Word Desk (일요일: --sunday → source/sunday.html)
