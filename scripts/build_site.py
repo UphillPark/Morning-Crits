@@ -76,6 +76,12 @@ def read_meta(src):
     screen = by_id.get("screen")
     if screen is not None and screen.get("data-work"):
         chips["screen"] = screen.get("data-medium", "") + " · " + screen["data-work"]
+    seeds = []
+    for li in thesis.select("ul.seeds li") if thesis else []:
+        seed = li.find(class_="seed")
+        link = li.find(class_="link")
+        if seed:
+            seeds.append({"seed": seed.get_text(" ", strip=True), "issue": link.get_text(" ", strip=True) if link else ""})
     vocab = []
     for main in sheets:
         if main["id"] == "page-words":
@@ -91,6 +97,7 @@ def read_meta(src):
         "headline": lead.get_text(" ", strip=True) if lead else "",
         "crit": crit_q.get_text(" ", strip=True) if crit_q else "",
         "thesis": issues,
+        "seeds": seeds,
         "symposium_day": int(sym["data-day"]) if sym is not None and sym.get("data-day", "").isdigit() else None,
         "unit": unit.get("data-unit") if unit is not None else None,
         "unit_concept": unit.get("data-concept") if unit is not None else None,
@@ -130,15 +137,62 @@ def with_archive_tab(body, prefix, current=False):
 CHIP_LABELS = [("thesis", "2"), ("symposium", "3"), ("unit", "4"), ("screen", "5")]
 ARCHIVE_CSS = """
 <style>
+.afilter { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }
+.afilter button { font-family: var(--f-mono); font-size: 12px; background: var(--sheet); color: var(--muted); border: 1px solid var(--ink); padding: 3px 10px; cursor: pointer; }
+.afilter button[aria-pressed="true"] { background: var(--ink); color: var(--sheet); }
+.afilter input { flex: 1 1 200px; min-width: 0; font: inherit; font-size: 14px; padding: 4px 10px; border: 1px solid var(--ink); background: var(--sheet); color: var(--ink); }
+.amonth { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.12em; color: var(--red); margin: 18px 0 4px; }
 .arch { list-style: none; margin: 0; padding: 0; display: grid; }
-.arch li { display: grid; grid-template-columns: 96px 64px minmax(0, 1fr); gap: 6px 14px; padding: 12px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+.arch > li { display: grid; grid-template-columns: 96px 64px minmax(0, 1fr); gap: 6px 14px; padding: 12px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+.arch > li[hidden] { display: none; }
 .arch .d, .arch .n { font-family: var(--f-mono); font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .arch .h { font-family: var(--f-head); font-weight: 600; font-size: 16px; line-height: 1.45; min-width: 0; }
-.arch .chips { grid-column: 3; display: flex; flex-wrap: wrap; gap: 6px; }
+.arch .sun { font-family: var(--f-mono); font-size: 11px; color: var(--red); border: 1px solid currentColor; padding: 0 5px; margin-right: 6px; }
+.arch .chips, .arch .det { grid-column: 3; min-width: 0; }
+.arch .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .arch .chips span { font-family: var(--f-mono); font-size: 11.5px; border: 1px solid var(--rule); padding: 0 6px; line-height: 1.7; min-width: 0; overflow-wrap: anywhere; }
-.arch .chips b { color: var(--red); font-weight: 500; margin-right: 4px; }
-@media (max-width: 560px) { .arch li { grid-template-columns: 78px minmax(0, 1fr); } .arch .n { grid-column: 1; grid-row: 2; } .arch .h, .arch .chips { grid-column: 2; } }
+.arch .chips b, .arch .det b { color: var(--red); font-weight: 500; margin-right: 4px; }
+.arch .det { display: none; font-size: 13.5px; line-height: 1.6; }
+.arch .det ul { margin: 2px 0 0; padding-left: 18px; }
+.arch .det a { color: var(--ink); }
+body.f-1 .arch .det[data-s="1"], body.f-2 .arch .det[data-s="2"], body.f-3 .arch .det[data-s="3"], body.f-4 .arch .det[data-s="4"], body.f-5 .arch .det[data-s="5"] { display: block; }
+body[class*="f-"] .arch .chips { display: none; }
+@media (max-width: 560px) { .arch > li { grid-template-columns: 78px minmax(0, 1fr); } .arch .n { grid-column: 1; grid-row: 2; } .arch .h, .arch .chips, .arch .det { grid-column: 2; } }
 </style>
+"""
+ARCHIVE_JS = """
+<script>
+(function () {
+  var btns = document.querySelectorAll('.afilter button'), q = document.querySelector('.afilter input');
+  function set(n) {
+    document.body.className = document.body.className.replace(/\\bf-\\d\\b/g, '').trim();
+    if (n) document.body.classList.add('f-' + n);
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-f') === (n || ''))); });
+    filter();
+  }
+  function filter() {
+    var t = (q.value || '').toLowerCase().trim();
+    var f = (document.body.className.match(/f-(\\d)/) || [])[1];
+    document.querySelectorAll('.arch > li').forEach(function (li) {
+      var okText = !t || li.getAttribute('data-text').indexOf(t) >= 0;
+      var okSheet = !f || li.querySelector('.det[data-s="' + f + '"]');
+      li.hidden = !(okText && okSheet);
+    });
+    document.querySelectorAll('.amonth').forEach(function (h) {
+      var ul = h.nextElementSibling;
+      h.hidden = ul && !ul.querySelector(':scope > li:not([hidden])');
+    });
+  }
+  btns.forEach(function (b) { b.addEventListener('click', function () {
+    var n = b.getAttribute('data-f');
+    try { history.replaceState(null, '', n ? '#sheet-' + n : '#'); } catch (e) {}
+    set(n);
+  }); });
+  q.addEventListener('input', filter);
+  var m = location.hash.match(/sheet-(\\d)/);
+  set(m ? m[1] : '');
+})();
+</script>
 """
 
 
@@ -153,16 +207,46 @@ def chips_for(it):
     return "".join(out)
 
 
+def details_for(it, href):
+    """Per-sheet detail blocks, shown when the archive is filtered to one sheet."""
+    out = []
+    if it.get("headline"):
+        q = ("<br><small>" + escape(it["crit"]) + "</small>") if it.get("crit") else ""
+        out.append('<div class="det" data-s="1"><b>1</b><a href="' + href + '#crit">' + escape(it["headline"]) + "</a>" + q + "</div>")
+    if it.get("thesis") or it.get("seeds"):
+        lis = "".join("<li>" + escape(t) + "</li>" for t in it.get("thesis", []))
+        seeds = "".join("<li>" + escape(x["seed"]) + (" <small>· " + escape(x.get("issue", "")) + "</small>" if x.get("issue") else "") + "</li>" for x in it.get("seeds") or [])
+        out.append('<div class="det" data-s="2"><b>2</b><a href="' + href + '#thesis">이슈</a><ul>' + lis + "</ul>"
+                   + ("<b>씨앗</b><ul>" + seeds + "</ul>" if seeds else "") + "</div>")
+    c = it.get("chips") or {}
+    for key, n in (("symposium", "3"), ("unit", "4"), ("screen", "5")):
+        if c.get(key):
+            out.append('<div class="det" data-s="' + n + '"><b>' + n + '</b><a href="' + href + "#" + key + '">' + escape(c[key]) + "</a></div>")
+    return "".join(out)
+
+
 def build_archive(head, items):
-    rows = []
+    groups, order = {}, []
     for it in items:
-        tag = "Sunday · " if it.get("edition") == "sunday" else ""
-        rows.append(
-            "<li><span class=\"d\">" + it["date"].replace("-", ".") + "</span>"
-            "<span class=\"n\">No. " + str(it["issue"]).zfill(3) + "</span>"
-            "<a class=\"h\" href=\"issues/" + it.get("slug", it["date"]) + ".html\">" + tag + escape(it["headline"]) + "</a>"
-            "<span class=\"chips\">" + chips_for(it) + "</span></li>"
+        month = it["date"][:7]
+        if month not in groups:
+            groups[month] = []
+            order.append(month)
+        href = "issues/" + it.get("slug", it["date"]) + ".html"
+        sun = '<span class="sun">SUNDAY</span>' if it.get("edition") == "sunday" else ""
+        text = " ".join([it.get("headline", ""), it.get("crit", "")] + it.get("thesis", []) + [x["seed"] for x in it.get("seeds") or []]
+                        + list((it.get("chips") or {}).values()) + (it.get("vocab") or [])).lower()
+        groups[month].append(
+            '<li data-text="' + escape(text) + '"><span class="d">' + it["date"].replace("-", ".") + "</span>"
+            '<span class="n">No. ' + str(it["issue"]).zfill(3) + "</span>"
+            '<a class="h" href="' + href + '">' + sun + escape(it["headline"]) + "</a>"
+            '<span class="chips">' + chips_for(it) + "</span>" + details_for(it, href) + "</li>"
         )
+    lists = "".join('<p class="amonth">' + m.replace("-", ".") + '</p>\n<ul class="arch">' + "\n".join(groups[m]) + "</ul>\n" for m in order)
+    filt = ('<div class="afilter" role="group" aria-label="면별 보기">'
+            '<button type="button" data-f="">전체</button>'
+            + "".join('<button type="button" data-f="' + str(n) + '">' + str(n) + "면</button>" for n in range(1, 6))
+            + '<input type="search" placeholder="검색 · 제목, 씨앗, 작품, 단어" aria-label="지난 호 검색"></div>')
     body = (
         '<nav class="tabs" aria-label="Sheets">\n'
         '  <a href="index.html#crit"><span class="n">SHEET 1/5</span> <b>Morning Crit</b></a>\n'
@@ -174,10 +258,10 @@ def build_archive(head, items):
         "</nav>\n"
         '<main class="sheet">\n'
         '  <header class="mast"><div><h1>Archive</h1>'
-        '<p class="sub">지난 Morning Crit 전체. 제목은 1면 헤드라인, 칩은 2~5면의 주제다. 제목을 누르면 그날 신문이 열린다.</p></div></header>\n'
+        '<p class="sub">Morning Crit 전체 색인. 면을 고르면 그 면의 지난 기사·씨앗·강의·작품이 펼쳐지고, 검색은 제목·씨앗·단어까지 찾는다.</p></div></header>\n'
         '  <section><div class="label"><span class="tag">지난 호</span> ' + str(len(items)) + "호</div>\n"
-        '  <ul class="arch">' + "\n".join(rows) + "</ul></section>\n"
-        "</main>\n"
+        "  " + filt + "\n" + lists + "</section>\n"
+        "</main>\n" + ARCHIVE_JS
     )
     head = re.sub(r"<title>.*?</title>", "<title>Morning Crit · Archive</title>", head, flags=re.S)
     return page(head + ARCHIVE_CSS, body, "Morning Crit 지난 호 목록")

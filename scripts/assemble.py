@@ -171,6 +171,120 @@ def split_doc(html):
     return html[:i], html[j:]
 
 
+SITE = "https://uphillpark.github.io/Morning-Crits/"
+RAIL_N = 10
+AUTO_RAIL = re.compile(r'\s*<aside class="rail[^"]*" data-auto[^>]*>.*?</aside><!--/rail-->', re.S)
+
+
+def load_json(rel):
+    path = os.path.join(ROOT, rel)
+    return json.load(open(path, encoding="utf-8")) if os.path.exists(path) else None
+
+
+def rbox(tag_id, tag, rest, inner, open_=True):
+    return (
+        '    <section class="rbox" aria-labelledby="' + tag_id + '"><details' + (" open" if open_ else "") + ">\n"
+        '      <summary class="label"><span class="tag" id="' + tag_id + '">' + tag + "</span> " + rest + "</summary>\n"
+        + inner + "\n    </details></section>\n"
+    )
+
+
+def rlist(rows):
+    return '      <ul class="rlist">\n' + "\n".join("        <li>" + r + "</li>" for r in rows) + "\n      </ul>"
+
+
+def left_rail(name, items, day):
+    """Past issues of one sheet, newest first, read from issues/index.json."""
+    past = [it for it in items if it.get("date", "") < day.isoformat() and it.get("edition") != "sunday"]
+    rows = []
+    for it in past:
+        href = SITE + "issues/" + it.get("slug", it["date"]) + ".html#" + name
+        d = '<span class="d">' + it["date"][5:].replace("-", ".") + " · No. " + str(it["issue"]).zfill(3) + "</span>"
+        if name == "crit" and it.get("headline"):
+            rows.append(d + '<a href="' + href + '">' + escape(it["headline"]) + "</a>")
+        elif name == "thesis" and (it.get("seeds") or it.get("thesis")):
+            seeds = [x["seed"] for x in it.get("seeds") or []] or it.get("thesis", [])
+            first = seeds[0].split(" — ")[0]
+            more = ('<span class="sub">+ ' + str(len(seeds) - 1) + "</span>") if len(seeds) > 1 else ""
+            rows.append(d + '<a href="' + href + '">' + escape(first) + "</a>" + more)
+        elif name == "symposium" and it.get("symposium_day"):
+            title = (it.get("chips") or {}).get("symposium", "DAY " + str(it["symposium_day"]))
+            rows.append(d + '<a href="' + href + '">' + escape(title) + "</a>")
+        elif name == "unit" and it.get("unit"):
+            rows.append(d + '<a href="' + href + '">' + escape((it.get("chips") or {}).get("unit", it["unit"])) + "</a>")
+        elif name == "screen" and it.get("screen_work"):
+            rows.append(d + '<a href="' + href + '">' + escape(it["screen_work"]) + '</a><span class="sub">' + escape(it.get("screen_medium") or "") + "</span>")
+        if len(rows) >= RAIL_N:
+            break
+    sheet_no = {"crit": 1, "thesis": 2, "symposium": 3, "unit": 4, "screen": 5}[name]
+    inner = rlist(rows) if rows else '      <p class="rnote">아직 지난 호가 없어요.</p>'
+    inner += '\n      <a class="rmore" href="' + SITE + "archive.html#sheet-" + str(sheet_no) + '">전체 보기 → Archive</a>'
+    label = "지난 씨앗" if name == "thesis" else "지난 호"
+    return (
+        '  <aside class="rail rail-left" data-auto aria-label="' + label + '"><div class="rail-in">\n'
+        + rbox("past-" + name, label, str(sheet_no) + "면 · 최근 " + str(min(len(rows), RAIL_N)), inner)
+        + "  </div></aside><!--/rail-->"
+    )
+
+
+def right_rail_auto(name, items, day):
+    """Tools for sheets 3-5, computed from the curriculum and the index."""
+    boxes = ""
+    if name == "symposium":
+        plan = load_json("curriculum/philosophy.json") or {"lessons": []}
+        lessons = plan["lessons"]
+        now = [l for l in lessons if l["date"] <= day.isoformat()]
+        cur = now[-1] if now else None
+        total = len(lessons)
+        n = cur["day"] if cur else 0
+        parts = []
+        for l in lessons:
+            if l["part"] not in parts:
+                parts.append(l["part"])
+        prog = ('      <p class="rnote">DAY ' + str(n).zfill(3) + " / " + str(total) + (" · " + escape(cur["part"]) if cur else "") + "</p>\n"
+                '      <div class="bar"><i style="width:' + str(round(100 * n / total, 1) if total else 0) + '%"></i></div>\n'
+                + rlist(['<span class="d">' + escape(pt) + "</span>" + str(sum(1 for l in lessons if l["part"] == pt)) + "회" for pt in parts]))
+        boxes += rbox("prog-h", "진도", "6개월 시간표", prog)
+        nxt = [l for l in lessons if l["date"] > day.isoformat()][:5]
+        boxes += rbox("next-h", "다음 강의", "", rlist(['<span class="d">DAY ' + str(l["day"]).zfill(3) + " · " + l["date"][5:].replace("-", ".") + "</span>" + escape(l["title"]) for l in nxt]) if nxt else '      <p class="rnote">시간표 끝</p>')
+    elif name == "unit":
+        units = (load_json("curriculum/units.json") or {"units": []})["units"]
+        done = {it.get("unit") for it in items if it.get("unit")}
+        rows = []
+        for school in ("AA", "RCA", "Bartlett"):
+            us = [u for u in units if u["school"] == school]
+            seen = [u for u in us if u["code"] in done]
+            left = [u["code"] for u in us if u["code"] not in done]
+            rows.append('<span class="d">' + school + " · " + str(len(seen)) + " / " + str(len(us)) + '</span><div class="bar"><i style="width:'
+                        + str(round(100 * len(seen) / len(us), 1) if us else 0) + '%"></i></div><span class="sub">남은 유닛: ' + escape(", ".join(left[:12])) + ("…" if len(left) > 12 else "") + "</span>")
+        boxes += rbox("cov-h", "유닛 지도", "다룬 유닛", rlist(rows))
+        boxes += rbox("rot-h", "요일 순환", "", '      <p class="rnote">월·화·목 AA · 수 RCA · 금 Bartlett · 토 학교 간 비교</p>', False)
+    elif name == "screen":
+        week = [it for it in items if it.get("screen_medium")][:7]
+        counts = {}
+        for it in week:
+            counts[it["screen_medium"]] = counts.get(it["screen_medium"], 0) + 1
+        total = len([it for it in items if it.get("screen_work")])
+        rows = ['<span class="d">' + m + "</span>" + str(counts.get(m, 0)) + "편" for m in ("Film", "Painting", "Documentary", "Photography", "Print")]
+        boxes += rbox("mix-h", "최근 7편", "매체 분포", rlist(rows) + '\n      <p class="rnote">지금까지 ' + str(total) + "편</p>")
+        boxes += rbox("frame-h", "남기는 법", "", '      <p class="rnote">마음에 든 프레임 한 장 + 그 이미지를 설명하는 영어 키워드 세 개.</p>', False)
+    if not boxes:
+        return ""
+    return '  <aside class="rail rail-right" data-auto aria-label="Sheet tools"><div class="rail-in">\n' + boxes + "  </div></aside><!--/rail-->"
+
+
+def with_rails(block, name, items, day):
+    """Replace the generated rails of one sheet; hand-written rails stay."""
+    block = AUTO_RAIL.sub("", block)
+    add = left_rail(name, items, day)
+    if name in SEMINAR and "rail-right" not in block:
+        add += "\n" + right_rail_auto(name, items, day)
+    i = block.rfind("<footer")
+    if i < 0:
+        i = block.rfind("</main>")
+    return block[:i] + add + "\n\n  " + block[i:]
+
+
 def latest_issue():
     idx = os.path.join(ROOT, "issues", "index.json")
     if not os.path.exists(idx):
@@ -235,6 +349,9 @@ def main():
         else:
             b = closed_sheet(name, titles[name], date_label, issue)
         blocks.append(b)
+    names = ["crit"] + (["thesis"] if thesis else []) + SEMINAR
+    items = load_json("issues/index.json") or []
+    blocks = [with_rails(b, n, items, day) for b, n in zip(blocks, names)]
     blocks = [set_hidden(b, hidden=(i > 0)) for i, b in enumerate(blocks)]
     body = "\n\n".join(blocks)
     sheets = [(n, t) for n, t in SHEETS if n != "thesis" or thesis]

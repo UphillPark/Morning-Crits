@@ -26,9 +26,10 @@
 ## 1. 1·2면 만들기
 - 현재 호의 HTML은 저장소의 `source/morning-crit.html`에서 얻는다. 아티팩트 URL(https://claude.ai/artifact/Bc7Yst9oB9arE3YjuB6Eaj)은 읽지 않고 발행 대상으로만 쓴다. 저장소를 받지 못했을 때에만 Artifact 도구 action "read"로 읽는다.
 - 이미 실린 기사 목록은 `issues/index.json`의 headline, thesis만 읽어 중복을 피한다. 새 전개가 없으면 같은 기사를 다시 싣지 않는다. 단어 중복 확인에는 vocab 필드를 쓴다. `source/seminar/`의 파일은 읽거나 고치지 않는다(합치는 스크립트가 쓴다).
-- 당신이 바꾸는 것은 `#page-crit`과 `#page-thesis` 두 시트의 내용뿐이다. 3~5면 시트, Word Desk 시트, 탭 내비게이션, CSS, 하단 스크립트(D-day·탭 전환)는 건드리지 않는다. 3~5면은 2절의 병합 스크립트가 채운다.
+- 당신이 바꾸는 것은 `#page-crit`과 `#page-thesis` 두 시트의 내용뿐이다. 3~5면 시트, Word Desk 시트, 탭 내비게이션, CSS, 하단 스크립트(D-day·탭 전환·PDF 저장)는 건드리지 않는다. 3~5면은 2절의 병합 스크립트가 채운다.
+- 각 시트에는 양옆 레일이 있다. `data-auto`가 붙은 레일(왼쪽 "지난 호", 3~5면 오른쪽)은 스크립트가 만드니 건드리지 않는다. 1면 오른쪽 레일(`aside.rail-right`)에는 일정(`ul.cal`), 읽기 지도, 읽는 법이, 2면 오른쪽 레일에는 오늘의 씨앗(`ul.seeds`)과 번역의 순서가 있다.
 - 디자인(CSS 토큰, 폰트, 마스트헤드 타이틀 블록, 크릿 박스, 스케일 바, 일정, 표, 푸터)은 그대로 유지하고 내용만 바꾼다. <title>은 "Morning Crit" 그대로 둔다. 클래스 이름과 구조(article.issue, dl.translate, div.figs, aside.crit, ul.cal li[data-date], .tblock, aside.vocab 등)를 바꾸지 않는다. 변환 스크립트가 이 구조를 읽는다.
-- 내용 교체는 Python 스크립트로 섹션 단위(lead, AI, 담론, 단신, 일정, 2면 이슈, 겹쳐 읽기, 보드 행, 단어 박스, 푸터)로 치환한다. 전체 HTML을 대화에 다시 출력하지 않는다.
+- 내용 교체는 Python 스크립트로 섹션 단위(lead, AI, 담론, 단신, 일정, 2면 이슈, 겹쳐 읽기, 오늘의 씨앗, 단어 박스, 푸터)로 치환한다. 전체 HTML을 대화에 다시 출력하지 않는다.
 - 두 시트 마스트헤드의 Date를 오늘(서울 날짜, 예 2026.10.13 TUE)로 바꾼다. 1면은 Issue 번호를 이전 호 +1("No. 005" 형식), Desk를 "London close MM/DD"(전날)로. 2면은 Desk에 그날의 국내·해외 이슈 수를 적는다. Rev는 "A".
 
 ### 취재 프로토콜 (WebSearch / WebFetch) — 1·2면에만 적용
@@ -50,7 +51,7 @@ I. 발행 직전 대조: 본문의 숫자가 전부 클레임 장부에 있는�
 - 1면 기사: 그날 가장 담론적인 이슈 1개(headline, dek, 본문 2문단, 숫자가 있으면 stats 3칸, 없으면 생략, 원문 링크). 오른쪽에 "CRIT · Question of the day"(질문 1개 + 실행 과제 2개)와 "DIPLOMA DESK"(AA 일정·지원 소식, 없으면 AA 공개 강연이나 읽을거리 하나).
 - AI · Technology · Infrastructure 기사 최대 2개. Discourse · Biennale · Europe 기사 2~4개(유럽 대륙 프로젝트나 저널 1개 이상).
 - 각 기사: kicker, headline, 2문단 요약, 빨간 CRIT 박스, 출처 링크(매체 · 날짜).
-- 단신 3~5개. 일정은 날짜순으로 갱신(지난 일정 삭제, data-date=YYYY-MM-DD 정확히). 읽기 지도와 읽는 법은 유지.
+- 단신 3~5개. 일정(1면 오른쪽 레일의 `ul.cal`)은 날짜순으로 갱신(지난 일정 삭제, data-date=YYYY-MM-DD 정확히). 읽기 지도와 읽는 법은 유지.
 - 문장은 영국식 철자(organise, centre)를 쓴다. 원문 문장을 길게 옮기지 말고 요약해서 쓴다.
 
 ### SHEET 2 · Thesis Desk (한국어)
@@ -58,7 +59,7 @@ I. 발행 직전 대조: 본문의 숫자가 전부 클레임 장부에 있는�
 - 각 이슈 카드(현재 article.issue 구조): 지역·분야 태그, 스케일 바(몸/방/건물/도시/영토 중 해당 칸에 class="on"), 제목, 사실 문단 + 핵심 수치 2~4칸(figs) + 출처, 그리고 dl.translate의 장소 / 개입 / 재현 / 참고(실재하는 건축가·작가·리서치 그룹·프로젝트만), 마지막에 THESIS Q(한국어 질문 한 줄 + 영어 한 줄).
 - 같은 주제가 며칠 이어지면 새 전개가 있을 때만 다시 싣는다.
 - 겹쳐 읽기: 그날 이슈 두 개씩 묶은 졸업 주제 후보 2~3개(국내×해외 조합 우선).
-- 주제 후보 보드: 기존 행은 지우지 말고 오늘 날짜(MM.DD)의 새 씨앗 2~4행을 표 맨 위에 추가한다. 30행을 넘으면 가장 오래된 행부터 정리한다.
+- 오늘의 씨앗: 2면 오른쪽 레일의 `ul.seeds`를 오늘 씨앗 2~4개로 통째로 바꾼다. 항목 형식은 `<li><b class="seed">씨앗 이름 — 한 줄 설명</b><span class="link">연결 이슈</span></li>`. 지난 씨앗은 지우는 게 맞다(스크립트가 issues/index.json에 쌓아 왼쪽 "지난 씨앗" 레일과 Archive에 보여준다).
 - 번역의 순서(method) 블록은 유지한다.
 
 ### 단어 박스 (1·2면 하단, aside.vocab)

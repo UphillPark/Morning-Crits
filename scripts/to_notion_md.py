@@ -134,8 +134,10 @@ def block(el, issue_date):
     """Markdown lines for one element, dispatched on tag and class."""
     cls = el.get("class") or []
     name = el.name
-    if name in ("nav", "script", "style") or "tblock" in cls:
+    if name in ("nav", "script", "style") or "tblock" in cls or el.has_attr("data-auto"):
         return []
+    if name == "ul" and "seeds" in cls:
+        return ["- **" + esc(text(li.find(class_="seed"))) + "** " + '<span color="red">' + esc(text(li.find(class_="link"))) + "</span>" for li in el.find_all("li", recursive=False)]
     if "label" in cls:
         tag = el.find(class_="tag")
         rest = text(el).replace(text(tag), "", 1).strip() if tag else ""
