@@ -97,8 +97,8 @@ I. 발행 직전 대조: 본문의 숫자가 전부 클레임 장부에 있는�
 - Notion 도구는 ToolSearch로 필요한 것만 불러온다(notion-query-data-sources, notion-create-pages, notion-update-page). 스키마를 다시 fetch하지 않는다.
 - 호 페이지: 대상은 Supply 페이지 안의 "Morning Crit_db", data source `collection://565379f0-e78e-4940-984e-b0fce3dc6597`. 속성은 Name, 발행일, 호수, 1면 헤드라인, 크릿 질문, 2면 이슈, 3면 주제, 4면 유닛·개념, 5면 작품, 5면 매체, 웹 신문, 키워드다.
   - 같은 발행일 페이지가 있는지는 rows 모드, limit 3, 발행일 내림차순으로 확인한다. 없으면 notion-create-pages로 parent {type: data_source_id, data_source_id: "565379f0-e78e-4940-984e-b0fce3dc6597"}, icon "📰", properties = notion-meta.json의 값 그대로 + "키워드"(교육, AI·기술, 기후, 주거, 재료·재사용, 정치·공간, 비엔날레·전시, 직업·시장, 인구·축소사회 중 그날 해당하는 것들), content = build/notion.md 내용을 한 글자도 바꾸지 말고 그대로 넣는다(allow_async false). 이미 있으면 그 페이지의 속성을 update_properties로, 본문을 replace_content로 갱신한다.
-- 단어장: 대상은 Supply 페이지 안의 "Word Bank_db", data source `collection://{{WORD_BANK_DATA_SOURCE_ID}}`. 속성은 Term, 뜻, 품사, 종류(IELTS/AA Crit), 예문, 면, 발행일, 호 링크다.
-  - build/word-bank.json의 항목을 한 번의 notion-create-pages 호출로 넣는다. 같은 Term이 이미 있는지는 그 Term으로 한 번에 조회해 확인하고, 이미 있으면 새로 만들지 않는다.
+- 단어장: 대상은 Supply 페이지 안의 "Word Bank_db", data source `collection://dea04552-a058-4c33-8dd5-56d51031026a`. 속성은 Term, 뜻, 품사, 종류(IELTS/AA Crit), 예문, 면, 발행일, 호 링크다.
+  - build/word-bank.json의 항목을 properties 그대로, parent {type: data_source_id, data_source_id: "dea04552-a058-4c33-8dd5-56d51031026a"}로 한 번의 notion-create-pages 호출에 넣는다(icon "🔤"). 같은 Term이 이미 있는지는 그 Term으로 한 번에 조회해 확인하고, 이미 있으면 새로 만들지 않는다.
 - 다른 페이지나 데이터베이스는 건드리지 않는다.
 
 ## 마무리
