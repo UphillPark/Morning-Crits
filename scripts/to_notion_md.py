@@ -168,6 +168,12 @@ def block(el, issue_date):
         return ['<span color="red">**' + esc(text(el)) + "**</span>"]
     if name == "dl" and "terms" in cls:
         return ["- **" + esc(text(dt_)) + "** " + inline(dd).strip() for dt_, dd in zip(el.find_all("dt"), el.find_all("dd"))]
+    if name == "ol" and "observe" in cls:
+        out = []
+        for li in el.find_all("li", recursive=False):
+            cat, st, p = li.find(class_="cat"), li.find("strong"), li.find("p")
+            out.append("1. " + '<span color="red">' + esc(text(cat)) + "</span> **" + esc(text(st)) + "** " + (inline(p).strip() if p else ""))
+        return out
     if name in ("ul", "ol") and not ({"briefs", "cal"} & set(cls)):
         mark = "1. " if name == "ol" else "- "
         return [mark + inline(li).strip() for li in el.find_all("li", recursive=False)]
