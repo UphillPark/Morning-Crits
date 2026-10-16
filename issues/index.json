@@ -1,5 +1,75 @@
 [
   {
+    "date": "2026-10-17",
+    "issue": 10,
+    "edition": "weekday",
+    "headline": "A minister steps between a planning committee and the High Court — Grafton’s timber library for Christ’s College, Cambridge, is halted by an Article 31 direction",
+    "crit": "If a building has to wait for a court, a committee and a minister in turn, which of those waits can a drawing shorten, and which must it simply survive? What does a library look like that is designed for the possibility of being decided twice?",
+    "thesis": [
+      "공급 대책은 쏟아지는데 입주는 줄었다: 계획과 열쇠 사이의 몇 년은 어디서 보내는가",
+      "경기 신축 분양가가 역대 최고를 새로 썼다: 단가가 오른 동네에서 가구가 가장 먼저 줄이는 방은 어디인가",
+      "페샤와르 교실의 흙벽돌 지붕이 무너졌다: 비가 샌다는 말은 누구에게 전해졌는가",
+      "카타르가 레바논에 짓겠다는 ‘대규모’ 태양광: 먼 발전소의 전기는 건물의 어디에서 받는가"
+    ],
+    "seeds": [
+      {
+        "seed": "열쇠 전의 시간 — 착공과 입주 사이 필지가 맡는 임시 프로그램",
+        "issue": "수도권 입주 공백"
+      },
+      {
+        "seed": "가격 평면 — 3.3㎡당 단가를 평면 도형에 곱해 보는 신축 분양",
+        "issue": "경기 분양가"
+      },
+      {
+        "seed": "읽히는 지붕 — 점검 등급이 겉으로 드러나는 학교 지붕과 처마",
+        "issue": "페샤와르 학교 붕괴"
+      },
+      {
+        "seed": "옥상의 배전소 — 먼 발전소의 전기를 건물 옥상에서 나눠 받는 구조",
+        "issue": "레바논 태양광"
+      }
+    ],
+    "symposium_day": 2,
+    "unit": "cross",
+    "unit_concept": "commons",
+    "screen_work": "Tokyo Story (1953)",
+    "screen_medium": "Film",
+    "chips": {
+      "thesis": "주거 · 파키스탄 · 레바논",
+      "symposium": "DAY 02 · 아르케 논쟁",
+      "unit": "cross cross · commons",
+      "screen": "Film · Tokyo Story (1953)"
+    },
+    "vocab": [
+      "call in",
+      "massing",
+      "viability",
+      "intensify",
+      "austerity",
+      "replenishment",
+      "waiting space",
+      "threshold",
+      "certify",
+      "grid",
+      "rarefaction",
+      "retribution",
+      "the Boundless",
+      "layered",
+      "enclosure",
+      "self-governance",
+      "conflate",
+      "co-opt",
+      "legible",
+      "entitlement",
+      "static camera",
+      "threshold",
+      "measured",
+      "fixed"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-10-17.html",
+    "slug": "2026-10-17"
+  },
+  {
     "date": "2026-10-16",
     "issue": 9,
     "edition": "weekday",
