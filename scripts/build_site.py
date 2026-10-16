@@ -121,8 +121,10 @@ def page(head, body, description):
 
 def with_archive_tab(body, prefix, current=False):
     cur = ' aria-current="page"' if current else ""
-    tab = '  <a href="' + prefix + 'archive.html"' + cur + '>ARCHIVE <b>지난 호</b></a>\n</nav>'
-    return body.replace("</nav>", tab, 1)
+    tab = '  <a href="' + prefix + 'archive.html"' + cur + '>ARCHIVE <b>지난 호</b></a>\n'
+    if '<button class="print-btn"' in body:
+        return body.replace('  <button class="print-btn"', tab + '  <button class="print-btn"', 1)
+    return body.replace("</nav>", tab + "</nav>", 1)
 
 
 CHIP_LABELS = [("thesis", "2"), ("symposium", "3"), ("unit", "4"), ("screen", "5")]

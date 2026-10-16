@@ -325,6 +325,60 @@ blockquote.brief cite { display: block; font-family: var(--f-mono); font-style: 
 .quiz details { margin-top: 4px; font-size: 14px; color: var(--muted); }
 .quiz summary { cursor: pointer; font-family: var(--f-mono); font-size: 12px; color: var(--blue); }
 @media (max-width: 560px) { .tabs a { padding: 7px 10px 6px; } .tabs a .n { display: none; } }
+/* ── Save as PDF (print): every sheet on its own A4 portrait page ── */
+.tabs .print-btn { margin-left: auto; font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.06em; color: var(--ink); background: var(--sheet); border: 1.5px solid var(--ink); border-bottom: 0; padding: 8px 14px 7px; cursor: pointer; }
+.tabs .print-btn:hover { color: var(--red); }
+.tabs .print-btn:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+@page { size: A4 portrait; margin: 12mm 12mm 14mm; }
+@media print {
+  :root, :root:not([data-theme="light"]), :root[data-theme="dark"] {
+    --paper: #fff !important; --sheet: #fff !important; --ink: #1B1F23 !important; --muted: #5A6168 !important;
+    --rule: #C6CBC3 !important; --grid: transparent !important; --red: #C2331D !important; --blue: #1F4E79 !important; --tint: #F1F2EE !important;
+    color-scheme: light;
+  }
+  html, body { background: #fff !important; }
+  body { padding: 0; font-size: 8.6pt; line-height: 1.45; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .tabs, .print-btn { display: none !important; }
+  main.sheet[hidden] { display: grid !important; }
+  .sheet { max-width: none; border: 0; padding: 0; gap: 12px; break-before: page; }
+  main.sheet:first-of-type { break-before: auto; }
+  /* Evergreen blocks stay on the web, not on paper. */
+  section[aria-labelledby="map-h"], section[aria-labelledby="rt-h"], section[aria-labelledby="method-h"] { display: none !important; }
+  .board tbody tr:nth-child(n+5) { display: none; }
+  .mast { padding-bottom: 8px; gap: 12px; }
+  .mast h1 { font-size: 34pt; }
+  .mast .sub { font-size: 8pt; margin-top: 4px; }
+  .tblock { font-size: 7.5pt; }
+  .label { margin-bottom: 8px; font-size: 7.5pt; }
+  .lead { grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr) !important; gap: 16px; }
+  .grid2, .dual { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 14px 18px; }
+  .issue { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) !important; gap: 8px 18px; padding-top: 8px; }
+  .issues { gap: 16px; }
+  .briefs { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 0 18px; }
+  .observe { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .observe li + li { border-left: 1px solid var(--ink) !important; border-top: 0 !important; }
+  .pairs { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .pairs article + article { border-left: 1px solid var(--ink) !important; border-top: 0 !important; }
+  .vocab ul { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .lead h2, .lec-head h2 { font-size: 17pt; }
+  .lead .deck, .lec-head .deck { font-size: 9.5pt; }
+  .story h3, .dual h3, .issue h3 { font-size: 11.5pt; }
+  .crit.big p { font-size: 11pt; }
+  .stats strong { font-size: 14pt; }
+  .facts .figs strong { font-size: 12pt; }
+  .essay { font-size: 9pt; line-height: 1.55; max-width: none; columns: 2; column-gap: 18px; display: block; }
+  .essay > * { margin-bottom: 8px; break-inside: avoid-column; }
+  .vocab .term { font-size: 11pt; }
+  .story p + p { margin-top: 6px; }
+  .crit, .plate, .vocab li, .observe li, .briefs li, .cal li, tr, figure, .stats, .figs { break-inside: avoid; }
+  .label, h2, h3, h4 { break-after: avoid; }
+  .tablewrap { overflow: visible; }
+  table { min-width: 0 !important; font-size: 8pt; }
+  .plate img { max-height: 70mm; }
+  footer { font-size: 7.5pt; }
+  a { color: inherit; text-decoration: none; }
+  .quiz details > * { display: block; }
+}
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
 </style>
 
@@ -335,6 +389,7 @@ blockquote.brief cite { display: block; font-family: var(--f-mono); font-style: 
   <a href="#unit" data-page="unit"><span class="n">SHEET 4/5</span> <b>Unit Brief</b></a>
   <a href="#screen" data-page="screen"><span class="n">SHEET 5/5</span> <b>Mood Screen</b></a>
   <a href="#words" data-page="words"><span class="n">WORDS</span> <b>Word Desk</b></a>
+  <button class="print-btn" type="button" title="모든 면을 A4 세로로 인쇄하거나 PDF로 저장">PDF로 저장</button>
 </nav>
 
 <main class="sheet" id="page-crit">
@@ -811,6 +866,18 @@ blockquote.brief cite { display: block; font-family: var(--f-mono); font-style: 
     function fail() { img.closest('.plate').classList.add('noimg'); }
     if (img.complete && img.naturalWidth === 0) fail();
     else img.addEventListener('error', fail);
+  });
+
+  // Save as PDF: the browser's print dialog, every sheet on its own A4 page.
+  var pbtn = document.querySelector('.print-btn');
+  if (pbtn) pbtn.addEventListener('click', function () {
+    var t = document.title;
+    var tb = document.querySelector('main.sheet .tblock');
+    var issue = tb ? (tb.textContent.match(/No\.\s*\d+/) || [''])[0] : '';
+    var date = tb ? (tb.textContent.match(/\d{4}\.\d{2}\.\d{2}/) || [''])[0] : '';
+    document.title = ('Morning Crit ' + issue + ' ' + date).trim();
+    document.querySelectorAll('img[loading="lazy"]').forEach(function (img) { img.loading = 'eager'; });
+    setTimeout(function () { window.print(); document.title = t; }, 300);
   });
 
   var pages = {}, first = null;

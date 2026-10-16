@@ -158,6 +158,7 @@ def nav(sheets):
         cur = ' aria-current="page"' if i == 0 else ""
         links.append('  <a href="#' + name + '" data-page="' + name + '"' + cur + '><span class="n">SHEET ' + str(i + 1) + "/" + str(total) + "</span> <b>" + title + "</b></a>")
     links.append('  <a href="#words" data-page="words"><span class="n">WORDS</span> <b>Word Desk</b></a>')
+    links.append('  <button class="print-btn" type="button" title="모든 면을 A4 세로로 인쇄하거나 PDF로 저장">PDF로 저장</button>')
     return '<nav class="tabs" aria-label="Sheets">\n' + "\n".join(links) + "\n</nav>"
 
 
