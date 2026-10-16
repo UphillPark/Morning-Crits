@@ -259,28 +259,264 @@ footer { border-top: 3px double var(--ink); padding-top: 14px; font-size: 12.5px
 .board td:first-child { font-family: var(--f-mono); font-weight: 400; font-size: 12px; color: var(--muted); }
 .board td.seed { font-weight: 600; white-space: normal; }
 .board table { min-width: 680px; }
+/* ── Word box (bottom of every sheet) ── */
+.vocab { border: 1px solid var(--ink); background: var(--tint); padding: 14px 16px 6px; }
+.vocab .k { font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.14em; color: var(--blue); display: block; margin-bottom: 6px; }
+.vocab ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; }
+.vocab li { padding: 9px 0; border-top: 1px solid var(--rule); font-size: 14px; line-height: 1.55; min-width: 0; }
+.vocab li::before { float: right; margin-left: 8px; font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.06em; padding: 0 5px; border: 1px solid currentColor; border-radius: 2px; }
+.vocab li[data-kind="ielts"]::before { content: "IELTS 7.0"; color: var(--muted); }
+.vocab li[data-kind="crit"]::before { content: "AA CRIT"; color: var(--red); }
+.vocab .term { font-family: var(--f-mast); font-style: italic; font-weight: 700; font-size: 18px; }
+.vocab .pos { font-family: var(--f-mono); font-size: 11px; color: var(--muted); }
+.vocab .ko { display: block; }
+.vocab .ex { display: block; font-size: 13px; color: var(--muted); font-style: italic; }
+@media (max-width: 720px) { .vocab ul { grid-template-columns: minmax(0, 1fr); } }
+
+/* ── Shared: lecture head, key chips, plates ── */
+.lec-head h2 { font-family: var(--f-head); font-weight: 900; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.3; }
+.lec-head .deck { font-size: 17px; margin-top: 14px; max-width: 64ch; }
+.lec-head .credits { font-family: var(--f-mono); font-size: 12.5px; color: var(--muted); margin-top: 10px; line-height: 1.6; }
+.keys { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.keys li { font-family: var(--f-mono); font-size: 12px; border: 1px solid var(--ink); padding: 2px 8px; line-height: 1.6; }
+.keys li i { font-style: normal; color: var(--muted); }
+.recap { border-left: 3px solid var(--blue); padding: 2px 0 2px 14px; color: var(--muted); font-size: 14.5px; max-width: 72ch; display: grid; gap: 8px; }
+.plates { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 20px; }
+.plate { margin: 0; border: 1px solid var(--ink); background: var(--tint); min-width: 0; }
+.plate img { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.plate figcaption { font-family: var(--f-mono); font-size: 11.5px; color: var(--muted); padding: 8px 12px; border-top: 1px solid var(--ink); line-height: 1.55; }
+.plate.noimg img { display: none; }
+.plate.noimg figcaption { border-top: 0; }
+.qs { margin: 0; padding-left: 22px; display: grid; gap: 8px; font-size: 15px; max-width: 72ch; }
+.next { font-family: var(--f-mono); font-size: 13px; border-top: 1px dashed var(--rule); padding-top: 10px; }
+.closed { border: 1.5px dashed var(--rule); padding: 28px; text-align: center; color: var(--muted); }
+
+/* ── Daily Symposium ── */
+.dual { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 40px; }
+.dual > article { min-width: 0; border-top: 1.5px solid var(--ink); padding-top: 14px; display: grid; gap: 12px; align-content: start; }
+.dual h3 { font-family: var(--f-head); font-weight: 600; font-size: 21px; line-height: 1.42; }
+.dual h4 { font-family: var(--f-mono); font-weight: 500; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red); margin: 6px 0 0; }
+@media (max-width: 820px) { .dual { grid-template-columns: minmax(0, 1fr); } }
+dl.terms { margin: 0; display: grid; grid-template-columns: minmax(0, 13em) minmax(0, 1fr); border-top: 1px solid var(--rule); }
+dl.terms dt, dl.terms dd { margin: 0; padding: 8px 0; border-bottom: 1px solid var(--rule); font-size: 14.5px; line-height: 1.6; }
+dl.terms dt { font-weight: 600; padding-right: 14px; }
+@media (max-width: 560px) { dl.terms { grid-template-columns: minmax(0, 1fr); } dl.terms dt { border-bottom: 0; padding-bottom: 0; } }
+
+/* ── Unit Brief ── */
+.essay { max-width: 72ch; display: grid; gap: 14px; font-size: 16px; line-height: 1.8; }
+.essay h3 { font-family: var(--f-head); font-weight: 600; font-size: 21px; line-height: 1.4; margin-top: 12px; }
+blockquote.brief { margin: 0; border-left: 3px solid var(--red); padding: 4px 0 4px 16px; font-family: var(--f-mast); font-style: italic; font-size: 19px; line-height: 1.5; max-width: 64ch; }
+blockquote.brief cite { display: block; font-family: var(--f-mono); font-style: normal; font-size: 11.5px; color: var(--muted); margin-top: 6px; }
+
+/* ── Mood Screen ── */
+.observe { list-style: none; counter-reset: obs; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: 1px solid var(--ink); }
+.observe li { padding: 16px; min-width: 0; counter-increment: obs; }
+.observe li + li { border-left: 1px solid var(--ink); }
+.observe .cat { font-family: var(--f-mono); font-size: 11.5px; color: var(--red); letter-spacing: 0.08em; display: block; margin-bottom: 4px; text-transform: uppercase; }
+.observe .cat::before { content: counter(obs) " · "; }
+.observe strong { font-family: var(--f-head); font-weight: 600; font-size: 17px; display: block; line-height: 1.45; }
+.observe p { font-size: 14px; line-height: 1.65; margin-top: 6px; }
+@media (max-width: 820px) { .observe { grid-template-columns: minmax(0, 1fr); } .observe li + li { border-left: 0; border-top: 1px solid var(--ink); } }
+.framebox { border: 1.5px dashed var(--blue); padding: 14px 16px; display: grid; gap: 8px; }
+.framebox .k { font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.14em; color: var(--blue); }
+.prompt { font-family: var(--f-mono); font-size: 12.5px; line-height: 1.6; background: var(--tint); padding: 10px 12px; border: 1px solid var(--rule); white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; }
+
+/* ── Word Desk / review ── */
+.words td:first-child { font-family: var(--f-mast); font-style: italic; font-size: 16px; }
+.words td.kind { font-family: var(--f-mono); font-size: 11px; white-space: nowrap; }
+.words td.kind.crit { color: var(--red); }
+.words table { min-width: 640px; }
+@media (max-width: 640px) { .words table { min-width: 0; } .words th:nth-child(2), .words td:nth-child(2), .words th:nth-child(5), .words td:nth-child(5) { display: none; } }
+.quiz { margin: 0; padding-left: 22px; display: grid; gap: 14px; }
+.quiz details { margin-top: 4px; font-size: 14px; color: var(--muted); }
+.quiz summary { cursor: pointer; font-family: var(--f-mono); font-size: 12px; color: var(--blue); }
+@media (max-width: 560px) { .tabs a { padding: 7px 10px 6px; } .tabs a .n { display: none; } }
+/* ── Side rails: left = past issues of this sheet, right = this sheet's tools ── */
+.sheet { position: relative; }
+.rail { display: grid; gap: 14px; align-content: start; order: 1; border-top: 3px double var(--ink); padding-top: 14px; }
+.rail-in { display: grid; gap: 14px; align-content: start; min-width: 0; }
+.sheet > footer { order: 2; }
+.rbox { min-width: 0; }
+.rbox details > summary { cursor: pointer; list-style: none; margin-bottom: 10px; }
+.rbox details > summary::-webkit-details-marker { display: none; }
+.rbox details > summary::before { content: "+"; font-family: var(--f-mono); color: var(--red); width: 1em; }
+.rbox details[open] > summary::before { content: "−"; }
+.rbox details:not([open]) > summary { margin-bottom: 0; }
+.rlist { list-style: none; margin: 0; padding: 0; display: grid; }
+.rlist li { padding: 7px 0; border-bottom: 1px solid var(--rule); font-size: 13px; line-height: 1.5; min-width: 0; }
+.rlist .d { display: block; font-family: var(--f-mono); font-size: 11px; color: var(--muted); }
+.rlist a { color: var(--ink); text-decoration: none; }
+.rlist a:hover { color: var(--blue); text-decoration: underline; }
+.rlist .sub { display: block; color: var(--muted); font-size: 12px; }
+.rmore { font-family: var(--f-mono); font-size: 11.5px; margin-top: 8px; display: inline-block; }
+.rnote { font-size: 13px; color: var(--muted); }
+.seeds { list-style: none; margin: 0; padding: 0; display: grid; }
+.seeds li { padding: 8px 0; border-bottom: 1px solid var(--rule); font-size: 13.5px; line-height: 1.5; }
+.seeds .seed { display: block; font-weight: 600; }
+.seeds .link { display: block; font-family: var(--f-mono); font-size: 11px; color: var(--red); margin-top: 2px; }
+.bar { height: 6px; background: var(--tint); border: 1px solid var(--ink); margin: 6px 0 2px; }
+.bar i { display: block; height: 100%; background: var(--ink); }
+.cal-next { display: none; }
+@media (max-width: 1439px) {
+  .cal-next { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; border: 1px solid var(--ink); padding: 8px 12px; font-size: 13.5px; text-decoration: none; color: var(--ink); }
+  .cal-next .k { font-family: var(--f-mono); font-size: 11px; color: var(--red); letter-spacing: 0.08em; }
+  .cal-next .dd { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+}
+@media (min-width: 1440px) {
+  .sheet, .tabs { max-width: min(1000px, calc(100vw - 600px)); }
+  .rail { position: absolute; top: -1.5px; bottom: 0; width: 250px; border-top: 0; padding-top: 0; display: block; }
+  .rail-left { right: calc(100% + 24px); }
+  .rail-right { left: calc(100% + 24px); }
+  .rail-in { position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; padding-right: 4px; scrollbar-width: thin; }
+  .rail .label { font-size: 11px; margin-bottom: 10px; gap: 8px; flex-wrap: wrap; }
+  .rail .cal li { grid-template-columns: minmax(0, 1fr) auto; gap: 2px 8px; padding: 8px 0; }
+  .rail .cal .d { font-size: 11.5px; }
+  .rail .cal .t { grid-column: 1 / -1; font-size: 13px; }
+  .rail .mapintro { font-size: 12.5px; margin-bottom: 10px; }
+  .rail table { min-width: 0; font-size: 12.5px; }
+  .rail th:nth-child(2), .rail td:nth-child(2), .rail th:nth-child(5), .rail td:nth-child(5) { display: none; }
+  .rail td:first-child { white-space: normal; }
+  .rail .routine, .rail .method { grid-template-columns: minmax(0, 1fr); }
+  .rail .routine div + div, .rail .method div + div { border-left: 0; border-top: 1px solid var(--ink); }
+  .rail .method div:nth-child(3) { border-left: 0; }
+  .rail .routine div, .rail .method div { padding: 10px 12px; }
+}
+/* ── Save as PDF (print): every sheet on its own A4 portrait page ── */
+.tabs .print-btn { margin-left: auto; font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.06em; color: var(--ink); background: var(--sheet); border: 1.5px solid var(--ink); border-bottom: 0; padding: 8px 14px 7px; cursor: pointer; }
+.tabs .print-btn:hover { color: var(--red); }
+.tabs .print-btn:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+@page { size: A4 portrait; margin: 12mm 12mm 14mm; }
+@media print {
+  :root, :root:not([data-theme="light"]), :root[data-theme="dark"] {
+    --paper: #fff !important; --sheet: #fff !important; --ink: #1B1F23 !important; --muted: #5A6168 !important;
+    --rule: #C6CBC3 !important; --grid: transparent !important; --red: #C2331D !important; --blue: #1F4E79 !important; --tint: #F1F2EE !important;
+    color-scheme: light;
+  }
+  html, body { background: #fff !important; }
+  body { padding: 0; font-size: 8.6pt; line-height: 1.45; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .tabs, .print-btn, .rail, .cal-next { display: none !important; }
+  main.sheet[hidden] { display: grid !important; }
+  .sheet { max-width: none; border: 0; padding: 0; gap: 12px; break-before: page; }
+  main.sheet:first-of-type { break-before: auto; }
+  .mast { padding-bottom: 8px; gap: 12px; }
+  .mast h1 { font-size: 34pt; }
+  .mast .sub { font-size: 8pt; margin-top: 4px; }
+  .tblock { font-size: 7.5pt; }
+  .label { margin-bottom: 8px; font-size: 7.5pt; }
+  .lead { grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr) !important; gap: 16px; }
+  .grid2, .dual { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 14px 18px; }
+  .issue { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) !important; gap: 8px 18px; padding-top: 8px; }
+  .issues { gap: 16px; }
+  .briefs { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 0 18px; }
+  .observe { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .observe li + li { border-left: 1px solid var(--ink) !important; border-top: 0 !important; }
+  .pairs { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .pairs article + article { border-left: 1px solid var(--ink) !important; border-top: 0 !important; }
+  .vocab ul { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .lead h2, .lec-head h2 { font-size: 17pt; }
+  .lead .deck, .lec-head .deck { font-size: 9.5pt; }
+  .story h3, .dual h3, .issue h3 { font-size: 11.5pt; }
+  .crit.big p { font-size: 11pt; }
+  .stats strong { font-size: 14pt; }
+  .facts .figs strong { font-size: 12pt; }
+  .essay { font-size: 9pt; line-height: 1.55; max-width: none; columns: 2; column-gap: 18px; display: block; }
+  .essay > * { margin-bottom: 8px; break-inside: avoid-column; }
+  .vocab .term { font-size: 11pt; }
+  .story p + p { margin-top: 6px; }
+  .crit, .plate, .vocab li, .observe li, .briefs li, .cal li, tr, figure, .stats, .figs { break-inside: avoid; }
+  .label, h2, h3, h4 { break-after: avoid; }
+  .tablewrap { overflow: visible; }
+  table { min-width: 0 !important; font-size: 8pt; }
+  .plate img { max-height: 70mm; }
+  footer { font-size: 7.5pt; }
+  a { color: inherit; text-decoration: none; }
+  .quiz details > * { display: block; }
+}
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+
+
+<style>
+.afilter { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }
+.afilter button { font-family: var(--f-mono); font-size: 12px; background: var(--sheet); color: var(--muted); border: 1px solid var(--ink); padding: 3px 10px; cursor: pointer; }
+.afilter button[aria-pressed="true"] { background: var(--ink); color: var(--sheet); }
+.afilter input { flex: 1 1 200px; min-width: 0; font: inherit; font-size: 14px; padding: 4px 10px; border: 1px solid var(--ink); background: var(--sheet); color: var(--ink); }
+.amonth { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.12em; color: var(--red); margin: 18px 0 4px; }
+.arch { list-style: none; margin: 0; padding: 0; display: grid; }
+.arch > li { display: grid; grid-template-columns: 96px 64px minmax(0, 1fr); gap: 6px 14px; padding: 12px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+.arch > li[hidden] { display: none; }
+.arch .d, .arch .n { font-family: var(--f-mono); font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.arch .h { font-family: var(--f-head); font-weight: 600; font-size: 16px; line-height: 1.45; min-width: 0; }
+.arch .sun { font-family: var(--f-mono); font-size: 11px; color: var(--red); border: 1px solid currentColor; padding: 0 5px; margin-right: 6px; }
+.arch .chips, .arch .det { grid-column: 3; min-width: 0; }
+.arch .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.arch .chips span { font-family: var(--f-mono); font-size: 11.5px; border: 1px solid var(--rule); padding: 0 6px; line-height: 1.7; min-width: 0; overflow-wrap: anywhere; }
+.arch .chips b, .arch .det b { color: var(--red); font-weight: 500; margin-right: 4px; }
+.arch .det { display: none; font-size: 13.5px; line-height: 1.6; }
+.arch .det ul { margin: 2px 0 0; padding-left: 18px; }
+.arch .det a { color: var(--ink); }
+body.f-1 .arch .det[data-s="1"], body.f-2 .arch .det[data-s="2"], body.f-3 .arch .det[data-s="3"], body.f-4 .arch .det[data-s="4"], body.f-5 .arch .det[data-s="5"] { display: block; }
+body[class*="f-"] .arch .chips { display: none; }
+@media (max-width: 560px) { .arch > li { grid-template-columns: 78px minmax(0, 1fr); } .arch .n { grid-column: 1; grid-row: 2; } .arch .h, .arch .chips, .arch .det { grid-column: 2; } }
 </style>
 </head>
 <body>
-<nav class="tabs" aria-label="지면">
-  <a href="index.html#crit">SHEET 1/2 <b>Morning Crit</b></a>
-  <a href="index.html#thesis">SHEET 2/2 <b>Thesis Desk</b></a>
+<nav class="tabs" aria-label="Sheets">
+  <a href="index.html#crit"><span class="n">SHEET 1/5</span> <b>Morning Crit</b></a>
+  <a href="index.html#thesis"><span class="n">SHEET 2/5</span> <b>Thesis Desk</b></a>
+  <a href="index.html#symposium"><span class="n">SHEET 3/5</span> <b>Daily Symposium</b></a>
+  <a href="index.html#unit"><span class="n">SHEET 4/5</span> <b>Unit Brief</b></a>
+  <a href="index.html#screen"><span class="n">SHEET 5/5</span> <b>Mood Screen</b></a>
   <a href="archive.html" aria-current="page">ARCHIVE <b>지난 호</b></a>
 </nav>
 <main class="sheet">
-  <header class="mast"><div><h1>Archive</h1><p class="sub">지난 Morning Crit 전체. 날짜를 누르면 그날의 1면과 2면이 열린다.</p></div></header>
+  <header class="mast"><div><h1>Archive</h1><p class="sub">Morning Crit 전체 색인. 면을 고르면 그 면의 지난 기사·씨앗·강의·작품이 펼쳐지고, 검색은 제목·씨앗·단어까지 찾는다.</p></div></header>
   <section><div class="label"><span class="tag">지난 호</span> 9호</div>
-  <div class="tablewrap"><table><thead><tr><th>날짜</th><th>호</th><th>1면</th><th>2면 이슈</th></tr></thead>
-  <tbody><tr><td class="m">2026.10.16</td><td class="m">No. 009</td><td><a href="issues/2026-10-16.html">Stirling Prize 2026은 주차장 위의 157세대 — Croydon의 공영 주택 Lion Green Road가 ‘올해의 건물’이 되었다</a></td><td>서울 오피스텔 월세 상승폭이 통계 작성 이래 최대: 가장 작은 방이 임대료를 받아내는 동안 매매는 식는다 · 운문댐의 수위선은 누가 정하는가: 국감에서 수자원공사는 ‘하류 하천 정비’와 ‘수력 발전 감소의 원인’을 두고 답했다 · 둘로 나뉘는 LH: ‘짓는 조직’과 ‘맡는 조직’의 경계는 한 단지의 어디에 그어지는가 · 지하로 몰린 물: Istanbul 폭우에서 주지사는 지하층 주민에게 윗층으로 올라가라고 했다</td></tr>
-<tr><td class="m">2026.10.15</td><td class="m">No. 008</td><td><a href="issues/2026-10-15.html">보존은 “마멀레이드에나 하는 일” — 100세로 세상을 떠난 Donald Insall이 남긴 ‘살아 있는 건물’의 원칙</a></td><td>이태원참사 4주기를 앞두고 추모시설과 아카이브 정책연구가 공유됐다: 지금 기억의 방은 사무 빌딩 안에 있다 · ‘다른 규칙의 구역’을 만드는 메가특구 노동특례: 노사정 실무협의가 3주째, 구역 안의 시계는 누가 정하는가 · 비료가 지나가는 하루 다섯 척의 문: UN이 호르무즈 비료 통로 개설을 촉구했다 · 연료비가 두 배가 된 구조선: 스페인 NGO가 중부 지중해 임무를 내년으로 미뤘다</td></tr>
-<tr><td class="m">2026.10.14</td><td class="m">No. 007</td><td><a href="issues/2026-10-14.html">“Resilience Starts at Home” — 재난 감축의 날이 올해 집을 방재의 중심에 놓았다</a></td><td>빈 어린이집이 어르신의 ‘중간집’이 된다: 보건복지부가 유휴 시설을 주거-돌봄 연계 공간으로 바꾼다 · 북극항로 시범 왕복을 마친 컨테이너선이 부산에 돌아왔다: 열린 바다가 항만의 시간표를 바꾼다 · 세종으로 가는 중앙행정기관: 2차 이전 방향이 나왔고, 금융 당국의 거취는 연내 결정된다 · 국경을 넘는 연기: Singapore와 Kuala Lumpur가 하루 세계에서 가장 오염된 도시가 됐다</td></tr>
-<tr><td class="m">2026.10.13</td><td class="m">No. 006</td><td><a href="issues/2026-10-13.html">Stirling Prize 발표 이틀 전 — 결선 6작품은 ‘무엇이 올해의 건물인가’를 다시 묻는다</a></td><td>[배경] 문을 닫는 학교: 폐교 뒤의 건물은 무엇이 되는가</td></tr>
-<tr><td class="m">2026.10.12</td><td class="m">No. 005</td><td><a href="issues/2026-10-12.html">25억 달러짜리 경기장이 ‘조용히’ 보류됐다 — The Line 안 지상 350m의 NEOM Stadium, 렌더링은 무엇을 약속했나</a></td><td>지방대를 떠난 유학생 1,200명: 충청권에서 지난해 학업을 멈춘 이들은 한국어와 취업난을 이유로 들었다 · 반도체는 호황인데 자영업은 문을 닫는다: ‘100만 명 폐업’이라는 제목 뒤의 골목 · 농가 인력의 70%는 외국인: 일터 옆에서 잠드는 사람의 집은 누가, 어떤 수수료로 짓는가 · 다시 불어난 Budhi Gandaki: 네팔 Gorkha의 집들이 쓸려 갔고 하류 주민에게 대피령이 내려졌다</td></tr>
-<tr><td class="m">2026.10.10</td><td class="m">No. 004</td><td><a href="issues/2026-10-10.html">결선 여섯 채 중 다섯 채가 벽돌이라는 지적과, “주거 건축이 장난스러워진다”는 Kevin McCloud — 2026 Stirling Prize는 무엇을 상 줄까</a></td><td>4,037개의 빈 학교: 학령인구는 한 해 19만 명 줄었고, 정부는 폐교를 공공주택 부지로 부른다 · 수도권엔 23만 호를 더 짓고, 전국엔 빈집 13만 4천 호와 빈 건축물 6만 1천 동이 남아 있다 · 3천 명이 몇 주를 지낸 해변: 스페인 세우타 Trampolín 캠프가 철거돼 사람들이 버스에 올랐다</td></tr>
-<tr><td class="m">2026.10.07</td><td class="m">No. 003</td><td><a href="issues/2026-10-07.html">“그들의 이윤, 우리의 비참” — 스페인 하원이 주거 긴급 법령을 부결하자 총리는 총선을 택했다</a></td><td>지어 놓고 비워 둔 공공임대: 1년 넘게 빈 집 2만 2천 호, 5년간 임대료 1,670억 원 · 같은 통합돌봄, 사는 곳에 따라 최대 4배: 경산 95.0%, 속초 23.7% · 수몰선이 지도마다 다르다: 인도 Polavaram 댐의 ‘없는 지도’ 속 마을들 · 70년 산 집에서 쫓겨난 87세: 스페인 주거 법령 부결과 11월 총선</td></tr>
-<tr><td class="m">2026.10.06</td><td class="m">No. 002</td><td><a href="issues/2026-10-06-002.html">“Housing is a Human Right. Build It.” — 세계 건축의 날, 문장은 권리를 말하고 동사는 건축가를 부른다</a></td><td>문 닫은 대형마트 37곳: 역세권의 창 없는 상자는 무엇이 되는가 · 돌봄의 60일: 학교가 쉬는 날, 맞벌이 부모는 출근한다 · 학교는 그대로, 아이는 반: 초등학교 한 곳당 학생 763명에서 358명으로 · 국경을 넘어 흐르는 광산: 미얀마의 광물은 태국의 강을 지나 중국으로 간다</td></tr>
-<tr><td class="m">2026.10.06</td><td class="m">No. 001</td><td><a href="issues/2026-10-06.html">“건축 학위는 무엇을 위한 것인가” — 영국 건축계가 다음 세대의 위기를 공개적으로 묻기 시작했다</a></td><td>폭염의 역설: 환자는 줄었는데 죽음은 늘었다 · 빈집 14만 호: 고칠 사람도, 살 사람도 없는 집 · 문 하나 뒤의 고립: 고독사 3,924명, 5년 연속 증가 · 데이터센터 신청 88건: 클라우드가 동네로 내려온다</td></tr></tbody></table></div></section>
+  <div class="afilter" role="group" aria-label="면별 보기"><button type="button" data-f="">전체</button><button type="button" data-f="1">1면</button><button type="button" data-f="2">2면</button><button type="button" data-f="3">3면</button><button type="button" data-f="4">4면</button><button type="button" data-f="5">5면</button><input type="search" placeholder="검색 · 제목, 씨앗, 작품, 단어" aria-label="지난 호 검색"></div>
+<p class="amonth">2026.10</p>
+<ul class="arch"><li data-text="the 2026 stirling prize goes to 157 homes on a car park — croydon’s council-built lion green road is building of the year if a scheme built by the public sector is finally sold to the market, on which line of the drawing does its “publicness” survive? is it the title, the tenancy or the topography that makes this estate public? 서울 오피스텔 월세 상승폭이 통계 작성 이래 최대: 가장 작은 방이 임대료를 받아내는 동안 매매는 식는다 운문댐의 수위선은 누가 정하는가: 국감에서 수자원공사는 ‘하류 하천 정비’와 ‘수력 발전 감소의 원인’을 두고 답했다 둘로 나뉘는 lh: ‘짓는 조직’과 ‘맡는 조직’의 경계는 한 단지의 어디에 그어지는가 지하로 몰린 물: istanbul 폭우에서 주지사는 지하층 주민에게 윗층으로 올라가라고 했다 가장자리의 이용법 — 저수율에 따라 쓰임이 바뀌는 댐 가장자리 땅 공용의 비율 — 오피스텔 호실을 줄여 공용 면적으로 돌리는 월세 구조 30년 단면 — 지을 때의 돈과 고칠 때의 돈을 한 동에 겹치기 물이 먼저 닿는 방 — 지하층 주거의 별도 출구와 대피 동선 주거 · 물 · 공공주택 · 튀르키예 day 01 · 신화에서 로고스로 bartlett pg17 · plasticity painting · interior, sunlight on the floor (1906) tenure outsider deep plan wind down permeable unsympathetic shared space give up edge split cosmogony first principle legitimacy conditional plasticity deflagration disobedience sceptical decorative impose raking light tonal range distorted lived in"><span class="d">2026.10.16</span><span class="n">No. 009</span><a class="h" href="issues/2026-10-16.html">The 2026 Stirling Prize goes to 157 homes on a car park — Croydon’s council-built Lion Green Road is building of the year</a><span class="chips"><span><b>2</b>주거 · 물 · 공공주택 · 튀르키예</span><span><b>3</b>DAY 01 · 신화에서 로고스로</span><span><b>4</b>Bartlett PG17 · plasticity</span><span><b>5</b>Painting · Interior, Sunlight on the Floor (1906)</span></span><div class="det" data-s="1"><b>1</b><a href="issues/2026-10-16.html#crit">The 2026 Stirling Prize goes to 157 homes on a car park — Croydon’s council-built Lion Green Road is building of the year</a><br><small>If a scheme built by the public sector is finally sold to the market, on which line of the drawing does its “publicness” survive? Is it the title, the tenancy or the topography that makes this estate public?</small></div><div class="det" data-s="2"><b>2</b><a href="issues/2026-10-16.html#thesis">이슈</a><ul><li>서울 오피스텔 월세 상승폭이 통계 작성 이래 최대: 가장 작은 방이 임대료를 받아내는 동안 매매는 식는다</li><li>운문댐의 수위선은 누가 정하는가: 국감에서 수자원공사는 ‘하류 하천 정비’와 ‘수력 발전 감소의 원인’을 두고 답했다</li><li>둘로 나뉘는 LH: ‘짓는 조직’과 ‘맡는 조직’의 경계는 한 단지의 어디에 그어지는가</li><li>지하로 몰린 물: Istanbul 폭우에서 주지사는 지하층 주민에게 윗층으로 올라가라고 했다</li></ul><b>씨앗</b><ul><li>가장자리의 이용법 — 저수율에 따라 쓰임이 바뀌는 댐 가장자리 땅 <small>· 운문댐 수위선</small></li><li>공용의 비율 — 오피스텔 호실을 줄여 공용 면적으로 돌리는 월세 구조 <small>· 서울 오피스텔 월세</small></li><li>30년 단면 — 지을 때의 돈과 고칠 때의 돈을 한 동에 겹치기 <small>· LH 조직 분리</small></li><li>물이 먼저 닿는 방 — 지하층 주거의 별도 출구와 대피 동선 <small>· Istanbul 폭우</small></li></ul></div><div class="det" data-s="3"><b>3</b><a href="issues/2026-10-16.html#symposium">DAY 01 · 신화에서 로고스로</a></div><div class="det" data-s="4"><b>4</b><a href="issues/2026-10-16.html#unit">Bartlett PG17 · plasticity</a></div><div class="det" data-s="5"><b>5</b><a href="issues/2026-10-16.html#screen">Painting · Interior, Sunlight on the Floor (1906)</a></div></li>
+<li data-text="보존은 “마멀레이드에나 하는 일” — 100세로 세상을 떠난 donald insall이 남긴 ‘살아 있는 건물’의 원칙 건물과 ‘친구가 된다’는 말은 도면으로 어떻게 증명되는가? 지키는 것과 계속 쓰이게 하는 것이 부딪칠 때, 나는 어느 쪽에 선을 긋는가? 이태원참사 4주기를 앞두고 추모시설과 아카이브 정책연구가 공유됐다: 지금 기억의 방은 사무 빌딩 안에 있다 ‘다른 규칙의 구역’을 만드는 메가특구 노동특례: 노사정 실무협의가 3주째, 구역 안의 시계는 누가 정하는가 비료가 지나가는 하루 다섯 척의 문: un이 호르무즈 비료 통로 개설을 촉구했다 연료비가 두 배가 된 구조선: 스페인 ngo가 중부 지중해 임무를 내년으로 미뤘다 임시로 시작한 기억 — 사무 빌딩 한 층의 기억공간이 영구 시설로 자라는 이행 구역 안의 시계 — 노동 특례 구역 건물의 층별 시간표와 문턱 하루 다섯 척의 창고 — 좁은 해협 통과량에 맞춘 비료 완충 저장 배정된 항구까지 — 구조선의 거리와 연료를 설계 조건으로"><span class="d">2026.10.15</span><span class="n">No. 008</span><a class="h" href="issues/2026-10-15.html">보존은 “마멀레이드에나 하는 일” — 100세로 세상을 떠난 Donald Insall이 남긴 ‘살아 있는 건물’의 원칙</a><span class="chips"><span><b>2</b>이슈 4건</span></span><div class="det" data-s="1"><b>1</b><a href="issues/2026-10-15.html#crit">보존은 “마멀레이드에나 하는 일” — 100세로 세상을 떠난 Donald Insall이 남긴 ‘살아 있는 건물’의 원칙</a><br><small>건물과 ‘친구가 된다’는 말은 도면으로 어떻게 증명되는가? 지키는 것과 계속 쓰이게 하는 것이 부딪칠 때, 나는 어느 쪽에 선을 긋는가?</small></div><div class="det" data-s="2"><b>2</b><a href="issues/2026-10-15.html#thesis">이슈</a><ul><li>이태원참사 4주기를 앞두고 추모시설과 아카이브 정책연구가 공유됐다: 지금 기억의 방은 사무 빌딩 안에 있다</li><li>‘다른 규칙의 구역’을 만드는 메가특구 노동특례: 노사정 실무협의가 3주째, 구역 안의 시계는 누가 정하는가</li><li>비료가 지나가는 하루 다섯 척의 문: UN이 호르무즈 비료 통로 개설을 촉구했다</li><li>연료비가 두 배가 된 구조선: 스페인 NGO가 중부 지중해 임무를 내년으로 미뤘다</li></ul><b>씨앗</b><ul><li>임시로 시작한 기억 — 사무 빌딩 한 층의 기억공간이 영구 시설로 자라는 이행 <small>· 이태원 추모시설·아카이브</small></li><li>구역 안의 시계 — 노동 특례 구역 건물의 층별 시간표와 문턱 <small>· 메가특구 노동특례</small></li><li>하루 다섯 척의 창고 — 좁은 해협 통과량에 맞춘 비료 완충 저장 <small>· 호르무즈 비료 통로</small></li><li>배정된 항구까지 — 구조선의 거리와 연료를 설계 조건으로 <small>· 지중해 구조선 연료비</small></li></ul></div></li>
+<li data-text="“resilience starts at home” — 재난 감축의 날이 올해 집을 방재의 중심에 놓았다 재난이 오면 ‘집’은 어디까지인가? 방, 건물, 마을 중 무엇을 한 단위로 설계해야 회복이 빨라지는가? 빈 어린이집이 어르신의 ‘중간집’이 된다: 보건복지부가 유휴 시설을 주거-돌봄 연계 공간으로 바꾼다 북극항로 시범 왕복을 마친 컨테이너선이 부산에 돌아왔다: 열린 바다가 항만의 시간표를 바꾼다 세종으로 가는 중앙행정기관: 2차 이전 방향이 나왔고, 금융 당국의 거취는 연내 결정된다 국경을 넘는 연기: singapore와 kuala lumpur가 하루 세계에서 가장 오염된 도시가 됐다 ceuta의 마지막 대형 캠프가 치워진 이틀 뒤, 스페인 국왕이 처음으로 도착했다 빈 방의 치수 바꾸기 — 아이의 키로 지은 어린이집을 어르신 회복실로 다시 맞추는 개조 연기의 방 — 연무 철에만 켜지는 양압 공용실과 학교 체육관 열린 만큼만 여는 부두 — 계절 항로를 따라 열고 접히는 항만 빈 청사의 순서 — 이전 후 서울 청사의 층을 시기를 나눠 돌려주는 시간표"><span class="d">2026.10.14</span><span class="n">No. 007</span><a class="h" href="issues/2026-10-14.html">“Resilience Starts at Home” — 재난 감축의 날이 올해 집을 방재의 중심에 놓았다</a><span class="chips"><span><b>2</b>이슈 5건</span></span><div class="det" data-s="1"><b>1</b><a href="issues/2026-10-14.html#crit">“Resilience Starts at Home” — 재난 감축의 날이 올해 집을 방재의 중심에 놓았다</a><br><small>재난이 오면 ‘집’은 어디까지인가? 방, 건물, 마을 중 무엇을 한 단위로 설계해야 회복이 빨라지는가?</small></div><div class="det" data-s="2"><b>2</b><a href="issues/2026-10-14.html#thesis">이슈</a><ul><li>빈 어린이집이 어르신의 ‘중간집’이 된다: 보건복지부가 유휴 시설을 주거-돌봄 연계 공간으로 바꾼다</li><li>북극항로 시범 왕복을 마친 컨테이너선이 부산에 돌아왔다: 열린 바다가 항만의 시간표를 바꾼다</li><li>세종으로 가는 중앙행정기관: 2차 이전 방향이 나왔고, 금융 당국의 거취는 연내 결정된다</li><li>국경을 넘는 연기: Singapore와 Kuala Lumpur가 하루 세계에서 가장 오염된 도시가 됐다</li><li>Ceuta의 마지막 대형 캠프가 치워진 이틀 뒤, 스페인 국왕이 처음으로 도착했다</li></ul><b>씨앗</b><ul><li>빈 방의 치수 바꾸기 — 아이의 키로 지은 어린이집을 어르신 회복실로 다시 맞추는 개조 <small>· 빈 어린이집 주거-돌봄</small></li><li>연기의 방 — 연무 철에만 켜지는 양압 공용실과 학교 체육관 <small>· 동남아 연무</small></li><li>열린 만큼만 여는 부두 — 계절 항로를 따라 열고 접히는 항만 <small>· 북극항로 시범운항</small></li><li>빈 청사의 순서 — 이전 후 서울 청사의 층을 시기를 나눠 돌려주는 시간표 <small>· 중앙행정기관 세종 이전</small></li></ul></div></li>
+<li data-text="stirling prize 발표 이틀 전 — 결선 6작품은 ‘무엇이 올해의 건물인가’를 다시 묻는다 발표 전에 심사위원이 되어 보자. 6작품 중 하나만 고른다면, 그 이유는 형태인가, 쓰임인가, 만든 과정인가? [배경] 문을 닫는 학교: 폐교 뒤의 건물은 무엇이 되는가 마지막 종이 울린 뒤 — 폐교 한 곳을 열 번에 나눠 마을에 돌려주는 순서 가장 큰 방의 두 번째 삶 — 강당·급식실 같은 큰 방의 전용 사례집"><span class="d">2026.10.13</span><span class="n">No. 006</span><a class="h" href="issues/2026-10-13.html">Stirling Prize 발표 이틀 전 — 결선 6작품은 ‘무엇이 올해의 건물인가’를 다시 묻는다</a><span class="chips"><span><b>2</b>이슈 1건</span></span><div class="det" data-s="1"><b>1</b><a href="issues/2026-10-13.html#crit">Stirling Prize 발표 이틀 전 — 결선 6작품은 ‘무엇이 올해의 건물인가’를 다시 묻는다</a><br><small>발표 전에 심사위원이 되어 보자. 6작품 중 하나만 고른다면, 그 이유는 형태인가, 쓰임인가, 만든 과정인가?</small></div><div class="det" data-s="2"><b>2</b><a href="issues/2026-10-13.html#thesis">이슈</a><ul><li>[배경] 문을 닫는 학교: 폐교 뒤의 건물은 무엇이 되는가</li></ul><b>씨앗</b><ul><li>마지막 종이 울린 뒤 — 폐교 한 곳을 열 번에 나눠 마을에 돌려주는 순서 <small>· 폐교 58곳</small></li><li>가장 큰 방의 두 번째 삶 — 강당·급식실 같은 큰 방의 전용 사례집 <small>· 폐교, 대형마트 폐점</small></li></ul></div></li>
+<li data-text="25억 달러짜리 경기장이 ‘조용히’ 보류됐다 — the line 안 지상 350m의 neom stadium, 렌더링은 무엇을 약속했나 렌더링이 먼저 팔리고 건물이 나중에 보류될 때, 건축가의 도면은 무엇을 보증하는가? 지방대를 떠난 유학생 1,200명: 충청권에서 지난해 학업을 멈춘 이들은 한국어와 취업난을 이유로 들었다 반도체는 호황인데 자영업은 문을 닫는다: ‘100만 명 폐업’이라는 제목 뒤의 골목 농가 인력의 70%는 외국인: 일터 옆에서 잠드는 사람의 집은 누가, 어떤 수수료로 짓는가 다시 불어난 budhi gandaki: 네팔 gorkha의 집들이 쓸려 갔고 하류 주민에게 대피령이 내려졌다 물을 따라 국경을 넘는 사람들: 앙골라 공동체가 극심한 가뭄 속에 계절 이동으로 돌아갔다 두 번째 학기의 상가 — 문 닫은 대학가 점포를 유학생의 언어 교실·공동 부엌으로 일터 옆의 잠 — 농가 외국인 노동자 숙소와 수수료 흐름을 한 건물에 대피의 높이 — 홍수 도착 시간을 건물 단면에 넣는 마을 단위 높은 바닥 물을 따라가는 시간표 — 계절에만 열리고 접히는 국경의 급수 거점"><span class="d">2026.10.12</span><span class="n">No. 005</span><a class="h" href="issues/2026-10-12.html">25억 달러짜리 경기장이 ‘조용히’ 보류됐다 — The Line 안 지상 350m의 NEOM Stadium, 렌더링은 무엇을 약속했나</a><span class="chips"><span><b>2</b>이슈 5건</span></span><div class="det" data-s="1"><b>1</b><a href="issues/2026-10-12.html#crit">25억 달러짜리 경기장이 ‘조용히’ 보류됐다 — The Line 안 지상 350m의 NEOM Stadium, 렌더링은 무엇을 약속했나</a><br><small>렌더링이 먼저 팔리고 건물이 나중에 보류될 때, 건축가의 도면은 무엇을 보증하는가?</small></div><div class="det" data-s="2"><b>2</b><a href="issues/2026-10-12.html#thesis">이슈</a><ul><li>지방대를 떠난 유학생 1,200명: 충청권에서 지난해 학업을 멈춘 이들은 한국어와 취업난을 이유로 들었다</li><li>반도체는 호황인데 자영업은 문을 닫는다: ‘100만 명 폐업’이라는 제목 뒤의 골목</li><li>농가 인력의 70%는 외국인: 일터 옆에서 잠드는 사람의 집은 누가, 어떤 수수료로 짓는가</li><li>다시 불어난 Budhi Gandaki: 네팔 Gorkha의 집들이 쓸려 갔고 하류 주민에게 대피령이 내려졌다</li><li>물을 따라 국경을 넘는 사람들: 앙골라 공동체가 극심한 가뭄 속에 계절 이동으로 돌아갔다</li></ul><b>씨앗</b><ul><li>두 번째 학기의 상가 — 문 닫은 대학가 점포를 유학생의 언어 교실·공동 부엌으로 <small>· 유학생 이탈, 자영업 폐업</small></li><li>일터 옆의 잠 — 농가 외국인 노동자 숙소와 수수료 흐름을 한 건물에 <small>· 농가 외국인 의존 70%</small></li><li>대피의 높이 — 홍수 도착 시간을 건물 단면에 넣는 마을 단위 높은 바닥 <small>· 네팔 Budhi Gandaki 홍수</small></li><li>물을 따라가는 시간표 — 계절에만 열리고 접히는 국경의 급수 거점 <small>· 앙골라-나미비아 가뭄 이동</small></li></ul></div></li>
+<li data-text="결선 여섯 채 중 다섯 채가 벽돌이라는 지적과, “주거 건축이 장난스러워진다”는 kevin mccloud — 2026 stirling prize는 무엇을 상 줄까 ‘장난기’와 ‘벽돌 일색’이 같은 해의 두 얼굴이라면, 심사는 무엇을 건물의 성취로 읽는가? 4,037개의 빈 학교: 학령인구는 한 해 19만 명 줄었고, 정부는 폐교를 공공주택 부지로 부른다 수도권엔 23만 호를 더 짓고, 전국엔 빈집 13만 4천 호와 빈 건축물 6만 1천 동이 남아 있다 3천 명이 몇 주를 지낸 해변: 스페인 세우타 trampolín 캠프가 철거돼 사람들이 버스에 올랐다 문 닫은 뒤의 마당 — 폐교의 운동장과 강당을 마을의 공공 바닥으로 남기는 전환 빈 것들의 장부 — 빈집과 빈 건축물을 한 장의 읍 단위 인벤토리로 문턱의 건물 — 철거와 수용 사이에서 짧게 머무는 해체 가능한 구조"><span class="d">2026.10.10</span><span class="n">No. 004</span><a class="h" href="issues/2026-10-10.html">결선 여섯 채 중 다섯 채가 벽돌이라는 지적과, “주거 건축이 장난스러워진다”는 Kevin McCloud — 2026 Stirling Prize는 무엇을 상 줄까</a><span class="chips"><span><b>2</b>이슈 3건</span></span><div class="det" data-s="1"><b>1</b><a href="issues/2026-10-10.html#crit">결선 여섯 채 중 다섯 채가 벽돌이라는 지적과, “주거 건축이 장난스러워진다”는 Kevin McCloud — 2026 Stirling Prize는 무엇을 상 줄까</a><br><small>‘장난기’와 ‘벽돌 일색’이 같은 해의 두 얼굴이라면, 심사는 무엇을 건물의 성취로 읽는가?</small></div><div class="det" data-s="2"><b>2</b><a href="issues/2026-10-10.html#thesis">이슈</a><ul><li>4,037개의 빈 학교: 학령인구는 한 해 19만 명 줄었고, 정부는 폐교를 공공주택 부지로 부른다</li><li>수도권엔 23만 호를 더 짓고, 전국엔 빈집 13만 4천 호와 빈 건축물 6만 1천 동이 남아 있다</li><li>3천 명이 몇 주를 지낸 해변: 스페인 세우타 Trampolín 캠프가 철거돼 사람들이 버스에 올랐다</li></ul><b>씨앗</b><ul><li>문 닫은 뒤의 마당 — 폐교의 운동장과 강당을 마을의 공공 바닥으로 남기는 전환 <small>· 폐교 4,037곳</small></li><li>빈 것들의 장부 — 빈집과 빈 건축물을 한 장의 읍 단위 인벤토리로 <small>· 빈집 13.4만, 빈 건축물 6.1만</small></li><li>문턱의 건물 — 철거와 수용 사이에서 짧게 머무는 해체 가능한 구조 <small>· 세우타 캠프 철거</small></li></ul></div></li>
+<li data-text="“그들의 이윤, 우리의 비참” — 스페인 하원이 주거 긴급 법령을 부결하자 총리는 총선을 택했다 ‘주거는 권리다’라는 문장이 표결에서 졌다면, 건축은 그 권리를 어떤 형태로 먼저 지을 수 있는가? 지어 놓고 비워 둔 공공임대: 1년 넘게 빈 집 2만 2천 호, 5년간 임대료 1,670억 원 같은 통합돌봄, 사는 곳에 따라 최대 4배: 경산 95.0%, 속초 23.7% 수몰선이 지도마다 다르다: 인도 polavaram 댐의 ‘없는 지도’ 속 마을들 70년 산 집에서 쫓겨난 87세: 스페인 주거 법령 부결과 11월 총선 빈 집의 장부 — 불 꺼진 공공임대를 돌봄·공유 공간으로 바꾸는 단지 전환 연계의 거리 — 속초와 경산 사이, 돌봄이 닿는 길의 건축 존재 증명 도면 — 수몰 예정 마을이 직접 그리는 가옥대장 머무를 권리의 두께 — 거주 연수가 쌓이는 건물, 계약 단면도"><span class="d">2026.10.07</span><span class="n">No. 003</span><a class="h" href="issues/2026-10-07.html">“그들의 이윤, 우리의 비참” — 스페인 하원이 주거 긴급 법령을 부결하자 총리는 총선을 택했다</a><span class="chips"><span><b>2</b>이슈 4건</span></span><div class="det" data-s="1"><b>1</b><a href="issues/2026-10-07.html#crit">“그들의 이윤, 우리의 비참” — 스페인 하원이 주거 긴급 법령을 부결하자 총리는 총선을 택했다</a><br><small>‘주거는 권리다’라는 문장이 표결에서 졌다면, 건축은 그 권리를 어떤 형태로 먼저 지을 수 있는가?</small></div><div class="det" data-s="2"><b>2</b><a href="issues/2026-10-07.html#thesis">이슈</a><ul><li>지어 놓고 비워 둔 공공임대: 1년 넘게 빈 집 2만 2천 호, 5년간 임대료 1,670억 원</li><li>같은 통합돌봄, 사는 곳에 따라 최대 4배: 경산 95.0%, 속초 23.7%</li><li>수몰선이 지도마다 다르다: 인도 Polavaram 댐의 ‘없는 지도’ 속 마을들</li><li>70년 산 집에서 쫓겨난 87세: 스페인 주거 법령 부결과 11월 총선</li></ul><b>씨앗</b><ul><li>빈 집의 장부 — 불 꺼진 공공임대를 돌봄·공유 공간으로 바꾸는 단지 전환 <small>· 공공임대 빈집 2.2만 호</small></li><li>연계의 거리 — 속초와 경산 사이, 돌봄이 닿는 길의 건축 <small>· 통합돌봄 4배 격차</small></li><li>존재 증명 도면 — 수몰 예정 마을이 직접 그리는 가옥대장 <small>· Polavaram 댐</small></li><li>머무를 권리의 두께 — 거주 연수가 쌓이는 건물, 계약 단면도 <small>· 스페인 주거 법령, 퇴거</small></li></ul></div></li>
+<li data-text="“housing is a human right. build it.” — 세계 건축의 날, 문장은 권리를 말하고 동사는 건축가를 부른다 ‘집은 권리다’라는 문장을 도면으로 옮긴다면, 무엇을 그려야 하는가? 평면인가, 소유 구조인가, 인허가 절차인가? 문 닫은 대형마트 37곳: 역세권의 창 없는 상자는 무엇이 되는가 돌봄의 60일: 학교가 쉬는 날, 맞벌이 부모는 출근한다 학교는 그대로, 아이는 반: 초등학교 한 곳당 학생 763명에서 358명으로 국경을 넘어 흐르는 광산: 미얀마의 광물은 태국의 강을 지나 중국으로 간다 기계가 모든 걸 아는 바다: 베트남 어민의 연료값, 어획량, 경계선 큰 지붕 아래 동네 — 폐점 마트를 철거하지 않는 공공 실내 365일의 학교 — 남는 교실과 비는 시간을 맞물린 돌봄 건축 강의 장부 — 광산에서 수도꼭지까지 한 유역의 관측 네트워크 항적의 건축 — 어선과 위치추적이 만드는 바다의 경계 열의 시민권 — 노동하는 몸을 위한 그늘 인프라"><span class="d">2026.10.06</span><span class="n">No. 002</span><a class="h" href="issues/2026-10-06-002.html">“Housing is a Human Right. Build It.” — 세계 건축의 날, 문장은 권리를 말하고 동사는 건축가를 부른다</a><span class="chips"><span><b>2</b>이슈 5건</span></span><div class="det" data-s="1"><b>1</b><a href="issues/2026-10-06-002.html#crit">“Housing is a Human Right. Build It.” — 세계 건축의 날, 문장은 권리를 말하고 동사는 건축가를 부른다</a><br><small>‘집은 권리다’라는 문장을 도면으로 옮긴다면, 무엇을 그려야 하는가? 평면인가, 소유 구조인가, 인허가 절차인가?</small></div><div class="det" data-s="2"><b>2</b><a href="issues/2026-10-06-002.html#thesis">이슈</a><ul><li>문 닫은 대형마트 37곳: 역세권의 창 없는 상자는 무엇이 되는가</li><li>돌봄의 60일: 학교가 쉬는 날, 맞벌이 부모는 출근한다</li><li>학교는 그대로, 아이는 반: 초등학교 한 곳당 학생 763명에서 358명으로</li><li>국경을 넘어 흐르는 광산: 미얀마의 광물은 태국의 강을 지나 중국으로 간다</li><li>기계가 모든 걸 아는 바다: 베트남 어민의 연료값, 어획량, 경계선</li></ul><b>씨앗</b><ul><li>큰 지붕 아래 동네 — 폐점 마트를 철거하지 않는 공공 실내 <small>· 홈플러스 폐점</small></li><li>365일의 학교 — 남는 교실과 비는 시간을 맞물린 돌봄 건축 <small>· 돌봄 60일, 학교 반토막</small></li><li>강의 장부 — 광산에서 수도꼭지까지 한 유역의 관측 네트워크 <small>· 미얀마 광산, 태국 강</small></li><li>항적의 건축 — 어선과 위치추적이 만드는 바다의 경계 <small>· 베트남 어민, 분쟁 해역</small></li><li>열의 시민권 — 노동하는 몸을 위한 그늘 인프라 <small>· 폭염 역설, 유럽 폭염</small></li></ul></div></li>
+<li data-text="“건축 학위는 무엇을 위한 것인가” — 영국 건축계가 다음 세대의 위기를 공개적으로 묻기 시작했다 당신의 포트폴리오는 ‘건물’을 그리는가, 아니면 건물이 생겨나는 조건(돈, 시간, 재료의 이력, 사람)을 그리는가? 폭염의 역설: 환자는 줄었는데 죽음은 늘었다 빈집 14만 호: 고칠 사람도, 살 사람도 없는 집 문 하나 뒤의 고립: 고독사 3,924명, 5년 연속 증가 데이터센터 신청 88건: 클라우드가 동네로 내려온다 가자 재건: 365km²의 첫 도면은 누가 그리는가 심해 채굴: 아무도 살지 않는 바닥의 영토"><span class="d">2026.10.06</span><span class="n">No. 001</span><a class="h" href="issues/2026-10-06.html">“건축 학위는 무엇을 위한 것인가” — 영국 건축계가 다음 세대의 위기를 공개적으로 묻기 시작했다</a><span class="chips"><span><b>2</b>이슈 6건</span></span><div class="det" data-s="1"><b>1</b><a href="issues/2026-10-06.html#crit">“건축 학위는 무엇을 위한 것인가” — 영국 건축계가 다음 세대의 위기를 공개적으로 묻기 시작했다</a><br><small>당신의 포트폴리오는 ‘건물’을 그리는가, 아니면 건물이 생겨나는 조건(돈, 시간, 재료의 이력, 사람)을 그리는가?</small></div><div class="det" data-s="2"><b>2</b><a href="issues/2026-10-06.html#thesis">이슈</a><ul><li>폭염의 역설: 환자는 줄었는데 죽음은 늘었다</li><li>빈집 14만 호: 고칠 사람도, 살 사람도 없는 집</li><li>문 하나 뒤의 고립: 고독사 3,924명, 5년 연속 증가</li><li>데이터센터 신청 88건: 클라우드가 동네로 내려온다</li><li>가자 재건: 365km²의 첫 도면은 누가 그리는가</li><li>심해 채굴: 아무도 살지 않는 바닥의 영토</li></ul></div></li></ul>
+</section>
 </main>
+
+<script>
+(function () {
+  var btns = document.querySelectorAll('.afilter button'), q = document.querySelector('.afilter input');
+  function set(n) {
+    document.body.className = document.body.className.replace(/\bf-\d\b/g, '').trim();
+    if (n) document.body.classList.add('f-' + n);
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-f') === (n || ''))); });
+    filter();
+  }
+  function filter() {
+    var t = (q.value || '').toLowerCase().trim();
+    var f = (document.body.className.match(/f-(\d)/) || [])[1];
+    document.querySelectorAll('.arch > li').forEach(function (li) {
+      var okText = !t || li.getAttribute('data-text').indexOf(t) >= 0;
+      var okSheet = !f || li.querySelector('.det[data-s="' + f + '"]');
+      li.hidden = !(okText && okSheet);
+    });
+    document.querySelectorAll('.amonth').forEach(function (h) {
+      var ul = h.nextElementSibling;
+      h.hidden = ul && !ul.querySelector(':scope > li:not([hidden])');
+    });
+  }
+  btns.forEach(function (b) { b.addEventListener('click', function () {
+    var n = b.getAttribute('data-f');
+    try { history.replaceState(null, '', n ? '#sheet-' + n : '#'); } catch (e) {}
+    set(n);
+  }); });
+  q.addEventListener('input', filter);
+  var m = location.hash.match(/sheet-(\d)/);
+  set(m ? m[1] : '');
+})();
+</script>
 </body>
 </html>
