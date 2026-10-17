@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-10-18",
+    "issue": 11,
+    "edition": "sunday",
+    "headline": "이번 주의 한 문장: 건물은 도면 밖의 기다림, 심사, 관리와 함께 지어진다",
+    "crit": "",
+    "thesis": [],
+    "seeds": [],
+    "symposium_day": null,
+    "unit": null,
+    "unit_concept": null,
+    "screen_work": null,
+    "screen_medium": null,
+    "chips": {},
+    "vocab": [
+      "tenure",
+      "plasticity",
+      "threshold",
+      "legitimacy",
+      "conflate"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-10-18.html",
+    "slug": "2026-10-18"
+  },
+  {
     "date": "2026-10-17",
     "issue": 10,
     "edition": "weekday",
