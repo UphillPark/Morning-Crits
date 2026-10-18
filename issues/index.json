@@ -1,5 +1,71 @@
 [
   {
+    "date": "2026-10-19",
+    "issue": 12,
+    "edition": "weekday",
+    "headline": "Bunkers, arks and a missile silo with LED “windows” — ArchDaily asks who is meant to be saved when the wealthy buy their own end of the world",
+    "crit": "If a bunker fakes a window with a live video feed, what is the drawing of that room actually describing: shelter, or the longing for a world outside? Where would you draw the line between a refuge that protects a household and an enclosure that withdraws it from everyone else?",
+    "thesis": [
+      "비가 오면 닫히는 길: 서울 하천 29곳이 통제된 하루, 하천변은 길인가 저수지인가",
+      "탈락한 782곳의 흄후드: 연구실 사고는 3년 새 38% 늘었는데 시설개선 신청은 4곳 중 1곳만 받아들여졌다",
+      "닷새째 멈춘 상업 물자: 며칠 만에 상하는 채소를 파는 가자 시장의 단면은 무엇을 보관하는가"
+    ],
+    "seeds": [
+      {
+        "seed": "물그릇이 되는 길 — 호우에 닫히는 하천변을 평소 길과 저수 단면으로 함께 설계",
+        "issue": "서울 하천 통제"
+      },
+      {
+        "seed": "없는 설비의 지도 — 신청에서 탈락한 연구실의 흄후드와 비상샤워를 평면에 표시",
+        "issue": "연구실 시설개선"
+      },
+      {
+        "seed": "며칠짜리 시장 — 품목별 보관 일수로 그리는 가자 시장의 시간 단면",
+        "issue": "가자 반입 중단"
+      }
+    ],
+    "symposium_day": 3,
+    "unit": "Dip7",
+    "unit_concept": "property",
+    "screen_work": "Au Tambour (1908)",
+    "screen_medium": "Photography",
+    "chips": {
+      "thesis": "기후 · 과학기술 · 가자",
+      "symposium": "DAY 03 · 수와 조화",
+      "unit": "AA Dip7 · property",
+      "screen": "Photography · Au Tambour (1908)"
+    },
+    "vocab": [
+      "escapism",
+      "accelerant",
+      "off-grid",
+      "cladding",
+      "spatial generosity",
+      "variability",
+      "reservoir",
+      "fixture",
+      "closure",
+      "section",
+      "monochord",
+      "transposition",
+      "attribute",
+      "doctrine",
+      "dispossession",
+      "commons",
+      "cadastre",
+      "contingent",
+      "entrenched",
+      "accrue",
+      "frontal",
+      "overcast",
+      "glazing",
+      "tonality",
+      "fragment"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-10-19.html",
+    "slug": "2026-10-19"
+  },
+  {
     "date": "2026-10-18",
     "issue": 11,
     "edition": "sunday",
