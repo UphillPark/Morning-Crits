@@ -1,5 +1,76 @@
 [
   {
+    "date": "2026-10-20",
+    "issue": 13,
+    "edition": "weekday",
+    "headline": "Two Lambeth estates escape the bulldozer — after a decade of resident resistance, the council drops demolition of Cressingham Gardens and Central Hill",
+    "crit": "If an estate is saved because rebuilding it is unviable, has its architecture been defended, or only deferred? What would you have to draw to make a council value a building for what it is, and not merely for what it would cost to replace?",
+    "thesis": [
+      "입학생이 없는 학교: 서울 등명초 통폐합 예고가 남기는 질문, 비는 교실은 무엇이 되는가",
+      "병원이 옮기는 내성: 수도권 CRE 감염이 집계 이래 최다를 기록했다, 병상 사이의 동선은 무엇을 나누는가",
+      "멈춘 트럭과 열린 여객 통로: 파키스탄이 이란과의 무역 국경을 닫은 날, 기다리는 줄은 어디에서 정주지가 되는가",
+      "물이 모자라서 시작된 시위: 모리셔스가 통금을 푼 날, 집 안에서 물은 어디에 보관되는가"
+    ],
+    "seeds": [
+      {
+        "seed": "두 번째 용도의 교실 — 입학생이 없는 학교의 한 층을 시간대별로 지역과 겹쳐 쓰는 평면",
+        "issue": "등명초 통폐합"
+      },
+      {
+        "seed": "나누지 않는 복도 — 내성균이 지나는 병동의 공유 설비와 동선을 평면에 표시",
+        "issue": "수도권 CRE 감염"
+      },
+      {
+        "seed": "줄 서는 도시 — 국경 화물 대기 구역을 임시 정주지로 읽는 시간 지도",
+        "issue": "파키스탄·이란 국경"
+      },
+      {
+        "seed": "물이 오는 요일 — 급수 일정에 맞춰 집 안에 물을 보관하는 단면",
+        "issue": "모리셔스 시위"
+      }
+    ],
+    "symposium_day": 4,
+    "unit": "Dip3",
+    "unit_concept": "atmosphere",
+    "screen_work": "Ōhashi Atake no yūdachi (1857)",
+    "screen_medium": "Print",
+    "chips": {
+      "thesis": "인구 · 보건 · 파키스탄 · 모리셔스",
+      "symposium": "DAY 04 · 흐름과 불변",
+      "unit": "AA Dip3 · atmosphere",
+      "screen": "Print · Ōhashi Atake no yūdachi (1857)"
+    },
+    "vocab": [
+      "reprieve",
+      "retrofit",
+      "unviable",
+      "homestead",
+      "embankment",
+      "authenticity",
+      "vacancy",
+      "ward",
+      "stranded",
+      "settlement",
+      "unity of opposites",
+      "monism",
+      "codification",
+      "fragment",
+      "atmosphere",
+      "multimodal",
+      "provocation",
+      "articulate",
+      "authorship",
+      "withheld",
+      "sheeting rain",
+      "graded",
+      "crop",
+      "restrained",
+      "hurry"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-10-20.html",
+    "slug": "2026-10-20"
+  },
+  {
     "date": "2026-10-19",
     "issue": 12,
     "edition": "weekday",
