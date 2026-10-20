@@ -1,5 +1,76 @@
 [
   {
+    "date": "2026-10-21",
+    "issue": 14,
+    "edition": "weekday",
+    "headline": "A design museum built from its own city’s rubble — Carmody Groarke’s Ghent extension turns condemned concrete, windscreens and old toilets into brick",
+    "crit": "If a building can prove that a city’s waste is a material, is it a prototype for a method or a one-off monument? What would you have to draw to show that the wall is the argument, and not the story told about it in the museum shop?",
+    "thesis": [
+      "돈은 들어왔는데 가게는 늘지 않았다: 농어촌 기본소득 시범 군에서 소비와 청년 인구는 늘었고, 생활 상권은 아직 보이지 않는다",
+      "하늘길이 얇아진 지방공항: 정부는 활성화를 말하지만 주요 국내선 운항 계획은 줄었다",
+      "중대재해가 같은 기업의 현장에서 되풀이된다: 3건 이상 보고한 기업은 대부분 건설사였다",
+      "여섯 차로를 건너는 풀밭: 콜로라도의 야생동물 육교가 충돌을 크게 줄였다는 보고가 나왔다",
+      "하루 2파운드가 숲을 지켰다는 연구: 페루 아샤닌카 마을에 조건 없는 현금을 준 2년의 실험, 다른 연구는 벌채 증가를 경고한다"
+    ],
+    "seeds": [
+      {
+        "seed": "읍내의 첫 번째 1층 — 상품권이 도는 군 소재지에서 빈 1층 칸과 청년의 작은 방을 한 블록에 엮는 평면",
+        "issue": "농어촌 기본소득"
+      },
+      {
+        "seed": "비행기 사이의 시간 — 지방공항 터미널을 시간대별로 다른 용도에 겹쳐 쓰는 다이어그램",
+        "issue": "지방공항 운항 감소"
+      },
+      {
+        "seed": "그려지지 않는 울타리 — 가설물과 작업자 동선을 설계 대상으로 올린 공사 단계별 평면",
+        "issue": "건설사 중대재해"
+      },
+      {
+        "seed": "돈이 도착하는 방 — 조건 없는 현금 수령일에 맞춰 쓰는 마을 공유 공간의 평면",
+        "issue": "페루 아마존 현금 실험"
+      }
+    ],
+    "symposium_day": 5,
+    "unit": "ADS6",
+    "unit_concept": "making",
+    "screen_work": "Man with a Movie Camera (1929)",
+    "screen_medium": "Documentary",
+    "chips": {
+      "thesis": "지방 소멸 · 지방 · 노동 · 미국 콜로라도",
+      "symposium": "DAY 05 · 역설과 원자",
+      "unit": "RCA ADS6 · making",
+      "screen": "Documentary · Man with a Movie Camera (1929)"
+    },
+    "vocab": [
+      "embodied carbon",
+      "mass timber",
+      "proof of concept",
+      "coexistence",
+      "headcount",
+      "arson",
+      "temporary works",
+      "thin out",
+      "unconditional",
+      "crossing",
+      "indivisible",
+      "plurality",
+      "ritual propriety",
+      "refute",
+      "hylomorphism",
+      "correspondence",
+      "epigraph",
+      "interdependent",
+      "restraint",
+      "accountable",
+      "juxtaposed",
+      "double exposure",
+      "viewpoint",
+      "staged"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-10-21.html",
+    "slug": "2026-10-21"
+  },
+  {
     "date": "2026-10-20",
     "issue": 13,
     "edition": "weekday",
