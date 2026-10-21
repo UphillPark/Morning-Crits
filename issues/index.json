@@ -1,5 +1,76 @@
 [
   {
+    "date": "2026-10-22",
+    "issue": 15,
+    "edition": "weekday",
+    "headline": "Nairobi’s first Pan-African Biennale tried to move the “centre” itself — a review asks who, in the end, held the pen",
+    "crit": "If a biennale can only prove its argument by travelling, what in your own project would still hold if it moved to another city every two years? What would you have to draw to show that the idea belongs to a place and its makers, not to the panel that discussed it?",
+    "thesis": [
+      "늘어난 법인세는 어디서 걷혔나: 법인 수가 늘어난 지방에서도 세액은 제자리이거나 줄었다",
+      "속도전의 다음 카드는 높이다: LH가 3기 신도시의 용적률을 지금보다 크게 올리겠다고 대통령에게 보고했다",
+      "오르는 것은 값, 줄어드는 것은 이사: 서울 외곽부터 오른 아파트 값과 가을 이사철의 거래 위축",
+      "도는 모퉁이에서 사고가 이어졌다: 일본 전통 축제의 수레가 쓰러져 두 주 사이 사망자가 나오자 안전 우려가 커졌다",
+      "재난 생존자가 정치 세력이 되려 한다: 텍사스 커빌의 주민 회관에서 홍수 1년 뒤의 사람들이 모였다"
+    ],
+    "seeds": [
+      {
+        "seed": "지방에 앉는 첫 번째 본사 — 본점 기능을 층별로 풀어 지방 거점 사옥에 앉히는 층별 인벤토리와 단면",
+        "issue": "법인세 수도권 집중"
+      },
+      {
+        "seed": "250% 블록의 학교 가는 길 — 용적률을 올린 신도시 블록의 단면 한 쌍과 걸음 수 지도",
+        "issue": "3기 신도시 용적률"
+      },
+      {
+        "seed": "모퉁이의 틈 — 수레가 도는 골목에서 사람이 빠져나갈 틈을 그린 군중 평면",
+        "issue": "일본 축제 수레 사고"
+      },
+      {
+        "seed": "회관의 두 얼굴 — 평상시 모임방이 재난 때 경보·임시 거점으로 바뀌는 평면 두 장",
+        "issue": "텍사스 홍수 생존자"
+      }
+    ],
+    "symposium_day": 6,
+    "unit": "Dip13",
+    "unit_concept": "as found",
+    "screen_work": "Stalker (1979)",
+    "screen_medium": "Film",
+    "chips": {
+      "thesis": "지역 균형 · 주거 · 일본 · 미국 텍사스",
+      "symposium": "DAY 06 · 다원론자들",
+      "unit": "AA Dip13 · as found",
+      "screen": "Film · Stalker (1979)"
+    },
+    "vocab": [
+      "transient",
+      "vernacular",
+      "green belt",
+      "inaugural",
+      "grievance",
+      "equitable",
+      "tax base",
+      "plot ratio",
+      "crowd safety",
+      "early warning",
+      "mixture",
+      "teleology",
+      "rectification of names",
+      "perform",
+      "as found",
+      "entropy",
+      "intervention",
+      "retrospective",
+      "legible",
+      "governs",
+      "sepia",
+      "waterlogged",
+      "disused",
+      "patient"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-10-22.html",
+    "slug": "2026-10-22"
+  },
+  {
     "date": "2026-10-21",
     "issue": 14,
     "edition": "weekday",
