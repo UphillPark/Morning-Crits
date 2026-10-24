@@ -2,15 +2,15 @@
 
 루틴 B(Morning Crit · Seminar)가 `prompts/routine-b.md` 3절에서 이 파일을 읽고 그대로 따른다. 5면은 영어로 쓰고, 본문(이미지·표·프롬프트 제외)은 300~450 words.
 
-목적은 두 가지다. (1) 렌더링과 생성형 AI 프롬프팅에 쓸 시각 어휘를 무의식적으로 쌓는다. (2) 매일 프롬프트로 이미지를 실제로 만들어 보고, 엄격하게 채점하고, 그 피드백으로 다음 호의 프롬프트를 고친다(architecture representation using generative AI 실력 기르기).
+목적은 두 가지다. (1) 렌더링과 생성형 AI 프롬프팅에 쓸 시각 어휘를 무의식적으로 쌓는다. (2) 발행일마다 프롬프트로 이미지를 실제로 만들어 보고, 엄격하게 채점하고, 그 피드백으로 다음 호의 프롬프트를 고친다(architecture representation using generative AI 실력 기르기).
 
 형식은 `prompts/seminar-example.html`의 `#page-screen`을 따른다. 견본의 문장은 형식 예시일 뿐이니 베끼지 않는다.
 
 이 파일의 `python3 scripts/…` 명령은 저장소 루트를 작업 디렉터리로 두고 **적힌 형태 그대로** 실행한다. 앞에 `cd …&&`, 환경 변수, 파이프를 붙이지 않는다. 저장소의 `.claude/settings.json` 허용 규칙이 이 형태만 허용한다. 처음 실행할 때 `pip install pillow numpy beautifulsoup4 lxml`.
 
 ## 1. 작품 고르기
-- 매일 한 작품: 영화, 회화, 다큐멘터리, 사진(사진가·사진집·사진전), 때때로 판화·드로잉. 고전과 교양이 되는 작품을 고르고 지금 열리는 전시나 신작은 고르지 않는다.
-- `issues/index.json`의 최근 7일 screen_medium을 보고 한 매체가 한 주에 3번을 넘지 않게 하고, 시대·지역·작가를 고르게 섞는다(아시아·한국 작품, 무성영화, 흑백, 실험영화 포함). 같은 작품(screen_work)은 다시 고르지 않는다. 회화를 고르는 날은 3면의 시대를 느슨하게 따라가도 좋다(억지로 맞추지 않는다).
+- 한 호에 한 작품: 영화, 회화, 다큐멘터리, 사진(사진가·사진집·사진전), 때때로 판화·드로잉. 고전과 교양이 되는 작품을 고르고 지금 열리는 전시나 신작은 고르지 않는다.
+- `issues/index.json`의 최근 6호 screen_medium을 보고 한 매체가 6호 안에 3번을 넘지 않게 하고, 시대·지역·작가를 고르게 섞는다(아시아·한국 작품, 무성영화, 흑백, 실험영화 포함). 같은 작품(screen_work)은 다시 고르지 않는다. 회화를 고르는 날은 3면의 시대를 느슨하게 따라가도 좋다(억지로 맞추지 않는다).
 - data-medium(Film/Painting/Documentary/Photography/Print), data-work("원제 또는 영어 제목 (연도)").
 - 결말과 반전을 쓰지 않는다. 스트리밍 제공 여부를 쓰지 않는다. 확인하지 않은 촬영 장비·렌즈·장면을 사실처럼 쓰지 않는다.
 
@@ -44,7 +44,7 @@ B1은 {실사 사진 Photograph, 컨셉아트 Concept art} 중 하나, B2는 {�
 | 3 | Concept art | Architectural drawing |
 | 4 | Concept art | Object / Diagram |
 
-- 오늘 combo = ((오늘 tblock Issue 번호 − 1) mod 4) + 1. 요일이 아니라 호수로 돌린다(일요일 휴간 때문에).
+- 오늘 combo = ((오늘 tblock Issue 번호 − 1) mod 4) + 1. 요일이 아니라 호수로 돌린다(주 3회라 요일로 돌리면 조합이 고르게 돌지 않는다).
 - 그날 작품과 조합이 정말 맞지 않을 때만 한 칸을 바꾸고, `data-combo`에 실제로 쓴 번호를, screen-log.json의 `combo_swap`에 이유를 적는다.
 - `figure.gen`과 `div.gprompt`의 B 칸에 `data-kind`(위 표의 영어 이름)를 단다.
 
@@ -59,7 +59,7 @@ B1은 {실사 사진 Photograph, 컨셉아트 Concept art} 중 하나, B2는 {�
 - 이 조건은 피드백에 따라 바뀔 수 있다. 바뀌면 이 파일을 고친다.
 
 ### 3.5 프롬프트 쓰기
-- 먼저 `prompts/screen-log.json`의 최근 7개 항목에서 `next`(다음 호 개선안)와 점수가 낮았던 축을 읽고, 오늘 프롬프트에 반영한다. 반영한 개선안은 로그의 `applied`에 적는다.
+- 먼저 `prompts/screen-log.json`의 최근 6개 항목에서 `next`(다음 호 개선안)와 점수가 낮았던 축을 읽고, 오늘 프롬프트에 반영한다. 반영한 개선안은 로그의 `applied`에 적는다.
 - 세 프롬프트 모두 example keywords 3개를 그대로 포함한다.
 - 단어 수: A 80 words 이하, B1·B2 각 60 words 이하(`<del>` 안의 말은 세지 않는다). 나열이 아니라 압축하는 연습이다.
 - A에서 노골적인 말을 피했다면 그 자리를 `<del>피한 말</del><ins>바꿔 쓴 말</ins>`로 표시하고, 아래에 `<p class="avoid">Avoided N explicit terms</p>`를 단다. `<del>` 안의 말은 실제로 모델에 보내지 않는다.
@@ -125,7 +125,7 @@ palette_de(낮을수록 같은 팔레트)와 layout_r(높을수록 같은 구도
 평균 = 그 이미지에서 확정된 축들의 산술평균(소수 첫째 자리).
 
 ### 4.2 채점관 5명과 과반수 규칙
-- 축마다 관점이 다른 채점관 5명을 둔다. 매일 같은 다섯을 쓴다.
+- 축마다 관점이 다른 채점관 5명을 둔다. 호마다 같은 다섯을 쓴다.
   - Style · Mood: 판화·회화 보존 전문가, 컬러리스트, 촬영감독, AA 튜터, 생성형 AI 프롬프트 엔지니어
   - Composition · Independence: 사진 편집자, 영화 편집자, 레이아웃 디자이너, AA 튜터, 미술사학자
   - Architecture: AA 다이플로마 튜터, 실무 건축가, 건축 사진가, 컨셉 아티스트, 구조 엔지니어

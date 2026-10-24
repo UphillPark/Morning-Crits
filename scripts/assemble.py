@@ -134,7 +134,7 @@ def words_sheet(html, date_label, issue):
         '  <header class="mast">\n'
         "    <div>\n"
         "      <h1>Word Desk</h1>\n"
-        '      <p class="sub">오늘 다섯 면에서 모은 단어 — IELTS 7.0 학술 어휘와 AA 크리틱 용어. 매주 일요일 퀴즈로 다시 본다.</p>\n'
+        '      <p class="sub">오늘 다섯 면에서 모은 단어 — IELTS 7.0 학술 어휘와 AA 크리틱 용어.</p>\n'
         "    </div>\n"
         '    <div class="tblock" aria-label="Issue information">\n'
         "      <div><b>Issue</b>" + issue + "</div>\n"
@@ -258,7 +258,7 @@ def right_rail_auto(name, items, day):
             rows.append('<span class="d">' + school + " · " + str(len(seen)) + " / " + str(len(us)) + '</span><div class="bar"><i style="width:'
                         + str(round(100 * len(seen) / len(us), 1) if us else 0) + '%"></i></div><span class="sub">남은 유닛: ' + escape(", ".join(left[:12])) + ("…" if len(left) > 12 else "") + "</span>")
         boxes += rbox("cov-h", "유닛 지도", "다룬 유닛", rlist(rows))
-        boxes += rbox("rot-h", "요일 순환", "", '      <p class="rnote">월·화·목 AA · 수 RCA · 금 Bartlett · 토 학교 간 비교</p>', False)
+        boxes += rbox("rot-h", "요일 순환", "", '      <p class="rnote">월 AA · 수 RCA · 금 Bartlett · 매달 마지막 금요일 학교 간 비교</p>', False)
     elif name == "screen":
         week = [it for it in items if it.get("screen_medium")][:7]
         counts = {}
