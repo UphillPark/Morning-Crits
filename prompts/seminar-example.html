@@ -195,13 +195,65 @@
     </ol>
   </section>
 
-  <section aria-labelledby="scr-q">
-    <div class="label"><span class="tag" id="scr-q">One question · your frame</span></div>
-    <aside class="crit"><span class="k">ONE QUESTION</span>…</aside>
+  <section class="gentest" aria-labelledby="scr-gen" data-combo="1" data-model="gemini-3.1-flash-lite-image" data-ban="red desert|deserto rosso|il deserto rosso|antonioni|michelangelo antonioni|monica vitti|giuliana|ravenna">
+    <div class="label"><span class="tag" id="scr-gen">Your frame · generative test</span> gemini-3.1-flash-lite-image · 1K · text only</div>
+
     <div class="framebox">
       <span class="k">YOUR FRAME · one still + three words</span>
       <p>Example keywords: <i>desaturated industrial landscape · diffused light · atmospheric depth</i></p>
       <pre class="prompt">desaturated industrial landscape, diffused overcast light, atmospheric depth, …</pre>
+    </div>
+
+    <div class="gen-row">
+      <figure class="gen" data-slot="a" data-status="ok">
+        <img src="https://uphillpark.github.io/Morning-Crits/assets/screen/2026-10-16-a.webp" alt="…" loading="lazy">
+        <figcaption><b>A · Reproduction</b> · Generated · 2026.10.16 · <a href="https://drive.google.com/file/d/…/view" target="_blank" rel="noopener">original</a></figcaption>
+        <p class="gscore">Style <b>81</b> · Composition <b>74</b> · Prompt <b>70</b> · Avg <b>75.0</b></p>
+      </figure>
+      <figure class="gen" data-slot="b1" data-status="ok" data-kind="Photograph">
+        <img src="https://uphillpark.github.io/Morning-Crits/assets/screen/2026-10-16-b1.webp" alt="…" loading="lazy">
+        <figcaption><b>B1 · Photograph</b> · Generated · 2026.10.16 · <a href="https://drive.google.com/file/d/…/view" target="_blank" rel="noopener">original</a></figcaption>
+        <p class="gscore">Mood <b>78</b> · Independence <b>85</b> · Architecture <b>72</b> · Prompt <b>80</b> · Avg <b>78.8</b></p>
+      </figure>
+      <figure class="gen noimg" data-slot="b2" data-status="quota" data-kind="Architectural drawing">
+        <div class="gfail">크레딧 소진 · credit used up</div>
+        <figcaption><b>B2 · Architectural drawing</b> · not generated</figcaption>
+      </figure>
+    </div>
+
+    <div class="gen-row">
+      <div class="gprompt" data-slot="a">
+        <span class="k">A · reproduction prompt · 72 words</span>
+        <pre class="prompt">… a <del>Ravenna</del><ins>northern Italian port</ins> refinery at the edge of a marsh, … <del>Antonioni colour</del><ins>muted greens against one saturated red pipe</ins> …</pre>
+        <p class="avoid">Avoided 2 explicit terms</p>
+      </div>
+      <div class="gprompt" data-slot="b1">
+        <span class="k">B1 · mood transfer · Photograph · 54 words</span>
+        <pre class="prompt">…</pre>
+        <dl class="carry"><dt>muted green fog</dt><dd>a ferry terminal wrapped in sea fog</dd><dt>one saturated red</dt><dd>a single red steel stair</dd></dl>
+      </div>
+      <div class="gprompt" data-slot="b2">
+        <span class="k">B2 · mood transfer · Architectural drawing · 48 words</span>
+        <pre class="prompt">…</pre>
+        <dl class="carry"><dt>…</dt><dd>…</dd></dl>
+      </div>
+    </div>
+
+    <div class="gnotes">
+      <div class="tablewrap"><table class="gscores">
+        <thead><tr><th>Image</th><th>Style / Mood</th><th>Composition / Independence</th><th>Architecture</th><th>Prompt</th><th>Avg</th><th>Palette ΔE</th><th>Layout r</th></tr></thead>
+        <tbody>
+          <tr><td>A · reproduction</td><td>81</td><td>74</td><td>—</td><td>70</td><td>75.0</td><td>7.9</td><td>0.61</td></tr>
+          <tr><td>B1 · photograph</td><td>78</td><td>85</td><td>72</td><td>80</td><td>78.8</td><td>9.4</td><td>0.12</td></tr>
+          <tr><td>B2 · architectural drawing</td><td colspan="7">not generated · credit used up</td></tr>
+        </tbody>
+      </table></div>
+      <div class="gfeed">
+        <div class="worked"><h4>What worked</h4><ul><li>…</li></ul></div>
+        <div class="mismatch"><h4>What didn’t match, and why</h4><ul><li>…</li></ul></div>
+        <div class="fixes"><h4>Next issue’s prompt changes</h4><ul><li>…</li></ul></div>
+      </div>
+      <p class="gnote">Scores: five judges per axis, majority of three within ±5 of the median. Judge details stay in prompts/screen-log.json. Originals in the <a href="https://drive.google.com/drive/folders/1adFL7U0zR4SfcoS0CCTODaWoMTPK0Liu" target="_blank" rel="noopener">mood screen</a> Drive folder.</p>
     </div>
   </section>
 

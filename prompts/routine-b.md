@@ -9,9 +9,9 @@
 일요일에는 3~5면 대신 복습호(page-review, page-quiz)를 만든다(4절).
 
 ## 0. 시작 (짧게)
-1. `git clone --depth 1 https://github.com/UphillPark/morning-crits <작업경로>`(add_repo 안내가 있으면 따른다). 실패하면 PushNotification으로 "Seminar: GitHub 접근 실패"를 보내고 끝낸다.
+1. 세션에 연결된 `UphillPark/morning-crits` 체크아웃을 작업 경로로 쓴다(저장소의 `.claude/settings.json` 허용 규칙이 그 체크아웃에서만 적용된다). 연결된 체크아웃이 없을 때만 `git clone --depth 1 https://github.com/UphillPark/morning-crits <작업경로>`(add_repo 안내가 있으면 따른다). 둘 다 실패하면 PushNotification으로 "Seminar: GitHub 접근 실패"를 보내고 끝낸다. 시작할 때 `git pull origin main`으로 최신 상태를 받는다.
 2. 오늘 날짜(KST)를 정한다. 일요일이면 4절로 간다.
-3. 형식 견본 `prompts/seminar-example.html`을 읽는다. 조각은 이 견본과 같은 구조여야 한다: `<main class="sheet" id="page-…" data-…>` 세 개, 같은 클래스(mast, tblock, lec-head, keys, recap, dual, plates/plate, crit, qs, terms, next, essay, brief, briefs, observe, framebox, prompt, vocab, footer)와 data-* 속성. 견본의 문장은 형식 예시일 뿐이니 베끼지 않는다.
+3. 형식 견본 `prompts/seminar-example.html`을 읽는다. 조각은 이 견본과 같은 구조여야 한다: `<main class="sheet" id="page-…" data-…>` 세 개, 같은 클래스(mast, tblock, lec-head, keys, recap, dual, plates/plate, crit, qs, terms, next, essay, brief, briefs, observe, gentest, framebox, gen-row, gen, gprompt, prompt, carry, gnotes, gscores, gfeed, vocab, footer)와 data-* 속성. 견본의 문장은 형식 예시일 뿐이니 베끼지 않는다.
 4. 중복 확인은 `issues/index.json`만 읽는다: symposium_day, unit, unit_concept, screen_work, screen_medium, vocab. 지난 호 HTML 전체를 읽지 않는다.
 5. 오늘 조각 `source/seminar/YYYY-MM-DD.html`이 이미 있으면 덮어쓰지 말고 요약에 "이미 있음"이라고 적고 끝낸다.
 
@@ -35,16 +35,13 @@
 - UNIT Q: 이 유닛에 지원한다면 포트폴리오에서 답해야 할 질문 하나. "Also in:" 줄에 같은 개념을 쓰는 다른 유닛을 units.json에서 골라 적는다.
 
 ## 3. 5면 · Mood Screen (영어, 간결하게)
-- 매일 한 작품: 영화, 회화, 다큐멘터리, 사진(사진가·사진집·사진전), 때때로 판화·드로잉. 고전과 교양이 되는 작품을 고르고 지금 열리는 전시나 신작은 고르지 않는다. 목적은 렌더링과 생성형 AI 프롬프팅에 쓸 시각 어휘를 무의식적으로 쌓는 것이다.
-- 매체 순서는 자유다. 다만 index.json의 최근 7일 screen_medium을 보고 한 매체가 한 주에 3번을 넘지 않게 하고, 시대·지역·작가를 고르게 섞는다(아시아·한국 작품, 무성영화, 흑백, 실험영화 포함). 같은 작품(screen_work)은 다시 고르지 않는다. 회화를 고르는 날은 3면의 시대를 느슨하게 따라가도 좋다(억지로 맞추지 않는다).
-- data-medium(Film/Painting/Documentary/Photography/Print), data-work("원제 또는 영어 제목 (연도)").
-- 구성: 이미지 1~2장 → 제목(원제 · 영어 · 한국어), 작가·감독, 연도, 국가, 러닝타임(확인된 경우) → Why this one(이 작품에서만 얻을 수 있는 시각 경험, 2~3문장) → Three things to watch for(다음 범주 중 이 작품에서 두드러지는 셋: Composition / Framing, Camera position / Lens / Perspective, Natural and artificial light, Colour palette / Grading, Materiality / Texture, Atmosphere / Weather, Spatial depth, Movement / Duration / Rhythm, Human scale / Occupation, Architecture / Landscape / Urban condition) → ONE QUESTION(이미지와 공간에 관한 질문 하나) → YOUR FRAME(사용자가 남길 프레임 1장 + 키워드 3개의 예시, 그리고 그 분위기를 영어로 묘사한 생성형 AI 프롬프트 한 줄).
-- 결말과 반전을 쓰지 않는다. 스트리밍 제공 여부를 쓰지 않는다. 확인하지 않은 촬영 장비·렌즈·장면을 사실처럼 쓰지 않는다.
+- `prompts/screen.md`를 처음부터 끝까지 읽고 그대로 따른다. 작품 고르기, 구성, 생성형 테스트(이미지 3장 생성·압축·Drive 보관·채점·기록장)가 모두 그 파일에 있다. 이 절보다 그 파일이 우선한다.
+- 5면 지침을 고칠 때는 이 파일이 아니라 `prompts/screen.md`를 고친다.
 
 ## 이미지와 링크 (3·5면 공통)
-- 이미지는 3면과 5면에만, 각 1~2장. 저작권이 풀린 작품이나 자유 라이선스 이미지를 쓴다. Wikimedia Commons를 우선하고, 파일 페이지에서 확인한 upload.wikimedia.org 원본 주소를 img src에, 파일 페이지 주소를 figcaption 링크에 넣는다. 영화 스틸처럼 라이선스가 불분명하면 이미지를 싣지 않고 figure 없이 신뢰할 만한 페이지(BFI, Criterion, 영상자료원 등) 링크만 단다.
+- 이미지는 3면과 5면에만, 각 1~2장(5면 생성형 테스트의 생성 이미지 3장은 따로 세며 `prompts/screen.md`를 따른다). 저작권이 풀린 작품이나 자유 라이선스 이미지를 쓴다. Wikimedia Commons를 우선하고, 파일 페이지에서 확인한 upload.wikimedia.org 원본 주소를 img src에, 파일 페이지 주소를 figcaption 링크에 넣는다. 영화 스틸처럼 라이선스가 불분명하면 이미지를 싣지 않고 figure 없이 신뢰할 만한 페이지(BFI, Criterion, 영상자료원 등) 링크만 단다.
 - figcaption: 작품명 · 작가 · 연대 · 소장처 · 출처 링크.
-- 모든 링크는 WebSearch/WebFetch 결과에서 직접 본 주소만 쓴다. 주소를 추측하거나 만들어 내지 않는다. 시트마다 링크는 3개 이하.
+- 모든 링크는 WebSearch/WebFetch 결과에서 직접 본 주소만 쓴다. 주소를 추측하거나 만들어 내지 않는다. 시트마다 링크는 3개 이하(5면 생성 이미지의 Drive 링크는 세지 않는다).
 
 ## 단어 박스 (각 시트의 aside.vocab)
 - 3면 3~4개(본문에 나온 영어 개념어·원어 표기), 4면 5~6개, 5면 4~5개. 반드시 그 시트 본문에 실제로 쓰인 표현에서 고른다.
@@ -54,7 +51,7 @@
 ## 4. 일요일 · 복습호
 - `prompts/sunday-example.html` 형식으로 page-review와 page-quiz 두 시트를 만든다. 새 취재는 하지 않는다.
 - 재료는 index.json에서 지난 월~토(이번 주) 항목과, 그 호들의 issues/YYYY-MM-DD.html에서 필요한 부분(h2, 단어 박스)만 grep으로 읽는다.
-- Weekly Review: 이번 주의 한 문장(h2), 1~5면을 면별로 짧게(1면 헤드라인 한 줄씩, 2면 씨앗 몇 개, 3면 DAY별 핵심 한 줄, 4면 유닛·개념, 5면 작품과 관찰 포인트 한 줄), 꼭 남길 단어 5개를 단어 박스로. 각 호 링크는 https://uphillpark.github.io/Morning-Crits/issues/YYYY-MM-DD.html.
+- Weekly Review: 이번 주의 한 문장(h2), 1~5면을 면별로 짧게(1면 헤드라인 한 줄씩, 2면 씨앗 몇 개, 3면 DAY별 핵심 한 줄, 4면 유닛·개념, 5면 작품과 관찰 포인트 한 줄, 그리고 `prompts/screen-log.json`의 이번 주 항목에서 평균 점수가 가장 높은 이미지 1개와 가장 낮은 이미지 1개를 `dl.terms.nominated`에 이름만: "작품 (연도) · 칸 이름", 예 "Red Desert (1964) · B1 Photograph". 사진·점수는 싣지 않는다. 채점된 이미지가 없으면 이 줄을 뺀다), 꼭 남길 단어 5개를 단어 박스로. 각 호 링크는 https://uphillpark.github.io/Morning-Crits/issues/YYYY-MM-DD.html.
 - Word Quiz: 이번 주 단어 박스에서만 10문항(빈칸 채우기, 뜻 고르기, 문장 만들기 섞기). 답은 details/summary로 접고, 어느 호 몇 면의 단어인지 적는다.
 - 그 주에 발행된 호가 하나도 없으면 만들지 않고 PushNotification으로 알린다.
 
@@ -63,9 +60,9 @@
   - problems가 있으면 고치고 다시 실행한다. 404 링크나 이미지는 빼거나 바꾼다.
   - unverified(컨테이너에서 열리지 않는 주소)는 WebSearch/WebFetch로 그 주소가 실재하는지 확인했으면 둔다. 확인하지 못했으면 뺀다.
 - 각 시트 tblock의 Issue는 `issues/index.json`의 가장 큰 issue + 1로 적는다(합치는 스크립트가 1면 호수로 다시 맞춘다). Date는 오늘, Rev는 A.
-- 조각 파일 하나만 커밋한다: 메시지 "Seminar fragment YYYY-MM-DD (DAY NNN)"(일요일은 "Sunday review fragment YYYY-MM-DD"), 끝에 세션 안내의 Co-Authored-By 줄. `git push origin main`. 거부되면 `git pull --rebase origin main` 후 한 번 더 푸시한다. 권한 문제로 거부되면 우회하지 말고 PushNotification으로 알린다.
-- 다른 파일(source/morning-crit.html, issues/, index.html 등)은 건드리지 않는다.
+- 평일에는 조각 파일, 5면 생성 이미지 압축본(`assets/screen/YYYY-MM-DD-*`), 기록장(`prompts/screen-log.json`)만 커밋한다. 일요일에는 조각 파일 하나만. 메시지 "Seminar fragment YYYY-MM-DD (DAY NNN)"(일요일은 "Sunday review fragment YYYY-MM-DD"), 끝에 세션 안내의 Co-Authored-By 줄. `git push origin main`. 거부되면 `git pull --rebase origin main` 후 한 번 더 푸시한다. 권한 문제로 거부되면 우회하지 말고 PushNotification으로 알린다.
+- 다른 파일(source/morning-crit.html, issues/, index.html, scripts/, prompts/의 다른 파일 등)은 건드리지 않는다.
 
 ## 마무리
-- 짧은 요약을 한국어로 남긴다: 3면 DAY와 제목, 4면 유닛·개념, 5면 작품·매체, 시트별 단어 수, 이미지 수, unverified로 남긴 링크, 푸시 결과.
-- PushNotification은 실패(클론·푸시 실패, 조각을 만들지 못함)가 있을 때만 보낸다.
+- 짧은 요약을 한국어로 남긴다: 3면 DAY와 제목, 4면 유닛·개념, 5면 작품·매체, 5면 생성형 테스트(combo, 세 칸의 status와 평균, Held 축, Drive 업로드 결과, 모델), 시트별 단어 수, 이미지 수, unverified로 남긴 링크, 푸시 결과.
+- PushNotification은 실패(클론·푸시 실패, 조각을 만들지 못함, Gemini 크레딧 소진, Drive 업로드 실패, 생성 이미지 세 칸 모두 실패)가 있을 때만 보낸다.

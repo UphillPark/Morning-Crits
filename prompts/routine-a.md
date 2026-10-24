@@ -80,7 +80,7 @@ I. 발행 직전 대조: 본문의 숫자가 전부 클레임 장부에 있는�
 - 스크립트가 오류를 내면 1·2면 구조가 바뀐 것이니 원래 구조로 고쳐 다시 실행한다. 그래도 안 되면 조각 없이 휴간으로 진행하고 요약에 적는다.
 
 ## 3. (A) 아티팩트 발행
-완성한 `source/morning-crit.html`(일요일은 `source/sunday.html`)을 Artifact 도구 publish에 url로 https://claude.ai/artifact/Bc7Yst9oB9arE3YjuB6Eaj 를 넘겨 같은 링크에 덮어 발행한다(icon은 넘기지 않는다). 구조와 CSS를 바꾸지 않는 내용 교체이므로 artifact-design 스킬은 구조를 건드릴 때만 불러온다.
+먼저 저장소 루트에서 `python3 scripts/inline_images.py`(일요일은 `python3 scripts/inline_images.py source/sunday.html build/artifact.html`)를 실행한다. 5면 생성 이미지(assets/screen/)를 HTML 안에 data URI로 넣은 사본 `build/artifact.html`이 만들어진다(원본 source 파일은 그대로). 그 `build/artifact.html`을 Artifact 도구 publish에 url로 https://claude.ai/artifact/Bc7Yst9oB9arE3YjuB6Eaj 를 넘겨 같은 링크에 덮어 발행한다(icon은 넘기지 않는다). 결과의 missing에 파일이 있으면 요약에 적는다. 구조와 CSS를 바꾸지 않는 내용 교체이므로 artifact-design 스킬은 구조를 건드릴 때만 불러온다.
 
 ## 4. (B) GitHub Pages 발행
 - 저장소 루트에서 `python3 scripts/build_site.py`를 실행한다(일요일은 `python3 scripts/build_site.py source/sunday.html`)(bs4가 없으면 `pip install beautifulsoup4 lxml` 후 pip가 설치한 파이썬으로 실행). index.html, issues/YYYY-MM-DD.html, issues/index.json(3~5면 필드와 단어 목록 포함), archive.html(1면 헤드라인 + 2~5면 칩)이 갱신된다. 오류가 나면 HTML 구조가 바뀐 것이니 원래 구조로 고쳐 다시 실행한다.
@@ -100,6 +100,7 @@ I. 발행 직전 대조: 본문의 숫자가 전부 클레임 장부에 있는�
   - 같은 발행일 페이지가 있는지는 rows 모드, limit 3, 발행일 내림차순으로 확인한다. 없으면 notion-create-pages로 parent {type: data_source_id, data_source_id: "565379f0-e78e-4940-984e-b0fce3dc6597"}, icon "📰", properties = notion-meta.json의 값 그대로 + "키워드"(교육, AI·기술, 기후, 주거, 재료·재사용, 정치·공간, 비엔날레·전시, 직업·시장, 인구·축소사회 중 그날 해당하는 것들), content = build/notion.md 내용을 한 글자도 바꾸지 말고 그대로 넣는다(allow_async false). 이미 있으면 그 페이지의 속성을 update_properties로, 본문을 replace_content로 갱신한다.
 - 단어장: 대상은 Supply 페이지 안의 "Word Bank_db", data source `collection://dea04552-a058-4c33-8dd5-56d51031026a`. 속성은 Term, 뜻, 품사, 종류(IELTS/AA Crit), 예문, 면, 발행일, 호 링크다.
   - build/word-bank.json의 항목을 properties 그대로, parent {type: data_source_id, data_source_id: "dea04552-a058-4c33-8dd5-56d51031026a"}로 한 번의 notion-create-pages 호출에 넣는다(icon "🔤"). 같은 Term이 이미 있는지는 그 Term으로 한 번에 조회해 확인하고, 이미 있으면 새로 만들지 않는다.
+- 5면 생성형 테스트는 Notion에 글만 들어간다(이미지 칸은 캡션·점수·실패 표기, 프롬프트는 지운 말 ~~취소선~~·바꾼 말 **굵게**). 원본 이미지는 본문의 Drive 폴더 링크로 본다.
 - 다른 페이지나 데이터베이스는 건드리지 않는다.
 
 ## 마무리

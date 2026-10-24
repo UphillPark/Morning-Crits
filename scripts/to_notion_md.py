@@ -155,6 +155,25 @@ def block(el, issue_date):
             term = "**" + part("term") + "**" + (" *" + part("pos") + "*" if part("pos") else "")
             rows.append([term, part("ko"), KIND.get(li.get("data-kind", ""), ""), part("ex")])
         return ['<span color="blue">**' + esc(text(el.find(class_="k"))) + "**</span>"] + table(rows)
+    if name == "figure" and "gen" in cls:
+        # Mood Screen generative test: text only; the images live in Drive and in the web issue.
+        fail = el.find(class_="gfail")
+        out = ["**" + esc(text(el.find("figcaption"))) + "**"]
+        out.append('<span color="red">' + esc(text(fail)) + "</span>" if fail else esc(text(el.find(class_="gscore"))))
+        return [l for l in out if l]
+    if name == "div" and "gprompt" in cls:
+        parts = []
+        for node in el.find("pre").descendants:
+            if isinstance(node, NavigableString):
+                t = esc(str(node))
+                parts.append({"del": "~~" + t + "~~", "ins": "**" + t + "**"}.get(node.parent.name, t))
+        out = ['<span color="blue">**' + esc(text(el.find(class_="k"))) + "**</span>", "".join(parts).strip()]
+        if el.find(class_="avoid"):
+            out.append('<span color="gray">' + esc(text(el.find(class_="avoid"))) + "</span>")
+        dl = el.find("dl", class_="carry")
+        if dl:
+            out += ["- " + esc(text(d)) + " → " + esc(text(dd)) for d, dd in zip(dl.find_all("dt"), dl.find_all("dd"))]
+        return out
     if name == "figure":
         img = el.find("img")
         cap = inline(el.find("figcaption")).strip() if el.find("figcaption") else ""
