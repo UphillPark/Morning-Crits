@@ -1,5 +1,74 @@
 [
   {
+    "date": "2026-10-24",
+    "issue": 16,
+    "edition": "weekday",
+    "headline": "“We have invoiced £0” — four months before it expires, London’s architecture framework is accused of leaving small practices behind",
+    "crit": "If a place on a list is not the same as paid work, what exactly is a young practice being offered when it is “included”? Which part of your own Diploma project would still be funded, and by whom, once the exhibition is over?",
+    "thesis": [
+      "구조는 남기고 껍질과 설비를 바꾼다: 반포푸르지오와 이수신동아4단지가 같은 날 리모델링 시공사를 정했다",
+      "32년 만에 깨어난 갱도: 영월 상동광산의 텅스텐은 먼저 미국으로 가고, 읍내에는 989명이 산다",
+      "눈이 오기 전의 조립식 주택 1,000동: 티베트 북부 규모 7 지진이 집 339채를 무너뜨렸다",
+      "다락방에서 맞은 여름: 올여름 유럽 854개 도시에서 폭염으로 5만 명이 숨졌다는 연구가 나왔다"
+    ],
+    "seeds": [
+      {
+        "seed": "남는 구조, 바뀌는 층 — 리모델링 단지 한 동을 구조체·마감·설비 세 층으로 분해한 축측도와 물량 목록",
+        "issue": "반포·이수 리모델링"
+      },
+      {
+        "seed": "광미의 다음 용도 — 갱도 되메움과 건설자재 사이의 부산물 인벤토리와 읍내 단면",
+        "issue": "영월 상동광산"
+      },
+      {
+        "seed": "겨울이 오기 전의 방 — 조립식 임시 주택의 첫 72시간부터 재건까지를 잇는 시간축 단면",
+        "issue": "티베트 지진"
+      },
+      {
+        "seed": "가장 더운 방의 이웃 — 한 건물의 열 지도와 혼자 사는 사람의 위치를 겹친 단면",
+        "issue": "유럽 폭염 사망"
+      }
+    ],
+    "symposium_day": 7,
+    "unit": "cross",
+    "unit_concept": "extraction",
+    "screen_work": "Abtei im Eichwald / The Abbey in the Oakwood (1809–10)",
+    "screen_medium": "Painting",
+    "chips": {
+      "thesis": "주거 · 강원 영월 · 중국 티베트 · 유럽 도시",
+      "symposium": "DAY 07 · 인간은 만물의 척도인가",
+      "unit": "cross cross · extraction",
+      "screen": "Painting · Abtei im Eichwald / The Abbey in the Oakwood (1809–10)"
+    },
+    "vocab": [
+      "invoice",
+      "tender",
+      "procurement",
+      "circumvent",
+      "gridlock",
+      "backfill",
+      "in situ",
+      "prefabricated",
+      "heat stress",
+      "relativism",
+      "impartial concern",
+      "persuasion",
+      "convention",
+      "extraction",
+      "stewardship",
+      "sufficiency",
+      "accumulation",
+      "leisure",
+      "rebuttal",
+      "silhouette",
+      "foreground",
+      "hush",
+      "monumental"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-10-24.html",
+    "slug": "2026-10-24"
+  },
+  {
     "date": "2026-10-22",
     "issue": 15,
     "edition": "weekday",
