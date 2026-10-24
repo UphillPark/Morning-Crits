@@ -1,1 +1,241 @@
-[]
+[
+  {
+    "date": "2026-10-24",
+    "issue": 16,
+    "work": "Abtei im Eichwald / The Abbey in the Oakwood (1809–10)",
+    "medium": "Painting",
+    "combo": 4,
+    "combo_swap": null,
+    "model": "gemini-3.1-flash-lite-image",
+    "reference": true,
+    "ban": [
+      "caspar david friedrich",
+      "friedrich",
+      "abbey in the oakwood",
+      "abtei im eichwald",
+      "abtei",
+      "eichwald",
+      "oakwood",
+      "eldena",
+      "monk by the sea",
+      "der mönch am meer",
+      "abbey"
+    ],
+    "keywords": [
+      "bare winter trees",
+      "ruined Gothic arch",
+      "dusk mist"
+    ],
+    "applied": [
+      "no text, no signature, no seal at the end of every prompt (from the 2026-10-24 test note in screen.md)",
+      "first logged issue: no earlier next-list to apply"
+    ],
+    "images": [
+      {
+        "slot": "a",
+        "kind": "Reproduction",
+        "status": "ok",
+        "words": 65,
+        "prompt": "Oil painting of a ruined Gothic church facade, one tall pointed arch window, standing in a snow-dusted graveyard; tiny cloaked figures carry a coffin toward it between bare winter trees. Dusk mist, pale glow in a greenish-grey sky fading to black-brown, near-monochrome palette, small figures against monumental stillness, centred symmetrical landscape. Ruined Gothic arch, bare winter trees, dusk mist. no text, no signature, no seal",
+        "avoided": [
+          [
+            "abbey",
+            "church facade"
+          ],
+          [
+            "monks",
+            "cloaked figures"
+          ],
+          [
+            "oak trees",
+            "bare winter trees"
+          ]
+        ],
+        "metrics": {
+          "palette_de": 13.0,
+          "layout_r": -0.014
+        },
+        "scores": {
+          "style": {
+            "judges": [
+              55,
+              50,
+              52,
+              48,
+              50
+            ],
+            "final": 50,
+            "held": false
+          },
+          "composition": {
+            "judges": [
+              45,
+              42,
+              45,
+              40,
+              42
+            ],
+            "final": 42,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              66,
+              64,
+              68,
+              62,
+              64
+            ],
+            "final": 64,
+            "held": false
+          }
+        },
+        "avg": 52.0,
+        "drive_url": "https://drive.google.com/file/d/1pTWgolWS_Vr-QuvQVyaG0W3uCEdcPhRC/view?usp=drivesdk",
+        "usage": {
+          "promptTokenCount": 91,
+          "candidatesTokenCount": 1570,
+          "totalTokenCount": 1661
+        }
+      },
+      {
+        "slot": "b1",
+        "kind": "Concept art",
+        "status": "ok",
+        "words": 56,
+        "prompt": "Concept art, aerial three-quarter view of a concrete salt-works hall on a frozen tidal flat, a new timber chapel set inside a ruined Gothic arch, a long diagonal ramp, a thin line of lamp-bearers, bare winter trees along a seawall, dusk mist, olive-grey sky darkening to brown-black, near-monochrome, sublime scale. no text, no signature, no seal",
+        "avoided": [],
+        "metrics": {
+          "palette_de": 12.2,
+          "layout_r": -0.082
+        },
+        "scores": {
+          "mood": {
+            "judges": [
+              72,
+              70,
+              74,
+              66,
+              71
+            ],
+            "final": 71,
+            "held": false
+          },
+          "independence": {
+            "judges": [
+              88,
+              86,
+              85,
+              84,
+              87
+            ],
+            "final": 86,
+            "held": false
+          },
+          "architecture": {
+            "judges": [
+              70,
+              72,
+              68,
+              74,
+              66
+            ],
+            "final": 70,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              72,
+              70,
+              66,
+              71,
+              69
+            ],
+            "final": 70,
+            "held": false
+          }
+        },
+        "avg": 74.3,
+        "drive_url": "https://drive.google.com/file/d/1sV8OlDAIY4VjehX2HlcsAlnAoZSEfKuO/view?usp=drivesdk",
+        "usage": {}
+      },
+      {
+        "slot": "b2",
+        "kind": "Object / Diagram",
+        "status": "ok",
+        "words": 49,
+        "prompt": "Exploded isometric object diagram of a hillside funeral chapel, fine ink and graphite wash on stained grey-green paper, pale moon disc, bare winter trees as wire silhouettes, a ruined Gothic arch floating as a detached fragment, dusk mist as soft wash, near-monochrome, quiet. no text, no signature, no seal",
+        "avoided": [],
+        "metrics": {
+          "palette_de": 17.9,
+          "layout_r": -0.105
+        },
+        "scores": {
+          "mood": {
+            "judges": [
+              72,
+              66,
+              70,
+              74,
+              70
+            ],
+            "final": 70,
+            "held": false
+          },
+          "independence": {
+            "judges": [
+              66,
+              68,
+              64,
+              70,
+              62
+            ],
+            "final": 66,
+            "held": false
+          },
+          "architecture": {
+            "judges": [
+              78,
+              76,
+              74,
+              74,
+              72
+            ],
+            "final": 74,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              75,
+              74,
+              73,
+              76,
+              74
+            ],
+            "final": 74,
+            "held": false
+          }
+        },
+        "avg": 71.0,
+        "drive_url": "https://drive.google.com/file/d/1GgTF1hGBvCr3nYTvXvoDc0hlSbjk1yp-/view?usp=drivesdk",
+        "usage": {}
+      }
+    ],
+    "judging": "Image-axis judges were separate blind subagent panels (no prompt shown); prompt axis judged from prompts and ban list. Rationales are in the session only.",
+    "worked": [
+      "aerial three-quarter view + new timber chapel inside the old arch gave Independence 86",
+      "exploded isometric object diagram, ink and graphite wash on stained grey-green paper gave Architecture 74",
+      "ruin as a detached floating fragment carried the motif without the frame"
+    ],
+    "mismatch": [
+      "A: 'greenish-grey sky' went teal; original is a yellow-grey horizon over near-black ground (palette ΔE 13.0)",
+      "A: 'one tall pointed arch window' and 'centred symmetrical' made the ruin fill the frame; original is small under a wide sky (layout r -0.01); 'snow-dusted' added snow",
+      "B2: grey-green again (ΔE 17.9); 'funeral chapel' and moon echoed the source (Independence 66)"
+    ],
+    "next": [
+      "Name the warm band: ochre-yellow band at the horizon under a grey-brown sky, near-black foreground",
+      "For reproduction give scale, drop symmetry and snow: low ruined wall small under a wide empty sky",
+      "For B change the programme away from the source subject (tide-gauge station) and drop the moon"
+    ]
+  }
+]
