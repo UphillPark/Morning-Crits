@@ -177,7 +177,7 @@ def block(el, issue_date):
     if name == "figure":
         img = el.find("img")
         cap = inline(el.find("figcaption")).strip() if el.find("figcaption") else ""
-        out = ["![" + esc(text(el.find("figcaption"))) + "](" + img["src"] + ")"] if img and img.get("src", "").startswith("http") else []
+        out = ["", "![" + esc(text(el.find("figcaption"))) + "](" + img["src"] + ")", ""] if img and img.get("src", "").startswith("http") else []
         return out + (['<span color="gray">' + cap + "</span>"] if cap else [])
     if name == "blockquote":
         return ["> " + inline(el).strip()]
