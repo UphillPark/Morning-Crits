@@ -237,5 +237,249 @@
       "For reproduction give scale, drop symmetry and snow: low ruined wall small under a wide empty sky",
       "For B change the programme away from the source subject (tide-gauge station) and drop the moon"
     ]
+  },
+  {
+    "date": "2026-10-26",
+    "issue": 17,
+    "work": "Inwang jesaekdo / Clearing After Rain on Mount Inwang (1751)",
+    "medium": "Painting",
+    "combo": 1,
+    "combo_swap": null,
+    "model": "gemini-3.1-flash-lite-image",
+    "reference": true,
+    "ban": [
+      "jeong seon",
+      "jeongseon",
+      "jeong sun",
+      "gyeomjae",
+      "겸재",
+      "정선",
+      "inwang",
+      "inwangsan",
+      "인왕",
+      "인왕제색도",
+      "jesaek",
+      "jesaekdo",
+      "clearing after rain",
+      "after rain",
+      "national treasure"
+    ],
+    "keywords": [
+      "wet black granite",
+      "rising mist",
+      "ink wash"
+    ],
+    "applied": [
+      "name the tonal structure instead of a warm band (grey-black monochrome, one broad bank of white mist)",
+      "no symmetry or snow; small houses at low right for scale",
+      "B programme changed away from the source subject (bathhouse, water-filtration works); no moon"
+    ],
+    "notes": [
+      "6 generation calls used: a, b1, b2, then a (first A used 'Hanging scroll' and returned three mounted scrolls side by side), then b2 twice (first returned a portrait panel with blank margins; second prompt was 65 words, over the 60 limit). Retries were for quality and word limit, not refused/error.",
+      "Judges were five profiles scored by the editor in one pass, not independent sessions.",
+      "B1 original uploaded to Drive (ok) but no url returned, twice."
+    ],
+    "images": [
+      {
+        "slot": "a",
+        "kind": "Reproduction",
+        "status": "ok",
+        "words": 80,
+        "prompt": "Wide horizontal ink landscape on aged paper, edge to edge, no mount, no border: a steep granite mountain with a huge dark rounded dome of rock streaked by vertical wet strokes, filling the upper centre; pale grey hills below stippled with dotted brush marks; one broad bank of white mist across the middle; dark pines and two small tiled-roof houses low in the right foreground. Grey-black monochrome. wet black granite, rising mist, ink wash. no text, no signature, no seal",
+        "avoided": [
+          [
+            "Joseon dynasty Korean",
+            "Wide horizontal"
+          ],
+          [
+            "Mount Inwang",
+            "steep granite mountain"
+          ]
+        ],
+        "metrics": {
+          "palette_de": 8.4,
+          "layout_r": 0.342
+        },
+        "scores": {
+          "style": {
+            "judges": [
+              65,
+              70,
+              68,
+              60,
+              72
+            ],
+            "final": 68,
+            "held": false
+          },
+          "composition": {
+            "judges": [
+              50,
+              55,
+              52,
+              45,
+              58
+            ],
+            "final": 52,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              60,
+              64,
+              62,
+              58,
+              66
+            ],
+            "final": 62,
+            "held": false
+          }
+        },
+        "avg": 60.7,
+        "drive_url": "https://drive.google.com/file/d/1ybxTxKkq4_HvYhr4JyH24UTpe70SqSQD/view?usp=drivesdk",
+        "usage": {
+          "totalTokenCount": 1602
+        }
+      },
+      {
+        "slot": "b1",
+        "kind": "Photograph",
+        "status": "ok",
+        "words": 52,
+        "prompt": "Documentary photograph, long lens, overcast: a stepped concrete bathhouse cut into a rain-darkened quarry face, one low tiled pavilion on its lowest terrace, white fog filling the terraces below, pines at the edge. wet black granite, rising mist, ink wash tonality, near-monochrome grey, quiet and empty. no text, no signature, no seal",
+        "avoided": [],
+        "metrics": {
+          "palette_de": 6.4,
+          "layout_r": 0.009
+        },
+        "scores": {
+          "mood": {
+            "judges": [
+              74,
+              78,
+              76,
+              70,
+              80
+            ],
+            "final": 76,
+            "held": false
+          },
+          "independence": {
+            "judges": [
+              68,
+              72,
+              70,
+              64,
+              75
+            ],
+            "final": 70,
+            "held": false
+          },
+          "architecture": {
+            "judges": [
+              78,
+              76,
+              80,
+              72,
+              74
+            ],
+            "final": 76,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              68,
+              72,
+              70,
+              66,
+              74
+            ],
+            "final": 70,
+            "held": false
+          }
+        },
+        "avg": 73.0,
+        "drive_url": null,
+        "usage": {}
+      },
+      {
+        "slot": "b2",
+        "kind": "Architectural drawing",
+        "status": "ok",
+        "words": 59,
+        "prompt": "Long section drawing filling the whole sheet, ink wash on aged paper: a stepped water-filtration works descending a steep dark hillside, stippled planting on each terrace, a band of bare paper as mist between upper tanks and a low pump hall, tiny scale figures. wet black granite, rising mist, ink wash. Grey-black monochrome. no text, no signature, no seal",
+        "avoided": [],
+        "metrics": {
+          "palette_de": 12.5,
+          "layout_r": 0.286
+        },
+        "scores": {
+          "mood": {
+            "judges": [
+              68,
+              72,
+              70,
+              64,
+              74
+            ],
+            "final": 70,
+            "held": false
+          },
+          "independence": {
+            "judges": [
+              86,
+              90,
+              88,
+              84,
+              92
+            ],
+            "final": 88,
+            "held": false
+          },
+          "architecture": {
+            "judges": [
+              64,
+              68,
+              66,
+              60,
+              70
+            ],
+            "final": 66,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              64,
+              68,
+              66,
+              62,
+              70
+            ],
+            "final": 66,
+            "held": false
+          }
+        },
+        "avg": 72.5,
+        "drive_url": "https://drive.google.com/file/d/1NqV_hPkltMJzBE3fwgm-k9ae7LVmDE6c/view?usp=drivesdk",
+        "usage": {}
+      }
+    ],
+    "worked": [
+      "Photograph, long lens, overcast + rain-darkened gave B1 the best Architecture score",
+      "naming the tonal structure put A at palette dE 8.4 (13.0 last issue)",
+      "a band of bare paper as mist carried the device into B2 without copying the mountain"
+    ],
+    "mismatch": [
+      "A: dome 'filling the upper centre' gave one tidy dome and empty paper (layout r 0.34); aged paper went cream not cool grey",
+      "B1/B2 reuse source props (tiled pavilion, pines, terraces), Independence 70 for B1",
+      "B2 asked for a section, got oblique views; portrait panel until 'whole sheet' added",
+      "'Hanging scroll' made the model draw three mounted scrolls"
+    ],
+    "next": [
+      "Avoid format words (hanging scroll, sheet); say edge to edge, no mount",
+      "For A describe density and count instead of one hero shape and position",
+      "For B change the programme and drop the source's signature props",
+      "For drawings say elevation or axonometric unless a cut is wanted; keep prompts under 55 words"
+    ]
   }
 ]
