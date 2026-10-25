@@ -1,0 +1,1403 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Morning Crit No. 017 · Tents in the square, dogs in the dark: Portugal clears its housing protest camps for a third night, and the question becomes what a public square is for">
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Morning Crit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,500;1,6..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap">
+<style>
+/* Layout: a drawing sheet. Title block masthead, lead + crit column, two-column story grid, calendar strip, reading map table. Redline = tutor's pen. */
+:root {
+  --paper: #F2F3EF;
+  --sheet: #F8F9F6;
+  --ink: #1B1F23;
+  --muted: #5A6168;
+  --rule: #C6CBC3;
+  --grid: rgba(31, 78, 121, 0.06);
+  --red: #C2331D;
+  --blue: #1F4E79;
+  --tint: #E6E9E2;
+  --f-mast: "Bodoni Moda", "Didot", "Times New Roman", serif;
+  --f-head: "Noto Serif KR", "Apple SD Gothic Neo", serif;
+  --f-body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #111417; --sheet: #161A1E; --ink: #E3E6E0; --muted: #9AA2A9; --rule: #2D3439;
+    --grid: rgba(138, 184, 230, 0.05); --red: #FF7C66; --blue: #8DB9E6; --tint: #1C2126;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #111417; --sheet: #161A1E; --ink: #E3E6E0; --muted: #9AA2A9; --rule: #2D3439;
+  --grid: rgba(138, 184, 230, 0.05); --red: #FF7C66; --blue: #8DB9E6; --tint: #1C2126;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  background: var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 15.5px;
+  line-height: 1.75;
+  padding-inline: 16px;
+  padding-block: 28px 64px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.sheet {
+  max-width: 1120px;
+  margin-inline: auto;
+  background: var(--sheet);
+  border: 1.5px solid var(--ink);
+  padding: clamp(16px, 3vw, 36px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 40px;
+}
+.sheet > * { min-width: 0; }
+a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+
+/* ── Masthead as title block ── */
+.mast {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  border-bottom: 3px double var(--ink);
+  padding-bottom: 18px;
+  gap: 20px;
+  align-items: end;
+}
+.mast h1 {
+  font-family: var(--f-mast);
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(48px, 9vw, 104px);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+.mast .sub {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.tblock {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, auto));
+  border: 1px solid var(--ink);
+  font-family: var(--f-mono);
+  font-size: 11.5px;
+  line-height: 1.35;
+}
+.tblock div { padding: 6px 10px; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.tblock div:nth-child(2n) { border-right: 0; }
+.tblock div:nth-last-child(-n+2) { border-bottom: 0; }
+.tblock b { display: block; font-weight: 400; color: var(--muted); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; }
+.mast > * { min-width: 0; }
+@media (max-width: 720px) { .mast { grid-template-columns: minmax(0, 1fr); } .tblock { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ── Section labels ── */
+.label {
+  display: flex; align-items: center; gap: 12px;
+  font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+.label::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+.label .tag { color: var(--ink); }
+
+/* ── Lead ── */
+.lead { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 36px; }
+.lead h2 { font-family: var(--f-head); font-weight: 900; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.3; }
+.lead .deck { font-size: 17px; margin-top: 14px; max-width: 62ch; }
+.lead .body { margin-top: 14px; max-width: 65ch; display: grid; gap: 12px; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: 22px; border-block: 1px solid var(--ink); }
+.stats div { padding: 12px 12px 12px 0; }
+.stats div + div { padding-left: 12px; border-left: 1px solid var(--rule); }
+.stats strong { display: block; font-family: var(--f-mono); font-size: 26px; font-weight: 500; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.stats span { font-size: 12.5px; color: var(--muted); line-height: 1.5; display: block; }
+.side { display: grid; gap: 22px; align-content: start; min-width: 0; }
+@media (max-width: 820px) { .lead { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .stats { grid-template-columns: 1fr; } .stats div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--rule); } }
+
+/* ── Crit (redline) ── */
+.crit {
+  border: 1.5px dashed var(--red);
+  padding: 12px 14px;
+  font-size: 14.5px;
+  line-height: 1.7;
+  margin-top: 14px;
+}
+.crit .k { font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.14em; color: var(--red); display: block; margin-bottom: 4px; }
+.crit.big { margin-top: 0; padding: 18px; }
+.crit.big p { font-family: var(--f-head); font-weight: 600; font-size: 19px; line-height: 1.55; }
+.crit.big ol { margin: 12px 0 0; padding-left: 20px; font-size: 14px; display: grid; gap: 6px; }
+
+/* ── Stories grid ── */
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 40px; }
+@media (max-width: 820px) { .grid2 { grid-template-columns: 1fr; } }
+.story { min-width: 0; border-top: 1.5px solid var(--ink); padding-top: 14px; }
+.kicker { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 6px; }
+.story h3 { font-family: var(--f-head); font-weight: 600; font-size: 21px; line-height: 1.42; margin-bottom: 10px; }
+.story p + p { margin-top: 10px; }
+.src { font-family: var(--f-mono); font-size: 12px; color: var(--muted); margin-top: 12px; line-height: 1.6; }
+.src a { color: var(--blue); }
+
+/* ── Briefs ── */
+.briefs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; }
+.briefs li { padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 14.5px; line-height: 1.6; min-width: 0; }
+.briefs li b { font-weight: 600; }
+.briefs .src { margin-top: 2px; }
+@media (max-width: 720px) { .briefs { grid-template-columns: 1fr; } }
+
+/* ── Calendar ── */
+.cal { list-style: none; margin: 0; padding: 0; display: grid; }
+.cal li { display: grid; grid-template-columns: 92px 64px minmax(0, 1fr); gap: 14px; padding: 11px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+.cal .d { font-family: var(--f-mono); font-size: 13px; font-variant-numeric: tabular-nums; }
+.cal .dd { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.cal .dd.soon { color: var(--red); font-weight: 500; }
+.cal .t { font-size: 14.5px; line-height: 1.6; }
+.cal .t small { display: block; color: var(--muted); font-size: 12.5px; }
+@media (max-width: 480px) { .cal li { grid-template-columns: 78px minmax(0, 1fr); } .cal .dd { grid-column: 1; grid-row: 2; } .cal .t { grid-column: 2; grid-row: 1 / span 2; } }
+
+/* ── Reading map ── */
+.mapintro { max-width: 70ch; margin-bottom: 18px; color: var(--muted); font-size: 14.5px; }
+.tablewrap { overflow-x: auto; border-top: 1.5px solid var(--ink); }
+table { width: 100%; border-collapse: collapse; min-width: 760px; font-size: 14px; line-height: 1.55; }
+th { text-align: left; font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 400; padding: 10px 12px 8px 0; border-bottom: 1px solid var(--ink); }
+td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+td:first-child { font-weight: 600; white-space: nowrap; }
+td.m { font-family: var(--f-mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
+tr.group td { padding-top: 22px; font-family: var(--f-mono); font-weight: 400; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red); border-bottom: 1px solid var(--ink); }
+.pill { display: inline-block; font-family: var(--f-mono); font-size: 10.5px; padding: 1px 6px; border: 1px solid currentColor; border-radius: 2px; letter-spacing: 0.04em; }
+.pill.free { color: var(--blue); }
+.pill.pay { color: var(--red); }
+.pill.part { color: var(--muted); }
+
+/* ── Routine ── */
+.routine { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--ink); }
+.routine div { padding: 16px; min-width: 0; }
+.routine div + div { border-left: 1px solid var(--ink); }
+.routine .mono { font-size: 12px; color: var(--red); display: block; margin-bottom: 6px; letter-spacing: 0.06em; }
+.routine p { font-size: 14px; line-height: 1.65; }
+@media (max-width: 720px) { .routine { grid-template-columns: 1fr; } .routine div + div { border-left: 0; border-top: 1px solid var(--ink); } }
+
+footer { border-top: 3px double var(--ink); padding-top: 14px; font-size: 12.5px; color: var(--muted); display: grid; gap: 6px; }
+
+/* ── Sheet tabs (page switch) ── */
+.tabs { max-width: 1120px; margin-inline: auto; display: flex; gap: 0; flex-wrap: wrap; }
+.tabs a {
+  font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.06em; text-decoration: none;
+  color: var(--muted); background: var(--tint);
+  border: 1.5px solid var(--ink); border-bottom: 0; padding: 8px 14px 7px;
+  margin-right: -1.5px; display: flex; gap: 10px; align-items: baseline;
+}
+.tabs a b { font-family: var(--f-head); font-weight: 600; font-size: 14px; letter-spacing: 0; color: inherit; }
+.tabs a[aria-current="page"] { background: var(--sheet); color: var(--ink); position: relative; top: 1.5px; }
+.tabs a:hover { color: var(--ink); }
+
+/* ── Thesis Desk ── */
+.method { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid var(--ink); }
+.method div { padding: 14px 16px; min-width: 0; }
+.method div + div { border-left: 1px solid var(--ink); }
+.method .mono { display: block; font-size: 11.5px; color: var(--red); letter-spacing: 0.08em; margin-bottom: 4px; }
+.method strong { font-family: var(--f-head); font-weight: 600; font-size: 17px; display: block; }
+.method p { font-size: 13.5px; line-height: 1.6; color: var(--muted); margin-top: 4px; }
+@media (max-width: 760px) { .method { grid-template-columns: repeat(2, minmax(0, 1fr)); } .method div:nth-child(3) { border-left: 0; } .method div:nth-child(n+3) { border-top: 1px solid var(--ink); } }
+@media (max-width: 420px) { .method { grid-template-columns: 1fr; } .method div + div { border-left: 0; border-top: 1px solid var(--ink); } }
+
+.issues { display: grid; gap: 44px; }
+.issue { border-top: 1.5px solid var(--ink); padding-top: 16px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 20px 40px; }
+.issue > header { grid-column: 1 / -1; display: grid; gap: 8px; }
+.issue .meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; font-family: var(--f-mono); font-size: 11.5px; letter-spacing: 0.08em; color: var(--muted); text-transform: uppercase; }
+.issue .region { color: var(--red); border: 1px solid currentColor; padding: 0 6px; border-radius: 2px; }
+.issue h3 { font-family: var(--f-head); font-weight: 900; font-size: clamp(22px, 2.6vw, 28px); line-height: 1.35; }
+.facts { min-width: 0; display: grid; gap: 10px; align-content: start; }
+.facts .figs { display: flex; flex-wrap: wrap; gap: 0; border-block: 1px solid var(--ink); }
+.facts .figs div { padding: 8px 14px 8px 0; margin-right: 14px; border-right: 1px solid var(--rule); min-width: 0; }
+.facts .figs div:last-child { border-right: 0; margin-right: 0; }
+.facts .figs strong { display: block; font-family: var(--f-mono); font-weight: 500; font-size: 20px; line-height: 1.25; font-variant-numeric: tabular-nums; }
+.facts .figs span { font-size: 12px; color: var(--muted); line-height: 1.4; display: block; }
+.translate { min-width: 0; margin: 0; display: grid; grid-template-columns: 76px minmax(0, 1fr); border-top: 1px solid var(--rule); align-content: start; }
+.translate dt, .translate dd { padding: 9px 0; border-bottom: 1px solid var(--rule); margin: 0; }
+.translate dt { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: 0.06em; color: var(--muted); padding-top: 12px; }
+.translate dd { font-size: 14.5px; line-height: 1.65; }
+.issue .crit { grid-column: 1 / -1; margin-top: 0; display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; }
+.issue .crit .q { font-family: var(--f-head); font-weight: 600; font-size: 18px; line-height: 1.5; }
+.issue .crit .en { font-family: var(--f-mast); font-style: italic; font-size: 16px; color: var(--muted); }
+@media (max-width: 820px) { .issue { grid-template-columns: 1fr; } }
+
+/* scale bar: which scales an issue spans */
+.scale { display: inline-grid; grid-template-columns: repeat(5, auto); border: 1px solid var(--ink); font-family: var(--f-mono); font-size: 10.5px; letter-spacing: 0.02em; text-transform: none; }
+.scale span { padding: 1px 7px; color: var(--muted); }
+.scale span + span { border-left: 1px solid var(--ink); }
+.scale span.on { background: var(--ink); color: var(--sheet); }
+
+.pairs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--ink); }
+.pairs article { padding: 18px; min-width: 0; display: grid; gap: 8px; align-content: start; }
+.pairs article + article { border-left: 1px solid var(--ink); }
+.pairs .x { font-family: var(--f-mono); font-size: 11.5px; color: var(--red); letter-spacing: 0.04em; }
+.pairs h3 { font-family: var(--f-head); font-weight: 600; font-size: 19px; line-height: 1.45; }
+.pairs p { font-size: 14px; line-height: 1.65; }
+@media (max-width: 820px) { .pairs { grid-template-columns: 1fr; } .pairs article + article { border-left: 0; border-top: 1px solid var(--ink); } }
+
+.board td:first-child { font-family: var(--f-mono); font-weight: 400; font-size: 12px; color: var(--muted); }
+.board td.seed { font-weight: 600; white-space: normal; }
+.board table { min-width: 680px; }
+/* ── Word box (bottom of every sheet) ── */
+.vocab { border: 1px solid var(--ink); background: var(--tint); padding: 14px 16px 6px; }
+.vocab .k { font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.14em; color: var(--blue); display: block; margin-bottom: 6px; }
+.vocab ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; }
+.vocab li { padding: 9px 0; border-top: 1px solid var(--rule); font-size: 14px; line-height: 1.55; min-width: 0; }
+.vocab li::before { float: right; margin-left: 8px; font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.06em; padding: 0 5px; border: 1px solid currentColor; border-radius: 2px; }
+.vocab li[data-kind="ielts"]::before { content: "IELTS 7.0"; color: var(--muted); }
+.vocab li[data-kind="crit"]::before { content: "AA CRIT"; color: var(--red); }
+.vocab .term { font-family: var(--f-mast); font-style: italic; font-weight: 700; font-size: 18px; }
+.vocab .pos { font-family: var(--f-mono); font-size: 11px; color: var(--muted); }
+.vocab .ko { display: block; }
+.vocab .ex { display: block; font-size: 13px; color: var(--muted); font-style: italic; }
+@media (max-width: 720px) { .vocab ul { grid-template-columns: minmax(0, 1fr); } }
+
+/* ── Shared: lecture head, key chips, plates ── */
+.lec-head h2 { font-family: var(--f-head); font-weight: 900; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.3; }
+.lec-head .deck { font-size: 17px; margin-top: 14px; max-width: 64ch; }
+.lec-head .credits { font-family: var(--f-mono); font-size: 12.5px; color: var(--muted); margin-top: 10px; line-height: 1.6; }
+.keys { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.keys li { font-family: var(--f-mono); font-size: 12px; border: 1px solid var(--ink); padding: 2px 8px; line-height: 1.6; }
+.keys li i { font-style: normal; color: var(--muted); }
+.recap { border-left: 3px solid var(--blue); padding: 2px 0 2px 14px; color: var(--muted); font-size: 14.5px; max-width: 72ch; display: grid; gap: 8px; }
+.plates { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 20px; }
+.plate { margin: 0; border: 1px solid var(--ink); background: var(--tint); min-width: 0; }
+.plate img { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.plate figcaption { font-family: var(--f-mono); font-size: 11.5px; color: var(--muted); padding: 8px 12px; border-top: 1px solid var(--ink); line-height: 1.55; }
+.plate.noimg img { display: none; }
+.plate.noimg figcaption { border-top: 0; }
+.qs { margin: 0; padding-left: 22px; display: grid; gap: 8px; font-size: 15px; max-width: 72ch; }
+.next { font-family: var(--f-mono); font-size: 13px; border-top: 1px dashed var(--rule); padding-top: 10px; }
+.closed { border: 1.5px dashed var(--rule); padding: 28px; text-align: center; color: var(--muted); }
+
+/* ── Daily Symposium ── */
+.dual { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 40px; }
+.dual > article { min-width: 0; border-top: 1.5px solid var(--ink); padding-top: 14px; display: grid; gap: 12px; align-content: start; }
+.dual h3 { font-family: var(--f-head); font-weight: 600; font-size: 21px; line-height: 1.42; }
+.dual h4 { font-family: var(--f-mono); font-weight: 500; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red); margin: 6px 0 0; }
+@media (max-width: 820px) { .dual { grid-template-columns: minmax(0, 1fr); } }
+dl.terms { margin: 0; display: grid; grid-template-columns: minmax(0, 13em) minmax(0, 1fr); border-top: 1px solid var(--rule); }
+dl.terms dt, dl.terms dd { margin: 0; padding: 8px 0; border-bottom: 1px solid var(--rule); font-size: 14.5px; line-height: 1.6; }
+dl.terms dt { font-weight: 600; padding-right: 14px; }
+@media (max-width: 560px) { dl.terms { grid-template-columns: minmax(0, 1fr); } dl.terms dt { border-bottom: 0; padding-bottom: 0; } }
+
+/* ── Unit Brief ── */
+.essay { max-width: 72ch; display: grid; gap: 14px; font-size: 16px; line-height: 1.8; }
+.essay h3 { font-family: var(--f-head); font-weight: 600; font-size: 21px; line-height: 1.4; margin-top: 12px; }
+blockquote.brief { margin: 0; border-left: 3px solid var(--red); padding: 4px 0 4px 16px; font-family: var(--f-mast); font-style: italic; font-size: 19px; line-height: 1.5; max-width: 64ch; }
+blockquote.brief cite { display: block; font-family: var(--f-mono); font-style: normal; font-size: 11.5px; color: var(--muted); margin-top: 6px; }
+
+/* ── Mood Screen ── */
+.observe { list-style: none; counter-reset: obs; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: 1px solid var(--ink); }
+.observe li { padding: 16px; min-width: 0; counter-increment: obs; }
+.observe li + li { border-left: 1px solid var(--ink); }
+.observe .cat { font-family: var(--f-mono); font-size: 11.5px; color: var(--red); letter-spacing: 0.08em; display: block; margin-bottom: 4px; text-transform: uppercase; }
+.observe .cat::before { content: counter(obs) " · "; }
+.observe strong { font-family: var(--f-head); font-weight: 600; font-size: 17px; display: block; line-height: 1.45; }
+.observe p { font-size: 14px; line-height: 1.65; margin-top: 6px; }
+@media (max-width: 820px) { .observe { grid-template-columns: minmax(0, 1fr); } .observe li + li { border-left: 0; border-top: 1px solid var(--ink); } }
+.framebox { border: 1.5px dashed var(--blue); padding: 14px 16px; display: grid; gap: 8px; }
+.framebox .k { font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.14em; color: var(--blue); }
+.prompt { font-family: var(--f-mono); font-size: 12.5px; line-height: 1.6; background: var(--tint); padding: 10px 12px; border: 1px solid var(--rule); white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; }
+.prompt ins { text-decoration: none; color: var(--blue); border-bottom: 1px solid var(--blue); }
+.prompt del { color: var(--red); opacity: 0.8; }
+
+/* ── Mood Screen generative test: frame / A | B1 | B2 / prompts / scores ── */
+.gentest { display: grid; gap: 16px; }
+.gen-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.gen-row > * { min-width: 0; }
+.gen { margin: 0; border: 1px solid var(--ink); background: var(--tint); display: flex; flex-direction: column; }
+.gen img { display: block; width: 100%; height: auto; }
+.gen figcaption { font-family: var(--f-mono); font-size: 11.5px; color: var(--muted); padding: 8px 12px; border-top: 1px solid var(--ink); line-height: 1.55; }
+.gen figcaption b { color: var(--ink); font-weight: 500; }
+.gen .gfail { flex: 1; min-height: 180px; display: grid; place-items: center; padding: 16px; text-align: center; font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.08em; color: var(--red); }
+.gen.noimg figcaption { border-top: 1px dashed var(--rule); }
+.gscore { margin: 0; padding: 6px 12px 10px; font-family: var(--f-mono); font-size: 11.5px; color: var(--muted); }
+.gscore b { color: var(--ink); font-weight: 500; font-variant-numeric: tabular-nums; }
+.gprompt { display: grid; gap: 6px; align-content: start; }
+.gprompt .k { font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.1em; color: var(--blue); text-transform: uppercase; }
+.gprompt .avoid { margin: 0; font-family: var(--f-mono); font-size: 11px; color: var(--muted); }
+.carry { margin: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 2px 10px; font-size: 13px; }
+.carry dt { color: var(--muted); }
+.carry dt::after { content: " →"; }
+.carry dd { margin: 0; }
+.gnotes { border-top: 1px solid var(--rule); padding-top: 12px; display: grid; gap: 14px; }
+.gnotes .tablewrap { overflow-x: auto; }
+.gscores { border-collapse: collapse; width: 100%; font-size: 13px; font-variant-numeric: tabular-nums; }
+.gscores th, .gscores td { border-bottom: 1px solid var(--rule); padding: 7px 9px; text-align: right; white-space: nowrap; }
+.gscores th:first-child, .gscores td:first-child { text-align: left; white-space: normal; }
+.gscores th { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
+.gfeed { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.gfeed > div { min-width: 0; }
+.gfeed h4 { margin: 0 0 6px; font-size: 14px; }
+.gfeed ul { margin: 0; padding-left: 18px; display: grid; gap: 5px; font-size: 13.5px; }
+.gfeed .mismatch h4 { color: var(--red); }
+.gfeed .fixes h4 { color: var(--blue); }
+.gnote { margin: 0; font-family: var(--f-mono); font-size: 11px; color: var(--muted); }
+@media (max-width: 820px) { .gen-row, .gfeed { grid-template-columns: minmax(0, 1fr); } }
+
+/* ── Word Desk / review ── */
+.words td:first-child { font-family: var(--f-mast); font-style: italic; font-size: 16px; }
+.words td.kind { font-family: var(--f-mono); font-size: 11px; white-space: nowrap; }
+.words td.kind.crit { color: var(--red); }
+.words table { min-width: 640px; }
+@media (max-width: 640px) { .words table { min-width: 0; } .words th:nth-child(2), .words td:nth-child(2), .words th:nth-child(5), .words td:nth-child(5) { display: none; } }
+.quiz { margin: 0; padding-left: 22px; display: grid; gap: 14px; }
+.quiz details { margin-top: 4px; font-size: 14px; color: var(--muted); }
+.quiz summary { cursor: pointer; font-family: var(--f-mono); font-size: 12px; color: var(--blue); }
+@media (max-width: 560px) { .tabs a { padding: 7px 10px 6px; } .tabs a .n { display: none; } }
+/* ── Side rails: left = past issues of this sheet, right = this sheet's tools ── */
+.sheet { position: relative; }
+.rail { display: grid; gap: 14px; align-content: start; order: 1; border-top: 3px double var(--ink); padding-top: 14px; }
+.rail-in { display: grid; gap: 14px; align-content: start; min-width: 0; }
+.sheet > footer { order: 2; }
+.rbox { min-width: 0; }
+.rbox details > summary { cursor: pointer; list-style: none; margin-bottom: 10px; }
+.rbox details > summary::-webkit-details-marker { display: none; }
+.rbox details > summary::before { content: "+"; font-family: var(--f-mono); color: var(--red); width: 1em; }
+.rbox details[open] > summary::before { content: "−"; }
+.rbox details:not([open]) > summary { margin-bottom: 0; }
+.rlist { list-style: none; margin: 0; padding: 0; display: grid; }
+.rlist li { padding: 7px 0; border-bottom: 1px solid var(--rule); font-size: 13px; line-height: 1.5; min-width: 0; }
+.rlist .d { display: block; font-family: var(--f-mono); font-size: 11px; color: var(--muted); }
+.rlist a { color: var(--ink); text-decoration: none; }
+.rlist a:hover { color: var(--blue); text-decoration: underline; }
+.rlist .sub { display: block; color: var(--muted); font-size: 12px; }
+.rmore { font-family: var(--f-mono); font-size: 11.5px; margin-top: 8px; display: inline-block; }
+.rnote { font-size: 13px; color: var(--muted); }
+.seeds { list-style: none; margin: 0; padding: 0; display: grid; }
+.seeds li { padding: 8px 0; border-bottom: 1px solid var(--rule); font-size: 13.5px; line-height: 1.5; }
+.seeds .seed { display: block; font-weight: 600; }
+.seeds .link { display: block; font-family: var(--f-mono); font-size: 11px; color: var(--red); margin-top: 2px; }
+.bar { height: 6px; background: var(--tint); border: 1px solid var(--ink); margin: 6px 0 2px; }
+.bar i { display: block; height: 100%; background: var(--ink); }
+.cal-next { display: none; }
+@media (max-width: 1439px) {
+  .cal-next { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; border: 1px solid var(--ink); padding: 8px 12px; font-size: 13.5px; text-decoration: none; color: var(--ink); }
+  .cal-next .k { font-family: var(--f-mono); font-size: 11px; color: var(--red); letter-spacing: 0.08em; }
+  .cal-next .dd { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+}
+@media (min-width: 1440px) {
+  .sheet, .tabs { max-width: min(1000px, calc(100vw - 600px)); }
+  .rail { position: absolute; top: -1.5px; bottom: 0; width: 250px; border-top: 0; padding-top: 0; display: block; }
+  .rail-left { right: calc(100% + 24px); }
+  .rail-right { left: calc(100% + 24px); }
+  .rail-in { position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; padding-right: 4px; scrollbar-width: thin; }
+  .rail .label { font-size: 11px; margin-bottom: 10px; gap: 8px; flex-wrap: wrap; }
+  .rail .cal li { grid-template-columns: minmax(0, 1fr) auto; gap: 2px 8px; padding: 8px 0; }
+  .rail .cal .d { font-size: 11.5px; }
+  .rail .cal .t { grid-column: 1 / -1; font-size: 13px; }
+  .rail .mapintro { font-size: 12.5px; margin-bottom: 10px; }
+  .rail table { min-width: 0; font-size: 12.5px; }
+  .rail th:nth-child(2), .rail td:nth-child(2), .rail th:nth-child(5), .rail td:nth-child(5) { display: none; }
+  .rail td:first-child { white-space: normal; }
+  .rail .routine, .rail .method { grid-template-columns: minmax(0, 1fr); }
+  .rail .routine div + div, .rail .method div + div { border-left: 0; border-top: 1px solid var(--ink); }
+  .rail .method div:nth-child(3) { border-left: 0; }
+  .rail .routine div, .rail .method div { padding: 10px 12px; }
+}
+/* ── Save as PDF (print): every sheet on its own A4 portrait page ── */
+.tabs .print-btn { margin-left: auto; font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.06em; color: var(--ink); background: var(--sheet); border: 1.5px solid var(--ink); border-bottom: 0; padding: 8px 14px 7px; cursor: pointer; }
+.tabs .print-btn:hover { color: var(--red); }
+.tabs .print-btn:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+@page { size: A4 portrait; margin: 12mm 12mm 14mm; }
+@media print {
+  :root, :root:not([data-theme="light"]), :root[data-theme="dark"] {
+    --paper: #fff !important; --sheet: #fff !important; --ink: #1B1F23 !important; --muted: #5A6168 !important;
+    --rule: #C6CBC3 !important; --grid: transparent !important; --red: #C2331D !important; --blue: #1F4E79 !important; --tint: #F1F2EE !important;
+    color-scheme: light;
+  }
+  html, body { background: #fff !important; }
+  body { padding: 0; font-size: 8.6pt; line-height: 1.45; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .tabs, .print-btn, .rail, .cal-next { display: none !important; }
+  main.sheet[hidden] { display: grid !important; }
+  .sheet { max-width: none; border: 0; padding: 0; gap: 12px; break-before: page; }
+  main.sheet:first-of-type { break-before: auto; }
+  .mast { padding-bottom: 8px; gap: 12px; }
+  .mast h1 { font-size: 34pt; }
+  .mast .sub { font-size: 8pt; margin-top: 4px; }
+  .tblock { font-size: 7.5pt; }
+  .label { margin-bottom: 8px; font-size: 7.5pt; }
+  .lead { grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr) !important; gap: 16px; }
+  .grid2, .dual { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 14px 18px; }
+  .issue { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) !important; gap: 8px 18px; padding-top: 8px; }
+  .issues { gap: 16px; }
+  .briefs { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 0 18px; }
+  .observe { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .observe li + li { border-left: 1px solid var(--ink) !important; border-top: 0 !important; }
+  .pairs { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .pairs article + article { border-left: 1px solid var(--ink) !important; border-top: 0 !important; }
+  .vocab ul { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .lead h2, .lec-head h2 { font-size: 17pt; }
+  .lead .deck, .lec-head .deck { font-size: 9.5pt; }
+  .story h3, .dual h3, .issue h3 { font-size: 11.5pt; }
+  .crit.big p { font-size: 11pt; }
+  .stats strong { font-size: 14pt; }
+  .facts .figs strong { font-size: 12pt; }
+  .essay { font-size: 9pt; line-height: 1.55; max-width: none; columns: 2; column-gap: 18px; display: block; }
+  .essay > * { margin-bottom: 8px; break-inside: avoid-column; }
+  .vocab .term { font-size: 11pt; }
+  .story p + p { margin-top: 6px; }
+  .crit, .plate, .vocab li, .observe li, .briefs li, .cal li, tr, figure, .stats, .figs { break-inside: avoid; }
+  .label, h2, h3, h4 { break-after: avoid; }
+  .tablewrap { overflow: visible; }
+  table { min-width: 0 !important; font-size: 8pt; }
+  .plate img { max-height: 70mm; }
+  footer { font-size: 7.5pt; }
+  a { color: inherit; text-decoration: none; }
+  .quiz details > * { display: block; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+<nav class="tabs" aria-label="Sheets">
+  <a href="#crit" data-page="crit" aria-current="page"><span class="n">SHEET 1/5</span> <b>Morning Crit</b></a>
+  <a href="#thesis" data-page="thesis"><span class="n">SHEET 2/5</span> <b>Thesis Desk</b></a>
+  <a href="#symposium" data-page="symposium"><span class="n">SHEET 3/5</span> <b>Daily Symposium</b></a>
+  <a href="#unit" data-page="unit"><span class="n">SHEET 4/5</span> <b>Unit Brief</b></a>
+  <a href="#screen" data-page="screen"><span class="n">SHEET 5/5</span> <b>Mood Screen</b></a>
+  <a href="#words" data-page="words"><span class="n">WORDS</span> <b>Word Desk</b></a>
+  <a href="../archive.html">ARCHIVE <b>지난 호</b></a>
+  <button class="print-btn" type="button" title="모든 면을 A4 세로로 인쇄하거나 PDF로 저장">PDF로 저장</button>
+</nav>
+
+<main class="sheet" id="page-crit">
+
+  <header class="mast">
+    <div>
+      <h1>Morning Crit</h1>
+      <p class="sub">A London architecture daily, read in Seoul — today’s issues, debates and one crit question for anyone preparing for the AA Diploma</p>
+    </div>
+    <div class="tblock" aria-label="Issue information">
+      <div><b>Issue</b>No. 017</div>
+      <div><b>Date</b>2026.10.26 MON</div>
+      <div><b>Desk</b>London close 10/25</div>
+      <div><b>Read</b>Seoul morning</div>
+      <div><b>Scale</b>1 : 1</div>
+      <div><b>Rev</b>A</div>
+    </div>
+  </header>
+
+  <!-- LEAD -->
+  <section aria-labelledby="lead-h">
+    <div class="label"><span class="tag">Front page</span> Housing · Protest · Public space · Lisbon · Porto</div>
+    <div class="lead">
+      <div>
+        <h2 id="lead-h">Tents in the square, dogs in the dark: Portugal clears its housing protest camps for a third night, and the question becomes what a public square is for</h2>
+        <p class="deck">The Guardian and Euronews report that police cleared protest camps in Lisbon’s Rossio Square and Porto’s Dom João I Square in the early hours of Sunday, arresting 31 people for disobedience. Police call the operation proportionate; campaigners say it was violent and intimidating.</p>
+        <div class="body">
+          <p>According to the Guardian (25 October), dozens of officers, some with dogs, moved in shortly after 2am to clear the tents in Rossio Square, put at “more than 100” by the Guardian and at around 130 by Euronews, together with a smaller camp of about 50 tents in Porto. Police said on social media that they had acted “to put an end to these illegal encampments”, that 31 people were arrested for disobedience, that 171 structures were removed and that eleven people, three of them officers, were injured. The group Casa Para Viver (“A Home to Live In”) contests those figures, saying more than 20 people were hurt and that rubber bullets were fired; a spokeswoman for the Porto camp told the news agency Lusa of 37 minor injuries. The group has called for further protests on Wednesday.</p>
+          <p>The context matters as much as the night itself. Reuters (20 October), reporting an earlier clearance with 55 arrests, quotes a police superintendent calling that eviction “calm, proportionate and appropriate”, and Porto’s mayor, Pedro Duarte, saying housing concerns would go on being heard so long as demonstrations stayed peaceful and legal. The campers demand, among other things, that the centre-right government withdraw a bill making evictions easier and ending rent caps on new leases (it passed a first reading with the far-right Chega abstaining), limits on property purchases by real-estate funds, and the rehabilitation of vacant buildings. Reuters and the Guardian both put purchase prices at more than double their 2017 level, with rents on new leases nearly doubled. This paper did not find a statement from the national government in the sources it read, so that side is only represented by the bill and the police account.</p>
+        </div>
+        <div class="stats">
+          <div><strong>31</strong><span>Arrests for disobedience, Lisbon and Porto, 25 Oct (police, via Guardian and Euronews)</span></div>
+          <div><strong>171</strong><span>Structures removed, according to police (Guardian)</span></div>
+          <div><strong>&gt; 2×</strong><span>Rise in Portuguese purchase prices since 2017 (Reuters, Guardian)</span></div>
+        </div>
+        <p class="src">
+          <a href="https://www.theguardian.com/world/2026/oct/25/police-portugal-dogs-batons-dismantle-housing-protest-camps" target="_blank" rel="noopener">The Guardian · 10.25</a> ·
+          <a href="https://www.euronews.com/2026/10/25/demonstrators-wounded-as-police-break-up-lisbon-and-porto-housing-protest-camps" target="_blank" rel="noopener">Euronews · 10.25</a> ·
+          <a href="https://www.thestar.com.my/news/world/2026/10/20/portuguese-police-clear-housing-protest-camps-arresting-55" target="_blank" rel="noopener">Reuters via The Star · 10.20</a>
+        </p>
+      </div>
+      <div class="side">
+        <aside class="crit big">
+          <span class="k">CRIT · Question of the day</span>
+          <p>If a tent is the smallest argument a person can make about housing, what argument does a square make back by forbidding it after dark? Which part of your own Diploma project depends on a rule about who may stay, and for how long?</p>
+          <ol>
+            <li>Draw one night in Rossio Square at 1:1 for a single tent: its footprint, its neighbours, the light, the line where the police stand. Beside each line, write the by-law, permit or hour that makes it legal or illegal.</li>
+            <li>Sort the campers’ demands into those a drawing could test (vacant buildings brought back into use) and those it could not (a rent ceiling). Choose the one your project can honestly address.</li>
+          </ol>
+        </aside>
+        <aside class="crit" style="margin-top:0">
+          <span class="k">DIPLOMA DESK · This week</span>
+          The AA is showing <b>Peter Salter: Drawings</b> at the AA Gallery, 36 Bedford Square, from 25 September to 5 December 2026 (Monday to Saturday, 11am–7pm, per the AA public page, read today). It presents previously unseen drawings from 1985 to 2020, moving between details, atmospheric perspectives and plans and sections of whole schemes. Read it as a lesson in how one drawing can carry both a detail and an atmosphere before you edit your own portfolio.
+          <p class="src"><a href="https://www.aaschool.ac.uk/public" target="_blank" rel="noopener">aaschool.ac.uk/public</a></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCOURSE / EUROPE -->
+  <section aria-labelledby="disc-h">
+    <div class="label"><span class="tag" id="disc-h">Discourse · Biennale · Europe</span></div>
+    <div class="grid2">
+      <article class="story">
+        <p class="kicker">Denmark · Germany · Infrastructure · Reuse (25 Oct)</p>
+        <h3>An arrow 217 metres long to watch a tunnel being built: Arup’s demountable Pilen viewpoint makes the Fehmarnbelt works a public sight</h3>
+        <p>According to Dezeen (25 October), the engineering firm Arup has designed Pilen (“the arrow”), a ramped viewpoint whose zigzagging, accessible path rises 24 metres above sea level so that the public can see the construction of the Fehmarnbelt Tunnel, an 18-kilometre road-and-rail link being built under the sea between Rødbyhavn in Denmark and Puttgarden in Germany. Its 217-metre length matches one of the 89 concrete elements that will form the tunnel, and it points towards the German portal like a compass needle, in the words of the project architect, Kristian Winther. The client, Femern, wanted to open the site to visitors; the tunnel is due in 2029 and is expected to bring Hamburg and Copenhagen within 2.5 hours by train.</p>
+        <p>The material argument is the part to study. Pilen is built from landfill timber and steel and is designed to be demounted once the tunnel is finished, with every component, foundations included, engineered for reuse elsewhere, according to Winther. That is the studio’s own claim and this paper has seen neither the drawings nor a reuse plan. A viewpoint that explains a megaproject to the public may also manage the public’s consent to it; that is this paper’s reading, not Dezeen’s, and the article quotes only the designers.</p>
+        <aside class="crit"><span class="k">CRIT</span>A viewpoint is built to make a megaproject legible and designed to disappear. What should remain once the tunnel opens: the platform, the timber, or only the drawing of how it was taken apart? Draw Pilen twice, on the first day of dismantling and on the first day of reuse.</aside>
+        <p class="src"><a href="https://www.dezeen.com/2026/10/25/arup-pilen-viewpoint-fehmarnbelt-tunnel/" target="_blank" rel="noopener">Dezeen · 10.25</a></p>
+      </article>
+      <article class="story">
+        <p class="kicker">London · Public space · Editorial (25 Oct)</p>
+        <h3>Oxford Street closes to traffic today: the Guardian calls it a case study in designing cities around people, not cars</h3>
+        <p>In an editorial (25 October), the Guardian notes that Sadiq Khan has tried to pedestrianise Oxford Street since 2016 and that its busiest stretch is due to close to traffic on Monday. The paper says vacant shops on the street have more than quadrupled since the pandemic and that the Greater London Authority estimates the scheme will generate £82m of value a year by raising footfall, adding that this “remains to be seen”. It also sets the street in a wider frame: 59 per cent of journeys in Britain were made by car in 2024, against 34 per cent in London.</p>
+        <p>The editorial answers the objection that closures merely displace traffic, which Westminster council among others raises. It cites a University of the West of England study suggesting some traffic disappears permanently after strategic roads close, and a study of 46 London low-traffic neighbourhoods that found minimal impact elsewhere. This is an opinion piece taking a side; the council’s own case is described but not quoted in it, so this paper cannot weigh the traffic evidence. The design question is quieter than the traffic one: the editorial measures success in footfall, which says little about whether anyone has a reason to stay.</p>
+        <aside class="crit"><span class="k">CRIT</span>A street closed to traffic is not yet a street opened to people. Draw one hour of Oxford Street in section and mark who is standing still, and why. What would you have to add to it for that person to stay?</aside>
+        <p class="src"><a href="https://www.theguardian.com/commentisfree/2026/oct/25/the-guardian-view-on-oxford-streets-pedestrianisation-cities-should-be-designed-around-people-not-cars" target="_blank" rel="noopener">The Guardian · 10.25 (editorial)</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="brief-h">
+    <div class="label"><span class="tag" id="brief-h">In brief · London trade and design</span></div>
+    <ul class="briefs">
+      <li><b>Landsec deprioritises a 1,700-home scheme in Lewisham.</b> The AJ (22 October, earlier than the last issue and not covered before) reports that Landsec has put aside its £1.5bn redevelopment of Lewisham Shopping Centre, which won planning permission a year ago, citing higher interest rates, building costs and regulation and a deadlock with the Green-run council over affordable housing. The plans offered 98 homes for social rent and 231 at discounted rent or for key workers; the mayor, Liam Shrivastava, says the level of social rent “needed to increase”. Studio Egret West, the masterplanner, said it was “disappointed”.
+        <p class="src"><a href="https://www.architectsjournal.co.uk/news/studio-egret-west-disappointed-as-landsec-shelves-1700-home-scheme" target="_blank" rel="noopener">Architects’ Journal · 10.22</a></p></li>
+      <li><b>Burnham reportedly “cools” on central funding for new towns.</b> The AJ (21 October), summarising a Financial Times report, says the Prime Minister may devolve housebuilding to metro mayors rather than fund the programme from Westminster, while the housing ministry says it is “assessing the options” for the seven locations named in May. A Lords committee had warned the programme “will fail” without clear leadership. All of this is reported from unnamed sources; the AJ notes that retaining some centrally backed schemes has not been ruled out.
+        <p class="src"><a href="https://www.architectsjournal.co.uk/news/burnham-cooling-on-new-towns-in-favour-of-devolution-drive" target="_blank" rel="noopener">Architects’ Journal · 10.21</a></p></li>
+      <li><b>A boardroom table that seems to stretch to the horizon.</b> Dezeen (25 October) reports that the collective Show Not Show has built a mirrored sheet-metal table at the Kruisruimte in Eindhoven for Dutch Design Week, after Jacqueline Hassink’s 1990s photographs of empty boardrooms. The group says it started from being asked to host the week’s press dinner, and treats the press as a site of power in design.
+        <p class="src"><a href="https://www.dezeen.com/2026/10/25/collectible-furniture-dutch-design-week-table-of-power/" target="_blank" rel="noopener">Dezeen · 10.25</a></p></li>
+    </ul>
+  </section>
+
+  <!-- RIGHT RAIL · tools (calendar is updated daily; map and how-to-read stay) -->
+  <aside class="rail rail-right" aria-label="Sheet tools"><div class="rail-in">
+    <section class="rbox" aria-labelledby="cal-h"><details open>
+      <summary class="label"><span class="tag" id="cal-h">Calendar · London time</span></summary>
+    <ul class="cal">
+      <li><span class="d">10.26 MON</span><span class="dd" data-date="2026-10-26"></span><span class="t">Part of Oxford Street closes to traffic · London<small>Opens Monday per the Guardian editorial; temporary phase one, designed by East; feedback being collected</small></span></li>
+      <li><span class="d">10.28 WED</span><span class="dd" data-date="2026-10-28"></span><span class="t">Further housing protests called in Portugal<small>By Casa Para Viver, per the Guardian</small></span></li>
+      <li><span class="d">10.29 THU</span><span class="dd" data-date="2026-10-29"></span><span class="t">Fourth anniversary of the Itaewon crowd crush · government memorial · Seoul<small>Per search results; the second government-hosted memorial</small></span></li>
+      <li><span class="d">10.30 FRI</span><span class="dd" data-date="2026-10-30"></span><span class="t">Exhibition <i>dRMM: Building from Forests</i> closes · London<small>Timber structures, forest-based architecture</small></span></li>
+      <li><span class="d">11.03 TUE</span><span class="dd" data-date="2026-11-03"></span><span class="t">AA taught postgraduate online open days · 3–5 Nov<small>Zaha Hadid Foundation due to reopen the same day (single source)</small></span></li>
+      <li><span class="d">11.26 THU</span><span class="dd" data-date="2026-11-26"></span><span class="t">AJ Architecture Awards 2026 ceremony · Royal Lancaster London<small>Per search summary</small></span></li>
+      <li><span class="d">11.29 SUN</span><span class="dd" data-date="2026-11-29"></span><span class="t">Spain’s snap general election<small>A political consequence of the defeated housing decree</small></span></li>
+      <li><span class="d">12.04 FRI</span><span class="dd" data-date="2026-12-04"></span><span class="t">London Small Site Design Code consultation closes<small>Responses via the GLA consultation page</small></span></li>
+      <li><span class="d">12.05 SAT</span><span class="dd" data-date="2026-12-05"></span><span class="t">Peter Salter: Drawings closes · AA Gallery, London<small>Per the AA public page</small></span></li>
+      <li><span class="d">2027 early</span><span class="dd" data-date="2027-01-15"></span><span class="t">Next Pan-African Biennale host city to be announced<small>Per the Architects’ Journal review (“early next year”)</small></span></li>
+      <li><span class="d">2027.02</span><span class="dd" data-date="2027-02-01"></span><span class="t">World Monuments Watch 2027 list due<small>25 sites selected from 372 nominations (ArchDaily)</small></span></li>
+      <li><span class="d">2027.05.08</span><span class="dd" data-date="2027-05-08"></span><span class="t">Venice Architecture Biennale opens · <i>Do Architecture</i></span></li>
+    </ul>
+    </details></section>
+    <section class="rbox" aria-labelledby="map-h"><details open>
+      <summary class="label"><span class="tag" id="map-h">Reading map · daily / weekly / monthly</span></summary>
+    <p class="mapintro">Chosen less for famous project photographs than for telling you what London is arguing about. News to skim daily sits at the top; criticism and theory to read slowly sit further down. This paper chooses its stories against the same map every morning.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Publication</th><th>City</th><th>Rhythm</th><th>Access</th><th>What you get</th></tr></thead>
+        <tbody>
+          <tr class="group"><td colspan="5">Daily · London trade news</td></tr>
+          <tr><td><a href="https://www.architectsjournal.co.uk/" target="_blank" rel="noopener">Architects’ Journal</a></td><td class="m">London</td><td class="m">daily</td><td><span class="pill pay">Paid</span></td><td>The UK trade’s primary source: scoops, education and employment surveys, campaigns (carbon, reuse). 50% student discount</td></tr>
+          <tr><td><a href="https://www.bdonline.co.uk/" target="_blank" rel="noopener">Building Design</a></td><td class="m">London</td><td class="m">daily</td><td><span class="pill pay">Paid</span></td><td>The AJ’s rival: policy, competitions, practice news, sharp columns</td></tr>
+          <tr><td><a href="https://www.dezeen.com/" target="_blank" rel="noopener">Dezeen</a></td><td class="m">London</td><td class="m">daily</td><td><span class="pill free">Free</span></td><td>Projects plus AI and technology. Subscribe to the <i>Dezeen Debate</i> and <i>Dezeen Agenda</i> newsletters</td></tr>
+          <tr><td><a href="https://www.theguardian.com/artanddesign/architecture" target="_blank" rel="noopener">The Guardian · Architecture</a></td><td class="m">London</td><td class="m">weekly+</td><td><span class="pill free">Free</span></td><td>Oliver Wainwright’s criticism: how architecture is read in British public debate</td></tr>
+          <tr><td><a href="https://www.ribaj.com/" target="_blank" rel="noopener">RIBA Journal</a></td><td class="m">London</td><td class="m">weekly+</td><td><span class="pill free">Free</span></td><td>The professional body’s view, award commentaries, practice and technique</td></tr>
+
+          <tr class="group"><td colspan="5">Weekly · criticism and debate</td></tr>
+          <tr><td><a href="https://www.architectural-review.com/" target="_blank" rel="noopener">The Architectural Review</a></td><td class="m">London</td><td class="m">monthly</td><td><span class="pill part">Partly paid</span></td><td>Each issue takes one theme (roads, borders, industry, America…) and uses buildings as a prism for argument. The editing closest to an AA brief</td></tr>
+          <tr><td><a href="https://www.e-flux.com/architecture/" target="_blank" rel="noopener">e-flux Architecture</a></td><td class="m">New York / Berlin</td><td class="m">series</td><td><span class="pill free">Free</span></td><td>Essay series weaving climate, technology and politics; school public lectures are announced here too</td></tr>
+          <tr><td><a href="https://thefunambulist.net/" target="_blank" rel="noopener">The Funambulist</a></td><td class="m">Paris</td><td class="m">bimonthly</td><td><span class="pill part">Partly paid</span></td><td>The politics of space and bodies: colonialism, borders, surveillance. Core of European critical discourse</td></tr>
+          <tr><td><a href="https://failedarchitecture.com/" target="_blank" rel="noopener">Failed Architecture</a></td><td class="m">Amsterdam</td><td class="m">irregular</td><td><span class="pill free">Free</span></td><td>Writing that reads urban failure and its causes socially</td></tr>
+          <tr><td><a href="https://placesjournal.org/" target="_blank" rel="noopener">Places Journal</a></td><td class="m">online</td><td class="m">weekly</td><td><span class="pill free">Free</span></td><td>Long, deep public-humanities essays; a handbook for research-led projects</td></tr>
+          <tr><td><a href="https://www.drawingmatter.org/" target="_blank" rel="noopener">Drawing Matter</a></td><td class="m">Somerset / London</td><td class="m">weekly</td><td><span class="pill free">Free</span></td><td>An archive of architectural drawings and writing; trains the “thinking through drawing” an AA portfolio needs</td></tr>
+
+          <tr class="group"><td colspan="5">Monthly · theory and institutions</td></tr>
+          <tr><td><a href="https://www.aaschool.ac.uk/" target="_blank" rel="noopener">AA Public Programme · AA Files</a></td><td class="m">London</td><td class="m">term</td><td><span class="pill free">Free lectures</span></td><td>Lecture recordings and termly programmes: the most direct view of what the school you are applying to is saying now</td></tr>
+          <tr><td><a href="https://www.architecturefoundation.org.uk/" target="_blank" rel="noopener">The Architecture Foundation</a></td><td class="m">London</td><td class="m">events</td><td><span class="pill free">Free</span></td><td>Talks and emerging-architect programmes from London’s independent architecture centre</td></tr>
+          <tr><td><a href="https://forensic-architecture.org/" target="_blank" rel="noopener">Forensic Architecture</a></td><td class="m">London</td><td class="m">projects</td><td><span class="pill free">Free</span></td><td>A Goldsmiths-based research agency using architectural techniques as evidence and investigation</td></tr>
+          <tr><td><a href="https://www.archplus.net/" target="_blank" rel="noopener">ARCH+</a></td><td class="m">Berlin</td><td class="m">quarterly</td><td><span class="pill pay">Paid</span></td><td>German-language theory journal: housing, commons, urban politics</td></tr>
+          <tr><td><a href="https://www.oasejournal.nl/" target="_blank" rel="noopener">OASE</a></td><td class="m">Rotterdam</td><td class="m">2× / yr</td><td><span class="pill part">Open archive</span></td><td>Design theory from Dutch and Belgian academia</td></tr>
+          <tr><td><a href="https://www.cca.qc.ca/" target="_blank" rel="noopener">CCA</a></td><td class="m">Montréal</td><td class="m">essays</td><td><span class="pill free">Free</span></td><td>Research exhibitions and online essays; a model of archive-based thinking</td></tr>
+        </tbody>
+      </table>
+    </div>
+    </details></section>
+    <section class="rbox" aria-labelledby="rt-h"><details>
+      <summary class="label"><span class="tag" id="rt-h">How to read · 15 minutes</span></summary>
+    <div class="routine">
+      <div><span class="mono">05 MIN · Skim</span><p>Read only the front page and the briefs. Remember one person, practice or institution each day, and in a month you will have a map of London architecture.</p></div>
+      <div><span class="mono">07 MIN · Go deep once</span><p>Pick one story and follow the link to the original. Rather than switching daily, follow one theme a week (AI, reuse, housing, education) and the shape of the debate appears.</p></div>
+      <div><span class="mono">03 MIN · Crit note</span><p>Answer the question in the red box in three lines. The answers pile up into material for your Diploma statement and portfolio introduction.</p></div>
+    </div>
+    </details></section>
+  </div></aside>
+
+  <!--VOCAB:page-crit-->
+  <aside class="vocab" aria-label="Words from this sheet">
+    <span class="k">WORDS · from this sheet</span>
+    <ul>
+      <li data-kind="ielts"><b class="term">encampment</b> <span class="pos">n.</span> <span class="ko">천막촌 · 야영지</span> <span class="ex">Police acted “to put an end to these illegal encampments”.</span></li>
+      <li data-kind="ielts"><b class="term">dismantle</b> <span class="pos">v.</span> <span class="ko">해체하다 · 철거하다</span> <span class="ex">Police dismantled housing protest camps in Lisbon and Porto.</span></li>
+      <li data-kind="crit"><b class="term">demountable</b> <span class="pos">adj.</span> <span class="ko">해체해 옮길 수 있는 (재사용을 전제로 한)</span> <span class="ex">Pilen is designed to be demounted once the tunnel is finished.</span></li>
+      <li data-kind="crit"><b class="term">footfall</b> <span class="pos">n.</span> <span class="ko">유동 인구 · 방문객 수</span> <span class="ex">The scheme is expected to create value by raising footfall.</span></li>
+      <li data-kind="ielts"><b class="term">devolve</b> <span class="pos">v.</span> <span class="ko">(권한 · 책임을) 이양하다</span> <span class="ex">The Prime Minister may devolve housebuilding to metro mayors.</span></li>
+      <li data-kind="ielts"><b class="term">deprioritise</b> <span class="pos">v.</span> <span class="ko">우선순위에서 내리다</span> <span class="ex">Landsec has chosen to deprioritise the Lewisham redevelopment.</span></li>
+    </ul>
+  </aside>
+
+    <aside class="rail rail-left" data-auto aria-label="지난 호"><div class="rail-in">
+    <section class="rbox" aria-labelledby="past-crit"><details open>
+      <summary class="label"><span class="tag" id="past-crit">지난 호</span> 1면 · 최근 10</summary>
+      <ul class="rlist">
+        <li><span class="d">10.24 · No. 016</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-24.html#crit">“We have invoiced £0” — four months before it expires, London’s architecture framework is accused of leaving small practices behind</a></li>
+        <li><span class="d">10.22 · No. 015</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-22.html#crit">Nairobi’s first Pan-African Biennale tried to move the “centre” itself — a review asks who, in the end, held the pen</a></li>
+        <li><span class="d">10.21 · No. 014</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-21.html#crit">A design museum built from its own city’s rubble — Carmody Groarke’s Ghent extension turns condemned concrete, windscreens and old toilets into brick</a></li>
+        <li><span class="d">10.20 · No. 013</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-20.html#crit">Two Lambeth estates escape the bulldozer — after a decade of resident resistance, the council drops demolition of Cressingham Gardens and Central Hill</a></li>
+        <li><span class="d">10.19 · No. 012</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-19.html#crit">Bunkers, arks and a missile silo with LED “windows” — ArchDaily asks who is meant to be saved when the wealthy buy their own end of the world</a></li>
+        <li><span class="d">10.17 · No. 010</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-17.html#crit">A minister steps between a planning committee and the High Court — Grafton’s timber library for Christ’s College, Cambridge, is halted by an Article 31 direction</a></li>
+        <li><span class="d">10.16 · No. 009</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-16.html#crit">The 2026 Stirling Prize goes to 157 homes on a car park — Croydon’s council-built Lion Green Road is building of the year</a></li>
+        <li><span class="d">10.15 · No. 008</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-15.html#crit">보존은 “마멀레이드에나 하는 일” — 100세로 세상을 떠난 Donald Insall이 남긴 ‘살아 있는 건물’의 원칙</a></li>
+        <li><span class="d">10.14 · No. 007</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-14.html#crit">“Resilience Starts at Home” — 재난 감축의 날이 올해 집을 방재의 중심에 놓았다</a></li>
+        <li><span class="d">10.13 · No. 006</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-13.html#crit">Stirling Prize 발표 이틀 전 — 결선 6작품은 ‘무엇이 올해의 건물인가’를 다시 묻는다</a></li>
+      </ul>
+      <a class="rmore" href="https://uphillpark.github.io/Morning-Crits/archive.html#sheet-1">전체 보기 → Archive</a>
+    </details></section>
+  </div></aside><!--/rail-->
+
+  <footer>
+    <p>Morning Crit No. 017 · Monday 26 October 2026. Story summaries rest on each publication’s original; paywalled pieces are quoted only as far as they are public. For this issue the Guardian, Euronews, Reuters (via The Star), Architects’ Journal and Dezeen pieces were each opened and read in full through their public pages, and the AA public page was read today. The lead rests on two newspapers and a wire report that agree on the arrests (31) and give different counts of tents and injuries; every figure for injuries and structures is attributed to the police or to the campaigners, and the national government’s own position was not found in the sources we read. The Oxford Street item is an editorial and is labelled as one; the council’s case is not quoted in it. The Pilen item rests on Dezeen and the designers’ own statements. The Lewisham and new-towns briefs are dated 22 and 21 October, before the last issue, and are marked as such; the new-towns item is the AJ’s account of an unnamed-source Financial Times report. No AI &amp; technology story met the sourcing bar today, so that section is omitted. Dezeen’s home page returned 403 to our check, but its feed and article pages loaded.</p>
+    <p>A new issue is published on this page every morning.</p>
+  </footer>
+</main>
+
+<main class="sheet" id="page-thesis" hidden>
+
+  <header class="mast">
+    <div>
+      <h1>Thesis Desk</h1>
+      <p class="sub">졸업전시 주제를 찾는 지면 — 건축 밖의 국내·해외 이슈를 골라, 그것이 어디서 일어나고 어떤 도면으로 그려질 수 있는지까지 번역한다</p>
+    </div>
+    <div class="tblock" aria-label="발행 정보">
+      <div><b>Sheet</b>2 / 5</div>
+      <div><b>Date</b>2026.10.26 MON</div>
+      <div><b>Desk</b>국내 3 · 해외 2</div>
+      <div><b>Mode</b>Issue → Drawing</div>
+      <div><b>Scale</b>1:1 — 1:500,000</div>
+      <div><b>Rev</b>A</div>
+    </div>
+  </header>
+
+    <section aria-labelledby="dom-h">
+    <div class="label"><span class="tag" id="dom-h">국내</span> 한국 사회에서 지금 공간이 된 문제</div>
+    <div class="issues">
+
+      <article class="issue">
+        <header>
+          <div class="meta"><span class="region">국내 · 주거 / 자산 격차</span><span class="scale" aria-label="스케일"> <span>몸</span><span class="on">방</span><span class="on">건물</span><span class="on">도시</span><span>영토</span></span></div>
+          <h3>같은 값으로 잴 수 없는 두 집: 자산 하위 20%와 상위 20%가 사는 집의 값 차이가 통계 작성 이래 가장 크게 벌어졌다</h3>
+        </header>
+        <div class="facts">
+          <p>연합뉴스(10월 26일)가 국가데이터처 국가통계포털(KOSIS) 자료를 풀이해 쓴 기사에 따르면, 지난해 자산 하위 20%(1분위) 가구의 자가 거주 주택 평균 가격은 239만 원으로 1년 전보다 9.1% 내려 2017년 통계 작성 이래 가장 낮았고, 상위 20%(5분위)는 6억 9,341만 원으로 7.7% 올랐다. 1분위 대비 5분위 거주 주택 가격은 290.1배로 2017년 이래 최대다. 기사는 1분위 가구 중 거주 주택을 가진 비율이 6.6%로 전년보다 0.8%p 줄어 역대 최소이고, 5분위는 82.5%라고 전한다. 부동산을 포함한 자산 격차도 68.6배로 직전 최대치(2022년 64.0배)를 넘었으며, 같은 기사는 소득 격차(경상소득 11.2배)와 대비된다고 쓴다. 상위층의 투자·임대용 주택까지 더하면 격차는 더 클 것이라는 설명과 함께, 한 연구자는 임차 가구를 위한 주거 안정 대책에 더 초점을 맞춰야 한다고 말하고 국회미래연구원 연구위원은 가계 자산의 약 70%가 부동산에 몰려 있다고 지적한다. 이 지면은 KOSIS 원표를 열어 보지 못했고, 같은 주제의 다른 자산 불평등 보도와는 지표의 정의가 달라 직접 비교하지 않았다.</p>
+          <div class="figs"><div><strong>290.1배</strong><span>자산 1분위 대비 5분위의 거주 주택 가격 (2017년 이래 최대, 연합뉴스 보도 기준)</span></div><div><strong>6.6% · 82.5%</strong><span>거주 주택을 가진 비율: 자산 1분위 · 5분위</span></div><div><strong>68.6배</strong><span>자산 5분위 대비 1분위의 자산 격차 (역대 최대)</span></div></div>
+          <p class="src"><a href="https://www.yna.co.kr/view/AKR20261023150200002" target="_blank" rel="noopener">연합뉴스 · 10.26</a> (원문 확인, 2등급: KOSIS 통계를 기자가 풀이한 단일 매체 기사, 원표 미확인, 제목에 수치를 쓰지 않음)</p>
+        </div>
+        <dl class="translate">
+          <dt>장소</dt><dd>보증금과 월세로 사는 한 칸짜리 방과, 같은 도시의 고가 아파트 한 채. 두 집의 평면과 단면, 창이 보는 풍경, 문 밖의 공용 공간이 놓이는 자리.</dd><dt>개입</dt><dd>가격이라는 숫자를 방의 면적·천장 높이·창·공용 시설로 번역해, 두 집 사이에서 가장 먼저 모자라는 것이 무엇인지 가르는 가설을 세운다. 공공이 임대로 공급하는 방이 갖춰야 할 최소 조건도 같은 방식으로 따져 본다. 편집자의 제안이며 기사의 내용이 아니다.</dd><dt>재현</dt><dd>두 집을 같은 축척으로 그린 단면 한 쌍, 가격에 면적·채광·공용 시설을 겹친 비교표, 임차 가구의 이사 경로를 그린 지도.</dd><dt>참고</dt><dd>1929년 프랑크푸르트 CIAM 2의 <i>최소한의 주거(Die Wohnung für das Existenzminimum)</i> 전시와 논의. 최소 주거를 도면의 기준으로 삼은 역사적 시도로 읽을 수 있다.</dd>
+        </dl>
+        <aside class="crit"><span class="k">THESIS Q</span><span class="q">같은 값의 격차를 방으로 옮기면, 가장 먼저 모자라는 것은 면적인가, 창인가, 문 밖의 공용 공간인가?</span><span class="en">If the disparity in price is drawn as two rooms at the same scale, what is missing first: area, daylight, or a shared space beyond the door?</span></aside>
+      </article>
+      <article class="issue">
+        <header>
+          <div class="meta"><span class="region">국내 · 서울 양천·영등포 · 도로 지하화 / 공원</span><span class="scale" aria-label="스케일"> <span>몸</span><span>방</span><span class="on">건물</span><span class="on">도시</span><span>영토</span></span></div>
+          <h3>차는 지하로, 지상은 공원으로: 서울시가 국회대로 지하화 본공사를 위해 31일 홍익병원사거리의 교통체계를 바꾼다</h3>
+        </header>
+        <div class="facts">
+          <p>연합뉴스(10월 26일)가 서울시 발표를 전한 기사에 따르면 시는 31일 오전 7시부터 양천구 홍익병원사거리의 하부 지하차도를 폐쇄하고, 기존 지상 4차로·지하 2차로를 지상 7차로의 평면교차로로 바꾼다. 국회대로 지하차도 및 상부공원화 사업은 신월IC부터 국회의사당 교차로까지 7.6㎞ 구간에 4.1㎞의 지하차도를 짓고, 3.5㎞ 구간의 지상을 약 11만㎡의 선형공원으로 만드는 계획이다. 목동 4·7단지 구간은 당초 기존 지하차도 위에 덮개를 씌우려 했으나 약 3m의 단차가 생겨 공원 이용이 불편하다는 민원이 나와, 지하차도를 더 깊게 파고 지상부를 평탄하게 잇는 설계로 바꿨다고 한다. 시는 보행자를 위해 중앙 안전지대에서 한 번 쉬어 건너는 2단 횡단보도를 두고, 지하차도는 2031년 6월, 상부공원은 2032년 6월 완공을 목표로 한다고 밝혔다. 기사는 서울시의 설명 중심이며 공사 기간의 주민 불편이나 반대 의견은 싣지 않았다.</p>
+          <div class="figs"><div><strong>7.6㎞ · 4.1㎞</strong><span>사업 구간과 그중 지하차도 길이 (서울시 발표)</span></div><div><strong>약 3m</strong><span>덮개 방식에서 생기는 것으로 우려된 단차 (설계 변경의 이유)</span></div><div><strong>2031.6 · 2032.6</strong><span>지하차도 개통 · 상부공원 완공 목표</span></div></div>
+          <p class="src"><a href="https://www.yna.co.kr/view/AKR20261025017800004" target="_blank" rel="noopener">연합뉴스 · 10.26</a> (원문 확인, 2등급: 서울시 발표 인용, 단일 매체, 반대 입장 없음)</p>
+        </div>
+        <dl class="translate">
+          <dt>장소</dt><dd>홍익병원사거리에서 목동 4·7단지 구간으로 이어지는 도로의 단면: 땅속으로 내려가는 차로, 평탄하게 이어질 지상의 공원, 공사 기간 동안 지상 7차로를 2단으로 건너는 횡단보도.</dd><dt>개입</dt><dd>‘3m 단차’를 없애려고 지하를 더 깊이 판 결정을 단서로, 지하화한 도로 위의 공원이 도시와 만나는 가장자리(경사로, 환기구, 출입구, 단지의 담)를 건축의 조건으로 놓는 가설을 세운다. 공사 6년 동안 임시 교차로가 보행자에게 어떤 도시인지도 함께 그린다. 편집자의 제안이며 기사의 내용이 아니다.</dd><dt>재현</dt><dd>지하차도·공원·단지를 한 장에 놓은 단면 연작, 2031·2032년 완공까지의 보행 시간축.</dd><dt>참고</dt><dd>보스턴의 Big Dig 이후 조성된 Rose Kennedy Greenway(2008). 고가도로를 지하로 보낸 자리에 선형 공원을 만든 사례로 읽을 수 있다.</dd>
+        </dl>
+        <aside class="crit"><span class="k">THESIS Q</span><span class="q">차가 사라진 땅 위의 공원은 어디에서 도시와 만나는가?</span><span class="en">After grade separation, where does the park above meet the street: at a ramp, a vent, or a three-metre step?</span></aside>
+      </article>
+      <article class="issue">
+        <header>
+          <div class="meta"><span class="region">국내 · 전북 새만금 · 항만 / 행정 경계</span><span class="scale" aria-label="스케일"> <span>몸</span><span>방</span><span class="on">건물</span><span class="on">도시</span><span class="on">영토</span></span></div>
+          <h3>부두는 섰는데 운영동이 없다: 새만금항 신항의 개항이 내년 8월로 밀렸다</h3>
+        </header>
+        <div class="facts">
+          <p>연합뉴스(10월 25일)에 따르면 올해 말로 예상되던 새만금항 신항의 개항이 내년 8월로 늦춰질 전망이다. 전북특별자치도는 해양수산부 중앙항만정책심의회가 7차례 심의 끝에 해상 매립지의 관할을 군산시로 정했지만, 그동안 김제시와 군산시의 관할권 다툼이 치열해 기반 시설을 갖추지 못했다고 설명한다. 새만금 2호 방조제 앞에는 잡화 부두 2개 선석과 방파제가 이미 모습을 드러냈으나, 항만 운영에 쓸 창고동과 운영동은 아직 착공하지 못했고 건축·도시계획 인허가도 늦어졌다. 도는 군산시, 해수부, 군산지방해양수산청과 협의체를 꾸려 행정 절차를 서두르면 내년 8월에는 개장식을 열 수 있다고 본다. 기사는 전북도의 설명을 전하는 단일 매체 기사이며 군산시나 김제시의 입장은 직접 실리지 않았다.</p>
+          <div class="figs"><div><strong>2개 선석</strong><span>이미 모습을 드러낸 잡화 부두 (방파제 포함)</span></div><div><strong>7차례</strong><span>관할을 정하기까지의 중앙항만정책심의회 심의</span></div><div><strong>올해 말 → 내년 8월</strong><span>신항 개항 시기 (전북도 전망)</span></div></div>
+          <p class="src"><a href="https://www.yna.co.kr/view/AKR20261025047600055" target="_blank" rel="noopener">연합뉴스 · 10.25</a> (원문 확인, 2등급: 전북도 설명 인용, 단일 매체, 군산·김제 입장 미게재)</p>
+        </div>
+        <dl class="translate">
+          <dt>장소</dt><dd>방조제 앞 간척지에 이미 놓인 두 선석과 방파제, 그 옆의 비어 있는 운영동·창고동 터, 그리고 땅 위를 가르는 군산과 김제의 행정 경계선.</dd><dt>개입</dt><dd>항만이 열리는 데 꼭 필요한 최소한의 건물(운영동, 창고동)이 무엇인지부터 정의하고, 그 건물을 경계 분쟁과 상관없이 먼저 앉히는 순서를 가설로 세운다. 부두가 먼저 서고 건물이 나중에 서는 순서가 가져오는 공백도 함께 따진다. 편집자의 제안이며 기사의 내용이 아니다.</dd><dt>재현</dt><dd>부두·방파제·빈 터·행정 경계를 한 장에 놓은 평면, 개항에 필요한 시설과 인허가를 순서대로 이은 시간축.</dd><dt>참고</dt><dd>Keller Easterling의 <i>Extrastatecraft</i>(2014). 항만 같은 인프라가 건물이 아니라 규칙과 관할로 작동하는 방식을 읽는 책이다.</dd>
+        </dl>
+        <aside class="crit"><span class="k">THESIS Q</span><span class="q">부두가 선 뒤에도 항구가 열리지 않을 때, 항구를 여는 마지막 건물은 무엇이며 누가 그 관할을 정하는가?</span><span class="en">When the quay stands but the port cannot open, which building is the last one, and who holds jurisdiction over it?</span></aside>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="int-h">
+    <div class="label"><span class="tag" id="int-h">해외</span> 세계가 지금 다투는 땅</div>
+    <div class="issues">
+
+      <article class="issue">
+        <header>
+          <div class="meta"><span class="region">해외 · 팔레스타인 헤브론 · 철거 / 강제 이주</span><span class="scale" aria-label="스케일"> <span class="on">몸</span><span class="on">방</span><span class="on">건물</span><span class="on">도시</span><span>영토</span></span></div>
+          <h3>하루 만에 비워진 구역: 헤브론에서 이스라엘군이 검문소 공격 뒤 한 동네를 허물고 주민을 내보냈다</h3>
+        </header>
+        <div class="facts">
+          <p>The Guardian(10월 25일)에 따르면 이스라엘군이 헤브론 인근 검문소에 대한 총격 공격(군인 2명 사망, 무장 대원 2명 사망) 이튿날 아인 데이르 바하 구역을 허물었다. 헤브론 시 당국은 토요일 오후까지 약 35헥타르가 파괴되었거나 철거 대상으로 표시됐고 약 1,500명이 집에서 쫓겨났다고 추산하며, 25만 명 도시 전체의 모든 진입로가 검문소로 막혔다고 한다. 인권 활동가 이사 암로는 “우리는 하지도 지지하지도 않은 일 때문에 집단으로 벌을 받고 있다”고 말했다. 이스라엘군은 서면 입장에서 대상 구역 주민 약 2,000명이 하마스와 연계된 씨족에 속하고 공격 가담자들이 그 출신이라고 밝혔으며, 떠나려는 민간인은 지정된 검문 지점을 통해 일시적으로 나갈 수 있었고 별도의 철거는 “법을 어기고 지어진” 구조물을 대상으로 한다고 설명했다. 네타냐후 총리는 “이곳을 파괴하겠다”고 말했고, 스모트리치 재무장관은 공격 지점 인근의 ‘불법 아랍 구조물’의 즉각 철거를 명령했다고 밝혔다. 이스라엘 총선은 나흘 뒤다. 기사는 현지 주민이 보낸 영상과 시 당국 추산에 기대고 있어 이 지면은 피해 규모를 독립적으로 확인하지 못했다.</p>
+          <div class="figs"><div><strong>약 35헥타르</strong><span>파괴됐거나 철거 대상으로 표시된 면적 (헤브론 시 추산)</span></div><div><strong>약 1,500명</strong><span>토요일 오후까지 쫓겨난 주민 (헤브론 시 추산)</span></div><div><strong>약 2,000명</strong><span>이스라엘군이 ‘연계된 씨족’이라 밝힌 대상 구역 주민 수</span></div></div>
+          <p class="src"><a href="https://www.theguardian.com/world/2026/oct/24/israel-soldiers-raze-west-bank-neighbourhood-hebron-families-from-homes" target="_blank" rel="noopener">The Guardian · 10.25</a> (원문 확인, 2등급: 시 당국·이스라엘군 입장을 각각 인용, 단일 매체, 현장 독립 확인 없음)</p>
+        </div>
+        <dl class="translate">
+          <dt>장소</dt><dd>아인 데이르 바하 구역의 돌담과 비탈, 줄지어 선 집, 그리고 검문소까지 이어지는 도로. 집 한 채 안의 방과 옥상, 그 집의 이웃까지 닿는 거리.</dd><dt>개입</dt><dd>허물린 구역을 ‘무엇이 있었는가’의 기록으로 되살리는 일을 건축의 과제로 놓는 가설을 세운다. 집, 길, 담, 우물의 위치와 쓰임을 복원하는 도면이 어떤 증거가 될 수 있는지 따진다. 철거의 군사적·법적 정당성에 대한 판단은 이 지면이 하지 않는다. 편집자의 제안이며 기사의 내용이 아니다.</dd><dt>재현</dt><dd>철거 전후를 겹친 위성 이미지와 도면, 집 한 채의 방 구성과 살림 목록, 이웃 관계를 보여주는 지도.</dd><dt>참고</dt><dd>Forensic Architecture의 연구 방식과 Eyal Weizman의 <i>Hollow Land</i>(2007). 건축을 증거와 점령의 도구로 읽는 작업이다.</dd>
+        </dl>
+        <aside class="crit"><span class="k">THESIS Q</span><span class="q">하루 만에 사라진 동네의 ‘있었음’을 도면은 누구에게 증명하는가?</span><span class="en">What does a drawing of a neighbourhood that was demolished in a day prove, and to whom?</span></aside>
+      </article>
+      <article class="issue">
+        <header>
+          <div class="meta"><span class="region">해외 · 북한·중국 국경 · 교량 / 통관</span><span class="scale" aria-label="스케일"> <span>몸</span><span>방</span><span class="on">건물</span><span class="on">도시</span><span class="on">영토</span></span></div>
+          <h3>12년 먼저 완성된 다리: 김정은이 새로 개통한 신압록강대교를 건너 단둥으로 갔다</h3>
+        </header>
+        <div class="facts">
+          <p>The Guardian(10월 24일)에 따르면 김정은 국무위원장이 토요일 신압록강대교를 건너 중국 단둥에 도착해 왕후닝 중국 공산당 상무위원을 만났고 자동차 공장을 둘러본 뒤 다리에서 배웅받았다. 약 3㎞의 이 다리는 중국이 완공한 지 12년 만인 10월 중순에야 개통됐는데, 북한 쪽의 지연 때문이었다고 기사는 쓴다. 9월 초에는 북한과 러시아의 첫 도로교가 열렸다. 교도통신은 다리와 항미원조전쟁 기념관 주변에 교통 통제가 있었고 인근 호텔 예약이 제한됐다고 전했다. 연합뉴스도 같은 방중을 보도했다. 검색 결과 기준으로 다리는 왕복 4차로, 총 길이 3,026m이고 북측 연결도로와 통관시설이 미비해 개통이 미뤄졌다고 한다. 11월 18~19일 선전 APEC을 앞두고 북미 회담 가능성이 거론되지만 로이터는 미국·한국 당국자들이 올해 만남 가능성을 낮게 본다고 보도했다고 기사는 덧붙인다. 이 지면은 길이와 개통 지연의 구체적 사유를 독립 확인하지 못했다.</p>
+          <div class="figs"><div><strong>12년</strong><span>중국의 교량 완공부터 개통까지 (Guardian)</span></div><div><strong>약 3㎞</strong><span>신압록강대교 길이 (Guardian; 검색 결과 기준 3,026m, 4차로)</span></div><div><strong>9월 초</strong><span>북한·러시아 첫 도로교 개통</span></div></div>
+          <p class="src"><a href="https://www.theguardian.com/world/2026/oct/24/kim-jong-un-crosses-newly-opened-bridge-into-china" target="_blank" rel="noopener">The Guardian · 10.24</a> (원문 확인, 2등급: 신화통신·통일부·교도통신 인용, 검색 결과 요약으로 교량 제원만 보조 확인)</p>
+        </div>
+        <dl class="translate">
+          <dt>장소</dt><dd>다리 양쪽 끝의 통관·검사·대기 건물과 그 앞 광장, 단둥과 신의주의 강변 도시, 12년 동안 쓰이지 않은 상판 위의 시간.</dd><dt>개입</dt><dd>다리의 구조물보다 양끝에 서는 건물(통관, 검사, 대기)의 프로그램이 개통 시점을 정한다는 점을 조건으로 놓고, 국경의 문이 열리기 위해 필요한 마지막 건물을 정의하는 가설을 세운다. 편집자의 제안이며 기사의 내용이 아니다.</dd><dt>재현</dt><dd>다리와 양쪽 끝 건물을 한 선 위에 놓은 평면, 완공(2014)에서 개통(2026)까지의 시간축, 짐과 사람의 검문 동선 단면.</dd><dt>참고</dt><dd>Teddy Cruz와 Fonna Forman의 샌디에이고–티후아나 국경 연구와 설계 작업. 국경을 선이 아니라 도시 조건으로 읽는 사례다.</dd>
+        </dl>
+        <aside class="crit"><span class="k">THESIS Q</span><span class="q">다리가 12년 먼저 완성되었는데도 열리지 못했다면, 국경을 여는 것은 구조물인가, 양끝의 건물인가?</span><span class="en">If a span stands for twelve years before the crossing can open, which building at either end finally opens it?</span></aside>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="pair-h">
+    <div class="label"><span class="tag" id="pair-h">겹쳐 읽기</span> 두 이슈를 하나의 졸업 주제로</div>
+    <div class="pairs">
+      <article>
+        <span class="x">새만금항 신항 × 신압록강대교</span>
+        <h3>열리기 위해 필요한 마지막 건물</h3>
+        <p>한쪽은 부두와 방파제가 서고도 운영동이 없어 열리지 못하는 항구이고, 다른 쪽은 12년 먼저 완성되고도 양끝의 준비가 늦어 열리지 못한 다리다. 인프라가 ‘열리는’ 시점을 정하는 가장 작은 건물을 정의하고 그것을 먼저 앉히는 순서를 단면과 시간축으로 그려 보는 프로젝트. 두 사안의 맥락이 다르므로 형식만 공유하며, 편집자의 가설이다.</p>
+      </article>
+      <article>
+        <span class="x">거주 주택 가격 격차 × 헤브론 철거</span>
+        <h3>값으로 남는 집, 도면으로 남기는 집</h3>
+        <p>한쪽은 집이 가격이라는 숫자로만 비교되는 사회이고, 다른 쪽은 집이 하루 만에 사라지고 그 있었음을 입증해야 하는 구역이다. 한 채의 집을 값이 아니라 방과 살림과 이웃의 도면으로 기록하는 방법을 두 사례에서 함께 시험하는 프로젝트. 두 기사가 직접 이어지지는 않으며 편집자의 가설이다.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- RIGHT RAIL · method + today's seeds -->
+  <aside class="rail rail-right" aria-label="이 면의 도구"><div class="rail-in">
+    <section class="rbox" aria-labelledby="seeds-h"><details open>
+      <summary class="label"><span class="tag" id="seeds-h">오늘의 씨앗</span> 졸업전시 주제 후보</summary>
+      <ul class="seeds">
+        <li><b class="seed">열리기 위한 마지막 건물 — 부두와 다리가 선 뒤 개항·개통을 가로막는 운영동·통관 건물을 최소 단위로 정의한 평면과 시간축</b><span class="link">새만금항·신압록강대교</span></li>
+        <li><b class="seed">3미터의 단차 — 지하화한 도로 위 공원이 단지와 길을 만나는 가장자리 단면 연작</b><span class="link">국회대로 지하화</span></li>
+        <li><b class="seed">같은 값의 두 방 — 자산 하위·상위 20%의 거주 주택을 같은 축척으로 그린 단면 한 쌍</b><span class="link">거주 주택 가격 격차</span></li>
+        <li><b class="seed">있었던 동네의 도면 — 허물린 구역의 집·길·담을 철거 전후로 겹쳐 복원한 도면</b><span class="link">헤브론 철거</span></li>
+      </ul>
+    </details></section>
+    <section class="rbox" aria-labelledby="method-h"><details>
+      <summary class="label"><span class="tag" id="method-h">번역의 순서</span> 이슈가 건축이 되기까지</summary>
+      <div class="method">
+      <div><span class="mono">1 · FACT</span><strong>사실</strong><p>숫자와 출처로 확인된 사건. 감상이 아니라 기록에서 출발한다.</p></div>
+      <div><span class="mono">2 · SITE</span><strong>장소</strong><p>그 일이 실제로 일어나는 곳. 방, 복도, 논밭, 변전소, 해저.</p></div>
+      <div><span class="mono">3 · MOVE</span><strong>개입</strong><p>건축이 바꿀 수 있는 하나의 조건. 프로그램, 경계, 재료, 시간.</p></div>
+      <div><span class="mono">4 · DRAWING</span><strong>재현</strong><p>그 생각을 증명하는 도면의 형식. 단면, 지도, 시간축, 인벤토리.</p></div>
+    </div>
+    </details></section>
+  </div></aside>
+
+  <!--VOCAB:page-thesis-->
+  <aside class="vocab" aria-label="이 면의 단어">
+    <span class="k">WORDS · 이 면의 영어 표현</span>
+    <ul>
+      <li data-kind="ielts"><b class="term">disparity</b> <span class="pos">n.</span> <span class="ko">격차 · 불균형</span> <span class="ex">If the disparity in price is drawn as two rooms at the same scale, what is missing first?</span></li>
+      <li data-kind="ielts"><b class="term">jurisdiction</b> <span class="pos">n.</span> <span class="ko">관할(권)</span> <span class="ex">Which building is the last one, and who holds jurisdiction over it?</span></li>
+      <li data-kind="crit"><b class="term">grade separation</b> <span class="pos">n.</span> <span class="ko">입체 분리 (도로를 지하·고가로 갈라 평면 교차를 없애는 일)</span> <span class="ex">After grade separation, where does the park above meet the street?</span></li>
+    </ul>
+  </aside>
+
+    <aside class="rail rail-left" data-auto aria-label="지난 씨앗"><div class="rail-in">
+    <section class="rbox" aria-labelledby="past-thesis"><details open>
+      <summary class="label"><span class="tag" id="past-thesis">지난 씨앗</span> 2면 · 최근 10</summary>
+      <ul class="rlist">
+        <li><span class="d">10.24 · No. 016</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-24.html#thesis">남는 구조, 바뀌는 층</a><span class="sub">+ 3</span></li>
+        <li><span class="d">10.22 · No. 015</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-22.html#thesis">지방에 앉는 첫 번째 본사</a><span class="sub">+ 3</span></li>
+        <li><span class="d">10.21 · No. 014</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-21.html#thesis">읍내의 첫 번째 1층</a><span class="sub">+ 3</span></li>
+        <li><span class="d">10.20 · No. 013</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-20.html#thesis">두 번째 용도의 교실</a><span class="sub">+ 3</span></li>
+        <li><span class="d">10.19 · No. 012</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-19.html#thesis">물그릇이 되는 길</a><span class="sub">+ 2</span></li>
+        <li><span class="d">10.17 · No. 010</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-17.html#thesis">열쇠 전의 시간</a><span class="sub">+ 3</span></li>
+        <li><span class="d">10.16 · No. 009</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-16.html#thesis">가장자리의 이용법</a><span class="sub">+ 3</span></li>
+        <li><span class="d">10.15 · No. 008</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-15.html#thesis">임시로 시작한 기억</a><span class="sub">+ 3</span></li>
+        <li><span class="d">10.14 · No. 007</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-14.html#thesis">빈 방의 치수 바꾸기</a><span class="sub">+ 3</span></li>
+        <li><span class="d">10.13 · No. 006</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-13.html#thesis">마지막 종이 울린 뒤</a><span class="sub">+ 1</span></li>
+      </ul>
+      <a class="rmore" href="https://uphillpark.github.io/Morning-Crits/archive.html#sheet-2">전체 보기 → Archive</a>
+    </details></section>
+  </div></aside><!--/rail-->
+
+  <footer>
+    <p>Thesis Desk · Morning Crit No. 017 · 2026년 10월 26일. 사실은 각 출처에 근거했고, 장소·개입·재현과 질문은 졸업전시 탐색을 위한 편집자의 제안이다. 이번 호의 다섯 이슈는 모두 원문을 직접 열어 확인했다. 국내 세 건은 연합뉴스 단일 매체 기사이며 통계 원표(KOSIS), 서울시 발표, 전북도 설명을 기사로만 접했고, 서울시·전북도 기사에는 반대 입장이나 이해 당사자의 말이 실리지 않았다. 자산 격차의 배율(290.1배)은 기사의 풀이이며 다른 보도와 교차 확인하지 못해 제목에 쓰지 않았다. 해외 두 건은 The Guardian 단일 기사다. 헤브론은 시 당국과 이스라엘군의 입장을 각각 실었으나 피해 규모를 독립적으로 확인하지 못했고, 철거의 정당성에 대한 판단은 하지 않는다. 신압록강대교의 제원 일부는 검색 결과 요약으로만 보조 확인했다. 이 지면은 어느 쪽 주장도 독자적으로 확인하지 못했다.</p>
+    <p>매일 아침 1면과 함께 갱신되며, 오늘의 씨앗은 오른쪽에, 지난 씨앗은 왼쪽 “지난 호” 칸에 쌓인다.</p>
+  </footer>
+</main>
+
+<main class="sheet" id="page-symposium" data-day="8" data-title="대화로 철학하기" hidden>
+  <header class="mast">
+    <div>
+      <h1>Daily Symposium</h1>
+      <p class="sub">역사·사상사 시대순 강의 — 서양과 동아시아를 한 시대 안에서 나란히 읽는다</p>
+    </div>
+    <div class="tblock" aria-label="강의 정보">
+      <div><b>Issue</b>No. 017</div>
+      <div><b>Date</b>2026.10.26 MON</div>
+      <div><b>Day</b>008 / 156</div>
+      <div><b>Part</b>I 고대</div>
+      <div><b>Read</b>17 min</div>
+      <div><b>Rev</b>A</div>
+    </div>
+  </header>
+
+  <section class="lec-head" aria-labelledby="sym-h">
+    <div class="label"><span class="tag">오늘의 강의</span> 고대 그리스 · 춘추 말기</div>
+    <h2 id="sym-h">대화로 철학하기: 묻는 일이 곧 가르침이던 두 사람</h2>
+    <p class="deck">중심 질문 — 책이 아니라 대화가 사유의 방법이었을 때, 질문은 상대의 앎을 무너뜨리는 일이 되는가, 상대의 앎을 키우는 일이 되는가?</p>
+    <ul class="keys"><li>엘렝코스 <i>elenchos</i></li><li>아포리아 <i>aporia</i></li><li>무지의 지 <i>Socratic ignorance</i></li><li>논어 <i>論語</i></li><li>자왈 <i>子曰</i></li></ul>
+  </section>
+
+  <section aria-labelledby="sym-recap">
+    <div class="label"><span class="tag" id="sym-recap">지난 수업과의 연결</span></div>
+    <div class="recap"><p>지난 DAY 007에서는 소피스트의 ‘인간은 만물의 척도’라는 주장과 노모스·퓌시스(관습과 자연)의 구분, 그리고 묵자의 겸애와 비공을 나란히 읽었다. 이 물음들은 모두 ‘누가, 어떤 근거로 말하는가’를 건드렸다. 오늘은 그 근거를 따지는 방식 자체, 곧 대화라는 방법을 본다. 같은 날 실린 두 인물은 비교의 재료이지 서로 영향을 주고받은 사이가 아니다.</p></div>
+  </section>
+
+  <div class="dual">
+    <article>
+      <h3>서양 · 소크라테스와 엘렝코스</h3>
+      <h4>시대적 배경</h4>
+      <p>소크라테스(기원전 470년경~399)는 아테네 시민이었고, 글을 남기지 않았다. 그가 활동한 기원전 5세기 후반의 아테네는 민주정 아래에서 공적 연설이 곧 권력이던 도시였다. 소피스트들은 수사와 논변을 가르쳤고, 말을 잘하는 일이 곧 정치적 힘이 되었다. 아테네는 펠로폰네소스 전쟁(기원전 431~404)을 치르며 흔들렸고, 소크라테스는 기원전 399년 불경죄와 청년을 타락시킨 죄로 재판받아 독배로 사형당했다.</p>
+      <h4>핵심 사상가와 개념</h4>
+      <p>소크라테스를 알려 주는 자료는 셋이다. 플라톤의 대화편, 크세노폰의 회상록, 그리고 기원전 423년 상연된 아리스토파네스의 희극 『구름』이다. 이 가운데 어느 것이 역사 속 소크라테스에 가까운지는 학계에서 지금도 갈린다(‘소크라테스 문제’). 플라톤의 초기 대화편 속 소크라테스를 가장 ‘소크라테스적’이라 보는 입장이 널리 쓰이지만, 이것은 하나의 해석이다.</p>
+      <p>그 대화편들에서 소크라테스는 ‘용기란 무엇인가’(『라케스』), ‘경건이란 무엇인가’(『에우튀프론』)처럼 ‘F란 무엇인가’를 묻는다. 대화 상대(interlocutor)가 정의를 내놓으면 소크라테스는 상대가 이미 인정한 다른 믿음들과 그 정의를 맞대어 모순을 드러낸다. 이 검증 방식을 엘렝코스(elenchos)라 부른다. 대화는 흔히 결론 없이, 상대가 자신이 모른다는 것을 깨닫는 막다른 길 곧 아포리아(aporia)에서 멈춘다.</p><p>예를 들어 『에우튀프론』에서 에우튀프론은 경건함을 ‘신들이 사랑하는 것’이라 정의한다. 소크라테스는 신들끼리 의견이 갈린다면 같은 행위가 경건하면서 불경하기도 하냐고 되묻고, 정의를 다시 세우도록 이끈다. 이 대화도 끝내 합의된 정의 없이 끝난다고 전한다. 중요한 것은 결론이 아니라 정의를 시험하는 절차다. 이 절차는 상대에게 정보를 주지 않고, 상대가 이미 가진 믿음을 재료로 쓴다는 점에서 일반적인 강의와 다르다. 물론 이 장면이 실제 대화의 기록이 아니라 플라톤이 구성한 극이라는 점은 늘 염두에 두어야 한다.</p>
+      <h4>구체적 텍스트</h4>
+      <p>『변론』에서 소크라테스는 친구 카이레폰이 델포이 신탁에 ‘소크라테스보다 지혜로운 이가 있는가’ 물었고 없다는 답을 받았다고 말한다(20e~23b). 그는 이 말의 뜻을 시험하려고 지혜롭다는 평판의 사람들을 찾아가 따져 물었고, 그들이 모르면서 안다고 여긴다는 것을 보았다고 한다. 그는 자신이 나은 점은 모르는 것을 안다고 생각하지 않는다는 것 하나뿐이라고 말한다. ‘무지의 지’는 이 대목을 줄인 후대의 공식이다. 이 이야기가 어디까지 역사이고 어디부터 플라톤의 연출인지는 확정할 수 없다.</p>
+      <h4>철학적 의미</h4>
+      <p>엘렝코스는 정보를 건네는 방법이 아니다. 상대의 믿음을 시험대에 올려 일관성을 묻는 방법이다. 그래서 이 방법은 가르침이면서 동시에 공격으로 읽혔고, 그가 재판에 이른 것과 무관하다고 하기 어렵다는 해석이 있다. 다만 재판의 원인에 대해서는 정치적 배경을 강조하는 해석도 있어 하나로 단정하지 않는다.</p>
+      <p class="src"><a href="https://plato.stanford.edu/entries/socrates/" target="_blank" rel="noopener">Stanford Encyclopedia of Philosophy · Socrates</a></p>
+    </article>
+    <article>
+      <h3>동아시아 · 『논어』의 문답과 공자 학단</h3>
+      <h4>시대적 배경</h4>
+      <p>공자(전통적으로 기원전 551~479)가 살던 춘추 시대 말기에는 주 왕실의 권위가 약해지고 제후국들이 서로 다투었다. 예(禮)가 무너졌다는 인식 속에서 공자는 제자들을 모아 가르쳤다. 공자의 생애는 후대에 사마천이 정리한 서술에 많이 기대는데, 그 가운데 일부는 가르침을 위해 구성된 일화일 수 있다는 점이 지적된다.</p>
+      <h4>핵심 개념</h4>
+      <p>『논어』(論語)는 공자와 제자들의 말을 모은 책이다. ‘자왈(子曰)’로 시작하는 짧은 말과 제자의 물음에 답하는 장면이 대부분이다. 전통적으로는 제자와 그 제자들이 엮었다고 하지만, 기원전 2세기 이전의 인용이 드물다는 점과 출토된 이본들이 보여 주는 차이 때문에, 한 시기에 한 번에 완성된 책이 아니라 여러 층이 쌓인 선집이라는 견해가 힘을 얻고 있다. 그러므로 『논어』 속 문답은 공자가 실제로 한 말의 속기록이라기보다 학단이 전한 공자의 모습으로 읽는 편이 안전하다.</p>
+      <h4>구체적 텍스트</h4>
+      <p>「안연」편에서 안연이 인(仁)을 묻자 공자는 자신을 이겨 예(禮)로 돌아오는 것이라 답하고, 안연은 그 구체적인 조목을 다시 묻는다. 물음이 한 번에 끝나지 않고 이어진다는 점이 눈에 띈다. 또 「위정」편에서 여러 사람이 효(孝)를 묻는데, 공자의 답은 묻는 사람마다 다르다고 전한다. 「선진」편에는 같은 질문, ‘들으면 바로 행해야 합니까’에 대해 자로에게는 부모형제가 계시니 먼저 의논하라 하고, 염유에게는 곧바로 행하라 했다는 대목이 있다. 이를 의아해한 공서화에게 공자는, 염유는 물러서는 성격이어서 밀어 주었고 자로는 남을 앞서려 해서 눌러 주었다고 설명한다. 「술이」편 8장은 스스로 분발하지 않으면 열어 주지 않고, 한 모퉁이를 들어 보였을 때 나머지 셋으로 돌아오지 못하면 다시 가르치지 않는다고 한다. 「위정」편 17장은 아는 것을 안다 하고 모르는 것을 모른다 하는 것이 아는 것이라 말한다.</p>
+      <h4>철학적 의미</h4>
+      <p>공자의 문답은 정의를 시험하는 논증이 아니라 상대의 자리에 맞춘 처방에 가깝다. 질문자의 성격, 처지, 준비된 정도가 답의 일부가 된다. 후대에 이 교육 방식을 가리키는 말이 따로 생겼다. 공자는 스스로를 ‘전할 뿐 짓지 않는다’(述而不作)고 했다고 하는데(「술이」 1장), 그의 철학이 책 한 권의 이론이 아니라 관계 속의 말로 남은 것은 이 자기 규정과 이어진다.</p>
+      <p class="src"><a href="https://plato.stanford.edu/entries/confucius/" target="_blank" rel="noopener">Stanford Encyclopedia of Philosophy · Confucius</a></p>
+    </article>
+  </div>
+
+  <div class="plates">
+    <figure class="plate">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/David_-_The_Death_of_Socrates.jpg" alt="A white-robed Socrates raises one hand and reaches for the cup of hemlock while his followers grieve around him in a stone cell" loading="lazy">
+      <figcaption>The Death of Socrates · Jacques-Louis David · 1787 · The Metropolitan Museum of Art, New York · 18세기 후반의 상상이지 당대의 기록이 아니다 · <a href="https://commons.wikimedia.org/wiki/File:David_-_The_Death_of_Socrates.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+    </figure>
+  </div>
+
+  <section aria-labelledby="sym-think">
+    <div class="label"><span class="tag" id="sym-think">통합적 사유</span></div>
+    <aside class="crit"><span class="k">SYMPOSIUM</span>두 사람은 모두 글이 아니라 말로 가르쳤고, 둘 다 우리는 그들의 제자들이 쓴 기록으로만 그들을 안다. 이 공통점은 비교의 출발일 뿐 영향 관계가 아니다. 갈라지는 지점은 질문의 방향이다. 소크라테스의 질문은 상대가 이미 가졌다고 믿는 앎을 시험해 허물고, 공자의 질문은 상대가 아직 못 가진 것을 그 사람에게 맞게 끌어낸다. 강의자의 생각으로는, 두 방식이 건축 크리틱(crit)에서도 모두 쓰인다는 점이 흥미롭다. 설계 의도의 모순을 파고드는 질문이 있고, 학생의 단계에 맞춰 한 걸음 더 가게 하는 질문이 있다. 어느 쪽이 더 낫다고 말하기보다, 지금 내 앞의 질문이 어느 쪽인지 알아차리는 것이 먼저다. 한 가지 더 조심할 것이 있다. 두 문답 모두 우리가 아는 형태는 제자들이 다듬은 기록이다. 소크라테스의 문답은 플라톤의 극적 구성이고, 공자의 문답은 학단이 전승한 장면이다. 그러므로 오늘 우리가 비교하는 것은 두 사람의 실제 대화라기보다, 후대가 기억하려 한 두 가지 대화의 모습이다. 이 한계를 인정하고 읽을 때 비교는 오히려 정직해진다.</aside>
+  </section>
+
+  <section aria-labelledby="sym-q">
+    <div class="label"><span class="tag" id="sym-q">핵심 질문 · 실습</span></div>
+    <ol class="qs">
+      <li>소크라테스의 대화가 결론 없이 끝나는 것(아포리아)은 실패인가, 방법의 일부인가? 근거를 두 가지 들어 보라.</li>
+      <li>같은 질문에 제자마다 다르게 답하는 방식은 가르침의 일관성을 해치는가, 완성하는가?</li>
+      <li>실습 (10분) · ‘좋은 공간이란 무엇인가’에 한 문장으로 답을 적는다. 그다음 자기 경험에서 그 정의에 맞지 않는 공간을 하나 찾아 적고(엘렝코스), 정의를 고쳐 쓴다. 마지막으로 같은 질문을 가족이나 친구 한 명에게 던져 그 사람의 처지에 맞게 질문을 바꿔 보라.</li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="sym-rev">
+    <div class="label"><span class="tag" id="sym-rev">복습</span></div>
+    <dl class="terms">
+      <dt>엘렝코스 ἔλεγχος</dt><dd>상대의 주장을 그 사람이 인정한 다른 믿음과 맞대어 검증하는 소크라테스적 문답 방식.</dd>
+      <dt>아포리아 ἀπορία</dt><dd>길이 막힌 상태. 대화 상대가 자신의 정의가 성립하지 않음을 깨닫고 멈추는 지점.</dd>
+      <dt>무지의 지</dt><dd>『변론』의 한 대목을 줄인 후대의 공식. 모르는 것을 안다고 생각하지 않는다는 뜻.</dd>
+      <dt>논어 論語</dt><dd>공자와 제자들의 문답과 말을 모은 책. 한 시기에 완성되지 않았다는 견해가 유력하다.</dd>
+      <dt>자왈 子曰</dt><dd>‘선생님께서 말씀하셨다’. 『논어』의 말이 학단의 기억 속에서 전해졌음을 보여 주는 형식.</dd>
+      <dt>술이부작 述而不作</dt><dd>전할 뿐 새로 짓지 않는다는 공자의 자기 규정(「술이」).</dd>
+    </dl>
+    <p class="next">NEXT · DAY 009 — 이데아와 비어 있음: 플라톤의 이데아론·동굴의 비유, 노자 『도덕경』 11장</p>
+  </section>
+
+  <aside class="vocab" aria-label="이 면의 단어">
+    <span class="k">WORDS · 이 면의 영어 표현</span>
+    <ul>
+      <li data-kind="crit"><b class="term">elenchus</b> <span class="pos">n.</span> <span class="ko">엘렝코스 · 반박적 검증</span> <span class="ex">Socrates tests a definition by elenchus.</span></li>
+      <li data-kind="crit"><b class="term">aporia</b> <span class="pos">n.</span> <span class="ko">아포리아 · 막다른 길</span> <span class="ex">The dialogue ends in aporia.</span></li>
+      <li data-kind="ielts"><b class="term">interlocutor</b> <span class="pos">n.</span> <span class="ko">대화 상대</span> <span class="ex">The interlocutor offers a definition.</span></li>
+      <li data-kind="ielts"><b class="term">consistency</b> <span class="pos">n.</span> <span class="ko">일관성</span> <span class="ex">He asks about the consistency of a belief.</span></li>
+    </ul>
+  </aside>
+
+    <aside class="rail rail-left" data-auto aria-label="지난 호"><div class="rail-in">
+    <section class="rbox" aria-labelledby="past-symposium"><details open>
+      <summary class="label"><span class="tag" id="past-symposium">지난 호</span> 3면 · 최근 7</summary>
+      <ul class="rlist">
+        <li><span class="d">10.24 · No. 016</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-24.html#symposium">DAY 07 · 인간은 만물의 척도인가</a></li>
+        <li><span class="d">10.22 · No. 015</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-22.html#symposium">DAY 06 · 다원론자들</a></li>
+        <li><span class="d">10.21 · No. 014</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-21.html#symposium">DAY 05 · 역설과 원자</a></li>
+        <li><span class="d">10.20 · No. 013</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-20.html#symposium">DAY 04 · 흐름과 불변</a></li>
+        <li><span class="d">10.19 · No. 012</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-19.html#symposium">DAY 03 · 수와 조화</a></li>
+        <li><span class="d">10.17 · No. 010</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-17.html#symposium">DAY 02 · 아르케 논쟁</a></li>
+        <li><span class="d">10.16 · No. 009</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-16.html#symposium">DAY 01 · 신화에서 로고스로</a></li>
+      </ul>
+      <a class="rmore" href="https://uphillpark.github.io/Morning-Crits/archive.html#sheet-3">전체 보기 → Archive</a>
+    </details></section>
+  </div></aside><!--/rail-->
+  <aside class="rail rail-right" data-auto aria-label="Sheet tools"><div class="rail-in">
+    <section class="rbox" aria-labelledby="prog-h"><details open>
+      <summary class="label"><span class="tag" id="prog-h">진도</span> 6개월 시간표</summary>
+      <p class="rnote">DAY 008 / 156 · I 고대</p>
+      <div class="bar"><i style="width:5.1%"></i></div>
+      <ul class="rlist">
+        <li><span class="d">I 고대</span>35회</li>
+        <li><span class="d">II 중세</span>22회</li>
+        <li><span class="d">III 근세</span>26회</li>
+        <li><span class="d">IV 계몽과 19세기</span>36회</li>
+        <li><span class="d">V 20세기</span>37회</li>
+      </ul>
+    </details></section>
+    <section class="rbox" aria-labelledby="next-h"><details open>
+      <summary class="label"><span class="tag" id="next-h">다음 강의</span> </summary>
+      <ul class="rlist">
+        <li><span class="d">DAY 009 · 10.28</span>이데아와 비어 있음</li>
+        <li><span class="d">DAY 010 · 10.30</span>정의로운 도시</li>
+        <li><span class="d">DAY 011 · 11.02</span>우주를 설계한 장인</li>
+        <li><span class="d">DAY 012 · 11.04</span>에로스와 모방</li>
+        <li><span class="d">DAY 013 · 11.06</span>형상과 질료</li>
+      </ul>
+    </details></section>
+  </div></aside><!--/rail-->
+
+  <footer>
+    <p>Daily Symposium DAY 008 · Morning Crit No. 017. 사실과 학계의 해석, 강의자의 비평을 구분해 적었다. 출처를 확인하지 못한 내용은 싣지 않았다.</p>
+  </footer>
+</main>
+
+<main class="sheet" id="page-unit" data-unit="Dip12" data-school="AA" data-concept="profanation" hidden>
+  <header class="mast">
+    <div>
+      <h1>Unit Brief</h1>
+      <p class="sub">AA · RCA · Bartlett unit briefs, read for the theory underneath them</p>
+    </div>
+    <div class="tblock" aria-label="Issue information">
+      <div><b>Issue</b>No. 017</div>
+      <div><b>Date</b>2026.10.26 MON</div>
+      <div><b>Unit</b>AA Dip12</div>
+      <div><b>Brief</b>2026–27</div>
+      <div><b>Concept</b>Profanation</div>
+      <div><b>Rev</b>A</div>
+    </div>
+  </header>
+
+  <section class="lec-head" aria-labelledby="unit-h">
+    <div class="label"><span class="tag">AA Diploma 12</span> The Cracks Where the Light Gets In: Transgressing Architectures of the Sacred and Profane</div>
+    <h2 id="unit-h">Giving the sacred back: why Dip12 treats profanation as a design method</h2>
+    <p class="deck">A building that is consecrated is set apart from use; profanation returns it. Dip12 asks you to find the exact place where that separation is made, and to work in the crack.</p>
+    <p class="credits">Tutors: Inigo Minns, Pol Esteve Castelló</p>
+  </section>
+
+  <section aria-labelledby="unit-essay">
+    <div class="label"><span class="tag" id="unit-essay">The lineage</span></div>
+    <div class="essay">
+      <p>The brief’s own text could not be opened from this desk, so nothing below is quoted from it. What follows rests on the unit’s published summary, which describes a year of world-building, speculative film and one-to-one action tests that disturb spaces of repression and belonging, and names the geographer Yi-Fu Tuan and the philosopher Giorgio Agamben.</p>
+      <h3>1 · Why the pair, and why now</h3>
+      <p>The sacred and the profane arrive in architecture as a ready-made pair, usually the church and the street. The unit’s title pushes against that comfort. A crack is where one thing fails to meet another, and light gets in only because the wall is imperfect. The brief does not ask you to design a better sacred room, and it does not ask you to make a church ironic either. It asks where the line between sacred and ordinary is drawn, who draws it, and what happens at the edge.</p>
+      <h3>2 · Durkheim: the separation is the point</h3>
+      <p>Émile Durkheim’s <i>Les formes élémentaires de la vie religieuse</i> (1912) gives the pair its modern form. For Durkheim the sacred is not a quality inside an object. It is a status: things are set apart and forbidden, and the profane is the remainder, the everyday and the useful. The two are heterogeneous in an absolute way, and religion is the collective work of keeping that distance. That reading matters to an architect because distance is exactly what buildings produce: thresholds, walls, steps, doors, silence.</p>
+      <h3>3 · Agamben: the act of giving back</h3>
+      <p>Giorgio Agamben’s <i>Profanazioni</i> (2005; English <i>Profanations</i>, translated by Jeff Fort, Zone Books, 2007) turns the argument around. If to consecrate is to remove a thing from common use, to profane is to return it to use. Profanation is not destruction or blasphemy. It is a change of use that leaves the thing intact and makes it available again. The unit’s programme page also carries Agamben’s sentence that the profanation of the unprofanable is the political task of the coming generation. For a designer the interesting word is “unprofanable”: what has become so thoroughly separated that it can no longer be touched, whether a monument, a rule, a law, or a market?</p>
+      <h3>4 · Bataille and the edge of the rule</h3>
+      <p>Georges Bataille’s <i>L’Érotisme</i> (1957; English <i>Erotism: Death and Sensuality</i>) approaches the same edge from the other side. Taboos and their transgression belong together, and the transgression does not abolish the rule. It confirms that the rule exists. Dip12’s word “transgressing” should be read in this sense. A designer who crosses a line has to know precisely where it runs, and what it protected.</p>
+      <h3>5 · Tuan: how a place becomes a place</h3>
+      <p>Yi-Fu Tuan’s <i>Space and Place: The Perspective of Experience</i> (University of Minnesota Press, 1977) supplies the ground. Tuan’s distinction between open space and place, a location that has become significant through experience, explains why consecration works spatially: it marks a place as unlike the others. It also explains why belonging and exclusion are so close. The same ritual that makes a place feel like home can make a stranger feel outside it. The unit’s interest in spaces of repression and belonging sits exactly here.</p>
+      <h3>6 · What your portfolio has to prove</h3>
+      <p>A portfolio for this unit cannot stop at an atmospheric image of a sacred room. It has to show the separation being made: a plan and section that mark where use stops, a threshold that is drawn at full scale, a ritual that is notated as carefully as a construction sequence. It then has to show the return: a one-to-one action or a short film in which the object, the room or the rule is used by someone who was not meant to use it, and the drawing records what that changes. The strongest evidence is a pair of drawings of the same space, before and after profanation, with the difference located in a specific wall, door or step. A world that is only described, without a drawn edge, will read as a story about architecture rather than architecture. Two practical tests help. First, ask whether a stranger could redraw your boundary from the drawings alone, without reading the text. Second, ask whether your action test has a witness: a person, a camera or a log that records who crossed, when, and what changed. Without a witness the return to use remains a claim. With one, it becomes evidence, and the unit’s emphasis on film, action and one-to-one testing suggests that this kind of evidence is what the tutors will look for.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="unit-read">
+    <div class="label"><span class="tag" id="unit-read">Read next</span></div>
+    <ul class="briefs">
+      <li><b>Giorgio Agamben, <i>Profanations</i>, trans. Jeff Fort (Zone Books, 2007).</b> Ten essays; start with the one on profanation, which is the shortest route into the unit’s vocabulary.<p class="src"><a href="https://old.zonebooks.org/titles/AGAM_PRO.html" target="_blank" rel="noopener">Zone Books title page</a></p></li>
+      <li><b>Yi-Fu Tuan, <i>Space and Place: The Perspective of Experience</i> (University of Minnesota Press, 1977).</b> Read the opening chapters on space and place, then ask what in your own site is merely space.<p class="src"><a href="https://cca.qc.ca/fr/recherche/details/library/publication/03126299" target="_blank" rel="noopener">CCA library record</a></p></li>
+      <li><b>Georges Bataille, <i>Erotism: Death and Sensuality</i> (City Lights, 1986; first French edition 1957).</b> For the relation between prohibition and its breaking.<p class="src"><a href="https://mitpressbookstore.mit.edu/book/9780872861909" target="_blank" rel="noopener">MIT Press Bookstore</a></p></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="unit-q">
+    <div class="label"><span class="tag" id="unit-q">For your portfolio</span></div>
+    <aside class="crit"><span class="k">UNIT Q</span>If you applied to Dip12, which wall, door or rule in a place you know would your portfolio return to use, who is currently kept out of it, and what drawing would prove that the return changed the building and not only the story?</aside>
+    <p class="src">Also in: AA Dip5 (threshold, seam), AA Dip1 (myth and the city)</p>
+  </section>
+
+  <aside class="vocab" aria-label="Words from this sheet">
+    <span class="k">WORDS · from this sheet</span>
+    <ul>
+      <li data-kind="crit"><b class="term">profanation</b> <span class="pos">n.</span> <span class="ko">신성 해제 · 세속화</span> <span class="ex">Profanation returns a thing to common use.</span></li>
+      <li data-kind="crit"><b class="term">consecrate</b> <span class="pos">v.</span> <span class="ko">성별하다 · 봉헌하다</span> <span class="ex">To consecrate is to set a thing apart from use.</span></li>
+      <li data-kind="crit"><b class="term">transgression</b> <span class="pos">n.</span> <span class="ko">위반 · 월경</span> <span class="ex">Transgression confirms that the rule exists.</span></li>
+      <li data-kind="ielts"><b class="term">heterogeneous</b> <span class="pos">adj.</span> <span class="ko">이질적인</span> <span class="ex">The sacred and the profane are heterogeneous.</span></li>
+      <li data-kind="ielts"><b class="term">taboo</b> <span class="pos">n.</span> <span class="ko">금기</span> <span class="ex">Taboos and their transgression belong together.</span></li>
+      <li data-kind="ielts"><b class="term">remainder</b> <span class="pos">n.</span> <span class="ko">나머지</span> <span class="ex">The profane is the remainder.</span></li>
+    </ul>
+  </aside>
+
+    <aside class="rail rail-left" data-auto aria-label="지난 호"><div class="rail-in">
+    <section class="rbox" aria-labelledby="past-unit"><details open>
+      <summary class="label"><span class="tag" id="past-unit">지난 호</span> 4면 · 최근 7</summary>
+      <ul class="rlist">
+        <li><span class="d">10.24 · No. 016</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-24.html#unit">cross cross · extraction</a></li>
+        <li><span class="d">10.22 · No. 015</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-22.html#unit">AA Dip13 · as found</a></li>
+        <li><span class="d">10.21 · No. 014</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-21.html#unit">RCA ADS6 · making</a></li>
+        <li><span class="d">10.20 · No. 013</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-20.html#unit">AA Dip3 · atmosphere</a></li>
+        <li><span class="d">10.19 · No. 012</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-19.html#unit">AA Dip7 · property</a></li>
+        <li><span class="d">10.17 · No. 010</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-17.html#unit">cross cross · commons</a></li>
+        <li><span class="d">10.16 · No. 009</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-16.html#unit">Bartlett PG17 · plasticity</a></li>
+      </ul>
+      <a class="rmore" href="https://uphillpark.github.io/Morning-Crits/archive.html#sheet-4">전체 보기 → Archive</a>
+    </details></section>
+  </div></aside><!--/rail-->
+  <aside class="rail rail-right" data-auto aria-label="Sheet tools"><div class="rail-in">
+    <section class="rbox" aria-labelledby="cov-h"><details open>
+      <summary class="label"><span class="tag" id="cov-h">유닛 지도</span> 다룬 유닛</summary>
+      <ul class="rlist">
+        <li><span class="d">AA · 3 / 19</span><div class="bar"><i style="width:15.8%"></i></div><span class="sub">남은 유닛: Dip1, Dip2, Dip4, Dip5, Dip6, Dip8, Dip9, Dip10, Dip11, Dip12, Dip14, Dip15…</span></li>
+        <li><span class="d">RCA · 1 / 14</span><div class="bar"><i style="width:7.1%"></i></div><span class="sub">남은 유닛: ADS0, ADS1, ADS2, ADS3, ADS4, ADS5, ADS7, ADS8, ADS9, ADS10, ADS11, ADS12…</span></li>
+        <li><span class="d">Bartlett · 1 / 12</span><div class="bar"><i style="width:8.3%"></i></div><span class="sub">남은 유닛: PG11, PG12, PG13, PG14, PG16, PG18, PG20, PG21, PG22, PG23, PG24</span></li>
+      </ul>
+    </details></section>
+    <section class="rbox" aria-labelledby="rot-h"><details>
+      <summary class="label"><span class="tag" id="rot-h">요일 순환</span> </summary>
+      <p class="rnote">월 AA · 수 RCA · 금 Bartlett · 매달 마지막 금요일 학교 간 비교</p>
+    </details></section>
+  </div></aside><!--/rail-->
+
+  <footer>
+    <p>Unit Brief · Morning Crit No. 017. The brief page could not be opened from this desk, so no sentence is quoted from it; the lineage is the editor’s reading, with each title and date checked against a published source.</p>
+  </footer>
+</main>
+
+<main class="sheet" id="page-screen" data-medium="Painting" data-work="Inwang jesaekdo / Clearing After Rain on Mount Inwang (1751)" hidden>
+  <header class="mast">
+    <div>
+      <h1>Mood Screen</h1>
+      <p class="sub">One classic a day — film, painting, documentary, photography — to build a visual vocabulary</p>
+    </div>
+    <div class="tblock" aria-label="Issue information">
+      <div><b>Issue</b>No. 017</div>
+      <div><b>Date</b>2026.10.26 MON</div>
+      <div><b>Medium</b>Painting</div>
+      <div><b>Year</b>1751</div>
+      <div><b>Origin</b>Korea</div>
+      <div><b>Rev</b>A</div>
+    </div>
+  </header>
+
+  <div class="plates">
+    <figure class="plate">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Inwangjesaekdo.jpg" alt="A black-ink landscape: a dark rounded granite peak streaked with vertical wet strokes, soft dotted hills, a band of bare paper as mist, and small tiled roofs among pines at the lower right" loading="lazy">
+      <figcaption>Inwang jesaekdo · Jeong Seon · 1751 · National Museum of Korea, Seoul · <a href="https://commons.wikimedia.org/wiki/File:Inwangjesaekdo.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+    </figure>
+  </div>
+
+  <section class="lec-head" aria-labelledby="scr-h">
+    <div class="label"><span class="tag">Today’s screening</span> Painting · Korea · 1751</div>
+    <h2 id="scr-h"><i>Inwang jesaekdo</i> · Clearing After Rain on Mount Inwang · 인왕제색도</h2>
+    <p class="credits">Jeong Seon · 1751 · Korea · ink on paper, 79.2 × 138.2 cm · National Treasure No. 216</p>
+    <p class="deck">Why this one: it is a black-and-white picture that still feels wet. A granite mountain is painted in heavy ink right after rain, and a band of untouched paper stands in for the mist that has not yet lifted. It teaches how much weather, weight and depth you can get from one colour and the gaps you leave.</p>
+  </section>
+
+  <section aria-labelledby="scr-obs">
+    <div class="label"><span class="tag" id="scr-obs">Three things to watch for</span></div>
+    <ol class="observe">
+      <li><span class="cat">Materiality / Texture</span><strong>Wet black against dry grey</strong><p>The great rock dome is built from broad vertical strokes of dense ink, while the slopes below are lighter and dotted. Compare the two touches and notice how the mountain feels heavy and the hills feel soft.</p></li>
+      <li><span class="cat">Spatial depth</span><strong>Mist is the paper left bare</strong><p>The middle of the picture is mostly empty. That gap separates the peak from the valley and makes the distance readable without any perspective lines.</p></li>
+      <li><span class="cat">Human scale / Occupation</span><strong>A few tiled roofs under pines</strong><p>Low in the corner, small roofs sit among dark trees. They are the only sign of people, and they set the size of everything above them.</p></li>
+    </ol>
+  </section>
+
+  <section class="gentest" aria-labelledby="scr-gen" data-combo="1" data-model="gemini-3.1-flash-lite-image" data-ban="jeong seon|jeongseon|jeong sun|gyeomjae|겸재|정선|inwang|inwangsan|인왕|인왕제색도|jesaek|jesaekdo|clearing after rain|after rain|national treasure">
+    <div class="label"><span class="tag" id="scr-gen">Your frame · generative test</span> gemini-3.1-flash-lite-image · 1K · text only</div>
+
+    <div class="framebox">
+      <span class="k">YOUR FRAME · one still + three words</span>
+      <p>Example keywords: <i>wet black granite · rising mist · ink wash</i></p>
+      <pre class="prompt">wet black granite, rising mist, ink wash, a dome of dark rock above a band of bare paper, small tiled roofs under pines, grey-black monochrome</pre>
+    </div>
+
+    <div class="gen-row">
+      <figure class="gen" data-slot="a" data-status="ok">
+        <img src="https://uphillpark.github.io/Morning-Crits/assets/screen/2026-10-26-a.webp" alt="A generated ink landscape: a dark rounded granite mountain over a white mist bank, pale stippled hills, pines and two small houses at the lower right, on cream paper" loading="lazy">
+        <figcaption><b>A · Reproduction</b> · Generated · 2026.10.26 · <a href="https://drive.google.com/file/d/1ybxTxKkq4_HvYhr4JyH24UTpe70SqSQD/view?usp=drivesdk" target="_blank" rel="noopener">original</a></figcaption>
+        <p class="gscore">Style <b>68</b> · Composition <b>52</b> · Prompt <b>62</b> · Avg <b>60.7</b></p>
+      </figure>
+      <figure class="gen" data-slot="b1" data-status="ok" data-kind="Photograph">
+        <img src="https://uphillpark.github.io/Morning-Crits/assets/screen/2026-10-26-b1.webp" alt="A black-and-white photograph of a stepped concrete bathhouse in a wet rock gorge, a tiled pavilion on the lowest terrace, fog rising and pines on the ridge" loading="lazy">
+        <figcaption><b>B1 · Photograph</b> · Generated · 2026.10.26</figcaption>
+        <p class="gscore">Mood <b>76</b> · Independence <b>70</b> · Architecture <b>76</b> · Prompt <b>70</b> · Avg <b>73.0</b></p>
+      </figure>
+      <figure class="gen" data-slot="b2" data-status="ok" data-kind="Architectural drawing">
+        <img src="https://uphillpark.github.io/Morning-Crits/assets/screen/2026-10-26-b2.webp" alt="An ink-wash architectural drawing on aged paper: stepped water-filtration tanks among stippled trees above a pump hall, with a band of bare paper between them" loading="lazy">
+        <figcaption><b>B2 · Architectural drawing</b> · Generated · 2026.10.26 · <a href="https://drive.google.com/file/d/1NqV_hPkltMJzBE3fwgm-k9ae7LVmDE6c/view?usp=drivesdk" target="_blank" rel="noopener">original</a></figcaption>
+        <p class="gscore">Mood <b>70</b> · Independence <b>88</b> · Architecture <b>66</b> · Prompt <b>66</b> · Avg <b>72.5</b></p>
+      </figure>
+    </div>
+
+    <div class="gen-row">
+      <div class="gprompt" data-slot="a">
+        <span class="k">A · reproduction prompt · 80 words</span>
+        <pre class="prompt"><del>Joseon dynasty Korean</del><ins>Wide horizontal</ins> ink landscape on aged paper, edge to edge, no mount, no border: a <del>Mount Inwang</del><ins>steep granite mountain</ins> with a huge dark rounded dome of rock streaked by vertical wet strokes, filling the upper centre; pale grey hills below stippled with dotted brush marks; one broad bank of white mist across the middle; dark pines and two small tiled-roof houses low in the right foreground. Grey-black monochrome. wet black granite, rising mist, ink wash. no text, no signature, no seal</pre>
+        <p class="avoid">Avoided 2 explicit terms</p>
+      </div>
+      <div class="gprompt" data-slot="b1">
+        <span class="k">B1 · mood transfer · Photograph · 52 words</span>
+        <pre class="prompt">Documentary photograph, long lens, overcast: a stepped concrete bathhouse cut into a rain-darkened quarry face, one low tiled pavilion on its lowest terrace, white fog filling the terraces below, pines at the edge. wet black granite, rising mist, ink wash tonality, near-monochrome grey, quiet and empty. no text, no signature, no seal</pre>
+        <dl class="carry"><dt>heavy dark rock</dt><dd>a rain-darkened quarry face</dd><dt>bare-paper mist</dt><dd>white fog filling the lower terraces</dd><dt>tiny roofs under pines</dt><dd>one low pavilion on the lowest terrace</dd></dl>
+      </div>
+      <div class="gprompt" data-slot="b2">
+        <span class="k">B2 · mood transfer · Architectural drawing · 59 words</span>
+        <pre class="prompt">Long section drawing filling the whole sheet, ink wash on aged paper: a stepped water-filtration works descending a steep dark hillside, stippled planting on each terrace, a band of bare paper as mist between upper tanks and a low pump hall, tiny scale figures. wet black granite, rising mist, ink wash. Grey-black monochrome. no text, no signature, no seal</pre>
+        <dl class="carry"><dt>dotted brush marks</dt><dd>stippled planting on each terrace</dd><dt>mist as untouched paper</dt><dd>a bare band between tanks and pump hall</dd><dt>small human presence</dt><dd>tiny scale figures</dd></dl>
+      </div>
+    </div>
+
+    <div class="gnotes">
+      <div class="tablewrap"><table class="gscores">
+        <thead><tr><th>Image</th><th>Style / Mood</th><th>Composition / Independence</th><th>Architecture</th><th>Prompt</th><th>Avg</th><th>Palette ΔE</th><th>Layout r</th></tr></thead>
+        <tbody>
+          <tr><td>A · reproduction</td><td>68</td><td>52</td><td>—</td><td>62</td><td>60.7</td><td>8.4</td><td>0.34</td></tr>
+          <tr><td>B1 · photograph</td><td>76</td><td>70</td><td>76</td><td>70</td><td>73.0</td><td>6.4</td><td>0.01</td></tr>
+          <tr><td>B2 · architectural drawing</td><td>70</td><td>88</td><td>66</td><td>66</td><td>72.5</td><td>12.5</td><td>0.29</td></tr>
+        </tbody>
+      </table></div>
+      <div class="gfeed">
+        <div class="worked"><h4>What worked</h4><ul><li>“Photograph, long lens, overcast” plus “rain-darkened” gave B1 a believable wet-stone grey and the strongest Architecture score of the day.</li><li>Naming the tonal structure (“grey-black monochrome”, “one broad bank of white mist”) put A within ΔE 8.4 of the original, better than last issue’s 13.0.</li><li>“A band of bare paper as mist” carried the source’s key device into B2 without copying the mountain.</li></ul></div>
+        <div class="mismatch"><h4>What didn’t match, and why</h4><ul><li>A: the original is a dense full-frame ridge with several peaks; “a huge dark rounded dome … filling the upper centre” gave one tidy dome and large empty paper (layout r 0.34). Position words led the model to a simpler composition, and “aged paper” turned the ground cream instead of cool grey.</li><li>B1 and B2 reuse source parts (tiled pavilion, pines, stepped terraces), which lowered Independence for B1 to 70.</li><li>B2 asked for a “section” but returned oblique views, and the sheet came back as a stacked pair on a portrait panel until the “whole sheet” wording was added.</li></ul></div>
+        <div class="fixes"><h4>Next issue’s prompt changes</h4><ul><li>Avoid format words: “hanging scroll” returned three mounted scrolls side by side. Say “edge to edge, no mount”.</li><li>For A, describe density and count (“three overlapping ridges, no sky”) instead of one hero shape and its position.</li><li>For B, change the programme and drop the source’s signature props (tiled roof, pines).</li><li>For drawings, write “elevation” or “axonometric” instead of “section” unless a cut is truly wanted, and keep prompts under 55 words.</li></ul></div>
+      </div>
+      <p class="gnote">Scores: five judge profiles per axis, majority of three within ±5 of the median, all scored in one editorial pass. Judge details stay in prompts/screen-log.json. The B1 original did not return a Drive link. Originals in the <a href="https://drive.google.com/drive/folders/1adFL7U0zR4SfcoS0CCTODaWoMTPK0Liu" target="_blank" rel="noopener">mood screen</a> Drive folder.</p>
+    </div>
+  </section>
+
+  <aside class="vocab" aria-label="Words from this sheet">
+    <span class="k">WORDS · from this sheet</span>
+    <ul>
+      <li data-kind="crit"><b class="term">stippled</b> <span class="pos">adj.</span> <span class="ko">점으로 질감을 낸</span> <span class="ex">stippled planting on each terrace</span></li>
+      <li data-kind="crit"><b class="term">tonal structure</b> <span class="pos">n.</span> <span class="ko">명암 구성</span> <span class="ex">naming the tonal structure</span></li>
+      <li data-kind="ielts"><b class="term">stand in for</b> <span class="pos">phr. v.</span> <span class="ko">~을 대신하다</span> <span class="ex">untouched paper stands in for the mist</span></li>
+      <li data-kind="ielts"><b class="term">readable</b> <span class="pos">adj.</span> <span class="ko">읽히는 · 알아볼 수 있는</span> <span class="ex">the distance readable without perspective lines</span></li>
+      <li data-kind="crit"><b class="term">mounting</b> <span class="pos">n.</span> <span class="ko">표구</span> <span class="ex">a mounting word makes the model draw the mount</span></li>
+    </ul>
+  </aside>
+
+    <aside class="rail rail-left" data-auto aria-label="지난 호"><div class="rail-in">
+    <section class="rbox" aria-labelledby="past-screen"><details open>
+      <summary class="label"><span class="tag" id="past-screen">지난 호</span> 5면 · 최근 7</summary>
+      <ul class="rlist">
+        <li><span class="d">10.24 · No. 016</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-24.html#screen">Abtei im Eichwald / The Abbey in the Oakwood (1809–10)</a><span class="sub">Painting</span></li>
+        <li><span class="d">10.22 · No. 015</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-22.html#screen">Stalker (1979)</a><span class="sub">Film</span></li>
+        <li><span class="d">10.21 · No. 014</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-21.html#screen">Man with a Movie Camera (1929)</a><span class="sub">Documentary</span></li>
+        <li><span class="d">10.20 · No. 013</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-20.html#screen">Ōhashi Atake no yūdachi (1857)</a><span class="sub">Print</span></li>
+        <li><span class="d">10.19 · No. 012</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-19.html#screen">Au Tambour (1908)</a><span class="sub">Photography</span></li>
+        <li><span class="d">10.17 · No. 010</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-17.html#screen">Tokyo Story (1953)</a><span class="sub">Film</span></li>
+        <li><span class="d">10.16 · No. 009</span><a href="https://uphillpark.github.io/Morning-Crits/issues/2026-10-16.html#screen">Interior, Sunlight on the Floor (1906)</a><span class="sub">Painting</span></li>
+      </ul>
+      <a class="rmore" href="https://uphillpark.github.io/Morning-Crits/archive.html#sheet-5">전체 보기 → Archive</a>
+    </details></section>
+  </div></aside><!--/rail-->
+  <aside class="rail rail-right" data-auto aria-label="Sheet tools"><div class="rail-in">
+    <section class="rbox" aria-labelledby="mix-h"><details open>
+      <summary class="label"><span class="tag" id="mix-h">최근 7편</span> 매체 분포</summary>
+      <ul class="rlist">
+        <li><span class="d">Film</span>2편</li>
+        <li><span class="d">Painting</span>2편</li>
+        <li><span class="d">Documentary</span>1편</li>
+        <li><span class="d">Photography</span>1편</li>
+        <li><span class="d">Print</span>1편</li>
+      </ul>
+      <p class="rnote">지금까지 7편</p>
+    </details></section>
+    <section class="rbox" aria-labelledby="frame-h"><details>
+      <summary class="label"><span class="tag" id="frame-h">남기는 법</span> </summary>
+      <p class="rnote">마음에 든 프레임 한 장 + 그 이미지를 설명하는 영어 키워드 세 개.</p>
+    </details></section>
+  </div></aside><!--/rail-->
+
+  <footer>
+    <p>Mood Screen · Morning Crit No. 017. Credits, dimensions and collection checked against published sources; no spoilers.</p>
+  </footer>
+</main>
+
+<main class="sheet" id="page-words" hidden>
+  <header class="mast">
+    <div>
+      <h1>Word Desk</h1>
+      <p class="sub">오늘 다섯 면에서 모은 단어 — IELTS 7.0 학술 어휘와 AA 크리틱 용어.</p>
+    </div>
+    <div class="tblock" aria-label="Issue information">
+      <div><b>Issue</b>No. 017</div>
+      <div><b>Date</b>2026.10.26 MON</div>
+      <div><b>IELTS</b>13</div>
+      <div><b>AA Crit</b>11</div>
+    </div>
+  </header>
+  <section aria-labelledby="words-h">
+    <div class="label"><span class="tag" id="words-h">Today’s words</span> 24 terms</div>
+    <div class="tablewrap words"><table>
+      <thead><tr><th>Term</th><th>POS</th><th>뜻 · 예문</th><th>Kind</th><th>Sheet</th></tr></thead>
+      <tbody><tr><td>encampment</td><td class="m">n.</td><td>천막촌 · 야영지<br><small>Police acted “to put an end to these illegal encampments”.</small></td><td class="kind ielts">IELTS 7.0</td><td class="m">Morning Crit</td></tr>
+<tr><td>dismantle</td><td class="m">v.</td><td>해체하다 · 철거하다<br><small>Police dismantled housing protest camps in Lisbon and Porto.</small></td><td class="kind ielts">IELTS 7.0</td><td class="m">Morning Crit</td></tr>
+<tr><td>demountable</td><td class="m">adj.</td><td>해체해 옮길 수 있는 (재사용을 전제로 한)<br><small>Pilen is designed to be demounted once the tunnel is finished.</small></td><td class="kind crit">AA CRIT</td><td class="m">Morning Crit</td></tr>
+<tr><td>footfall</td><td class="m">n.</td><td>유동 인구 · 방문객 수<br><small>The scheme is expected to create value by raising footfall.</small></td><td class="kind crit">AA CRIT</td><td class="m">Morning Crit</td></tr>
+<tr><td>devolve</td><td class="m">v.</td><td>(권한 · 책임을) 이양하다<br><small>The Prime Minister may devolve housebuilding to metro mayors.</small></td><td class="kind ielts">IELTS 7.0</td><td class="m">Morning Crit</td></tr>
+<tr><td>deprioritise</td><td class="m">v.</td><td>우선순위에서 내리다<br><small>Landsec has chosen to deprioritise the Lewisham redevelopment.</small></td><td class="kind ielts">IELTS 7.0</td><td class="m">Morning Crit</td></tr>
+<tr><td>disparity</td><td class="m">n.</td><td>격차 · 불균형<br><small>If the disparity in price is drawn as two rooms at the same scale, what is missing first?</small></td><td class="kind ielts">IELTS 7.0</td><td class="m">Thesis Desk</td></tr>
+<tr><td>jurisdiction</td><td class="m">n.</td><td>관할(권)<br><small>Which building is the last one, and who holds jurisdiction over it?</small></td><td class="kind ielts">IELTS 7.0</td><td class="m">Thesis Desk</td></tr>
+<tr><td>grade separation</td><td class="m">n.</td><td>입체 분리 (도로를 지하·고가로 갈라 평면 교차를 없애는 일)<br><small>After grade separation, where does the park above meet the street?</small></td><td class="kind crit">AA CRIT</td><td class="m">Thesis Desk</td></tr>
+<tr><td>elenchus</td><td class="m">n.</td><td>엘렝코스 · 반박적 검증<br><small>Socrates tests a definition by elenchus.</small></td><td class="kind crit">AA CRIT</td><td class="m">Daily Symposium</td></tr>
+<tr><td>aporia</td><td class="m">n.</td><td>아포리아 · 막다른 길<br><small>The dialogue ends in aporia.</small></td><td class="kind crit">AA CRIT</td><td class="m">Daily Symposium</td></tr>
+<tr><td>interlocutor</td><td class="m">n.</td><td>대화 상대<br><small>The interlocutor offers a definition.</small></td><td class="kind ielts">IELTS 7.0</td><td class="m">Daily Symposium</td></tr>
+<tr><td>consistency</td><td class="m">n.</td><td>일관성<br><small>He asks about the consistency of a belief.</small></td><td class="kind ielts">IELTS 7.0</td><td class="m">Daily Symposium</td></tr>
+<tr><td>profanation</td><td class="m">n.</td><td>신성 해제 · 세속화<br><small>Profanation returns a thing to common use.</small></td><td class="kind crit">AA CRIT</td><td class="m">Unit Brief</td></tr>
+<tr><td>consecrate</td><td class="m">v.</td><td>성별하다 · 봉헌하다<br><small>To consecrate is to set a thing apart from use.</small></td><td class="kind crit">AA CRIT</td><td class="m">Unit Brief</td></tr>
+<tr><td>transgression</td><td class="m">n.</td><td>위반 · 월경<br><small>Transgression confirms that the rule exists.</small></td><td class="kind crit">AA CRIT</td><td class="m">Unit Brief</td></tr>
+<tr><td>heterogeneous</td><td class="m">adj.</td><td>이질적인<br><small>The sacred and the profane are heterogeneous.</small></td><td class="kind ielts">IELTS 7.0</td><td class="m">Unit Brief</td></tr>
+<tr><td>taboo</td><td class="m">n.</td><td>금기<br><small>Taboos and their transgression belong together.</small></td><td class="kind ielts">IELTS 7.0</td><td class="m">Unit Brief</td></tr>
+<tr><td>remainder</td><td class="m">n.</td><td>나머지<br><small>The profane is the remainder.</small></td><td class="kind ielts">IELTS 7.0</td><td class="m">Unit Brief</td></tr>
+<tr><td>stippled</td><td class="m">adj.</td><td>점으로 질감을 낸<br><small>stippled planting on each terrace</small></td><td class="kind crit">AA CRIT</td><td class="m">Mood Screen</td></tr>
+<tr><td>tonal structure</td><td class="m">n.</td><td>명암 구성<br><small>naming the tonal structure</small></td><td class="kind crit">AA CRIT</td><td class="m">Mood Screen</td></tr>
+<tr><td>stand in for</td><td class="m">phr. v.</td><td>~을 대신하다<br><small>untouched paper stands in for the mist</small></td><td class="kind ielts">IELTS 7.0</td><td class="m">Mood Screen</td></tr>
+<tr><td>readable</td><td class="m">adj.</td><td>읽히는 · 알아볼 수 있는<br><small>the distance readable without perspective lines</small></td><td class="kind ielts">IELTS 7.0</td><td class="m">Mood Screen</td></tr>
+<tr><td>mounting</td><td class="m">n.</td><td>표구<br><small>a mounting word makes the model draw the mount</small></td><td class="kind crit">AA CRIT</td><td class="m">Mood Screen</td></tr></tbody>
+    </table></div>
+  </section>
+</main>
+
+<script>
+(function () {
+  var DAY = 86400000;
+  function kstMidnight(d) {
+    var k = new Date(d.getTime() + 9 * 3600000);
+    return Date.UTC(k.getUTCFullYear(), k.getUTCMonth(), k.getUTCDate());
+  }
+  var today = kstMidnight(new Date());
+  document.querySelectorAll('.dd[data-date]').forEach(function (el) {
+    var p = el.getAttribute('data-date').split('-');
+    var target = Date.UTC(+p[0], +p[1] - 1, +p[2]);
+    var n = Math.round((target - today) / DAY);
+    el.textContent = n > 0 ? 'D-' + n : (n === 0 ? '오늘' : '지남');
+    if (n >= 0 && n <= 3) el.classList.add('soon');
+  });
+
+  // Images that fail to load leave their caption and credit in place.
+  document.querySelectorAll('.plate img').forEach(function (img) {
+    function fail() { img.closest('.plate').classList.add('noimg'); }
+    if (img.complete && img.naturalWidth === 0) fail();
+    else img.addEventListener('error', fail);
+  });
+
+  // Rails: open on wide screens, folded under the sheet on narrow ones.
+  var wide = window.matchMedia('(min-width: 1440px)');
+  function fold() {
+    document.querySelectorAll('.rail details').forEach(function (d) {
+      if (!d.hasAttribute('data-default')) d.setAttribute('data-default', d.open ? 'open' : 'closed');
+      d.open = wide.matches ? d.getAttribute('data-default') === 'open' : false;
+    });
+  }
+  fold();
+  if (wide.addEventListener) wide.addEventListener('change', fold);
+
+  // Narrow screens: the next calendar item as one line under the masthead.
+  document.querySelectorAll('main.sheet').forEach(function (m) {
+    var next = null;
+    m.querySelectorAll('.cal li').forEach(function (li) {
+      var dd = li.querySelector('.dd');
+      if (!next && dd && dd.textContent !== '지남') next = li;
+    });
+    if (!next) return;
+    var a = document.createElement('a');
+    a.className = 'cal-next';
+    a.href = '#';
+    a.innerHTML = '<span class="k">NEXT</span><span class="dd"></span><span class="t"></span>';
+    a.querySelector('.dd').textContent = next.querySelector('.d').textContent + ' · ' + next.querySelector('.dd').textContent;
+    a.querySelector('.t').textContent = (next.querySelector('.t').firstChild || {}).textContent || '';
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var d = next.closest('details'); if (d) d.open = true;
+      next.scrollIntoView({ block: 'center' });
+    });
+    var mast = m.querySelector('.mast');
+    mast.parentNode.insertBefore(a, mast.nextSibling);
+  });
+
+  // Save as PDF: the browser's print dialog, every sheet on its own A4 page.
+  var pbtn = document.querySelector('.print-btn');
+  if (pbtn) pbtn.addEventListener('click', function () {
+    var t = document.title;
+    var tb = document.querySelector('main.sheet .tblock');
+    var issue = tb ? (tb.textContent.match(/No\.\s*\d+/) || [''])[0] : '';
+    var date = tb ? (tb.textContent.match(/\d{4}\.\d{2}\.\d{2}/) || [''])[0] : '';
+    document.title = ('Morning Crit ' + issue + ' ' + date).trim();
+    document.querySelectorAll('img[loading="lazy"]').forEach(function (img) { img.loading = 'eager'; });
+    setTimeout(function () { window.print(); document.title = t; }, 300);
+  });
+
+  var pages = {}, first = null;
+  document.querySelectorAll('main.sheet[id^="page-"]').forEach(function (m) {
+    var name = m.id.slice(5);
+    pages[name] = m;
+    if (!first) first = name;
+  });
+  var tabs = document.querySelectorAll('.tabs a[data-page]');
+  function show(name, scroll) {
+    if (!pages[name]) name = first;
+    Object.keys(pages).forEach(function (k) { pages[k].hidden = (k !== name); });
+    tabs.forEach(function (t) {
+      if (t.getAttribute('data-page') === name) t.setAttribute('aria-current', 'page');
+      else t.removeAttribute('aria-current');
+    });
+    if (scroll) window.scrollTo(0, 0);
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function (e) {
+      e.preventDefault();
+      var name = t.getAttribute('data-page');
+      try { history.replaceState(null, '', '#' + name); } catch (err) {}
+      show(name, true);
+    });
+  });
+  window.addEventListener('hashchange', function () { show(location.hash.slice(1), true); });
+  show(location.hash.slice(1), false);
+})();
+</script>
+
+
+</body></html>
+</body>
+</html>

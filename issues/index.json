@@ -1,5 +1,76 @@
 [
   {
+    "date": "2026-10-26",
+    "issue": 17,
+    "edition": "weekday",
+    "headline": "Tents in the square, dogs in the dark: Portugal clears its housing protest camps for a third night, and the question becomes what a public square is for",
+    "crit": "If a tent is the smallest argument a person can make about housing, what argument does a square make back by forbidding it after dark? Which part of your own Diploma project depends on a rule about who may stay, and for how long?",
+    "thesis": [
+      "같은 값으로 잴 수 없는 두 집: 자산 하위 20%와 상위 20%가 사는 집의 값 차이가 통계 작성 이래 가장 크게 벌어졌다",
+      "차는 지하로, 지상은 공원으로: 서울시가 국회대로 지하화 본공사를 위해 31일 홍익병원사거리의 교통체계를 바꾼다",
+      "부두는 섰는데 운영동이 없다: 새만금항 신항의 개항이 내년 8월로 밀렸다",
+      "하루 만에 비워진 구역: 헤브론에서 이스라엘군이 검문소 공격 뒤 한 동네를 허물고 주민을 내보냈다",
+      "12년 먼저 완성된 다리: 김정은이 새로 개통한 신압록강대교를 건너 단둥으로 갔다"
+    ],
+    "seeds": [
+      {
+        "seed": "열리기 위한 마지막 건물 — 부두와 다리가 선 뒤 개항·개통을 가로막는 운영동·통관 건물을 최소 단위로 정의한 평면과 시간축",
+        "issue": "새만금항·신압록강대교"
+      },
+      {
+        "seed": "3미터의 단차 — 지하화한 도로 위 공원이 단지와 길을 만나는 가장자리 단면 연작",
+        "issue": "국회대로 지하화"
+      },
+      {
+        "seed": "같은 값의 두 방 — 자산 하위·상위 20%의 거주 주택을 같은 축척으로 그린 단면 한 쌍",
+        "issue": "거주 주택 가격 격차"
+      },
+      {
+        "seed": "있었던 동네의 도면 — 허물린 구역의 집·길·담을 철거 전후로 겹쳐 복원한 도면",
+        "issue": "헤브론 철거"
+      }
+    ],
+    "symposium_day": 8,
+    "unit": "Dip12",
+    "unit_concept": "profanation",
+    "screen_work": "Inwang jesaekdo / Clearing After Rain on Mount Inwang (1751)",
+    "screen_medium": "Painting",
+    "chips": {
+      "thesis": "주거 · 서울 양천 · 전북 새만금 · 팔레스타인 헤브론",
+      "symposium": "DAY 08 · 대화로 철학하기",
+      "unit": "AA Dip12 · profanation",
+      "screen": "Painting · Inwang jesaekdo / Clearing After Rain on Mount Inwang (1751)"
+    },
+    "vocab": [
+      "encampment",
+      "dismantle",
+      "demountable",
+      "footfall",
+      "devolve",
+      "deprioritise",
+      "disparity",
+      "jurisdiction",
+      "grade separation",
+      "elenchus",
+      "aporia",
+      "interlocutor",
+      "consistency",
+      "profanation",
+      "consecrate",
+      "transgression",
+      "heterogeneous",
+      "taboo",
+      "remainder",
+      "stippled",
+      "tonal structure",
+      "stand in for",
+      "readable",
+      "mounting"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-10-26.html",
+    "slug": "2026-10-26"
+  },
+  {
     "date": "2026-10-24",
     "issue": 16,
     "edition": "weekday",
