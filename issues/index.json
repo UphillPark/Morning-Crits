@@ -1,5 +1,75 @@
 [
   {
+    "date": "2026-10-28",
+    "issue": 18,
+    "edition": "weekday",
+    "headline": "Built from waste, paid for by the flats around it: Hackney Wick’s new Yard theatre is held up against the Olympic legacy’s official culture quarter",
+    "crit": "If a levy on the flats around it can pay for a theatre that looks nothing like them, is that planning gain or a quiet subsidy from development to its own alibi? And when a building deliberately fakes permanence, what should a crit mark it down for: the fake, or the honesty about it?",
+    "thesis": [
+      "다 타 버린 판잣집, 아직 짓지 못한 아파트: 구룡마을에서 열 달 만에 다시 큰불이 났고, 이재민은 재개발 이주 절차 안으로 돌아간다",
+      "돌봄 곳간이 빠르게 줄고 있다: 노인장기요양보험의 연간 흑자가 2년 새 크게 쪼그라든 채 2027년 보험료율 결정을 앞뒀다",
+      "강둑으로 몰리는 사람들: 소말리아 남부에서 공습과 엘니뇨 홍수가 겹친다는 주민 증언을 The Guardian이 전했고, 미 아프리카사령부는 이를 부인한다",
+      "국기에 그려진 산의 마지막 얼음이 사라졌다: 슬로베니아 트리글라우 빙하가 뜨거운 유럽의 여름 끝에 자취를 감췄다"
+    ],
+    "seeds": [
+      {
+        "seed": "아직 이주하지 않은 이의 지붕 — 철거와 착공 사이 남은 세대를 위한 방화 단위와 즉시 거처의 순서도",
+        "issue": "구룡마을 화재"
+      },
+      {
+        "seed": "4.7개월의 방 — 돌봄 준비금을 침대·복도·휴게실의 면적으로 바꾼 시설 단면",
+        "issue": "장기요양 재정"
+      },
+      {
+        "seed": "강둑의 높은 바닥 — 침수 도착 시간을 기준으로 앉히는 피난 거점과 최소 급수·치료 시설",
+        "issue": "소말리아 주바 범람원"
+      },
+      {
+        "seed": "마지막 얼음의 장부 — 같은 자리 사진 쌍과 측정선으로 빙하 없는 산의 자료를 잇는 관측소",
+        "issue": "트리글라우 빙하"
+      }
+    ],
+    "symposium_day": 9,
+    "unit": "ADS0",
+    "unit_concept": "decisive moment",
+    "screen_work": "Bethlehem graveyard and steel mill (1935)",
+    "screen_medium": "Photography",
+    "chips": {
+      "thesis": "서울 강남 구룡마을 · 돌봄 · 소말리아 하부 주바 · 슬로베니아 트리글라우",
+      "symposium": "DAY 09 · 이데아와 비어 있음",
+      "unit": "RCA ADS0 · decisive moment",
+      "screen": "Photography · Bethlehem graveyard and steel mill (1935)"
+    },
+    "vocab": [
+      "bricolage",
+      "planning gain",
+      "permanence",
+      "legacy",
+      "evacuate",
+      "transfer slab",
+      "relocation",
+      "sustainability",
+      "floodplain",
+      "remnant",
+      "allegory",
+      "participation",
+      "ascent",
+      "hollow",
+      "scenography",
+      "peripeteia",
+      "spectatorship",
+      "unfolding",
+      "reversal",
+      "in retrospect",
+      "vantage point",
+      "smokestack",
+      "unsentimental",
+      "grain"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-10-28.html",
+    "slug": "2026-10-28"
+  },
+  {
     "date": "2026-10-26",
     "issue": 17,
     "edition": "weekday",
