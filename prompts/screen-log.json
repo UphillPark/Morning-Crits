@@ -481,5 +481,245 @@
       "For B change the programme and drop the source's signature props",
       "For drawings say elevation or axonometric unless a cut is wanted; keep prompts under 55 words"
     ]
+  },
+  {
+    "date": "2026-10-28",
+    "issue": 18,
+    "work": "Bethlehem graveyard and steel mill (1935)",
+    "medium": "Photography",
+    "combo": 2,
+    "combo_swap": null,
+    "model": "gemini-3.1-flash-lite-image",
+    "reference": true,
+    "ban": [
+      "walker evans",
+      "evans",
+      "bethlehem",
+      "bethlehem steel",
+      "graveyard",
+      "graveyard and steel mill",
+      "steel mill",
+      "farm security administration",
+      "fsa",
+      "pennsylvania",
+      "st. michael",
+      "st michael"
+    ],
+    "keywords": [
+      "hazy winter sky",
+      "soot-grey masonry",
+      "flat frontal light"
+    ],
+    "applied": [
+      "named the tonal structure (flat overcast light, near-monochrome) instead of format words",
+      "no format words like scroll or sheet in A; B1 programme changed to a school hall, B2 to a bathhouse, props from the source dropped",
+      "drawing asked for an isometric, not a section; every prompt under 70 words"
+    ],
+    "notes": [
+      "3 generation calls, all ok, no retries. Original from the Library of Congress (LC-DIG-ppmsca-36750); Caligari was the first choice but its Commons stills were deleted, so the work changed.",
+      "Judges were five profiles scored by the editor in one pass, not independent sessions.",
+      "B1 shows lettering on the bus despite 'no text'."
+    ],
+    "images": [
+      {
+        "slot": "a",
+        "kind": "Reproduction",
+        "status": "ok",
+        "words": 66,
+        "prompt": "Black-and-white documentary photograph from a low rise: rows of small white crosses in dry grass fill the foreground, a street of narrow wooden terraced houses climbs the slope behind, and a dark industrial plant with tall smokestacks and drifting smoke sits on the far skyline. Flat overcast light, fine grain, no people. hazy winter sky, soot-grey masonry, flat frontal light. no text, no signature, no seal",
+        "avoided": [
+          [
+            "graveyard",
+            "rows of small white crosses in dry grass"
+          ],
+          [
+            "steel mill",
+            "dark industrial plant"
+          ]
+        ],
+        "metrics": {
+          "palette_de": 5.1,
+          "layout_r": 0.096
+        },
+        "scores": {
+          "style": {
+            "judges": [
+              78,
+              80,
+              76,
+              72,
+              80
+            ],
+            "final": 78,
+            "held": false
+          },
+          "composition": {
+            "judges": [
+              38,
+              42,
+              35,
+              45,
+              40
+            ],
+            "final": 40,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              66,
+              68,
+              62,
+              70,
+              65
+            ],
+            "final": 66,
+            "held": false
+          }
+        },
+        "avg": 61.3,
+        "drive_url": "https://drive.google.com/file/d/1n2b27_RVEn0wJaOXDS9NHJD91A8bgQQ6/view?usp=drivesdk",
+        "usage": {
+          "totalTokenCount": 1588
+        }
+      },
+      {
+        "slot": "b1",
+        "kind": "Photograph",
+        "status": "ok",
+        "words": 51,
+        "prompt": "Documentary photograph, long lens, flat frontal view: a plain timber-clad school gymnasium beside a wet car park, one parked bus, a water tower and bare poplars dissolving in the haze behind. Near-monochrome, fine grain, quiet and empty. hazy winter sky, soot-grey masonry, flat frontal light. no text, no signature, no seal",
+        "avoided": [],
+        "metrics": {
+          "palette_de": 5.2,
+          "layout_r": 0.091
+        },
+        "scores": {
+          "mood": {
+            "judges": [
+              74,
+              76,
+              72,
+              70,
+              76
+            ],
+            "final": 74,
+            "held": false
+          },
+          "independence": {
+            "judges": [
+              86,
+              88,
+              84,
+              90,
+              85
+            ],
+            "final": 86,
+            "held": false
+          },
+          "architecture": {
+            "judges": [
+              72,
+              70,
+              76,
+              68,
+              74
+            ],
+            "final": 72,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              76,
+              78,
+              72,
+              74,
+              78
+            ],
+            "final": 76,
+            "held": false
+          }
+        },
+        "avg": 77.0,
+        "drive_url": "https://drive.google.com/file/d/1cDjcREwwW2qI5Y2BuFKS0zgEcJ4JmC0i/view?usp=drivesdk",
+        "usage": {}
+      },
+      {
+        "slot": "b2",
+        "kind": "Object / Diagram",
+        "status": "ok",
+        "words": 52,
+        "prompt": "Isometric object diagram filling the whole sheet, graphite and grey wash on pale paper: an exploded model of a small brick bathhouse, roof, boiler room, bench hall and plinth floating apart in a vertical stack, thin dimension lines. hazy winter sky, soot-grey masonry, flat frontal light. no text, no signature, no seal",
+        "avoided": [],
+        "metrics": {
+          "palette_de": 18.3,
+          "layout_r": -0.044
+        },
+        "scores": {
+          "mood": {
+            "judges": [
+              62,
+              58,
+              65,
+              60,
+              55
+            ],
+            "final": 60,
+            "held": false
+          },
+          "independence": {
+            "judges": [
+              88,
+              90,
+              92,
+              85,
+              90
+            ],
+            "final": 90,
+            "held": false
+          },
+          "architecture": {
+            "judges": [
+              82,
+              80,
+              78,
+              84,
+              76
+            ],
+            "final": 80,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              72,
+              70,
+              74,
+              68,
+              75
+            ],
+            "final": 72,
+            "held": false
+          }
+        },
+        "avg": 75.5,
+        "drive_url": "https://drive.google.com/file/d/1ZXQRX64XS8FNuHhocNesl6xLWXHqCX8o/view?usp=drivesdk",
+        "usage": {}
+      }
+    ],
+    "worked": [
+      "dark industrial plant + flat overcast light brought A to palette dE 5.1 (8.4 last issue)",
+      "long lens, flat frontal view, near-monochrome gave B1 Independence 86",
+      "exploded, floating apart in a vertical stack, thin dimension lines gave B2 a legible object diagram (Architecture 80)"
+    ],
+    "mismatch": [
+      "A: 'rows of small white crosses' gave hundreds of identical crosses; original has one large stone cross and a few gravestones (Composition 40, layout r 0.10)",
+      "B1: parked bus got lettering despite no text; mood read as a later decade (74)",
+      "B2: model added a blue-grey sky band and cream paper, palette dE 18.3, Mood 60"
+    ],
+    "next": [
+      "For reproduction give one hero object and a count: one large stone cross at left filling a third of the frame, a few low gravestones, brick porches behind",
+      "Avoid vehicles and signage in photographs, or say unmarked",
+      "For drawings say no sky, plain grey paper, ink only; add a period cue such as 1930s documentary grain",
+      "Keep every prompt under 55 words"
+    ]
   }
 ]
