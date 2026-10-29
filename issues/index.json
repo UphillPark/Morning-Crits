@@ -1,5 +1,77 @@
 [
   {
+    "date": "2026-10-30",
+    "issue": 19,
+    "edition": "weekday",
+    "headline": "“Substandard” by deregulation, not by conversion: a UCL Bartlett report asks the government to end office-to-home permitted development",
+    "crit": "If a change of use needs no planning permission, who answers for the window that was never added? And if the fault lies in the process rather than the conversion, what should an architect’s drawing guarantee that the process no longer does?",
+    "thesis": [
+      "무너진 도서관의 뒷면: 노동자 4명이 숨진 광주대표도서관 붕괴 수사가 뇌물 혐의까지 번져 공무원·감리자·시공사 관계자 송치로 끝났다",
+      "그린벨트 위의 새 동네 여섯 곳: 정부가 서울 인접 경기권 신규택지 후보지를 발표했고, 서울 안에는 한 곳도 없다",
+      "도면은 늘었는데 집은 줄었다: 서울의 주택 인허가가 크게 늘었지만 수도권 착공과 전국 준공은 줄었다",
+      "“수십 년의 실패”라는 보고서 앞에서 홍콩 행정장관이 고개를 숙였다: 대나무 비계에 싸인 보수 중인 단지는 누가 감시하는가",
+      "카약으로 출근하는 거리: 캘리포니아 해안에 기록적인 만조가 밀려들었고, 과학자들은 더 큰 물이 올 수 있다고 경고한다"
+    ],
+    "seeds": [
+      {
+        "seed": "서명이 쌓이는 단면 — 용접 이음부터 감리 확인까지 시공 단계별 점검 지점과 확인한 사람의 자리를 올린 공사 기록 도면",
+        "issue": "광주대표도서관 붕괴"
+      },
+      {
+        "seed": "남길 땅부터 그리는 택지 — 환경평가 1·2등급 필지를 비운 채 가구 수를 앉힌 배치 연작",
+        "issue": "수도권 신규 택지"
+      },
+      {
+        "seed": "허가와 입주 사이의 마당 — 착공을 기다리는 필지의 임시 용도와 접히는 순서를 그린 시간 단면",
+        "issue": "서울 인허가·준공 격차"
+      },
+      {
+        "seed": "두 개의 바닥 — 만조 달력에 맞춰 길이 위층과 수로로 나뉘는 해안 거리 단면과 연간 시간표",
+        "issue": "캘리포니아 기록적 만조"
+      }
+    ],
+    "symposium_day": 10,
+    "unit": "cross",
+    "unit_concept": "commons",
+    "screen_work": "Carceri d’invenzione / Imaginary Prisons (ca. 1749–50)",
+    "screen_medium": "Print",
+    "chips": {
+      "thesis": "광주 서구 치평동 · 경기 김포 · 서울 · 홍콩 타이포",
+      "symposium": "DAY 10 · 정의로운 도시",
+      "unit": "cross cross · commons",
+      "screen": "Print · Carceri d’invenzione / Imaginary Prisons (ca. 1749–50)"
+    },
+    "vocab": [
+      "permitted development",
+      "deregulation",
+      "cross-ventilation",
+      "social value",
+      "stalled",
+      "diagnose",
+      "weld",
+      "signature",
+      "skin",
+      "wait on",
+      "tripartite soul",
+      "noble lie",
+      "philosopher-king",
+      "extension",
+      "enclosure",
+      "polycentric",
+      "hydrosocial",
+      "sanction",
+      "subsistence",
+      "hardened",
+      "hatching",
+      "staffage",
+      "axonometric",
+      "oppressive",
+      "disorienting"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-10-30.html",
+    "slug": "2026-10-30"
+  },
+  {
     "date": "2026-10-28",
     "issue": 18,
     "edition": "weekday",
