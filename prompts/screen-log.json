@@ -721,5 +721,243 @@
       "For drawings say no sky, plain grey paper, ink only; add a period cue such as 1930s documentary grain",
       "Keep every prompt under 55 words"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "issue": 19,
+    "work": "Carceri d’invenzione / Imaginary Prisons (ca. 1749–50)",
+    "medium": "Print",
+    "combo": 3,
+    "combo_swap": null,
+    "model": "gemini-3.1-flash-lite-image",
+    "reference": true,
+    "ban": [
+      "piranesi",
+      "giovanni battista piranesi",
+      "giambattista piranesi",
+      "carceri",
+      "carceri d'invenzione",
+      "invenzione",
+      "imaginary prisons",
+      "prison",
+      "prisons",
+      "prisoner",
+      "prisoners",
+      "drawbridge",
+      "the drawbridge"
+    ],
+    "keywords": [
+      "cavernous stone vaults",
+      "tiny human figures",
+      "dense etched hatching"
+    ],
+    "applied": [
+      "avoided format words (no scroll, sheet); said edge to edge, no mount",
+      "B programmes changed away from the source subject (grain terminal, water-cistern hall); no bridges or ropes in B",
+      "drawing asked for an axonometric, no sky, plain paper, ink only; every prompt under 60 words",
+      "for A named one object set with a count (gangway, turret, one arched bridge)"
+    ],
+    "notes": [
+      "3 generation calls, all ok, no retries. Original from the Met Open Access (object 337060, first state).",
+      "Judges were five profiles scored by the editor in one pass, not independent sessions.",
+      "Drive upload ok, urls returned.",
+      "python3 needed pip install --user pillow (system PIL shadowed)."
+    ],
+    "images": [
+      {
+        "slot": "a",
+        "kind": "Reproduction",
+        "status": "ok",
+        "words": 56,
+        "prompt": "Dense black-brown hatched etching on warm cream paper, edge to edge, no mount. Cavernous stone vaults, tiny human figures, dense etched hatching. One hinged timber gangway projecting at upper right beside a round turret, one low arched stone bridge at lower right, long diagonal ropes, a spiral stair at left. No text, no signature, no seal.",
+        "avoided": [
+          [
+            "drawbridge",
+            "hinged timber gangway"
+          ]
+        ],
+        "metrics": {
+          "palette_de": 9.4,
+          "layout_r": 0.336
+        },
+        "scores": {
+          "style": {
+            "judges": [
+              72,
+              68,
+              70,
+              74,
+              66
+            ],
+            "final": 70,
+            "held": false
+          },
+          "composition": {
+            "judges": [
+              62,
+              58,
+              60,
+              64,
+              55
+            ],
+            "final": 60,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              68,
+              64,
+              66,
+              70,
+              62
+            ],
+            "final": 66,
+            "held": false
+          }
+        },
+        "avg": 65.3,
+        "drive_url": "https://drive.google.com/file/d/1qrWQR9NxMgAmBOOBdfxqkLgkQjVJgKeY/view?usp=drivesdk",
+        "usage": {}
+      },
+      {
+        "slot": "b1",
+        "kind": "Concept art",
+        "status": "ok",
+        "words": 46,
+        "prompt": "Concept art, wide matte painting: a vast abandoned grain terminal, cavernous stone vaults, tiny human figures on a steel loading gantry, dense etched hatching texture, warm sepia near-monochrome, shafts of raking dusty light from high clerestories, overwhelming scale, no sky. No text, no signature, no seal.",
+        "avoided": [],
+        "metrics": {
+          "palette_de": 8.4,
+          "layout_r": -0.016
+        },
+        "scores": {
+          "mood": {
+            "judges": [
+              74,
+              70,
+              72,
+              76,
+              66
+            ],
+            "final": 72,
+            "held": false
+          },
+          "independence": {
+            "judges": [
+              84,
+              82,
+              86,
+              80,
+              78
+            ],
+            "final": 82,
+            "held": false
+          },
+          "architecture": {
+            "judges": [
+              72,
+              70,
+              74,
+              68,
+              76
+            ],
+            "final": 72,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              72,
+              70,
+              68,
+              74,
+              66
+            ],
+            "final": 70,
+            "held": false
+          }
+        },
+        "avg": 74.0,
+        "drive_url": "https://drive.google.com/file/d/143qBEd7vJtLP1S7iaiSDvnpl8PsfWbrx/view?usp=drivesdk",
+        "usage": {}
+      },
+      {
+        "slot": "b2",
+        "kind": "Architectural drawing",
+        "status": "ok",
+        "words": 44,
+        "prompt": "Architectural axonometric drawing in black ink on plain warm cream paper: a municipal water-cistern hall, cavernous stone vaults, tiny human figures on the stairs, dense etched hatching, hairline dimension lines, 1740s engraved plate sensibility, no sky, no colour. No text, no signature, no seal.",
+        "avoided": [],
+        "metrics": {
+          "palette_de": 4.8,
+          "layout_r": 0.102
+        },
+        "scores": {
+          "mood": {
+            "judges": [
+              66,
+              62,
+              64,
+              68,
+              60
+            ],
+            "final": 64,
+            "held": false
+          },
+          "independence": {
+            "judges": [
+              82,
+              80,
+              84,
+              78,
+              86
+            ],
+            "final": 82,
+            "held": false
+          },
+          "architecture": {
+            "judges": [
+              80,
+              78,
+              82,
+              76,
+              74
+            ],
+            "final": 78,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              70,
+              66,
+              68,
+              72,
+              64
+            ],
+            "final": 68,
+            "held": false
+          }
+        },
+        "avg": 73.0,
+        "drive_url": "https://drive.google.com/file/d/1XvSW6QKGeRHg0hdwkbIr8rqPo7SVdS7g/view?usp=drivesdk",
+        "usage": {}
+      }
+    ],
+    "worked": [
+      "hinged gangway + turret + low arched bridge gave A its anchors (layout r 0.34, up from 0.10)",
+      "plain warm cream paper, no sky, no colour: B2 palette dE 4.8",
+      "near-monochrome kept B1 independent (82)"
+    ],
+    "mismatch": [
+      "A: keyword 'cavernous stone vaults' filled the frame; original has a pale unworked centre (Composition 60, Style 70)",
+      "A: 'round turret' became a castle tower",
+      "B1: 'raking dusty light' gave stock god-rays, clean digital finish (Mood 72)",
+      "B2: drew labels, scale bar and north arrows despite 'no text'"
+    ],
+    "next": [
+      "For A add the tonal map: bare paper at centre, dark only toward edges; say sentry box not turret",
+      "Drop 'hairline dimension lines'; write no labels, no north arrow, no scale bar",
+      "For concept art ask for pen-and-ink wash with visible hatching; skip shafts and dusty",
+      "Say 18th-century, not a precise decade; keep prompts under 55 words"
+    ]
   }
 ]
