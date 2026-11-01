@@ -1,5 +1,75 @@
 [
   {
+    "date": "2026-11-02",
+    "issue": 20,
+    "edition": "weekday",
+    "headline": "“We can’t just be knocking up homes”: housing campaigner Kwajo Tweneboa tells a room of top practices to put quality before targets",
+    "crit": "If a target counts homes and a resident counts damp, which of the two does your drawing set actually measure? And what would an architect have to draw, or refuse to draw, for “lived experience” to sit at the front of a project rather than in its acknowledgements?",
+    "thesis": [
+      "숲과 집 사이의 선: 가을 산불 조심 기간이 시작됐고, 정부는 본부를 세우고 군 헬기를 대기시켰다",
+      "“외국인 유학생 30만 명 시대”의 잠자리: 교육부가 출신국은 넓어지고 중도탈락은 줄었다고 정리했다",
+      "검은 X가 그려진 집들: 헤브론 봉쇄 뒤 이주 규모를 두고 이스라엘 국방장관·시 당국·유엔의 숫자가 엇갈린다"
+    ],
+    "seeds": [
+      {
+        "seed": "불이 건너지 못하는 띠 — 집·완충띠·숲을 잇는 단면 연작과 건조기 위험 달력을 겹친 마을 배치도",
+        "issue": "가을 산불 조심 기간"
+      },
+      {
+        "seed": "학기 사이에 비는 방 — 유학생의 입주와 공실을 학기 달력에 맞춰 한 블록 단면 위에 올린 시간표",
+        "issue": "외국인 유학생 30만 명 시대"
+      },
+      {
+        "seed": "집 대장 — 표시가 그어진 집 한 채를 평면, 거주 인원, 날짜로 기록한 인벤토리 도면",
+        "issue": "헤브론 봉쇄"
+      },
+      {
+        "seed": "처음 온 사람의 대피로 — 언어와 동선을 겹친 대학 도시의 안내 지도",
+        "issue": "유학생 × 산불"
+      }
+    ],
+    "symposium_day": 11,
+    "unit": "Dip8",
+    "unit_concept": "care",
+    "screen_work": "Das Cabinet des Dr. Caligari (1920)",
+    "screen_medium": "Film",
+    "chips": {
+      "thesis": "전국 산림 인접 지역 · 전국 대학가 · 팔레스타인 헤브론",
+      "symposium": "DAY 11 · 우주를 설계한 장인",
+      "unit": "AA Dip8 · care",
+      "screen": "Film · Das Cabinet des Dr. Caligari (1920)"
+    },
+    "vocab": [
+      "lived experience",
+      "prioritise",
+      "placemaking",
+      "embodied carbon",
+      "porous",
+      "embedded",
+      "firebreak",
+      "settle",
+      "displace",
+      "inventory",
+      "receptacle",
+      "likely account",
+      "succession",
+      "cyclical",
+      "obsolete",
+      "intersectional",
+      "maintenance",
+      "continuity",
+      "mediating",
+      "care crisis",
+      "flat",
+      "painted shadows",
+      "insist",
+      "convincing",
+      "wedge"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-11-02.html",
+    "slug": "2026-11-02"
+  },
+  {
     "date": "2026-10-30",
     "issue": 19,
     "edition": "weekday",
