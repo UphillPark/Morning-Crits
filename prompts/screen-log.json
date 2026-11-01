@@ -959,5 +959,220 @@
       "For concept art ask for pen-and-ink wash with visible hatching; skip shafts and dusty",
       "Say 18th-century, not a precise decade; keep prompts under 55 words"
     ]
+  },
+  {
+    "date": "2026-11-02",
+    "issue": 20,
+    "work": "Das Cabinet des Dr. Caligari (1920)",
+    "medium": "Film",
+    "combo": 4,
+    "combo_swap": null,
+    "model": "gemini-3.1-flash-lite-image",
+    "reference": false,
+    "reference_note": "No reference image: upload.wikimedia.org answered 429 to downloads. Style, Composition and Mood not scored (Mood shown as reference only). Judge passes were made by the editing model, one lens per judge, not by independent raters.",
+    "ban": [
+      "caligari",
+      "cabinet",
+      "dr. caligari",
+      "doctor caligari",
+      "das cabinet",
+      "wiene",
+      "robert wiene",
+      "cesare",
+      "conrad veidt",
+      "veidt",
+      "werner krauss",
+      "krauss",
+      "lil dagover",
+      "dagover",
+      "francis",
+      "jane",
+      "holstenwall",
+      "somnambulist",
+      "decla",
+      "carl mayer",
+      "janowitz",
+      "reimann",
+      "röhrig",
+      "rohrig",
+      "hermann warm",
+      "expressionist",
+      "expressionism"
+    ],
+    "keywords": [
+      "painted shadows",
+      "tilted walls",
+      "sharp angles"
+    ],
+    "applied": [
+      "concept art asked for ink and wash with visible hatching",
+      "B2 wrote no labels, no north arrow, no scale bar",
+      "all prompts kept to 55 words or fewer"
+    ],
+    "images": [
+      {
+        "slot": "a",
+        "kind": "Reproduction",
+        "status": "ok",
+        "words": 55,
+        "prompt": "Black-and-white silent-film still, 1920s, grainy: a steep narrow alley of crooked houses, painted shadows, tilted walls, sharp angles, jagged streaks of white light drawn on the walls, one pale thin man in a dark coat sliding along the left wall, a few spiky bare trees on a painted backdrop. No text, no signature, no seal.",
+        "avoided": [
+          [
+            "Expressionist",
+            "crooked"
+          ]
+        ],
+        "metrics": {},
+        "scores": {
+          "prompt": {
+            "judges": [
+              72,
+              70,
+              74,
+              68,
+              76
+            ],
+            "final": 72,
+            "held": false
+          }
+        },
+        "avg": 72.0,
+        "drive_url": "https://drive.google.com/file/d/1Vl-usGxFwR81fPxFFWbsJ3phiWi5wF3j/view?usp=drivesdk",
+        "usage": {
+          "totalTokenCount": 1624
+        }
+      },
+      {
+        "slot": "b1",
+        "kind": "Concept art",
+        "status": "ok",
+        "words": 48,
+        "prompt": "Concept art, ink and grey wash with visible hatching, near-monochrome: a harbour fish market of leaning pale timber sheds, painted shadows in black streaks across plaster, tilted walls, sharp angles, doorways like cut triangles, tiny figures on the steps, 1920s film-set grain. No text, no signature, no seal.",
+        "avoided": [],
+        "metrics": {},
+        "scores": {
+          "mood": {
+            "judges": [
+              70,
+              66,
+              72,
+              68,
+              74
+            ],
+            "final": 70,
+            "held": false
+          },
+          "independence": {
+            "judges": [
+              86,
+              84,
+              82,
+              88,
+              80
+            ],
+            "final": 84,
+            "held": false
+          },
+          "architecture": {
+            "judges": [
+              68,
+              66,
+              70,
+              64,
+              72
+            ],
+            "final": 68,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              74,
+              72,
+              70,
+              68,
+              76
+            ],
+            "final": 72,
+            "held": false
+          }
+        },
+        "avg": 74.7,
+        "drive_url": "https://drive.google.com/file/d/1_WlDM9Pc4t1CxRmzyKjBTarbJ8E8pisb/view?usp=drivesdk",
+        "usage": {}
+      },
+      {
+        "slot": "b2",
+        "kind": "Object / Diagram",
+        "status": "ok",
+        "words": 48,
+        "prompt": "Object diagram, black ink only on plain pale grey paper, no sky: a lighthouse keeper's house model exploded upward into parts, painted shadows as hatched black shapes, tilted walls, sharp angles, 1920s film-set grain. No labels, no north arrow, no scale bar, no text, no signature, no seal.",
+        "avoided": [],
+        "metrics": {},
+        "scores": {
+          "mood": {
+            "judges": [
+              58,
+              60,
+              62,
+              56,
+              64
+            ],
+            "final": 60,
+            "held": false
+          },
+          "independence": {
+            "judges": [
+              82,
+              80,
+              84,
+              78,
+              86
+            ],
+            "final": 82,
+            "held": false
+          },
+          "architecture": {
+            "judges": [
+              80,
+              78,
+              82,
+              76,
+              74
+            ],
+            "final": 78,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              76,
+              74,
+              72,
+              70,
+              78
+            ],
+            "final": 74,
+            "held": false
+          }
+        },
+        "avg": 78.0,
+        "drive_url": "https://drive.google.com/file/d/1KMoKVxKF0h-qEsUbcbQ0G1QAuzK3fr88/view?usp=drivesdk",
+        "usage": {}
+      }
+    ],
+    "worked": [
+      "B2: plain pale grey paper, black ink only, no sky gave a clean exploded drawing; no labels, no north arrow, no scale bar kept it free of annotations",
+      "A: painted shadows, tilted walls, sharp angles plus jagged streaks of white light gave a convincing painted-set alley"
+    ],
+    "mismatch": [
+      "No reference image, so A style and composition were not measured",
+      "B1: tilted walls became picturesque collapsing sheds and a stock cloudy sky appeared because no sky was not requested",
+      "B2: house stayed orthogonal; tilted walls and sharp angles ignored, film-set grain only changed the paper"
+    ],
+    "next": [
+      "Replace tilted walls with walls leaning in opposite directions and add triangular windows",
+      "For concept art also write no sky, plain paper",
+      "For A add flat painted backdrop, little real depth",
+      "Keep every prompt at 55 words or fewer"
+    ]
   }
 ]
