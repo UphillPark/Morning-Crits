@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-11-04",
+    "issue": 21,
+    "edition": "weekday",
+    "headline": "1,539 homes approved in Slough with no affordable housing — and both the developer and the council’s own assessor say the scheme is still unviable",
+    "crit": "When a viability appraisal can switch affordable housing to zero while the elevations stay the same, what exactly is the architect’s drawing evidence of? And what would you draw so that the cost of a missing tenure becomes as visible as the height of a block?",
+    "thesis": [
+      "물이 차오른 도시, 하늘에서 쏟아진 물: 마이애미는 기록적인 연속 침수를 끝냈고 플로리다 중부 해안에는 응급 홍수 경보가 내려졌다"
+    ],
+    "seeds": [
+      {
+        "seed": "물이 드는 날짜의 1층 — 조위 달력을 겹친 1층 단면 연작, 침수일 수에 따라 용도가 바뀌는 시간표",
+        "issue": "마이애미 만조 침수"
+      },
+      {
+        "seed": "계산표를 도면으로 — 사업성 계산이 정한 주택 종류를 기간별 막대와 위험 부담자로 그린 한 장",
+        "issue": "마이애미 × 슬라우"
+      }
+    ],
+    "symposium_day": null,
+    "unit": null,
+    "unit_concept": null,
+    "screen_work": null,
+    "screen_medium": null,
+    "chips": {
+      "thesis": "미국 플로리다"
+    },
+    "vocab": [
+      "viability assessment",
+      "temper",
+      "Section 106",
+      "statutory",
+      "covenant",
+      "king tide",
+      "threshold",
+      "turn A into B"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-11-04.html",
+    "slug": "2026-11-04"
+  },
+  {
     "date": "2026-11-02",
     "issue": 20,
     "edition": "weekday",
