@@ -1,5 +1,68 @@
 [
   {
+    "date": "2026-11-06",
+    "issue": 22,
+    "edition": "weekday",
+    "headline": "Who pays for a cladding-era refurbishment? A tribunal orders Urban Splash and linked companies to repay the state for fire-safety work on seven Manchester blocks — and discounts the bill for the government’s own regulatory failings",
+    "crit": "If a tribunal can trace the cost of a refurbishment back through every company, director and drawing that touched it, what does an architect’s signature on a drawing set now certify? And how would you draw a refurbishment so that its remediation liability stays legible thirty years later?",
+    "thesis": [
+      "[배경] 집은 2,018만 호인데 가구는 줄어든다: 등록센서스가 보여 주는 빈집과 1인가구의 지도"
+    ],
+    "seeds": [
+      {
+        "seed": "재고 지도 한 장 — 한 단지의 빈 호, 거주 호, 1인가구를 색으로 구분해 ‘새로 짓지 않는’ 선택지를 그리기",
+        "issue": "인구주택총조사 [배경]"
+      },
+      {
+        "seed": "빈 층의 용도 전환 단면 — 한 동에서 비어 있는 층을 공용 프로그램으로 바꾸는 단면 연작",
+        "issue": "인구주택총조사 [배경]"
+      },
+      {
+        "seed": "호수와 탄소를 같은 도면에 — 짓는 호수와 이미 있는 호수를 탄소 비용과 함께 놓은 한 장",
+        "issue": "빈집 × 런던 계획"
+      }
+    ],
+    "symposium_day": 13,
+    "unit": "PG12",
+    "unit_concept": "mise-en-abîme",
+    "screen_work": "Nanook of the North (1922)",
+    "screen_medium": "Documentary",
+    "chips": {
+      "thesis": "전국",
+      "symposium": "DAY 13 · 형상과 질료",
+      "unit": "Bartlett PG12 · mise-en-abîme",
+      "screen": "Documentary · Nanook of the North (1922)"
+    },
+    "vocab": [
+      "remediation",
+      "liable",
+      "public realm",
+      "pathway",
+      "benchmark",
+      "net zero",
+      "dwelling stock",
+      "proportion",
+      "measure A by B",
+      "efficient cause",
+      "potentiality",
+      "dexterity",
+      "tacit",
+      "mise-en-abîme",
+      "reciprocity",
+      "domesticity",
+      "currency",
+      "licence",
+      "decorative",
+      "tonal range",
+      "cutaway",
+      "locked off",
+      "constructed",
+      "scoured"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-11-06.html",
+    "slug": "2026-11-06"
+  },
+  {
     "date": "2026-11-04",
     "issue": 21,
     "edition": "weekday",
