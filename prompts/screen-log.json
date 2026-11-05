@@ -1174,5 +1174,221 @@
       "For A add flat painted backdrop, little real depth",
       "Keep every prompt at 55 words or fewer"
     ]
+  },
+  {
+    "date": "2026-11-06",
+    "issue": 22,
+    "work": "Nanook of the North (1922)",
+    "medium": "Documentary",
+    "combo": 2,
+    "combo_swap": null,
+    "model": "gemini-3.1-flash-lite-image",
+    "reference": false,
+    "ban": [
+      "nanook",
+      "nanook of the north",
+      "flaherty",
+      "robert flaherty",
+      "allakariallak",
+      "nyla",
+      "revillon",
+      "ungava",
+      "inukjuak",
+      "port harrison",
+      "hudson bay"
+    ],
+    "keywords": [
+      "wind-scoured snowfield",
+      "low pale sun",
+      "fur and bone"
+    ],
+    "applied": [
+      "one hero object and a count for A",
+      "no sky, plain grey paper, ink only for drawings",
+      "prompts under 55 words (A 60 words, B 50 and 41)",
+      "period cue 1920s"
+    ],
+    "images": [
+      {
+        "slot": "a",
+        "kind": "Reproduction",
+        "status": "ok",
+        "words": 60,
+        "prompt": "Wind-scoured snowfield, low pale sun, fur and bone. A hunter in a heavy hide parka crouches at left beside a snow-block dome that fills a third of the frame, one harpoon planted upright, three sled dogs curled in the snow, flat white horizon. 1920s silent-film still, orthochromatic black and white, soft grain, slight vignette. No text, no signature, no seal.",
+        "avoided": [
+          [
+            "Inuit hunter",
+            "hunter in a heavy hide parka"
+          ],
+          [
+            "igloo",
+            "snow-block dome"
+          ]
+        ],
+        "metrics": null,
+        "scores": {
+          "style": {
+            "note": "not scored, no reference image"
+          },
+          "composition": {
+            "note": "not scored, no reference image"
+          },
+          "prompt": {
+            "judges": [
+              78,
+              75,
+              80,
+              72,
+              76
+            ],
+            "final": 76,
+            "held": false
+          }
+        },
+        "avg": 76.0,
+        "drive_url": "https://drive.google.com/file/d/1A_ty9qbIJjaeii8tU3olJ_820_N6VEf5/view?usp=drivesdk",
+        "usage": {
+          "promptTokenCount": 0,
+          "image_tokens": 1120
+        }
+      },
+      {
+        "slot": "b1",
+        "kind": "Photograph",
+        "status": "ok",
+        "words": 50,
+        "prompt": "Wind-scoured snowfield, low pale sun, fur and bone. Photograph of a tarred-timber relief hut half-buried by drifts on a high plateau, one figure in a long coat at the door for scale, vast empty horizon. 1920s expedition plate-camera look, black and white, soft grain. No text, no signature, no seal.",
+        "avoided": [],
+        "metrics": null,
+        "scores": {
+          "mood_reference_only": {
+            "judges": [
+              74,
+              70,
+              76,
+              72,
+              78
+            ],
+            "final": 74,
+            "held": false
+          },
+          "independence": {
+            "judges": [
+              88,
+              90,
+              85,
+              86,
+              90
+            ],
+            "final": 88,
+            "held": false
+          },
+          "architecture": {
+            "judges": [
+              70,
+              72,
+              68,
+              74,
+              66
+            ],
+            "final": 70,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              80,
+              78,
+              82,
+              76,
+              80
+            ],
+            "final": 80,
+            "held": false
+          }
+        },
+        "avg": 79.3,
+        "drive_url": "https://drive.google.com/file/d/1zAWCXYo7qwytkHjlPV65CvYreHMldFlP/view?usp=drivesdk",
+        "usage": {
+          "promptTokenCount": 0,
+          "image_tokens": 1120
+        }
+      },
+      {
+        "slot": "b2",
+        "kind": "Object / Diagram",
+        "status": "ok",
+        "words": 41,
+        "prompt": "Wind-scoured snowfield, low pale sun, fur and bone. Ink-and-wash axonometric object diagram of a sectioned timber shelter half-buried in a drift, snow layers hatched, no sky, plain grey paper, ink only, 1920s expedition report plate. No text, no signature, no seal.",
+        "avoided": [],
+        "metrics": null,
+        "scores": {
+          "mood_reference_only": {
+            "judges": [
+              72,
+              70,
+              68,
+              74,
+              66
+            ],
+            "final": 70,
+            "held": false
+          },
+          "independence": {
+            "judges": [
+              82,
+              84,
+              86,
+              80,
+              88
+            ],
+            "final": 84,
+            "held": false
+          },
+          "architecture": {
+            "judges": [
+              74,
+              72,
+              76,
+              70,
+              78
+            ],
+            "final": 74,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              78,
+              80,
+              76,
+              82,
+              74
+            ],
+            "final": 78,
+            "held": false
+          }
+        },
+        "avg": 78.7,
+        "drive_url": "https://drive.google.com/file/d/11QOgFfSBgV_vLVz65H97Zrn8O53xM-ZC/view?usp=drivesdk",
+        "usage": {
+          "promptTokenCount": 0,
+          "image_tokens": 1120
+        }
+      }
+    ],
+    "worked": [
+      "hero object plus a count gave A a clear layout",
+      "orthochromatic and plate-camera look gave period grain",
+      "no sky, plain grey paper kept the diagram free of lettering"
+    ],
+    "mismatch": [
+      "no reference image: Wikimedia returned 429 for every download, so Style and Composition were not scored",
+      "B2 added white gouache despite ink only, since ink-and-wash allowed it",
+      "B1 hut reads as a shed, no architectural cue in the prompt"
+    ],
+    "next": [
+      "For drawings choose ink-and-wash or ink only, never both",
+      "For photographs add one architectural cue such as a deep eave or stepped threshold",
+      "Keep hero object and a count for A and add a tonal note such as bare paper at centre"
+    ]
   }
 ]
