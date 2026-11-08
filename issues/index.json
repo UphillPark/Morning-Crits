@@ -1,5 +1,59 @@
 [
   {
+    "date": "2026-11-09",
+    "issue": 23,
+    "edition": "weekday",
+    "headline": "A school of architecture without its name: Birmingham City University’s head of architecture leaves after 15 months, in a department folded into a larger school and stripped of two master’s courses",
+    "crit": "If a school’s name, department and master’s courses can be rearranged by a balance sheet, what exactly does an applicant buy when choosing “a school of architecture”: a building, a brand, or the particular people who teach this year?",
+    "thesis": [
+      "국민평형과 소형의 간격이 좁아진다: 대출 한도가 집의 크기를 다시 정한다",
+      "소방서의 비용은 어느 정부가 내는가: 당정이 지방 소방 재정에 중앙 지원을 검토한다",
+      "남산에 작가정원 다섯 곳: 박람회가 끝난 뒤에도 남는 정원은 누가 돌보는가",
+      "물이 끊긴 동네 옆의 서버실: 동남아에서 데이터센터가 물을 두고 주민과 맞선다",
+      "모래 절벽이 텐트 위로 무너졌다: 가자 피란민 거처의 바닥은 누가 점검하는가"
+    ],
+    "seeds": [
+      {
+        "seed": "59와 84 사이의 방 — 한 동에서 두 평면을 겹쳐 세대가 늘고 줄 수 있는 한 칸을 그리기",
+        "issue": "서울 평형 가격차"
+      },
+      {
+        "seed": "출동 반경 지도 — 한 시군의 소방서·산업단지·병원을 겹치고 비용 부담선을 칠하기",
+        "issue": "소방 재정"
+      },
+      {
+        "seed": "물 수지 단면 — 저수지에서 냉각탱크와 동네 수도꼭지까지, 가뭄 달과 평시를 나란히",
+        "issue": "동남아 데이터센터"
+      },
+      {
+        "seed": "사면 아래의 텐트 — 임시 거처의 첫 도면을 지반 단면으로 시작하기",
+        "issue": "가자 모래 절벽"
+      }
+    ],
+    "symposium_day": null,
+    "unit": null,
+    "unit_concept": null,
+    "screen_work": null,
+    "screen_medium": null,
+    "chips": {
+      "thesis": "서울 · 전국 · 인도네시아 바탐섬 · 가자 지구"
+    },
+    "vocab": [
+      "restructuring",
+      "redundancy",
+      "time-barred",
+      "concealment",
+      "exemption",
+      "pre-application advice",
+      "lending cap",
+      "narrow the gap",
+      "draw from",
+      "ledger"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-11-09.html",
+    "slug": "2026-11-09"
+  },
+  {
     "date": "2026-11-06",
     "issue": 22,
     "edition": "weekday",
