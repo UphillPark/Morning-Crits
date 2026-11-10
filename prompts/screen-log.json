@@ -1390,5 +1390,275 @@
       "For photographs add one architectural cue such as a deep eave or stepped threshold",
       "Keep hero object and a count for A and add a tonal note such as bare paper at centre"
     ]
+  },
+  {
+    "date": "2026-11-11",
+    "issue": 24,
+    "work": "Effetti del Buon Governo in città / Effects of Good Government in the City (1338–39)",
+    "medium": "Painting",
+    "combo": 4,
+    "combo_swap": null,
+    "model": "gemini-3.1-flash-lite-image",
+    "reference": true,
+    "ban": [
+      "lorenzetti",
+      "ambrogio lorenzetti",
+      "ambrogio",
+      "ambrogio laurati",
+      "allegory of good and bad government",
+      "effects of good government",
+      "good government",
+      "bad government",
+      "buon governo",
+      "buongoverno",
+      "effetti del buon governo",
+      "siena",
+      "sienese",
+      "palazzo pubblico",
+      "sala dei nove",
+      "sala della pace",
+      "the nine",
+      "noveschi",
+      "securitas",
+      "piazza del campo",
+      "좋은 정부",
+      "시에나"
+    ],
+    "keywords": [
+      "stacked oblique perspective",
+      "chalky terracotta plaster",
+      "busy civic life"
+    ],
+    "applied": [
+      "one hero element and a count kept partly for A (one rooftop scaffold)",
+      "no sky, plain paper for concept art",
+      "B prompts at 55 words or fewer",
+      "changed programme away from the source subject (market hall, washhouse)"
+    ],
+    "images": [
+      {
+        "slot": "a",
+        "kind": "Reproduction",
+        "status": "ok",
+        "words": 76,
+        "prompt": "Stacked oblique perspective, chalky terracotta plaster, busy civic life. A wide fourteenth-century Italian wall painting of a hill town: tall pink, ochre and grey houses with loggias and towers packed up the left two thirds, masons on one rooftop scaffold, a chain of dancers in long gowns in the lower centre, a city wall and gate at right opening onto green hills. Flat tilted space, faded plaster with small losses. No text, no signature, no seal.",
+        "avoided": [
+          [
+            "Lorenzetti fresco",
+            "fourteenth-century Italian wall painting"
+          ],
+          [
+            "Siena",
+            "hill town"
+          ]
+        ],
+        "metrics": {
+          "palette_de": 9.4,
+          "layout_r": 0.007
+        },
+        "scores": {
+          "style": {
+            "judges": [
+              66,
+              70,
+              64,
+              68,
+              72
+            ],
+            "final": 68,
+            "held": false
+          },
+          "composition": {
+            "judges": [
+              50,
+              54,
+              46,
+              52,
+              48
+            ],
+            "final": 50,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              66,
+              70,
+              64,
+              68,
+              62
+            ],
+            "final": 66,
+            "held": false
+          }
+        },
+        "avg": 61.3,
+        "notes": {
+          "style": "fresco skin and pinks right, but pale blue sky and rounder 15th-century modelling",
+          "composition": "landscape and gate take the right third; original is a town frieze across the width under a dark sky; layout_r near zero",
+          "prompt": "no proper names, but position listing (left two thirds, lower centre, at right) and near the length limit"
+        },
+        "drive_url": "https://drive.google.com/file/d/1pC1qSxzD43hzuO4PdY8ImJ2pHd6jKgJD/view?usp=drivesdk",
+        "usage": {
+          "promptTokenCount": 97,
+          "candidatesTokenCount": 1512,
+          "image_tokens": 1120
+        }
+      },
+      {
+        "slot": "b1",
+        "kind": "Concept art",
+        "status": "ok",
+        "words": 55,
+        "prompt": "Stacked oblique perspective, chalky terracotta plaster, busy civic life. Concept art of a multi-storey covered market hall cut open like a doll's house, tilted flat floors, dozens of small traders weighing grain and hauling sacks up timber hoists. Pale pink, ochre and slate-blue gouache, matte. No sky, plain paper. No text, no signature, no seal.",
+        "avoided": [],
+        "metrics": {
+          "palette_de": 10.5,
+          "layout_r": -0.257
+        },
+        "scores": {
+          "mood": {
+            "judges": [
+              64,
+              68,
+              62,
+              58,
+              66
+            ],
+            "final": 64,
+            "held": false
+          },
+          "independence": {
+            "judges": [
+              86,
+              88,
+              84,
+              90,
+              85
+            ],
+            "final": 86,
+            "held": false
+          },
+          "architecture": {
+            "judges": [
+              76,
+              78,
+              72,
+              74,
+              80
+            ],
+            "final": 76,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              74,
+              72,
+              76,
+              70,
+              74
+            ],
+            "final": 74,
+            "held": false
+          }
+        },
+        "avg": 75.0,
+        "notes": {
+          "mood": "busy trades and palette carry, but crisp modern isometric reads contemporary, not medieval flat stacking",
+          "architecture": "legible floors, hoists and stairs; convincing cutaway"
+        },
+        "drive_url": "https://drive.google.com/file/d/1N937PkB636bRwGHP_wEe2MRL-0xwW8Eh/view?usp=drivesdk",
+        "usage": {
+          "promptTokenCount": 97,
+          "candidatesTokenCount": 1512,
+          "image_tokens": 1120
+        }
+      },
+      {
+        "slot": "b2",
+        "kind": "Object / Diagram",
+        "status": "ok",
+        "words": 55,
+        "prompt": "Stacked oblique perspective, chalky terracotta plaster, busy civic life. A painted plaster model of a stepped public washhouse, five terraces of stone basins under timber roofs, tiny painted figures rinsing cloth, on a white plinth, seen from above at a tilt. Pale pink, ochre and slate-blue. Plain grey backdrop. No text, no signature, no seal.",
+        "avoided": [],
+        "metrics": {
+          "palette_de": 8.4,
+          "layout_r": 0.064
+        },
+        "scores": {
+          "mood": {
+            "judges": [
+              68,
+              62,
+              70,
+              56,
+              66
+            ],
+            "final": 66,
+            "held": false
+          },
+          "independence": {
+            "judges": [
+              88,
+              90,
+              86,
+              84,
+              90
+            ],
+            "final": 88,
+            "held": false
+          },
+          "architecture": {
+            "judges": [
+              72,
+              76,
+              68,
+              74,
+              70
+            ],
+            "final": 72,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              74,
+              76,
+              72,
+              70,
+              76
+            ],
+            "final": 74,
+            "held": false
+          }
+        },
+        "avg": 75.0,
+        "notes": {
+          "mood": "palette and tilted bird's-eye carry; museum-model finish feels modern",
+          "architecture": "terraces and stairs read; rock base unexplained"
+        },
+        "drive_url": "https://drive.google.com/file/d/1ejV5jYxz4GMysJamphZhT9GjsblaP9Hc/view?usp=drivesdk",
+        "usage": {
+          "promptTokenCount": 97,
+          "candidatesTokenCount": 1512,
+          "image_tokens": 1120
+        }
+      }
+    ],
+    "worked": [
+      "'faded plaster with small losses' gave a convincing fresco skin",
+      "naming a programme with work in it carried busy civic life into both B images",
+      "'seen from above at a tilt' gave B2 the bird's-eye reading while staying a different object"
+    ],
+    "mismatch": [
+      "A painted a pale blue sky and green landscape; original has a dark sky band and the town fills the width ('gate opening onto green hills' invited countryside)",
+      "A reads 15th-century with real recession; a century word alone did not flatten space",
+      "B1 became a crisp modern isometric; 'doll's house' and 'cut open' pulled it contemporary",
+      "A still listed positions, marked down by Prompt judges"
+    ],
+    "next": [
+      "State the sky tone directly: dark blue-black sky band, no landscape",
+      "For early painting add: flat frieze, no vanishing point, figures the same size near and far",
+      "For concept art swap doll's house for elevation-like frieze, no isometric",
+      "Replace position lists with one hero element and a count; keep A under 65 words"
+    ]
   }
 ]
