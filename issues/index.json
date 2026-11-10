@@ -1,5 +1,77 @@
 [
   {
+    "date": "2026-11-11",
+    "issue": 24,
+    "edition": "weekday",
+    "headline": "Keep the mall, drop the masterplan: Wakefield’s new Reform-run council moves to scrap 5Plus Architects’ Cathedral Quarter and revamp the 1980s shopping centre it was meant to replace",
+    "crit": "When a council keeps a half-empty shopping centre because a new masterplan is too risky to pay for, has the argument for retrofit been won, or has it simply been borrowed by a balance sheet?",
+    "thesis": [
+      "외벽 청소, 증축 현장, 천장 크레인: 하루 사이 공장 세 곳에서 높이가 노동자를 죽였다",
+      "집 앞 학교를 두고 도시의 반대편으로: 수원이 고교 배정 구역을 다시 그리려 한다",
+      "화면 속 납골당이 먼저 찼다: 반려동물을 위한 가상 추모함이 출시 열흘여 만에 거의 다 찼다",
+      "임금, 주거, 물가: 스페인 양대 노조가 조기 총선을 앞두고 24시간 총파업에 들어갔다",
+      "기후회의 개최국이 개막 날 유전의 증산을 자축했다: COP31 안탈리아와 가바르 유전 사이"
+    ],
+    "seeds": [
+      {
+        "seed": "작업 높이 단면 — 한 공장의 외벽·슬래브 끝·크레인 아래, 사람이 서는 모든 높이를 그리기",
+        "issue": "공장 추락 사고"
+      },
+      {
+        "seed": "통학 등시선 학군 — 행정선 대신 30·45·60분 통학권으로 경계를 다시 긋기",
+        "issue": "수원 고교 배정"
+      },
+      {
+        "seed": "동네의 추모 방 — 가상 사물함 2만 2천 개가 증명한 수요를 빈 상가 한 층에 옮기기",
+        "issue": "반려동물 가상 추모관"
+      },
+      {
+        "seed": "임금 한 달의 면적 — 같은 축척으로 도시별 ‘월급으로 빌리는 방’을 나란히",
+        "issue": "스페인 주거 총파업"
+      }
+    ],
+    "symposium_day": 15,
+    "unit": "ADS5",
+    "unit_concept": "folly",
+    "screen_work": "Effetti del Buon Governo in città / Effects of Good Government in the City (1338–39)",
+    "screen_medium": "Painting",
+    "chips": {
+      "thesis": "경기 평택 · 경기 수원 · 온라인 · 스페인",
+      "symposium": "DAY 15 · 폴리스의 동물",
+      "unit": "RCA ADS5 · folly",
+      "screen": "Painting · Effetti del Buon Governo in città / Effects of Good Government in the City (1338–39)"
+    },
+    "vocab": [
+      "earmark",
+      "stack up",
+      "leisure-led",
+      "dual aspect",
+      "levy",
+      "margin",
+      "edge protection",
+      "catchment",
+      "columbarium",
+      "picket line",
+      "political animal",
+      "artifice",
+      "self-sufficiency",
+      "deliberation",
+      "folly",
+      "mannerism",
+      "spolia",
+      "polemical",
+      "pyrrhic",
+      "surplus",
+      "frieze",
+      "fresco",
+      "civic",
+      "commission",
+      "recession"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-11-11.html",
+    "slug": "2026-11-11"
+  },
+  {
     "date": "2026-11-09",
     "issue": 23,
     "edition": "weekday",
