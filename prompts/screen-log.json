@@ -1660,5 +1660,264 @@
       "For concept art swap doll's house for elevation-like frieze, no isometric",
       "Replace position lists with one hero element and a count; keep A under 65 words"
     ]
+  },
+  {
+    "date": "2026-11-13",
+    "issue": 25,
+    "work": "Hanyeo / The Housemaid (1960)",
+    "medium": "Film",
+    "combo": 1,
+    "combo_swap": null,
+    "model": "gemini-3.1-flash-lite-image",
+    "reference": false,
+    "ban": [
+      "the housemaid",
+      "housemaid",
+      "hanyeo",
+      "하녀",
+      "下女",
+      "kim ki-young",
+      "kim ki young",
+      "김기영",
+      "kim jin-kyu",
+      "김진규",
+      "lee eun-shim",
+      "이은심",
+      "ju jeung-nyeo",
+      "ju jeung-ryu",
+      "주증녀",
+      "um aeng-ran",
+      "엄앵란",
+      "dong-sik",
+      "myung-sook",
+      "kyung-hee",
+      "kim deok-jin",
+      "김덕진"
+    ],
+    "keywords": [
+      "vertical domestic tension",
+      "hard tungsten shadows",
+      "rain-streaked glass"
+    ],
+    "applied": [
+      "B prompts at 55 words or fewer (54, 54); A 68 words",
+      "drawing in ink only, not ink-and-wash",
+      "no sky, plain grey paper for the drawing",
+      "one hero element and a count for A (one staircase, one piano)"
+    ],
+    "images": [
+      {
+        "slot": "a",
+        "kind": "Reproduction",
+        "status": "ok",
+        "words": 68,
+        "prompt": "Vertical domestic tension, hard tungsten shadows, rain-streaked glass. Night in a new two-storey house: one steep wooden staircase climbs out of a cramped living room, an upright piano beside it, a young live-in servant in a plain dress halfway up, a man in shirt sleeves below. Rain on the window. Low camera, deep blacks, 1960 black and white film still, fine grain. No text, no signature, no seal.",
+        "avoided": [
+          [
+            "housemaid",
+            "young live-in servant"
+          ],
+          [
+            "Kim Ki-young expressionism",
+            "Low camera, deep blacks"
+          ]
+        ],
+        "metrics": null,
+        "scores": {
+          "style": {
+            "note": "not scored, no reference image"
+          },
+          "composition": {
+            "note": "not scored, no reference image"
+          },
+          "prompt": {
+            "judges": [
+              72,
+              74,
+              70,
+              76,
+              73
+            ],
+            "final": 73,
+            "held": false
+          }
+        },
+        "avg": 73.0,
+        "judge_notes": {
+          "prompt": [
+            "staircase and piano evoke the house without names",
+            "position words halfway up and below are mild listing",
+            "no place cue let the model default to an American interior",
+            "68 words, compact but over the 65 target",
+            "clean of banned terms"
+          ]
+        },
+        "drive_url": "https://drive.google.com/file/d/1e_CV8yiRG-QWvh0-i9dH-bE3-TGdN3PK/view?usp=drivesdk",
+        "usage": {
+          "promptTokenCount": 77,
+          "image_tokens": 1120
+        }
+      },
+      {
+        "slot": "b1",
+        "kind": "Photograph",
+        "status": "ok",
+        "words": 54,
+        "prompt": "Vertical domestic tension, hard tungsten shadows, rain-streaked glass. Night photograph of a concrete mill dormitory on a slope, three floors of identical windows, one lit, a single external steel stair, wet courtyard, one figure at a window for scale. 1960s press photograph, glossy black and white, fine grain. No text, no signature, no seal.",
+        "avoided": [],
+        "metrics": null,
+        "scores": {
+          "mood_reference_only": {
+            "judges": [
+              70,
+              74,
+              72,
+              68,
+              76
+            ],
+            "final": 72,
+            "held": false
+          },
+          "independence": {
+            "judges": [
+              86,
+              88,
+              84,
+              90,
+              85
+            ],
+            "final": 86,
+            "held": false
+          },
+          "architecture": {
+            "judges": [
+              76,
+              78,
+              74,
+              72,
+              80
+            ],
+            "final": 76,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              74,
+              76,
+              72,
+              78,
+              74
+            ],
+            "final": 74,
+            "held": false
+          }
+        },
+        "avg": 78.7,
+        "judge_notes": {
+          "architecture": [
+            "dormitory mass and external stair read clearly",
+            "wet ground gives scale",
+            "generic facade, little material detail",
+            "convincing night photograph",
+            "stair structure plausible"
+          ]
+        },
+        "drive_url": "https://drive.google.com/file/d/1AIW9e29qyNtOmuCBuGIB2MJwmymZoBHd/view?usp=drivesdk",
+        "usage": {
+          "promptTokenCount": 77,
+          "image_tokens": 1120
+        }
+      },
+      {
+        "slot": "b2",
+        "kind": "Architectural drawing",
+        "status": "ok",
+        "words": 54,
+        "prompt": "Vertical domestic tension, hard tungsten shadows, rain-streaked glass. Ink section through a narrow hillside boarding house, five rooms stacked, each lit by one bare bulb, one ladder stair linking them, rain as fine diagonal hatching on the glass, black ink shadows, no sky, plain grey paper, ink only. No text, no signature, no seal.",
+        "avoided": [],
+        "metrics": null,
+        "scores": {
+          "mood_reference_only": {
+            "judges": [
+              74,
+              70,
+              76,
+              72,
+              78
+            ],
+            "final": 74,
+            "held": false
+          },
+          "independence": {
+            "judges": [
+              76,
+              80,
+              72,
+              78,
+              74
+            ],
+            "final": 76,
+            "held": false
+          },
+          "architecture": {
+            "judges": [
+              70,
+              74,
+              68,
+              72,
+              66
+            ],
+            "final": 70,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              74,
+              72,
+              76,
+              70,
+              74
+            ],
+            "final": 74,
+            "held": false
+          }
+        },
+        "avg": 73.3,
+        "judge_notes": {
+          "independence": [
+            "stacked dwelling with stairs stays close to the source's house-and-stair theme"
+          ],
+          "architecture": [
+            "section legible",
+            "room letters A–G break no-text rule",
+            "dark band reads as sky",
+            "ladder stairs inconsistent floor to floor",
+            "structure thin but plausible"
+          ]
+        },
+        "drive_url": "https://drive.google.com/file/d/1ZkW4Cn9MPK9zXoh5mBstYu_DydJOt3Qn/view?usp=drivesdk",
+        "usage": {
+          "promptTokenCount": 77,
+          "image_tokens": 1120
+        }
+      }
+    ],
+    "worked": [
+      "hard tungsten shadows plus deep blacks gave one pool of light in a dark field",
+      "1960s press photograph, glossy black and white gave period grain",
+      "five rooms stacked, each lit by one bare bulb read as vertical hierarchy"
+    ],
+    "mismatch": [
+      "A defaulted to an American 1950s interior: no place cue",
+      "low camera ignored; framing stayed at chest height",
+      "B2 lettered rooms A–G despite no text; section invites labels",
+      "B2 dark band read as night sky despite no sky"
+    ],
+    "next": [
+      "For A add Seoul, 1960, East Asian cast",
+      "Replace low camera with camera at knee height looking up the stair",
+      "For sections add no room labels, no letters; shadows inside rooms only, white ground",
+      "Keep B at 55 words or fewer, A under 65"
+    ]
   }
 ]
