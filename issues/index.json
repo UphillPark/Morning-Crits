@@ -1,5 +1,76 @@
 [
   {
+    "date": "2026-11-13",
+    "issue": 25,
+    "edition": "weekday",
+    "headline": "“Regeneration is not ending, but the way in which it is taken forward will now have to change”: after seven years, Birmingham and Berkeley St Joseph walk away from the Ladywood estate masterplan",
+    "crit": "If a twenty-year masterplan can be drawn, consulted on and dissolved without a single building, who has paid for the drawings: the developer, the council, or the residents who lived inside them for seven years?",
+    "thesis": [
+      "기록은 화면으로 옮겨 간다: 전태일 추도일에 노동·인권 기록 6,875점이 ‘e뮤지엄’에 전면 공개됐다",
+      "학교도 집도 아닌 곳에서 지내는 아이들: 경찰청 통계와 쉼터 실태조사가 ‘학교 밖’ 청소년의 보호망을 묻는다",
+      "응급실 옆, 경찰이 지키는 방: 김해에 이어 진주에 경남 서부권 ‘주취자보호센터’가 들어선다",
+      "바다를 건너던 배가 바다의 바닥이 됐다: SS United States가 Florida 앞바다에 가라앉아 인공어초가 됐다"
+    ],
+    "seeds": [
+      {
+        "seed": "실측 아카이브 — 노동 기록 한 점마다 그것이 쓰인 방의 치수를 함께 남기기",
+        "issue": "전태일 기록 공개"
+      },
+      {
+        "seed": "낮의 주소 — 학교 밖 청소년이 예약 없이 들어갈 수 있는 동네의 문을 지도로 그리기",
+        "issue": "학교 밖 청소년·쉼터"
+      },
+      {
+        "seed": "밤의 방 — 보호·치료·감시가 겹치는 한 방의 열 시간 단면",
+        "issue": "주취자보호센터"
+      },
+      {
+        "seed": "가라앉히는 설계 — 철거와 보존 사이, 구조물을 다른 생물에게 넘기는 마지막 도면",
+        "issue": "SS United States 인공어초"
+      }
+    ],
+    "symposium_day": 16,
+    "unit": "PG23",
+    "unit_concept": "recursion",
+    "screen_work": "Hanyeo / The Housemaid (1960)",
+    "screen_medium": "Film",
+    "chips": {
+      "thesis": "서울 · 전국 · 경남 진주 · 미국 플로리다 Destin 앞바다",
+      "symposium": "DAY 16 · 모방과 정화",
+      "unit": "Bartlett PG23 · recursion",
+      "screen": "Film · Hanyeo / The Housemaid (1960)"
+    },
+    "vocab": [
+      "walk away from",
+      "single move",
+      "indemnity",
+      "abstain",
+      "net-to-gross",
+      "podium",
+      "measured drawing",
+      "drop-in",
+      "scuttle",
+      "fabrication",
+      "katharsis",
+      "recognition",
+      "magnitude",
+      "purgation",
+      "recursion",
+      "translation",
+      "second-order",
+      "converge",
+      "deviation",
+      "residue",
+      "claustrophobia",
+      "floor plan",
+      "refinement",
+      "discordant",
+      "single-source light"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-11-13.html",
+    "slug": "2026-11-13"
+  },
+  {
     "date": "2026-11-11",
     "issue": 24,
     "edition": "weekday",
