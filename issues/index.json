@@ -1,5 +1,77 @@
 [
   {
+    "date": "2026-11-16",
+    "issue": 26,
+    "edition": "weekday",
+    "headline": "A practice built on “social purpose” asks its creditors for time: Levitt Bernstein cuts jobs and proposes a company voluntary arrangement",
+    "crit": "If a housing practice can win the work, keep its turnover and still run out of cash, is the problem in the practice, in the fee, or in the way public housing is procured?",
+    "thesis": [
+      "움직임이 멈췄다는 신호: 혼자 사는 노인의 집에 단 감지기가 보낸 응급 대응이 4년 사이 크게 늘었고, 대부분은 ‘활동 미감지’였다",
+      "가득 채운 배터리가 더 위험하다: 서울소방 실험에서 완충 상태의 배터리가 눌리자 대부분 열폭주를 일으켰고, 시중에는 충전율 규제가 없다",
+      "물을 지켜 온 쪽이 걸어서 물을 쓸 쪽으로 갔다: 재경화천군민회가 용인 반도체 단지의 화천댐 용수 사용을 두고 용인에서 화천까지 걸었다",
+      "하루 만에 기록이 깨졌다: 스페인이 카나리아 제도에 이주 비상사태를 선포했고, El Hierro의 작은 항구가 유럽의 입구가 됐다",
+      "캠프의 텐트가 모두 탔다: 레바논 동부 Bar Elias의 시리아 난민 캠프에서 불이 나 주민들이 거처를 잃었다"
+    ],
+    "seeds": [
+      {
+        "seed": "쉬는 몸의 평면 — 움직이지 않아도 위험 신호가 되지 않는 혼자 사는 집",
+        "issue": "독거노인 활동 미감지"
+      },
+      {
+        "seed": "충전율의 방 — 채우는 곳과 두는 곳을 떼어 놓는 원룸과 가게의 평면",
+        "issue": "배터리 충전율 실험"
+      },
+      {
+        "seed": "200㎞의 물 단면 — 물을 지켜 온 땅과 쓰는 땅을 한 장에 펼치기",
+        "issue": "화천댐 물 주권"
+      },
+      {
+        "seed": "텐트 사이의 거리 — 불이 건너지 못하는 캠프의 배치 규칙",
+        "issue": "Bar Elias 캠프 화재"
+      }
+    ],
+    "symposium_day": 17,
+    "unit": "Dip11",
+    "unit_concept": "play",
+    "screen_work": "Urformen der Kunst / Art Forms in Nature (1928)",
+    "screen_medium": "Photography",
+    "chips": {
+      "thesis": "전국 · 서울 · 강원 화천 ~ 경기 용인 · 스페인 카나리아 제도 El Hierro",
+      "symposium": "DAY 17 · 정원의 철학",
+      "unit": "AA Dip11 · play",
+      "screen": "Photography · Urformen der Kunst / Art Forms in Nature (1928)"
+    },
+    "vocab": [
+      "company voluntary arrangement",
+      "creditor",
+      "proportionate",
+      "unregistered design",
+      "reconfigure",
+      "adaptability",
+      "inactivity",
+      "state of charge",
+      "upstream",
+      "reception centre",
+      "ataraxia",
+      "tranquillity",
+      "positional power",
+      "self-interest",
+      "magic circle",
+      "substitute",
+      "economy of means",
+      "prototype",
+      "eddy",
+      "pedigree",
+      "specimen",
+      "magnified",
+      "ornament",
+      "isolate",
+      "translucent"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-11-16.html",
+    "slug": "2026-11-16"
+  },
+  {
     "date": "2026-11-13",
     "issue": 25,
     "edition": "weekday",
