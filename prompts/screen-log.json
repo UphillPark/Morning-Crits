@@ -1919,5 +1919,345 @@
       "For sections add no room labels, no letters; shadows inside rooms only, white ground",
       "Keep B at 55 words or fewer, A under 65"
     ]
+  },
+  {
+    "date": "2026-11-16",
+    "issue": 26,
+    "work": "Urformen der Kunst / Art Forms in Nature (1928)",
+    "medium": "Photography",
+    "combo": 2,
+    "combo_swap": null,
+    "model": "gemini-3.1-flash-lite-image",
+    "reference": true,
+    "reference_image": "Acanthus mollis, 1928, gelatin silver print, J. Paul Getty Museum 84.XM.142.2 (Wikimedia Commons)",
+    "ban": [
+      "blossfeldt",
+      "karl blossfeldt",
+      "블로스펠트",
+      "urformen der kunst",
+      "urformen",
+      "art forms in nature",
+      "예술의 원형",
+      "wundergarten der natur",
+      "acanthus mollis",
+      "acanthus",
+      "nierendorf",
+      "wasmuth"
+    ],
+    "keywords": [
+      "sculptural plant form",
+      "neutral grey ground",
+      "magnified symmetry"
+    ],
+    "applied": [
+      "A kept under 65 words (64); B at 55 or fewer (54, 51)",
+      "one hero element and a count for A (one flower spike, four tiers)",
+      "tonal note for A: bare pale cream ground",
+      "no labels, no letters, no numbers for the object/diagram"
+    ],
+    "images": [
+      {
+        "slot": "a",
+        "kind": "Reproduction",
+        "status": "ok",
+        "words": 64,
+        "prompt": "Sculptural plant form, neutral grey ground, magnified symmetry. Vertical close-up photograph of one thistle-like flower spike: a thick stem rising from the bottom edge, four tiers of hooded, net-veined bracts fringed with long spines, curling outward in pairs. Even soft daylight, no cast shadow, bare pale cream ground. Late 1920s gelatin silver print, warm grey tones, fine grain. No text, no signature, no seal.",
+        "avoided": [
+          [
+            "acanthus",
+            "thistle-like"
+          ],
+          [
+            "Blossfeldt plate",
+            "Late 1920s gelatin silver print, warm grey tones"
+          ]
+        ],
+        "metrics": {
+          "palette_de": 5.5,
+          "layout_r": 0.59
+        },
+        "scores": {
+          "style": {
+            "judges": [
+              78,
+              80,
+              76,
+              74,
+              79
+            ],
+            "final": 78,
+            "held": false
+          },
+          "composition": {
+            "judges": [
+              70,
+              66,
+              72,
+              68,
+              64
+            ],
+            "final": 68,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              74,
+              76,
+              72,
+              70,
+              75
+            ],
+            "final": 74,
+            "held": false
+          }
+        },
+        "avg": 73.3,
+        "judge_notes": {
+          "style": [
+            "paper tone and warm grey very close",
+            "grain and contrast right for a period print",
+            "bracts darker and leathery, not translucent",
+            "spines sharper and more numerous than original",
+            "convincing silver-print surface"
+          ],
+          "composition": [
+            "three tiers instead of four",
+            "tapers like a fir tree; original widens at the base",
+            "long bare stem at bottom absent in original",
+            "centred frontal axis kept",
+            "symmetry stronger than original"
+          ],
+          "prompt": [
+            "no names; thistle-like is a fair substitute",
+            "rising from the bottom edge is mild position listing",
+            "64 words, compact",
+            "hooded did not deliver translucency",
+            "period medium phrase replaced the artist name well"
+          ]
+        },
+        "drive_url": "https://drive.google.com/file/d/1C4EL2zhq8LnyFLYorfDsR7r6g61LgkUU/view?usp=drivesdk",
+        "usage": {
+          "promptTokenCount": 97,
+          "image_tokens": 1120
+        }
+      },
+      {
+        "slot": "b1",
+        "kind": "Photograph",
+        "status": "ok",
+        "words": 54,
+        "prompt": "Sculptural plant form, neutral grey ground, magnified symmetry. Close photograph looking straight up at one concrete column head, ribs branching outward like leaf veins across a shallow vaulted ceiling, cropped tight and centred, even soft daylight, no people. Late 1920s gelatin silver print, warm grey tones, fine grain. No text, no signature, no seal.",
+        "carry": [
+          [
+            "net of veins on a bract",
+            "concrete ribs branching across a ceiling"
+          ],
+          [
+            "specimen cut free of its setting",
+            "one column head, cropped tight, no people"
+          ],
+          [
+            "even shadowless light, warm grey print",
+            "soft daylight and the same period print tone"
+          ]
+        ],
+        "metrics": {
+          "palette_de": 11.2,
+          "layout_r": 0.063
+        },
+        "scores": {
+          "mood": {
+            "judges": [
+              76,
+              80,
+              74,
+              72,
+              78
+            ],
+            "final": 76,
+            "held": false
+          },
+          "independence": {
+            "judges": [
+              80,
+              78,
+              84,
+              76,
+              82
+            ],
+            "final": 80,
+            "held": false
+          },
+          "architecture": {
+            "judges": [
+              74,
+              70,
+              76,
+              72,
+              68
+            ],
+            "final": 72,
+            "held": false
+          },
+          "prompt": {
+            "judges": [
+              78,
+              76,
+              80,
+              74,
+              77
+            ],
+            "final": 77,
+            "held": false
+          }
+        },
+        "avg": 76.3,
+        "judge_notes": {
+          "mood": [
+            "botanical structure read at once",
+            "print tone close, slightly cooler",
+            "more Gothic than botanical in places",
+            "frontal centred grammar kept",
+            "white snapshot border is off-period"
+          ],
+          "independence": [
+            "ceiling not plant",
+            "radial centred layout still echoes the stem axis",
+            "layout r 0.06",
+            "new subject and viewpoint",
+            "no plant parts"
+          ],
+          "architecture": [
+            "vault reads clearly",
+            "rib logic inconsistent near edges",
+            "concrete texture plausible",
+            "ribs ornamental rather than structural",
+            "scale ambiguous without any reference"
+          ]
+        },
+        "drive_url": "https://drive.google.com/file/d/1cmoBDAS1Ni9l1N3c1wzBUxaw7PMUPxDb/view?usp=drivesdk",
+        "usage": {
+          "promptTokenCount": 97,
+          "image_tokens": 1120
+        }
+      },
+      {
+        "slot": "b2",
+        "kind": "Object / Diagram",
+        "status": "ok",
+        "words": 51,
+        "prompt": "Sculptural plant form, neutral grey ground, magnified symmetry. Five white plaster models of cast-iron railing brackets, each grown from one bud-shaped knot, laid in a horizontal row like specimens, photographed flat from above, soft even light, plain grey card, no labels, no letters, no numbers. No text, no signature, no seal.",
+        "carry": [
+          [
+            "plates as teaching material for ornament",
+            "plaster casts of railing brackets"
+          ],
+          [
+            "a series of specimens",
+            "five objects laid in a row"
+          ],
+          [
+            "bud and stem as structure",
+            "each bracket grown from a bud-shaped knot"
+          ]
+        ],
+        "metrics": {
+          "palette_de": 11.5,
+          "layout_r": -0.068
+        },
+        "scores": {
+          "mood": {
+            "judges": [
+              58,
+              62,
+              55,
+              66,
+              60
+            ],
+            "final": 60,
+            "held": false
+          },
+          "independence": {
+            "judges": [
+              86,
+              84,
+              88,
+              82,
+              85
+            ],
+            "final": 85,
+            "held": false
+          },
+          "architecture": {
+            "judges": [
+              62,
+              48,
+              70,
+              55,
+              64
+            ],
+            "final": null,
+            "held": true,
+            "range": [
+              48,
+              70
+            ]
+          },
+          "prompt": {
+            "judges": [
+              66,
+              64,
+              70,
+              62,
+              68
+            ],
+            "final": 66,
+            "held": false
+          }
+        },
+        "avg": 70.3,
+        "judge_notes": {
+          "mood": [
+            "modern colour catalogue look, no period",
+            "scrollwork is Victorian, not botanical",
+            "specimen row is the one carried idea",
+            "grey card helps",
+            "identical copies kill the study-series feeling"
+          ],
+          "architecture": [
+            "credible as a specimen series",
+            "no plausible fixing or load path for cast iron",
+            "nice object photograph, could be a concept prop",
+            "clean but generic decoration",
+            "reads as architectural ornament study"
+          ]
+        },
+        "drive_url": "https://drive.google.com/file/d/1iYRTWSHpuIH5HdSXtWg4_qwnGU9CcYrb/view?usp=drivesdk",
+        "usage": {
+          "promptTokenCount": 97,
+          "image_tokens": 1120
+        }
+      }
+    ],
+    "held_axes": [
+      "b2 architecture (48–70)"
+    ],
+    "worked": [
+      "late 1920s gelatin silver print, warm grey tones plus bare pale cream ground matched the paper tone (palette ΔE 5.5)",
+      "net-veined bracts fringed with long spines gave vein network and spines without naming the plant",
+      "looking straight up, ribs branching like leaf veins turned plant structure into a ceiling with independent layout"
+    ],
+    "mismatch": [
+      "A three tiers not four, fir-tree taper, long bare stem: rising from the bottom edge read as stem length",
+      "A bracts opaque and leathery: hooded carried shape, not backlit translucency",
+      "B2 modern colour catalogue shot: no medium or era cue",
+      "cast-iron railing brackets pulled Victorian scrollwork; five identical copies lost the specimen series"
+    ],
+    "next": [
+      "For A add translucent bracts lit from behind, veins dark; leaves down to the bottom edge, stem barely visible",
+      "Give every B prompt one medium-and-period phrase, even objects and diagrams",
+      "Replace railing brackets with brackets shaped like unfurling fern tips, each one different",
+      "For photographs add no border"
+    ]
   }
 ]
