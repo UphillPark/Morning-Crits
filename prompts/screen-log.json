@@ -2259,5 +2259,337 @@
       "Replace railing brackets with brackets shaped like unfurling fern tips, each one different",
       "For photographs add no border"
     ]
+  },
+  {
+    "date": "2026-11-18",
+    "issue": 27,
+    "work": "Het straatje / The Little Street (c. 1658)",
+    "medium": "Painting",
+    "combo": 3,
+    "combo_swap": null,
+    "model": "gemini-3.1-flash-lite-image",
+    "reference": true,
+    "reference_source": "Rijksmuseum IIIF (iiif.micr.io/wcmnK)",
+    "ban": [
+      "little street",
+      "het straatje",
+      "straatje",
+      "view of houses in delft",
+      "gezicht op huizen in delft",
+      "델프트의 작은 거리",
+      "작은 거리",
+      "vermeer",
+      "johannes vermeer",
+      "jan vermeer",
+      "delft",
+      "vlamingstraat",
+      "rijksmuseum",
+      "ariaentgen",
+      "deterding"
+    ],
+    "keywords": [
+      "stepped brick gable",
+      "whitewashed courtyard plinth",
+      "overcast daylight"
+    ],
+    "applied": [
+      "Give every B prompt one medium-and-period phrase (B1 17th-century Northern European palette, B2 Dutch 1650s house-builder's manner)",
+      "Drawings: ink only, not ink-and-wash",
+      "Sections/drawings: no labels, no letters",
+      "Hero element and a count for A (one brick house, four doorways, three figures), A under 70 words",
+      "Keep B under 60 words"
+    ],
+    "generation_calls": 5,
+    "generation_notes": "a and b1 each hit one 503 high-demand error before succeeding on retry",
+    "images": [
+      {
+        "slot": "a",
+        "kind": "Reproduction",
+        "status": "ok",
+        "words": 67,
+        "aspect": "3:4",
+        "prompt": "Small oil painting on canvas, 1650s Dutch town. One brick house seen straight on, its stepped brick gable rising into a cloudy grey-blue sky; a lower house and an alley to its left. Whitewashed courtyard plinth across the base, four doorways, shutters in muted green and one red. Three small figures at quiet chores. Overcast daylight, worn mortar, fine cracked varnish. no text, no signature, no seal",
+        "avoided": [
+          [
+            "Vermeer, Delft",
+            "1650s Dutch town"
+          ],
+          [
+            "The Little Street",
+            "One brick house seen straight on"
+          ]
+        ],
+        "metrics": {
+          "palette_de": 9.6,
+          "layout_r": 0.263
+        },
+        "scores": {
+          "style": {
+            "judges": [
+              66,
+              70,
+              64,
+              68,
+              72
+            ],
+            "final": 68,
+            "held": false,
+            "notes": [
+              "conservator: glossy 19th-c. revival surface, not 1650s matt",
+              "colourist: brick/whitewash/green-red shutters right, sky too blue-grey dramatic",
+              "DP: even light ok but the canvas-on-easel framing breaks the image",
+              "AA tutor: reads as a pastiche of a Dutch street, not this one",
+              "prompt engineer: palette close, surface wrong"
+            ]
+          },
+          "composition": {
+            "judges": [
+              58,
+              62,
+              55,
+              60,
+              64
+            ],
+            "final": 60,
+            "held": false,
+            "notes": [
+              "photo editor: whole house centred, original crops top and right",
+              "film editor: alley left kept, sky proportion smaller",
+              "layout: gable complete and central, the key crop lost",
+              "AA tutor: figures moved to street, not in doorways",
+              "art historian: frontal view kept, framing differs; easel border"
+            ]
+          },
+          "prompt": {
+            "judges": [
+              72,
+              70,
+              74,
+              66,
+              72
+            ],
+            "final": 72,
+            "held": false,
+            "notes": [
+              "prompt engineer: compact, one hero element and counts",
+              "copyright: no names, ban clean",
+              "copy editor: 'small oil painting on canvas' invited the easel",
+              "AA tutor: shutter colours listed one by one",
+              "researcher: fine cracked varnish is a cliché that pushed revival gloss"
+            ]
+          }
+        },
+        "avg": 66.7,
+        "drive_url": "https://drive.google.com/file/d/1m-rmKf6srvdwXaMHNgnXgx-Q7PQhNUtg/view?usp=drivesdk",
+        "usage": {
+          "promptTokenCount": 92,
+          "candidatesTokenCount": 1552,
+          "totalTokenCount": 1644
+        }
+      },
+      {
+        "slot": "b1",
+        "kind": "Concept art",
+        "status": "ok",
+        "words": 57,
+        "aspect": "4:3",
+        "prompt": "Concept art, oil sketch with a 17th-century Northern European palette. A new public wash-house around a narrow yard, seen from a low corner: long timber drying racks, deep window reveals, a stepped brick gable, a whitewashed courtyard plinth. Two figures fold linen. Overcast daylight, pearly grey, brick red, one green door. no text, no signature, no seal",
+        "metrics": {
+          "palette_de": 9.4,
+          "layout_r": 0.025
+        },
+        "scores": {
+          "mood": {
+            "judges": [
+              76,
+              74,
+              78,
+              70,
+              76
+            ],
+            "final": 76,
+            "held": false,
+            "notes": [
+              "conservator: dry brick and whitewash feel right",
+              "colourist: pearly grey, brick red, one green door works",
+              "DP: soft overcast, no hard shadows",
+              "AA tutor: quiet labour transferred; slightly genre-painting",
+              "prompt engineer: period palette phrase helped"
+            ]
+          },
+          "independence": {
+            "judges": [
+              74,
+              78,
+              72,
+              76,
+              70
+            ],
+            "final": 74,
+            "held": false,
+            "notes": [
+              "photo editor: oblique deep yard, but stepped gable at centre echoes original",
+              "film editor: new scene and action",
+              "layout: gable centred like the reference motif",
+              "AA tutor: different building type",
+              "art historian: still a Dutch street scene genre"
+            ]
+          },
+          "architecture": {
+            "judges": [
+              76,
+              72,
+              78,
+              74,
+              70
+            ],
+            "final": 74,
+            "held": false,
+            "notes": [
+              "Dip tutor: yard and gallery readable",
+              "architect: timber gallery and racks plausible",
+              "photographer: depth good, low corner kept",
+              "concept artist: brushwork convincing",
+              "engineer: overhanging gallery lacks supports on the left"
+            ]
+          },
+          "prompt": {
+            "judges": [
+              74,
+              72,
+              76,
+              70,
+              74
+            ],
+            "final": 74,
+            "held": false,
+            "notes": [
+              "prompt engineer: medium+period phrase first, compact",
+              "copyright: ban clean",
+              "copy editor: slight list of features",
+              "AA tutor: good translation of chores",
+              "researcher: within 60 words"
+            ]
+          }
+        },
+        "avg": 74.5,
+        "drive_url": "https://drive.google.com/file/d/1LkdzkTr7Mi0rwDDERbQyarcxkvIT5KNj/view?usp=drivesdk",
+        "usage": {
+          "promptTokenCount": 83,
+          "candidatesTokenCount": 1530,
+          "totalTokenCount": 1613
+        }
+      },
+      {
+        "slot": "b2",
+        "kind": "Architectural drawing",
+        "status": "ok",
+        "words": 56,
+        "aspect": "16:9",
+        "prompt": "Architectural drawing, ink only on white paper, Dutch 1650s house-builder's manner. Long elevation of a canal-side neighbourhood kitchen: five narrow bays, one stepped brick gable, brick coursing hatched fine, a whitewashed courtyard plinth left blank. Overcast daylight: no cast shadows, even line weight. no labels, no letters, no scale bar. no text, no signature, no seal",
+        "metrics": {
+          "palette_de": 30.5,
+          "layout_r": 0.162
+        },
+        "scores": {
+          "mood": {
+            "judges": [
+              58,
+              52,
+              62,
+              66,
+              56
+            ],
+            "final": 58,
+            "held": false,
+            "notes": [
+              "conservator: ink line alone loses brick and whitewash",
+              "colourist: no palette transfer at all; yellowed paper",
+              "DP: no light to read",
+              "AA tutor: period Dutch elevation gives some time feel",
+              "prompt engineer: ink-only choice removed the carrier of mood"
+            ]
+          },
+          "independence": {
+            "judges": [
+              80,
+              84,
+              78,
+              82,
+              76
+            ],
+            "final": 80,
+            "held": false,
+            "notes": [
+              "photo editor: elevation, not a street view",
+              "film editor: no figures, new programme",
+              "layout: long horizontal, unrelated",
+              "AA tutor: stepped gable left recalls the original",
+              "art historian: different genre"
+            ]
+          },
+          "architecture": {
+            "judges": [
+              78,
+              74,
+              80,
+              72,
+              76
+            ],
+            "final": 76,
+            "held": false,
+            "notes": [
+              "Dip tutor: clean elevation, bays legible",
+              "architect: plausible 17th-c. proportions; 'five bays' became more",
+              "photographer: n/a, drawing grammar kept",
+              "concept artist: line weight even as asked",
+              "engineer: plinth band and openings consistent"
+            ]
+          },
+          "prompt": {
+            "judges": [
+              72,
+              70,
+              74,
+              68,
+              76
+            ],
+            "final": 72,
+            "held": false,
+            "notes": [
+              "prompt engineer: clear drawing grammar",
+              "copyright: ban clean",
+              "copy editor: 'no text' repeated twice with 'no labels'",
+              "AA tutor: ink only was the wrong choice for a palette-led original",
+              "researcher: within 60 words"
+            ]
+          }
+        },
+        "avg": 71.5,
+        "drive_url": "https://drive.google.com/file/d/1SXwbLPHMXxCZtgpdbndr2U8J5_LveUmW/view?usp=drivesdk",
+        "usage": {
+          "promptTokenCount": 88,
+          "candidatesTokenCount": 1576,
+          "totalTokenCount": 1664
+        }
+      }
+    ],
+    "worked": [
+      "'stepped brick gable' + 'worn mortar' gave believable brick, shutters and whitewash without naming the painter",
+      "B1 public wash-house with two figures folding linen carried unhurried domestic labour into a new type and an oblique view (layout r 0.03)",
+      "B2 'no cast shadows, even line weight' and 'no labels, no letters' gave a clean elevation without stray text"
+    ],
+    "mismatch": [
+      "A rendered as a canvas on an easel: 'small oil painting on canvas' read as an object to photograph",
+      "A centres a complete house; the original crops the façade at top and right",
+      "A glossy 19th-century revival surface instead of a matt 1650s surface; 'fine cracked varnish' pushed gloss",
+      "B2 ink only on yellowed paper lost the brick-and-whitewash palette (palette ΔE 30.5)"
+    ],
+    "next": [
+      "For paintings write: the painted image fills the whole frame, no easel, no canvas edge",
+      "For cropped originals name the crop: façade cut off by the top and right edges",
+      "Replace fine cracked varnish with matt, granular paint, soft edges",
+      "For drawings that must keep a palette allow one wash: ink with a single brick-red wash, white ground"
+    ]
   }
 ]
