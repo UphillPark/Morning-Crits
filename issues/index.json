@@ -1,5 +1,77 @@
 [
   {
+    "date": "2026-11-18",
+    "issue": 27,
+    "edition": "weekday",
+    "headline": "“Architects are canaries in the coal mine”: the RIBA’s president-elect reads Levitt Bernstein’s rescue plan as a warning to government, as forecasters cut their outlook for private housing starts",
+    "crit": "If architects are the canaries in the coal mine, what exactly is the gas: the cost of building, the price of money, or a planning system that only works when the market is rising?",
+    "thesis": [
+      "시험실이 검문소가 된다: AI 부정행위를 막겠다며 정부가 수능 날 아침 전국에 위급재난문자를 보내고, 단추에 스티커를 붙이고, 가방을 복도로 내보낸다",
+      "고쳐 쓰는 데 필요한 동의가 줄어든다: 국토부가 아파트 리모델링 허가에 필요한 주민 동의 문턱을 낮췄다",
+      "접으려던 택지가 다시 펼쳐질까: LH가 포기하려던 세종의 대규모 공공주택지구를 국토부가 부처 이전을 이유로 붙잡았다",
+      "18쪽의 초안에 ‘화석연료 단계적 퇴출’이 들어갔다: COP31 합의문 초안을 두고 산유국과 EU가 서로 다른 이유로 반발한다",
+      "같은 거리, 다른 숫자: 프랑스 공공부문 임금 시위의 참가자를 내무부와 노조가 크게 다르게 셌다"
+    ],
+    "seeds": [
+      {
+        "seed": "믿음의 거리 — 검색 없이도 공정함이 보이는 시험실의 평면 규칙",
+        "issue": "수능 AI 부정행위 대책"
+      },
+      {
+        "seed": "30%의 단면 — 리모델링에 동의하지 않은 세대를 덜 건드리는 증축의 순서",
+        "issue": "리모델링 동의율 완화"
+      },
+      {
+        "seed": "보류된 땅의 마당 — 지어질지 모르는 택지에 먼저 놓는 임시의 길과 텃밭",
+        "issue": "세종 공공주택지구 보류"
+      },
+      {
+        "seed": "계수선 — 같은 거리를 다르게 세는 이유를 보여 주는 행진로의 장치",
+        "issue": "프랑스 공공부문 시위 집계"
+      }
+    ],
+    "symposium_day": 18,
+    "unit": "ADS4",
+    "unit_concept": "arche-fossil",
+    "screen_work": "Het straatje / The Little Street (c. 1658)",
+    "screen_medium": "Painting",
+    "chips": {
+      "thesis": "전국 시험장 · 전국 공동주택 · 세종 조치원 · 튀르키예 Antalya",
+      "symposium": "DAY 18 · 자연에 따라 살기",
+      "unit": "RCA ADS4 · arche-fossil",
+      "screen": "Painting · Het straatje / The Little Street (c. 1658)"
+    },
+    "vocab": [
+      "canary in the coal mine",
+      "defer",
+      "certificate of immunity from listing",
+      "pedestrianisation",
+      "graining",
+      "imitation",
+      "invigilate",
+      "supermajority",
+      "designation",
+      "phase out",
+      "living in agreement with nature",
+      "cosmopolis",
+      "appropriation (oikeiōsis)",
+      "orthodoxy",
+      "arche-fossil",
+      "correlationism",
+      "ancestrality",
+      "stratigraphy",
+      "asymmetry",
+      "repository",
+      "stepped gable",
+      "whitewash",
+      "cropped",
+      "unhurried",
+      "patched"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-11-18.html",
+    "slug": "2026-11-18"
+  },
+  {
     "date": "2026-11-16",
     "issue": 26,
     "edition": "weekday",
