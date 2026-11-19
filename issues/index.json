@@ -1,5 +1,77 @@
 [
   {
+    "date": "2026-11-20",
+    "issue": 28,
+    "edition": "weekday",
+    "headline": "A word, not a competence: after a year off the register and “the threat of prosecution hanging over me”, the RIBA president rejoins the ARB — and says the experience proves the system polices a title rather than the work",
+    "crit": "If anyone may do an architect’s work but only some may use the word, is the profession defined by what it does, or by what it is allowed to call itself?",
+    "thesis": [
+      "선로가 땅속으로 내려가면 그 위에는 누구의 땅이 남는가: 국토부 공청회에서 서울역~금천구청 등 철도 지하화 신규 사업이 추려졌고, 비용은 위의 땅을 팔아 대라는 전제가 붙었다",
+      "성곽은 세계유산이 되려 하고 성곽 아래 마을은 재개발을 기다린다: 한양도성 등재 영향권의 주민들이 시의회 토론회에서 등재 추진 중단을 요구했다",
+      "숲이 다시 자랄 때까지 머무는 집: 대형 산불이 지나간 영양의 숲에 주민과 함께 단 인공둥지에서 하늘다람쥐가 번식했다",
+      "판결은 내려졌고 돌아갈 마을은 불탔다: 국제사법재판소가 처음으로 한 국가의 제노사이드 책임을 인정해 미얀마에 로힝야 배상을 명령했다",
+      "바다를 건너려던 나무가 다시 땅에 내려간다: 조지아로 수출하려고 파낸 수백 년 된 바오밥 다섯 그루가 남아공의 보호구역에 다시 심긴다"
+    ],
+    "seeds": [
+      {
+        "seed": "덮개의 단면 — 지하화된 선로 위를 공원과 개발이 나눠 갖는 땅의 단면 규칙",
+        "issue": "철도 지하화 신규 사업"
+      },
+      {
+        "seed": "사라진 성곽의 선 — 멸실 구간을 집을 건드리지 않고 표시하는 바닥과 높이의 규칙",
+        "issue": "한양도성 세계유산 등재 논란"
+      },
+      {
+        "seed": "회복 기간의 집 — 숲이 자라면 스스로 자리를 내주는 인공둥지의 건축",
+        "issue": "영양 하늘다람쥐 인공둥지"
+      },
+      {
+        "seed": "배상의 도면 — 불탄 마을을 위성과 증언으로 다시 그려 귀환의 근거로 쓰는 도면 체계",
+        "issue": "ICJ 로힝야 제노사이드 판결"
+      }
+    ],
+    "symposium_day": 19,
+    "unit": "PG11",
+    "unit_concept": "access to tools",
+    "screen_work": "Melencolia I (1514)",
+    "screen_medium": "Print",
+    "chips": {
+      "thesis": "서울 · 서울 중구 · 경북 영양군 석보면 · 미얀마 Rakhine",
+      "symposium": "DAY 19 · 판단 중지",
+      "unit": "Bartlett PG11 · access to tools",
+      "screen": "Print · Melencolia I (1514)"
+    },
+    "vocab": [
+      "reserved activity",
+      "wind up",
+      "delegated powers",
+      "conservation area",
+      "sclerotic",
+      "testimony",
+      "transfer of development rights",
+      "terrain vague",
+      "restitution",
+      "uproot",
+      "suspension of judgement",
+      "equivocation",
+      "universals",
+      "indeterminate",
+      "counterculture",
+      "conviviality",
+      "radical monopoly",
+      "kit of parts",
+      "precedent",
+      "counterweight",
+      "burin",
+      "exploded axonometric",
+      "idle",
+      "brooding",
+      "clutter"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-11-20.html",
+    "slug": "2026-11-20"
+  },
+  {
     "date": "2026-11-18",
     "issue": 27,
     "edition": "weekday",
