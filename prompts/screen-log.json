@@ -2591,5 +2591,339 @@
       "Replace fine cracked varnish with matt, granular paint, soft edges",
       "For drawings that must keep a palette allow one wash: ink with a single brick-red wash, white ground"
     ]
+  },
+  {
+    "date": "2026-11-20",
+    "issue": 28,
+    "work": "Melencolia I (1514)",
+    "medium": "Print",
+    "combo": 4,
+    "combo_swap": null,
+    "model": "gemini-3.1-flash-lite-image",
+    "reference": true,
+    "reference_source": "The Met Open Access (object 336228, DP820348.jpg)",
+    "ban": [
+      "melencolia",
+      "melancholia",
+      "멜렌콜리아",
+      "멜랑콜리아",
+      "dürer",
+      "durer",
+      "duerer",
+      "뒤러",
+      "albrecht",
+      "magic square",
+      "truncated rhombohedron",
+      "nuremberg",
+      "metropolitan museum"
+    ],
+    "keywords": [
+      "burin cross-hatching",
+      "scattered measuring tools",
+      "faceted stone block"
+    ],
+    "applied": [
+      "Give every B prompt one medium-and-period phrase (B1 early-16th-century copper engraving manner, B2 1520s geometry treatise plate)",
+      "Drawings: ink only, no wash (black ink on white paper)",
+      "No labels on the diagram",
+      "Hero element and a count for A, A under 65 words (64)",
+      "Keep B near 55 words (55, 56)"
+    ],
+    "generation_calls": 3,
+    "generation_notes": "all three succeeded on the first call",
+    "images": [
+      {
+        "slot": "a",
+        "kind": "Reproduction",
+        "status": "ok",
+        "words": 64,
+        "aspect": "3:4",
+        "prompt": "Copper engraving, early 1500s German workshop, black ink on cream paper, burin cross-hatching throughout. One brooding winged woman sits at right, head propped on her fist, a compass idle in her lap. A faceted stone block, a ladder and a lean sleeping dog fill the left; scattered measuring tools on the floor. Low sea horizon, a comet's rays. no text, no signature, no seal",
+        "avoided": [
+          [
+            "Albrecht Dürer, 1514",
+            "early 1500s German workshop"
+          ],
+          [
+            "melancholy angel",
+            "brooding winged woman"
+          ],
+          [
+            "truncated rhombohedron",
+            "faceted stone block"
+          ]
+        ],
+        "metrics": {
+          "palette_de": 4.8,
+          "layout_r": 0.623
+        },
+        "scores": {
+          "style": {
+            "judges": [
+              80,
+              78,
+              76,
+              72,
+              79
+            ],
+            "final": 78,
+            "held": false,
+            "notes": [
+              "conservator: burin line convincing, a little smooth like a 19th-c. reproductive engraving",
+              "colourist: cream sheet and black ink almost identical",
+              "DP: plate mark and margin kept, light from upper left right",
+              "AA tutor: reads as a careful copy of a Northern print, not this plate's density",
+              "prompt engineer: medium line did its job"
+            ]
+          },
+          "composition": {
+            "judges": [
+              70,
+              66,
+              68,
+              62,
+              72
+            ],
+            "final": 68,
+            "held": false,
+            "notes": [
+              "photo editor: figure right, block left, ladder centre kept",
+              "film editor: two dogs, sphere moved right",
+              "layout: rock cliff replaces the wall; hourglass, bell, square missing",
+              "AA tutor: no child figure, wall-hung objects lost",
+              "art historian: main masses in place, interior becomes outdoor"
+            ]
+          },
+          "prompt": {
+            "judges": [
+              70,
+              72,
+              68,
+              66,
+              74
+            ],
+            "final": 70,
+            "held": false,
+            "notes": [
+              "prompt engineer: compact, gesture phrase strong",
+              "copyright: ban clean",
+              "copy editor: 'at right', 'fill the left' are position lists",
+              "AA tutor: backdrop never named",
+              "researcher: count not enforced, two dogs"
+            ]
+          }
+        },
+        "avg": 72.0,
+        "drive_url": "https://drive.google.com/file/d/1qJZycW5k7lYXN2ZH539sFkOm15WU_Fpz/view?usp=drivesdk",
+        "usage": {
+          "promptTokenCount": 90,
+          "candidatesTokenCount": 1501,
+          "totalTokenCount": 1591
+        }
+      },
+      {
+        "slot": "b1",
+        "kind": "Concept art",
+        "status": "ok",
+        "words": 55,
+        "aspect": "16:9",
+        "prompt": "Concept art, early-16th-century copper engraving manner, black ink on cream paper, burin cross-hatching. An unfinished hilltop observatory seen from below: timber cranes idle, a faceted stone block hanging mid-air, ladders left against bare walls, scattered measuring tools across the quarry floor. Comet rays over a flat sea. No workers. no text, no signature, no seal",
+        "metrics": {
+          "palette_de": 5.0,
+          "layout_r": 0.349
+        },
+        "scores": {
+          "mood": {
+            "judges": [
+              74,
+              76,
+              70,
+              72,
+              78
+            ],
+            "final": 74,
+            "held": false,
+            "notes": [
+              "conservator: engraved tone right",
+              "colourist: palette identical",
+              "DP: stillness reads, light too even",
+              "AA tutor: stalled work carried, brooding weight weaker",
+              "prompt engineer: 'idle', 'no workers' worked"
+            ]
+          },
+          "independence": {
+            "judges": [
+              72,
+              70,
+              76,
+              68,
+              74
+            ],
+            "final": 72,
+            "held": false,
+            "notes": [
+              "photo editor: different scene",
+              "film editor: comet and sea echo the original sky",
+              "layout: wide landscape, different composition",
+              "AA tutor: block and comet are borrowed motifs",
+              "art historian: own subject, quoted props"
+            ]
+          },
+          "architecture": {
+            "judges": [
+              70,
+              72,
+              66,
+              74,
+              70
+            ],
+            "final": 70,
+            "held": false,
+            "notes": [
+              "Dip tutor: reads as ruin more than unfinished observatory",
+              "architect: masonry coursing and cranes plausible",
+              "photographer: depth and scale clear",
+              "concept artist: good establishing shot",
+              "engineer: hanging block and crane geometry fine, walls unstable"
+            ]
+          },
+          "prompt": {
+            "judges": [
+              74,
+              72,
+              70,
+              76,
+              72
+            ],
+            "final": 72,
+            "held": false,
+            "notes": [
+              "prompt engineer: dense and clear",
+              "copyright: clean",
+              "copy editor: one sky motif too many",
+              "AA tutor: programme 'observatory' not drawn",
+              "researcher: good length"
+            ]
+          }
+        },
+        "avg": 72.0,
+        "drive_url": "https://drive.google.com/file/d/1nJksVs1YmJFxOSZbvwK8nQV8AzpeAaBC/view?usp=drivesdk",
+        "usage": {
+          "promptTokenCount": 80,
+          "candidatesTokenCount": 1480,
+          "totalTokenCount": 1560
+        }
+      },
+      {
+        "slot": "b2",
+        "kind": "Object / Diagram",
+        "status": "ok",
+        "words": 56,
+        "aspect": "3:4",
+        "prompt": "Diagram plate from a 1520s geometry treatise, copper engraving, black ink on white paper, burin cross-hatching for shadow only. Exploded axonometric of one small stone tool-house: faceted stone block plinth, timber frame, ladder stair, scattered measuring tools laid out beneath. Parts float on one vertical axis. White ground, no labels. no text, no signature, no seal",
+        "metrics": {
+          "palette_de": 7.8,
+          "layout_r": 0.28
+        },
+        "scores": {
+          "mood": {
+            "judges": [
+              62,
+              58,
+              66,
+              60,
+              70
+            ],
+            "final": 62,
+            "held": false,
+            "notes": [
+              "conservator: engraved line but light, sparse plate",
+              "colourist: paler, too much white",
+              "DP: no dark mass, no weight",
+              "AA tutor: treatise feel right, melancholy gone",
+              "prompt engineer: 'shadow only' + 'white ground' emptied it"
+            ]
+          },
+          "independence": {
+            "judges": [
+              86,
+              84,
+              88,
+              82,
+              85
+            ],
+            "final": 85,
+            "held": false,
+            "notes": [
+              "photo editor: wholly different subject",
+              "film editor: no borrowed composition",
+              "layout: vertical exploded stack",
+              "AA tutor: own object",
+              "art historian: only tools echo the original"
+            ]
+          },
+          "architecture": {
+            "judges": [
+              76,
+              72,
+              78,
+              74,
+              70
+            ],
+            "final": 74,
+            "held": false,
+            "notes": [
+              "Dip tutor: exploded axo legible, good tectonic order",
+              "architect: timber frame and plinth credible",
+              "photographer: n/a to photo, clean drawing",
+              "concept artist: clear read",
+              "engineer: ladder floats, plinth tapered not faceted"
+            ]
+          },
+          "prompt": {
+            "judges": [
+              72,
+              74,
+              70,
+              68,
+              76
+            ],
+            "final": 72,
+            "held": false,
+            "notes": [
+              "prompt engineer: clear structure",
+              "copyright: clean",
+              "copy editor: 'faceted' ignored by model",
+              "AA tutor: mood words missing",
+              "researcher: good axis instruction"
+            ]
+          }
+        },
+        "avg": 73.3,
+        "drive_url": "https://drive.google.com/file/d/1zdhplgPYPivXOEvRMpHAALb0CJRU8YG9/view?usp=drivesdk",
+        "usage": {
+          "promptTokenCount": 84,
+          "candidatesTokenCount": 1517,
+          "totalTokenCount": 1601
+        }
+      }
+    ],
+    "worked": [
+      "'Copper engraving, early 1500s German workshop, burin cross-hatching throughout' fixed medium, period and paper (palette ΔE 4.8)",
+      "One gesture phrase ('head propped on her fist, a compass idle in her lap') rebuilt the pose",
+      "'Diagram plate from a 1520s geometry treatise' + 'Parts float on one vertical axis' gave a clean exploded axonometric"
+    ],
+    "mismatch": [
+      "A: no backdrop named, so a rock face replaced the wall; hourglass, bell, child omitted",
+      "A: one dog became two",
+      "B2: 'shadow only' + 'White ground' emptied the plate; the dark tone carries the mood",
+      "B1: comet and sea imported the original's sky motif"
+    ],
+    "next": [
+      "For A name the backdrop and hung objects: a plain stone wall behind her, hung with an hourglass and a bell; write one dog only",
+      "For diagrams from dark originals: dense hatching on every shadowed face, a dark ground band beneath",
+      "For B drop sky motifs from the original (comet, sea); use a neutral light note such as low winter sun",
+      "Replace faceted stone block with an eight-faced stone solid when the geometry matters"
+    ]
   }
 ]
