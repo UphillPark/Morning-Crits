@@ -2925,5 +2925,129 @@
       "For B drop sky motifs from the original (comet, sea); use a neutral light note such as low winter sun",
       "Replace faceted stone block with an eight-faced stone solid when the geometry matters"
     ]
+  },
+  {
+    "date": "2026-11-23",
+    "issue": 29,
+    "work": "Pather Panchali (1955)",
+    "medium": "Film",
+    "combo": 1,
+    "combo_swap": null,
+    "model": "gemini-3.1-flash-lite-image",
+    "reference": true,
+    "reference_source": "Wikimedia Commons, File:Publicity_still_from_Pather_Panchali.jpg (public domain)",
+    "ban": [
+      "pather panchali",
+      "pather",
+      "panchali",
+      "song of the little road",
+      "song of the road",
+      "길의 노래",
+      "satyajit",
+      "satyajit ray",
+      "apu",
+      "durga",
+      "sarbajaya",
+      "harihar",
+      "indir",
+      "subir banerjee",
+      "uma dasgupta",
+      "karuna banerjee",
+      "chunibala devi",
+      "nischindipur",
+      "bibhutibhushan",
+      "bandyopadhyay",
+      "subrata mitra",
+      "ravi shankar"
+    ],
+    "keywords": [
+      "1950s black-and-white film grain",
+      "bare mud wall",
+      "soft overcast daylight"
+    ],
+    "applied": [
+      "For A name the backdrop (bare mud wall) and give a count (three heads)",
+      "For cropped originals name the crop (tight crop: three heads fill the frame)",
+      "Give every B prompt one medium-and-period phrase (B1 1950s documentary photograph, B2 1950s survey sheet)",
+      "For photographs add no border",
+      "For B use a neutral light note (soft overcast daylight), no sky motif from the original",
+      "For drawings from toned originals ask for full tonal range instead of white ground"
+    ],
+    "generation_calls": 3,
+    "generation_notes": "all three calls returned quota (billing account has an outstanding balance); the three calls were sent together, so the 'stop after first quota' rule could not apply. No image, no Drive upload, no compare.",
+    "images": [
+      {
+        "slot": "a",
+        "kind": "Reproduction",
+        "status": "quota",
+        "words": 68,
+        "aspect": "4:3",
+        "prompt": "1950s black-and-white film grain, a 35mm still from a Bengali village drama. Tight crop: three heads fill the frame against a bare mud wall streaked with dry cracks. A smiling young mother, low in the frame, glances up at her daughter, a wet-haired girl who leans in to whisper into her small brother's ear. Soft overcast daylight, matt grey tones, no border. no text, no signature, no seal",
+        "avoided": [
+          [
+            "Pather Panchali",
+            "a Bengali village drama"
+          ],
+          [
+            "Sarbajaya",
+            "young mother"
+          ],
+          [
+            "Durga",
+            "a wet-haired girl"
+          ],
+          [
+            "Apu",
+            "her small brother"
+          ]
+        ],
+        "metrics": null,
+        "scores": {},
+        "avg": null,
+        "drive_url": null,
+        "usage": null,
+        "detail": "Your billing account has an outstanding balance. Make a payment at https://aistudio.google.com/billing to restore service."
+      },
+      {
+        "slot": "b1",
+        "kind": "Photograph",
+        "status": "quota",
+        "words": 48,
+        "aspect": "3:2",
+        "prompt": "Documentary photograph, 1950s black-and-white film grain: a bamboo-and-thatch village schoolroom raised on stilts above a flooded paddy in Bengal, its bare mud wall half-washed by monsoon rain, one dark open doorway. Soft overcast daylight, humid air, distant palms. No people, no border. no text, no signature, no seal",
+        "metrics": null,
+        "scores": {},
+        "avg": null,
+        "drive_url": null,
+        "usage": null,
+        "detail": "Your billing account has an outstanding balance. Make a payment at https://aistudio.google.com/billing to restore service."
+      },
+      {
+        "slot": "b2",
+        "kind": "Architectural drawing",
+        "status": "quota",
+        "words": 57,
+        "aspect": "4:3",
+        "prompt": "Architectural drawing, 1950s survey sheet: sectional perspective through a rural Bengali courtyard house, bare mud wall, thatched eaves, a deep veranda, steps down to a pond, one banana tree. Graphite hatching and grey wash with the full tonal range of 1950s black-and-white film grain; soft overcast daylight pooling in the courtyard. no text, no signature, no seal",
+        "metrics": null,
+        "scores": {},
+        "avg": null,
+        "drive_url": null,
+        "usage": null,
+        "detail": "Your billing account has an outstanding balance. Make a payment at https://aistudio.google.com/billing to restore service."
+      }
+    ],
+    "worked": [
+      "Not assessed: no image generated (credit used up)"
+    ],
+    "mismatch": [
+      "No comparison possible; reference still kept for the next run"
+    ],
+    "next": [
+      "Once credit is restored, keep named backdrop, named crop and counts for a clean test",
+      "For film stills keep 'matt grey tones' and 'no border' to stop added frames or sprocket edges",
+      "For architectural drawings from grey originals ask for 'full tonal range' instead of 'white ground'",
+      "Send generation calls one at a time so a quota on the first stops the rest"
+    ]
   }
 ]
