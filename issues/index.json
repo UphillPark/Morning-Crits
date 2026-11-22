@@ -1,5 +1,77 @@
 [
   {
+    "date": "2026-11-23",
+    "issue": 29,
+    "edition": "weekday",
+    "headline": "Replace, not adapt: Kengo Kuma’s National Gallery wing goes out to public consultation, and the gallery sets out why it chose to demolish the 1960s St Vincent House rather than convert it",
+    "crit": "When a gallery argues that a new building will care for its paintings better than an adapted one, whose lifespan is being measured: the building’s, or the collection’s?",
+    "thesis": [
+      "마지막 길은 아직 멀다: 경기 북부에는 지자체가 지은 화장장이 한 곳도 없고, 새 시설은 주민 반발과 재정난 속에 2029~2032년에야 문을 연다",
+      "탄광이 떠난 마을이 교도소를 원한다: 정선 사북 주민들이 교정시설 유치위원회를 꾸렸고, 군은 법무부에 제안서를 냈다",
+      "규정대로 일하면 열차가 늦어진다면: 경부선 화물열차 탈선 뒤 철도노조가 ‘안전운행 투쟁’을 26일로 미루고 정비고와 인력 충원을 요구했다",
+      "‘화석연료’라는 한 단어를 넘지 못했다: COP31이 합의 없이 끝났고, 마셜제도는 “모든 쪽에서 버림받았다”고, 러시아는 그 단어가 들어간 어떤 표현에도 동의할 수 없다고 말했다",
+      "300명이 일하던 3층 공장에서 불이 났다: 인도네시아 Banten의 과자 공장 화재로 최소 3명이 숨지고 36명이 실종됐다"
+    ],
+    "seeds": [
+      {
+        "seed": "마을 곁의 굴뚝 — 숨기지 않고 일상 경로와 겹쳐 놓는 화장장의 배치 규칙",
+        "issue": "경기 북부 화장장 공백"
+      },
+      {
+        "seed": "담장의 두 얼굴 — 수용자를 가두면서 읍내에 일자리를 여는 교정시설의 경계",
+        "issue": "정선 사북 교정시설 유치"
+      },
+      {
+        "seed": "규정대로의 단면 — 정비 규정이 요구하는 시간과 인원을 면적으로 바꾼 정비고",
+        "issue": "경부선 탈선과 안전운행 투쟁"
+      },
+      {
+        "seed": "300명의 탈출 단면 — 생산 라인과 피난 경로가 부딪히는 공장 바닥의 평면 규칙",
+        "issue": "Banten 과자 공장 화재"
+      }
+    ],
+    "symposium_day": 20,
+    "unit": "Dip20",
+    "unit_concept": "conservatory",
+    "screen_work": "Pather Panchali (1955)",
+    "screen_medium": "Film",
+    "chips": {
+      "thesis": "경기 이천 · 강원 정선군 사북읍 · 세종 소정리역 · 튀르키예 Antalya",
+      "symposium": "DAY 20 · 헬레니즘의 지식 도시",
+      "unit": "AA Dip20 · conservatory",
+      "screen": "Film · Pather Panchali (1955)"
+    },
+    "vocab": [
+      "stepped massing",
+      "purpose-designed",
+      "ventilated facade",
+      "dichotomy",
+      "monetise",
+      "promissory note",
+      "siting",
+      "carceral",
+      "overshoot",
+      "means of escape",
+      "axiom",
+      "deduction",
+      "patronage",
+      "ineffable",
+      "archetype",
+      "social reproduction",
+      "montage",
+      "ephemeral",
+      "cultivate",
+      "inseparable",
+      "on location",
+      "vernacular",
+      "open shade",
+      "intimacy",
+      "humid"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-11-23.html",
+    "slug": "2026-11-23"
+  },
+  {
     "date": "2026-11-20",
     "issue": 28,
     "edition": "weekday",
