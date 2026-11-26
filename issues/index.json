@@ -1,5 +1,77 @@
 [
   {
+    "date": "2026-11-27",
+    "issue": 31,
+    "edition": "weekday",
+    "headline": "Heritage harm outweighed by “enormous” economic benefits: Westminster councillors overrule their own officers and approve HOK’s Paddington life sciences hub, which will replace the former Imperial College Medical School",
+    "crit": "If a retrofit-first policy can be outweighed whenever the new use is valuable enough, is it a policy about buildings, or a price list for demolition?",
+    "thesis": [
+      "지붕의 빗물이 유적을 판다: DDP 곡면 지붕 아래의 조선 하도감 유구를 공원으로 옮기려던 서울시 안이 2년 6개월 만에 국가유산청 심의에서 부결됐다",
+      "국민 셋 중 한 명은 교통약자다: 저상버스 보급률이 처음 절반을 넘었지만, 울산은 열 대 중 세 대에 머물고 교통약자는 1,646만 명으로 늘었다",
+      "멈춘 현장에도 예산이 붙는다: 붕괴 사고로 공사가 중단된 광주대표도서관에 통합시가 내년 건립 예산의 87%를 지방채로 편성했고, 재개 여부는 내년 7월께에야 가늠된다",
+      "텐트 대신 카라반이라도: 가자의 네 번째 겨울, 피란 거처 1,700곳의 절반 이상이 침수 위험 지대에 있고, 국경 밖에는 들어가지 못한 텐트가 쌓여 있다",
+      "닫힌 문 뒤의 병동: Zagreb와 Zenica의 정신병원에서 잇따라 폭행 영상이 공개돼 의료진 13명 이상이 체포됐고, 의사들은 밤의 병동에 사람이 없다고 말한다"
+    ],
+    "seeds": [
+      {
+        "seed": "지붕이 버린 물의 지도 — 곡면 지붕의 낙수를 받아 돌려 유적을 현 위치에 남기는 보호 장치",
+        "issue": "DDP 하도감 유구 부결"
+      },
+      {
+        "seed": "늙어 가는 승차 높이 — 교통약자 1,646만 명의 몸으로 다시 정하는 정류장의 단면",
+        "issue": "교통약자 이동편의 실태조사"
+      },
+      {
+        "seed": "멈춘 공사장의 공공 시간 — 진단을 기다리는 사고 현장을 기록 장치로 여는 가설 구조물",
+        "issue": "광주대표도서관 공사 중단"
+      },
+      {
+        "seed": "반입 가능한 것만으로 짓는 겨울 거처 — 이중 용도 통제를 설계 조건으로 삼는 피란 거처와 캠프 배치",
+        "issue": "가자의 네 번째 겨울"
+      }
+    ],
+    "symposium_day": 22,
+    "unit": "cross",
+    "unit_concept": "agency",
+    "screen_work": "Cubiculum from the Villa of P. Fannius Synistor at Boscoreale (ca. 50–40 BCE)",
+    "screen_medium": "Painting",
+    "chips": {
+      "thesis": "서울 중구 동대문디자인플라자(DDP) 어울림광장 · 전국 시내버스 · 전남광주통합특별시 광주대표도서관 건립 현장 · 가자지구 az-Zawayda",
+      "symposium": "DAY 22 · 공화정과 자연법",
+      "unit": "cross cross · agency",
+      "screen": "Painting · Cubiculum from the Villa of P. Fannius Synistor at Boscoreale (ca. 50–40 BCE)"
+    },
+    "vocab": [
+      "retrofit first",
+      "incongruous",
+      "snowball",
+      "handover",
+      "development corporation",
+      "drift",
+      "runoff",
+      "step-free",
+      "dual-use",
+      "coercive",
+      "natural law",
+      "mixed constitution",
+      "portent",
+      "eloquence",
+      "agency",
+      "actant",
+      "assemblage",
+      "flat ontology",
+      "accountable",
+      "burden of proof",
+      "illusionistic",
+      "barrel vault",
+      "cinnabar",
+      "recede",
+      "saturated"
+    ],
+    "url": "https://uphillpark.github.io/Morning-Crits/issues/2026-11-27.html",
+    "slug": "2026-11-27"
+  },
+  {
     "date": "2026-11-25",
     "issue": 30,
     "edition": "weekday",
