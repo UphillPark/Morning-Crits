@@ -3049,5 +3049,105 @@
       "For architectural drawings from grey originals ask for 'full tonal range' instead of 'white ground'",
       "Send generation calls one at a time so a quota on the first stops the rest"
     ]
+  },
+  {
+    "date": "2026-11-27",
+    "issue": 31,
+    "work": "Cubiculum from the Villa of P. Fannius Synistor at Boscoreale (ca. 50–40 BCE)",
+    "medium": "Painting",
+    "combo": 3,
+    "combo_swap": null,
+    "model": "gemini-3.1-flash-lite-image",
+    "reference": true,
+    "reference_source": "https://images.metmuseum.org/CRDImages/gr/original/DP143704.jpg (Met open access, public domain)",
+    "ban": [
+      "boscoreale",
+      "fannius",
+      "synistor",
+      "villa of p. fannius synistor",
+      "cubiculum",
+      "pompeii",
+      "pompeian",
+      "vesuvius",
+      "second style",
+      "metropolitan museum",
+      "oplontis",
+      "villa of the mysteries"
+    ],
+    "keywords": [
+      "illusionistic wall painting",
+      "cinnabar red",
+      "shallow stage depth"
+    ],
+    "applied": [
+      "Named backdrop, named view and counts in A (two black border bands, one barred window)",
+      "One medium-and-period phrase in every B prompt (matt gouache, late-antique palette; ink long section)",
+      "Full tonal range instead of white ground for the architectural drawing",
+      "Generation calls sent one at a time; stopped after the first quota"
+    ],
+    "images": [
+      {
+        "slot": "a",
+        "kind": "Reproduction",
+        "status": "quota",
+        "words": 74,
+        "prompt": "Photograph of a small vaulted ancient bedroom seen straight on from its doorway, square frame. Grey plaster barrel vault; white mosaic floor with two black border bands. Side and back walls are one illusionistic wall painting: cinnabar red columns, shallow stage depth opening onto blue-green sky, painted porticoes, a rocky grotto, one barred window centred in the back wall. Matt, faded fresco surface, soft even light. No people. No text, no signature, no seal.",
+        "avoided": [
+          [
+            "Boscoreale cubiculum",
+            "small vaulted ancient bedroom"
+          ],
+          [
+            "Second Style fresco",
+            "illusionistic wall painting"
+          ]
+        ],
+        "metrics": null,
+        "scores": {},
+        "avg": null,
+        "drive_url": null,
+        "usage": null,
+        "detail": "Your billing account has an outstanding balance. Make a payment at https://aistudio.google.com/billing to restore service."
+      },
+      {
+        "slot": "b1",
+        "kind": "Concept art",
+        "status": "quota",
+        "words": 51,
+        "prompt": "Concept art, matt gouache, late-antique palette: a subway concourse whose bare concrete walls carry an illusionistic wall painting of colonnades and gardens, cinnabar red bands, blue-green skies, shallow stage depth; commuters small against painted porticoes, one real escalator cutting through. Wide view, low winter light. No text, no signature, no seal.",
+        "avoided": [],
+        "metrics": null,
+        "scores": {},
+        "avg": null,
+        "drive_url": null,
+        "usage": null,
+        "detail": "not sent after quota on slot a"
+      },
+      {
+        "slot": "b2",
+        "kind": "Architectural drawing",
+        "status": "quota",
+        "words": 55,
+        "prompt": "Architectural drawing, ink long section with one cinnabar red wash and one blue-green wash, full tonal range: a narrow terraced house whose windowless inner rooms are lined with illusionistic wall painting of distant pavilions, shallow stage depth, rooms read as stacked painted stages. Hatched cut walls, no room labels. No text, no signature, no seal.",
+        "avoided": [],
+        "metrics": null,
+        "scores": {},
+        "avg": null,
+        "drive_url": null,
+        "usage": null,
+        "detail": "not sent after quota on slot a"
+      }
+    ],
+    "worked": [
+      "No images; prompts carry the 2026-11-23 changes for a clean test once credit returns"
+    ],
+    "mismatch": [
+      "No comparison possible: billing account has an outstanding balance (second issue in a row)"
+    ],
+    "next": [
+      "Once credit is restored, rerun these three prompts unchanged against the same Met reference",
+      "For painted interiors test 'camera at eye level on the room's centre line' if 'seen straight on from its doorway' drifts",
+      "If 'late-antique palette' drifts to Byzantine gold, name the two colours only"
+    ]
   }
 ]
